@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="1.02.01.08.03">Créditos com Controladores;</entry>
+<entry key="1.02.01.08.01">Créditos com Coligadas;</entry>
+<entry key="1.02.04.02">Goodwill;</entry>
+<entry key="1.02.04.01">Intangíveis;11.386</entry>
+<entry key="1.02.02.01.04">Outras Participações Societárias;284</entry>
+<entry key="1.02.02.01.01">Participações em Coligadas;</entry>
+<entry key="1.02.01.01.02">Títulos Disponíveis para Venda;</entry>
+<entry key="1.02.04.01.01">Contrato de Concessão;</entry>
+<entry key="1.02.01.01.01">Títulos para Negociação;</entry>
+<entry key="1.02.01.06.01">Imposto de Renda e Contribuição Social Diferidos;4.579</entry>
+<entry key="1.01.08">Outros Ativos Circulantes;</entry>
+<entry key="1.01.02.02">Aplicações Financeiras Avaliadas ao Custo Amortizado;</entry>
+<entry key="1.01.07">Despesas Antecipadas;0</entry>
+<entry key="1.01.02.01">Aplicações Financeiras Avaliadas a Valor Justo;</entry>
+<entry key="1.01.06">Tributos a Recuperar;6.258</entry>
+<entry key="1.02.02.02">Propriedades para Investimento;</entry>
+<entry key="1.01.05">Ativos Biológicos;</entry>
+<entry key="1.02.02.01">Participações Societárias;284</entry>
+<entry key="1.01.04">Estoques;307.840</entry>
+<entry key="1.01.03">Contas a Receber;208.784</entry>
+<entry key="1.01.02">Aplicações Financeiras;7.734</entry>
+<entry key="1.01.01">Caixa e Equivalentes de Caixa;9.268</entry>
+<entry key="1.01.02.02.01">Títulos Mantidos até o Vencimento;</entry>
+<entry key="1.02.01.09.05">Outros Ativos;798</entry>
+<entry key="1.02.01.09.04">Depósitos Judiciais;7.110</entry>
+<entry key="1.02.01.09.03">Demais Impostos a Recuperar;2.019</entry>
+<entry key="1.02.01.09.02">Ativos de Operações Descontinuadas;</entry>
+<entry key="1.02.01.09.01">Ativos Não-Correntes a Venda;</entry>
+<entry key="1">Ativo Total;759.967</entry>
+<entry key="1.02.01.02.01">Títulos Mantidos até o Vencimento;</entry>
+<entry key="1.02">Ativo Não Circulante;220.083</entry>
+<entry key="1.01">Ativo Circulante;539.884</entry>
+<entry key="Conta">Descrição;31/12/2015</entry>
+<entry key="1.01.03.02">Outras Contas a Receber;19.917</entry>
+<entry key="1.02.03.03">Imobilizado em Andamento;</entry>
+<entry key="1.01.03.01">Clientes;188.867</entry>
+<entry key="1.02.03.02">Imobilizado Arrendado;</entry>
+<entry key="1.02.04">Intangível;11.386</entry>
+<entry key="1.02.03.01">Imobilizado em Operação;193.907</entry>
+<entry key="1.02.03">Imobilizado;193.907</entry>
+<entry key="1.01.08.03">Outros;</entry>
+<entry key="1.02.02">Investimentos;284</entry>
+<entry key="1.01.08.02">Ativos de Operações Descontinuadas;</entry>
+<entry key="1.01.08.01">Ativos Não-Correntes a Venda;</entry>
+<entry key="1.02.01">Ativo Realizável a Longo Prazo;14.506</entry>
+<entry key="1.02.01.09">Outros Ativos Não Circulantes;9.927</entry>
+<entry key="1.02.01.08">Créditos com Partes Relacionadas;</entry>
+<entry key="1.02.01.07">Despesas Antecipadas;</entry>
+<entry key="1.02.01.06">Tributos Diferidos;4.579</entry>
+<entry key="1.02.01.05">Ativos Biológicos;</entry>
+<entry key="1.02.01.04">Estoques;</entry>
+<entry key="1.02.01.03">Contas a Receber;</entry>
+<entry key="1.02.01.02">Aplicações Financeiras Avaliadas ao Custo Amortizado;</entry>
+<entry key="1.02.01.01">Aplicações Financeiras Avaliadas a Valor Justo;</entry>
+<entry key="1.01.06.01">Tributos Correntes a Recuperar;6.258</entry>
+<entry key="1.01.02.01.02">Títulos Disponíveis para Venda;</entry>
+<entry key="1.01.02.01.01">Títulos para Negociação;</entry>
+<entry key="1.01.06.01.02">Demais Impostos a Recuperar;1.567</entry>
+<entry key="1.01.06.01.01">Imposto de Renda e Contribuição Social a Recuperar;4.691</entry>
+<entry key="1.02.01.03.02">Outras Contas a Receber;</entry>
+<entry key="1.02.01.03.01">Clientes;</entry>
+<entry key="1.02.01.08.04">Créditos com Outras Partes Relacionadas;</entry>
+</properties>

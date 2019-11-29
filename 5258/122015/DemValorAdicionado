@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="7.07">Valor Adicionado Total a Distribuir;2.716.057</entry>
+<entry key="7.06">Vlr Adicionado Recebido em Transferência;88.786</entry>
+<entry key="7.05">Valor Adicionado Líquido Produzido;2.627.271</entry>
+<entry key="7.04">Retenções;-227.698</entry>
+<entry key="7.03">Valor Adicionado Bruto;2.854.969</entry>
+<entry key="7.02">Insumos Adquiridos de Terceiros;-6.317.568</entry>
+<entry key="7.01">Receitas;9.172.537</entry>
+<entry key="7.08.01.04">Outros;</entry>
+<entry key="7.08.01.03">F.G.T.S.;55.410</entry>
+<entry key="7.08.01.02">Benefícios;147.383</entry>
+<entry key="7.08.01.01">Remuneração Direta;755.019</entry>
+<entry key="7.08.05">Outros;</entry>
+<entry key="7.08.04">Remuneração de Capitais Próprios;339.785</entry>
+<entry key="7.08.03">Remuneração de Capitais de Terceiros;585.297</entry>
+<entry key="7.08.02">Impostos, Taxas e Contribuições;833.163</entry>
+<entry key="7.08.01">Pessoal;957.812</entry>
+<entry key="7.08.04.04">Part. Não Controladores nos Lucros Retidos;-421</entry>
+<entry key="7.08.04.03">Lucros Retidos / Prejuízo do Período;189.956</entry>
+<entry key="7.01.04">Provisão/Reversão de Créds. Liquidação Duvidosa;-5.403</entry>
+<entry key="7.08.04.02">Dividendos;48.243</entry>
+<entry key="7.01.03">Receitas refs. à Construção de Ativos Próprios;</entry>
+<entry key="7.08.04.01">Juros sobre o Capital Próprio;102.007</entry>
+<entry key="7.01.02">Outras Receitas;1.485</entry>
+<entry key="7.01.01">Vendas de Mercadorias, Produtos e Serviços;9.176.455</entry>
+<entry key="7.06.03">Outros;</entry>
+<entry key="7.06.02">Receitas Financeiras;88.786</entry>
+<entry key="7.06.01">Resultado de Equivalência Patrimonial;</entry>
+<entry key="7.08.02.03">Municipais;11.950</entry>
+<entry key="7.08.02.02">Estaduais;413.236</entry>
+<entry key="7.08.02.01">Federais;407.977</entry>
+<entry key="7.04.02">Outras;</entry>
+<entry key="7.04.01">Depreciação, Amortização e Exaustão;-227.698</entry>
+<entry key="Conta">Descrição;01/01/2015 
+ a 
+ 31/12/2015</entry>
+<entry key="7.02.04">Outros;</entry>
+<entry key="7.02.03">Perda/Recuperação de Valores Ativos;-4.781</entry>
+<entry key="7.02.02">Materiais, Energia, Servs. de Terceiros e Outros;-385.323</entry>
+<entry key="7.02.01">Custos Prods., Mercs. e Servs. Vendidos;-5.927.464</entry>
+<entry key="7.08.03.03">Outras;</entry>
+<entry key="7.08.03.02">Aluguéis;308.336</entry>
+<entry key="7.08.03.01">Juros;276.961</entry>
+<entry key="7.08">Distribuição do Valor Adicionado;2.716.057</entry>
+</properties>

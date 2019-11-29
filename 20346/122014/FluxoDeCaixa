@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.03.09">Gastos com IPO;</entry>
+<entry key="6.03.08">Empréstimos e Financiamentos - Amortização;-234.045</entry>
+<entry key="6.03.07">Pagamento de Juros;-44.835</entry>
+<entry key="6.03.06">Aquisição de Participação Adicional em Controladas;-1.844</entry>
+<entry key="6.03.05">Ações em Tesouraria;-9.112</entry>
+<entry key="6.03.04">Aumento de Capital;186.767</entry>
+<entry key="6.03.03">Pagamento de Dividendos;-1.867</entry>
+<entry key="6.03.02">Controladas;</entry>
+<entry key="6.03.01">Empréstimos e Financiamentos - Captação (Amortização);172.422</entry>
+<entry key="6.01.02.09">Impostos a recolher;-11.260</entry>
+<entry key="6.01.02.08">Créditos a Homologar Passivo;</entry>
+<entry key="6.01.02.07">Salários e contribuições;2.811</entry>
+<entry key="6.01.02.06">Fornecedores;145.933</entry>
+<entry key="6.01.02.05">Outros Ativos Operacionais;21.518</entry>
+<entry key="6.01.02.04">Créditos a Homologar ativo;</entry>
+<entry key="6.01.02.03">Impostos a Recuperar;-18.850</entry>
+<entry key="6.01.02.02">Estoques;-50.957</entry>
+<entry key="6.01.03">Outros;</entry>
+<entry key="6.01.02.01">Duplicatas a receber;-34.465</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;47.660</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;11.206</entry>
+<entry key="6.01.01.12">IR e CSLL Correntes;</entry>
+<entry key="6.01.01.11">Provisão para créditos de liquidação duvidosa;5.467</entry>
+<entry key="6.01.01.10">Outros ajustes ao lucro;11.542</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;114.515</entry>
+<entry key="Conta">Descrição;01/01/2014 
+ a 
+ 31/12/2014</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;67.486</entry>
+<entry key="6.02.09">Fluxo de Caixa Líquido na Aquisição de Controlada;0</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-11.837</entry>
+<entry key="6.02.08">Participação Minoritários;</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;58.866</entry>
+<entry key="6.02.07">Recebimento de empréstimo - Partes Relacionadas;</entry>
+<entry key="6.02.06">Concessão de Empréstimos - Partes Relacionadas;</entry>
+<entry key="6.02.05">Adições - intangível;-4.483</entry>
+<entry key="6.02.04">Redução de Investimento;21.350</entry>
+<entry key="6.02.03">Aumento de Investimento;-6.679</entry>
+<entry key="6.02.02">Baixa de Imobilizado;0</entry>
+<entry key="6.02.01">Adições - Imobilizado e Intangível;-22.025</entry>
+<entry key="6.01.01.09">Juros sobre Empréstimos;51.843</entry>
+<entry key="6.01.01.08">Resultado Equiv. Patrimonial;-2.636</entry>
+<entry key="6.01.01.07">Baixa de imobilizado e Intangível;3.844</entry>
+<entry key="6.01.01.06">Reversão Riscos Tribut.Cíveis e Trabalhistas;</entry>
+<entry key="6.01.01.05">Efeito da associação com Amerisource;-15.734</entry>
+<entry key="6.01.01.04">Depreciações e Amortizações;16.280</entry>
+<entry key="6.01.01.03">Incentivos Fiscais;</entry>
+<entry key="6.01.01.02">Provisão para contingências;1.234</entry>
+<entry key="6.01.01.01">Lucro antes do Imposto de Renda e Contribuição Social;-60.634</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;174.097</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;59.582</entry>
+<entry key="6.01.02.11">Imposto de Renda e Contribuição Social pagos;-1.003</entry>
+<entry key="6.01.02.10">Outros Passivos Operacionais;-6.067</entry>
+</properties>

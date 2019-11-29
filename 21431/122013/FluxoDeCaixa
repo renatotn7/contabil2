@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.03.09">Custo de transação de captação;-2.906</entry>
+<entry key="6.03.08">Dividendos pagos;-102.112</entry>
+<entry key="6.03.07">Compra de ações em tesouraria;0</entry>
+<entry key="6.03.06">Pagamento por empréstimos - juros;-362.310</entry>
+<entry key="6.03.04">Pagamento de empréstimos - principal;-1.620.667</entry>
+<entry key="6.03.03">Recebimento por empréstimos tomados;920.133</entry>
+<entry key="6.03.02">Integralização de capital;38.058</entry>
+<entry key="6.03.01">Alienações de ações em tesouraria;8.159</entry>
+<entry key="6.01.02.09">Salários e encargos sociais;-2.249</entry>
+<entry key="6.01.02.08">Tributos a recolher;-5.619</entry>
+<entry key="6.01.02.07">Impostos de renda e contribuição social pagos;-8.605</entry>
+<entry key="6.01.02.06">Fornecedores;56.187</entry>
+<entry key="6.01.02.05">Demais contas a receber;37.036</entry>
+<entry key="6.01.02.04">Depósitos judiciais e outros;2.561</entry>
+<entry key="6.01.02.03">Tributos a recuperar;-70.260</entry>
+<entry key="6.01.02.02">Estoques;-152.744</entry>
+<entry key="6.01.03">Outros;</entry>
+<entry key="6.01.02.01">Contas a receber de clientes;-20.274</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;-272.762</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;938.547</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;-577.569</entry>
+<entry key="Conta">Descrição;01/01/2013 
+ a 
+ 31/12/2013</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;-1.121.645</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-121.709</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;665.785</entry>
+<entry key="6.02.06">Aumento de capital nas controladas/coligadas;0</entry>
+<entry key="6.02.05">Juros e outros;92.062</entry>
+<entry key="6.02.04">Recebimento pela venda de ativos permanentes;27.820</entry>
+<entry key="6.02.03">Compra de intangíveis;-17.303</entry>
+<entry key="6.02.02">Compra de ativo imobilizado;-224.288</entry>
+<entry key="6.02.01">Aquisição de controladas (menos caixa líquido na aquisição);0</entry>
+<entry key="6.01.01.09">Indenizações de direito uso de marcas;0</entry>
+<entry key="6.01.01.08">Redução ao valor recuperável de ativos "Impairment";-459</entry>
+<entry key="6.01.01.07">Despesas de stock options;9.384</entry>
+<entry key="6.01.01.06">Despesas de juros e relacionadas;370.789</entry>
+<entry key="6.01.01.05">Perdas cambiais;211.866</entry>
+<entry key="6.01.01.04">Equivalência patrimonial continuadas;1.357</entry>
+<entry key="6.01.01.03">Resultado na venda de ativos permanentes;-72.107</entry>
+<entry key="6.01.01.02">Depreciação e amortização;104.907</entry>
+<entry key="6.01.01.01">Lucro/Prejuízo do Período;312.810</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;1.158.833</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;1.736.402</entry>
+<entry key="6.01.02.12">Demais contas a pagar;-34.021</entry>
+<entry key="6.01.02.11">Juros pagos;1.477</entry>
+<entry key="6.01.02.10">Contas a pagar;-76.251</entry>
+</properties>

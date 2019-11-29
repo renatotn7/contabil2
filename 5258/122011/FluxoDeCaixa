@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.03.05">Juros Sobre Capital Próprio e Dividendos Pagos;-40.863</entry>
+<entry key="6.03.04">Recebimento de Exercício do Plano de Opção de Ação;909</entry>
+<entry key="6.03.03">Juros Pagos;-7.420</entry>
+<entry key="6.03.02">Pagamentos de Financiamentos;-26.183</entry>
+<entry key="6.03.01">Financiamentos Tomados;60.865</entry>
+<entry key="6.01.02.09">Outras Obrigações;7.663</entry>
+<entry key="6.01.02.08">Impostos, Taxas e Contribuições;-2.416</entry>
+<entry key="6.01.02.07">Salários e Encargos Sociais;-350</entry>
+<entry key="6.01.02.06">Fornecedores;69.995</entry>
+<entry key="6.01.02.05">Ativos no Realizável a Longo Prazo;-6.686</entry>
+<entry key="6.01.02.04">Outros Ativos Circulantes;-12.809</entry>
+<entry key="6.01.02.03">Estoques;-124.563</entry>
+<entry key="6.01.02.02">Contas a Receber;-46.186</entry>
+<entry key="6.01.03">Outros;-31.940</entry>
+<entry key="6.01.02.01">Aplicações Financeiras;15.319</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;-97.694</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;158.253</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;159.125</entry>
+<entry key="Conta">Descrição;01/01/2011 
+ a 
+ 31/12/2011</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;-12.692</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;143.198</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;28.619</entry>
+<entry key="6.02.03">Caixa Adquirido em Combinação de Negócios;226.409</entry>
+<entry key="6.01.03.01">Imposto de Renda e Contribuição Social Pagos;-31.940</entry>
+<entry key="6.02.02">Recebimentos por Vendas de Imobilizados;494</entry>
+<entry key="6.02.01">Aquisições de Imobilizado e Intangível;-83.705</entry>
+<entry key="6.01.01.08">Despesas de Juros;9.092</entry>
+<entry key="6.01.01.07">Provisão (Reversão) para Crédito de Liquidação Duvidosa;471</entry>
+<entry key="6.01.01.06">Provisão para Perdas no Estoque;500</entry>
+<entry key="6.01.01.05">Provisão (Reversão) para Demandas Judiciais;-245</entry>
+<entry key="6.01.01.04">Resultado na Venda ou Baixa do Imobilizado e Intangível;1.026</entry>
+<entry key="6.01.01.03">Plano de Opções de Ações;532</entry>
+<entry key="6.01.01.02">Depreciações e Amortizações;55.672</entry>
+<entry key="6.01.01.01">Lucro Líquido Antes do I.R. e C.S.L.L.;91.205</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;339.971</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;180.846</entry>
+<entry key="6.01.02.10">Aluguéis a Pagar;2.339</entry>
+</properties>

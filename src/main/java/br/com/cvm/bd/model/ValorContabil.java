@@ -23,9 +23,14 @@ public class ValorContabil implements Serializable {
 	private double valor;
 
 	//bi-directional many-to-one association to ContaContabil
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="id_conta_contabil", nullable=false)
 	private ContaContabil contaContabil;
+
+	//bi-directional many-to-one association to Demonstrativo
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="id_demonstrativo", nullable=false)
+	private Demonstrativo demonstrativo;
 
 	public ValorContabil() {
 	}
@@ -52,6 +57,14 @@ public class ValorContabil implements Serializable {
 
 	public void setContaContabil(ContaContabil contaContabil) {
 		this.contaContabil = contaContabil;
+	}
+
+	public Demonstrativo getDemonstrativo() {
+		return this.demonstrativo;
+	}
+
+	public void setDemonstrativo(Demonstrativo demonstrativo) {
+		this.demonstrativo = demonstrativo;
 	}
 
 }

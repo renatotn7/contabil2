@@ -10,6 +10,7 @@ import javax.persistence.Query;
 
 import br.com.cvm.bd.helper.PersistenceManager;
 import br.com.cvm.bd.model.ContaContabil;
+import br.com.cvm.bd.model.Demonstrativo;
 import br.com.cvm.bd.model.Empresa;
 import br.com.cvm.bd.model.Periodo;
 import br.com.cvm.bd.model.TipoDemonstrativo;
@@ -85,6 +86,19 @@ public static ContaContabil getBdAccount(String account) {
 public static String comparaExistencia(Properties existente ,Properties novo,String sigla, Integer data, String cvm) {
 	int count = 0;
 	StringBuilder sb = new StringBuilder(); 
+	
+	
+	Demonstrativo dm = new Demonstrativo();
+  	Empresa e = em.find(Empresa.class, Integer.parseInt(cvm));
+	dm.setEmpresa(e);
+	Periodo p = em.find(Periodo.class, 2);
+	dm.setPeriodo(p);
+	dm.setEstadoCriacao(0);
+	dm.setVersao(1);
+	dm.setData(data);
+	
+	
+	
 	 for(Object key :novo.keySet()) {
 		 String keynovo = (String)key;
 		if( existente.getProperty(keynovo.trim())==null) { //ve se encontra  a conta no bd
@@ -99,16 +113,13 @@ public static String comparaExistencia(Properties existente ,Properties novo,Str
 			ContaContabil cnovo = new ContaContabil();
 			cnovo.setContaContabil(keynovo.trim());
 			cnovo.setDescricao(valuep1.split(";")[0]);
-			cnovo.setData(data);
-			Empresa e = em.find(Empresa.class, Integer.parseInt(cvm));
-			cnovo.setEmpresa(e);
-	    	Periodo p = em.find(Periodo.class, 2);
-	    	cnovo.setPeriodo(p);
+			cnovo.setDemonstrativo(dm);
+			
 	    	 Query query = em.createQuery("SELECT e FROM TipoDemonstrativo e where e.siglaTipo=\'"+sigla+"\'");
 	    	 TipoDemonstrativo  tp = (TipoDemonstrativo) query.getSingleResult();
 	    
 	    	cnovo.setTipoDemonstrativo(tp);
-	    	cnovo.setVersao(1);
+	    
 			ContaComparada ccomp = new ContaComparada();
 			ccomp.setComparado(cnovo);
 			ccomp.setTipoComparacao("N");
@@ -136,6 +147,18 @@ public static String comparaExistencia(Properties existente ,Properties novo,Str
 }
 public static String dif(Properties existentes, Properties novas
 		,String sigla, Integer data, String cvm, String desc1, String desc2) {
+	
+	
+	Demonstrativo dm = new Demonstrativo();
+  	Empresa e = em.find(Empresa.class, Integer.parseInt(cvm));
+	dm.setEmpresa(e);
+	Periodo p = em.find(Periodo.class, 2);
+	dm.setPeriodo(p);
+	dm.setEstadoCriacao(0);
+	dm.setVersao(1);
+	dm.setData(data);
+	
+	
 	int count = 0;
 	StringBuilder sb = new StringBuilder(); 
 	for(Object key :existentes.keySet()) {
@@ -155,16 +178,14 @@ public static String dif(Properties existentes, Properties novas
 				ContaContabil cnovo = new ContaContabil();
 				cnovo.setContaContabil(keynovo.trim());
 				cnovo.setDescricao(valuep2.split(";")[0]);
-				cnovo.setData(data);
-				Empresa e = em.find(Empresa.class, Integer.parseInt(cvm));
-				cnovo.setEmpresa(e);
-		    	Periodo p = em.find(Periodo.class, 2);
-		    	cnovo.setPeriodo(p);
+				
+			
+		    
 		    	 Query query = em.createQuery("SELECT e FROM TipoDemonstrativo e where e.siglaTipo=\'"+sigla+"\'");
 		    	 TipoDemonstrativo  tp = (TipoDemonstrativo) query.getSingleResult();
 		    
 		    	cnovo.setTipoDemonstrativo(tp);
-		    	cnovo.setVersao(1);
+		    	cnovo.setDemonstrativo(dm);
 				ContaComparada ccomp = new ContaComparada();
 				ccomp.setComparado(cnovo);
 				ccomp.setTipoComparacao("D");

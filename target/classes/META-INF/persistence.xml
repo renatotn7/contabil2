@@ -8,6 +8,7 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
   <class>br.com.cvm.bd.model.Abrangencia</class>
   <class>br.com.cvm.bd.model.Account</class>
   <class>br.com.cvm.bd.model.ContaContabil</class>
+  <class>br.com.cvm.bd.model.Demonstrativo</class>
   <class>br.com.cvm.bd.model.Empresa</class>
   <class>br.com.cvm.bd.model.Indicador</class>
   <class>br.com.cvm.bd.model.Periodo</class>

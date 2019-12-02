@@ -2,9 +2,6 @@ package br.com.cvm.bd.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.util.List;
 
 
@@ -30,9 +27,9 @@ public class Periodo implements Serializable {
 	@Column(name="sigla_periodo", nullable=false, length=10)
 	private String siglaPeriodo;
 
-	//bi-directional many-to-one association to ContaContabil
-	@OneToMany(mappedBy="periodo", fetch=FetchType.LAZY)
-	private List<ContaContabil> contaContabils;
+	//bi-directional many-to-one association to Demonstrativo
+	@OneToMany(mappedBy="periodo")
+	private List<Demonstrativo> demonstrativos;
 
 	public Periodo() {
 	}
@@ -60,27 +57,27 @@ public class Periodo implements Serializable {
 	public void setSiglaPeriodo(String siglaPeriodo) {
 		this.siglaPeriodo = siglaPeriodo;
 	}
-	@JsonIgnore
-	public List<ContaContabil> getContaContabils() {
-		return this.contaContabils;
+
+	public List<Demonstrativo> getDemonstrativos() {
+		return this.demonstrativos;
 	}
 
-	public void setContaContabils(List<ContaContabil> contaContabils) {
-		this.contaContabils = contaContabils;
+	public void setDemonstrativos(List<Demonstrativo> demonstrativos) {
+		this.demonstrativos = demonstrativos;
 	}
 
-	public ContaContabil addContaContabil(ContaContabil contaContabil) {
-		getContaContabils().add(contaContabil);
-		contaContabil.setPeriodo(this);
+	public Demonstrativo addDemonstrativo(Demonstrativo demonstrativo) {
+		getDemonstrativos().add(demonstrativo);
+		demonstrativo.setPeriodo(this);
 
-		return contaContabil;
+		return demonstrativo;
 	}
 
-	public ContaContabil removeContaContabil(ContaContabil contaContabil) {
-		getContaContabils().remove(contaContabil);
-		contaContabil.setPeriodo(null);
+	public Demonstrativo removeDemonstrativo(Demonstrativo demonstrativo) {
+		getDemonstrativos().remove(demonstrativo);
+		demonstrativo.setPeriodo(null);
 
-		return contaContabil;
+		return demonstrativo;
 	}
 
 }

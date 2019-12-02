@@ -2,9 +2,6 @@ package br.com.cvm.bd.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.util.List;
 
 
@@ -30,7 +27,7 @@ public class Abrangencia implements Serializable {
 	private String siglaAbrangencia;
 
 	//bi-directional many-to-one association to TipoDemonstrativo
-	@OneToMany(mappedBy="abrangencia", fetch=FetchType.LAZY)
+	@OneToMany(mappedBy="abrangencia")
 	private List<TipoDemonstrativo> tipoDemonstrativos;
 
 	public Abrangencia() {
@@ -59,7 +56,7 @@ public class Abrangencia implements Serializable {
 	public void setSiglaAbrangencia(String siglaAbrangencia) {
 		this.siglaAbrangencia = siglaAbrangencia;
 	}
-	@JsonIgnore
+
 	public List<TipoDemonstrativo> getTipoDemonstrativos() {
 		return this.tipoDemonstrativos;
 	}

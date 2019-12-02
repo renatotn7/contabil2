@@ -323,10 +323,10 @@ public class ApplicationController {
 			ContaContabil contaescolhida=gson.fromJson((String)obj.get("contaescolhida"),ContaContabil.class);
 			//ContaContabil cc = (ContaContabil) obj.get("contacomparada");
 			
-			ccomparada.setIdrefconta(contaescolhida.getIdContaContabil());
+			ccomparada.setIdRefconta(contaescolhida.getIdContaContabil());
 		}
 		PersisteAccounts.persisteAccount(ccomparada);
-		System.out.println(ccomparada.getIdrefconta());
+		System.out.println(ccomparada.getIdRefconta());
 	}
 
 }

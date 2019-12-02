@@ -2,9 +2,6 @@ package br.com.cvm.bd.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.util.List;
 
 
@@ -26,61 +23,29 @@ public class ContaContabil implements Serializable {
 	@Column(name="conta_contabil", nullable=false, length=100)
 	private String contaContabil;
 
-	@Column(nullable=false)
-	private int data;
-
-	@Column(nullable=false)
-	private int versao;
-	@Column(nullable=false)
+	@Column(nullable=false, length=255)
 	private String descricao;
-	
-	@Column(name="idrefconta")
-	private Integer idrefconta;
-	
 
+	@Column(name="id_refconta")
+	private int idRefconta;
 
-	public Integer getIdrefconta() {
-		return idrefconta;
-	}
-
-	public void setIdrefconta(Integer idrefconta) {
-		this.idrefconta = idrefconta;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-
-	//bi-directional many-to-one association to Empresa
-	@ManyToOne
-	@JoinColumn(name="cvm", nullable=false)
-	private Empresa empresa;
+	//bi-directional many-to-one association to Demonstrativo
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="id_demonstrativo")
+	private Demonstrativo demonstrativo;
 
 	//bi-directional many-to-one association to Indicador
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="id_indicador")
 	private Indicador indicador;
 
-	//bi-directional many-to-one association to Periodo
-	@ManyToOne
-	@JoinColumn(name="id_periodo", nullable=false)
-	private Periodo periodo;
-
 	//bi-directional many-to-one association to TipoDemonstrativo
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="id_tipo", nullable=false)
 	private TipoDemonstrativo tipoDemonstrativo;
 
 	//bi-directional many-to-one association to ValorContabil
-	@OneToMany(mappedBy="contaContabil", fetch=FetchType.LAZY)
+	@OneToMany(mappedBy="contaContabil")
 	private List<ValorContabil> valorContabils;
 
 	public ContaContabil() {
@@ -102,28 +67,28 @@ public class ContaContabil implements Serializable {
 		this.contaContabil = contaContabil;
 	}
 
-	public int getData() {
-		return this.data;
+	public String getDescricao() {
+		return this.descricao;
 	}
 
-	public void setData(int data) {
-		this.data = data;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
-	public int getVersao() {
-		return this.versao;
+	public int getIdRefconta() {
+		return this.idRefconta;
 	}
 
-	public void setVersao(int versao) {
-		this.versao = versao;
+	public void setIdRefconta(int idRefconta) {
+		this.idRefconta = idRefconta;
 	}
 
-	public Empresa getEmpresa() {
-		return this.empresa;
+	public Demonstrativo getDemonstrativo() {
+		return this.demonstrativo;
 	}
 
-	public void setEmpresa(Empresa empresa) {
-		this.empresa = empresa;
+	public void setDemonstrativo(Demonstrativo demonstrativo) {
+		this.demonstrativo = demonstrativo;
 	}
 
 	public Indicador getIndicador() {
@@ -134,14 +99,6 @@ public class ContaContabil implements Serializable {
 		this.indicador = indicador;
 	}
 
-	public Periodo getPeriodo() {
-		return this.periodo;
-	}
-
-	public void setPeriodo(Periodo periodo) {
-		this.periodo = periodo;
-	}
-
 	public TipoDemonstrativo getTipoDemonstrativo() {
 		return this.tipoDemonstrativo;
 	}
@@ -149,7 +106,7 @@ public class ContaContabil implements Serializable {
 	public void setTipoDemonstrativo(TipoDemonstrativo tipoDemonstrativo) {
 		this.tipoDemonstrativo = tipoDemonstrativo;
 	}
-	@JsonIgnore
+
 	public List<ValorContabil> getValorContabils() {
 		return this.valorContabils;
 	}

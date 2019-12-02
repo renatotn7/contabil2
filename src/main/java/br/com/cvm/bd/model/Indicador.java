@@ -2,9 +2,6 @@ package br.com.cvm.bd.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.util.List;
 
 
@@ -30,7 +27,7 @@ public class Indicador implements Serializable {
 	private String nomeIndicador;
 
 	//bi-directional many-to-one association to ContaContabil
-	@OneToMany(mappedBy="indicador", fetch=FetchType.LAZY)
+	@OneToMany(mappedBy="indicador")
 	private List<ContaContabil> contaContabils;
 
 	public Indicador() {
@@ -59,7 +56,7 @@ public class Indicador implements Serializable {
 	public void setNomeIndicador(String nomeIndicador) {
 		this.nomeIndicador = nomeIndicador;
 	}
-	@JsonIgnore
+
 	public List<ContaContabil> getContaContabils() {
 		return this.contaContabils;
 	}

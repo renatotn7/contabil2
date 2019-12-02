@@ -1,3 +1,17 @@
+@ManyToOne
+	@JoinColumn(name="cvm", nullable=false)
+	private Empresa empresa;
 
-/.apt_generated/
+	@JsonIgnore
+
+
+<plugins>
+    <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>             
+        <configuration>    
+            <mainClass>br.com.cvm.rest.Application</mainClass>
+        </configuration>
+    </plugin>
+</plugins>
 /target/

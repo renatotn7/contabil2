@@ -2,9 +2,6 @@ package br.com.cvm.bd.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.util.List;
 
 
@@ -30,11 +27,11 @@ public class TipoDemonstrativo implements Serializable {
 	private String siglaTipo;
 
 	//bi-directional many-to-one association to ContaContabil
-	@OneToMany(mappedBy="tipoDemonstrativo", fetch=FetchType.LAZY)
+	@OneToMany(mappedBy="tipoDemonstrativo")
 	private List<ContaContabil> contaContabils;
 
 	//bi-directional many-to-one association to Abrangencia
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="abrangencia_id", nullable=false)
 	private Abrangencia abrangencia;
 
@@ -64,7 +61,7 @@ public class TipoDemonstrativo implements Serializable {
 	public void setSiglaTipo(String siglaTipo) {
 		this.siglaTipo = siglaTipo;
 	}
-	@JsonIgnore
+
 	public List<ContaContabil> getContaContabils() {
 		return this.contaContabils;
 	}
@@ -86,7 +83,7 @@ public class TipoDemonstrativo implements Serializable {
 
 		return contaContabil;
 	}
-	
+
 	public Abrangencia getAbrangencia() {
 		return this.abrangencia;
 	}

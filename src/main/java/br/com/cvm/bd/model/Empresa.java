@@ -2,9 +2,6 @@ package br.com.cvm.bd.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.util.List;
 
 
@@ -19,67 +16,36 @@ public class Empresa implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(unique=true, nullable=false)
 	private int cvm;
 
 	@Column(name="nome_pregao", nullable=false, length=50)
 	private String nomePregao;
 
-	@Column(name="raiz_ativo", nullable=true, length=8)
+	@Column(name="raiz_ativo", length=8)
 	private String raizAtivo;
 
 	@Column(name="razao_social", nullable=false, length=255)
 	private String razaoSocial;
 
-	@Column(nullable=true)
-	private int situacao;
-	@Column(nullable=true)
+	@Column(length=10)
 	private String segmento;
-	
-	public String getSetor() {
-		return setor;
-	}
 
-	public void setSetor(String setor) {
-		this.setor = setor;
-	}
-
-	public String getSubsetor() {
-		return subsetor;
-	}
-
-	public void setSubsetor(String subsetor) {
-		this.subsetor = subsetor;
-	}
-
-
-	@Column(nullable=true)
-	private String setor;
-	@Column(nullable=true)
-	private String subsetor;
-	@Column(nullable=true)
+	@Column(length=255)
 	private String segmentosetorial;
-	
-	public String getSegmentosetorial() {
-		return segmentosetorial;
-	}
 
-	public void setSegmentosetorial(String segmentosetorial) {
-		this.segmentosetorial = segmentosetorial;
-	}
+	@Column(length=255)
+	private String setor;
 
-	public String getSegmento() {
-		return segmento;
-	}
+	private int situacao;
 
-	public void setSegmento(String segmento) {
-		this.segmento = segmento;
-	}
+	@Column(length=255)
+	private String subsetor;
 
-	//bi-directional many-to-one association to ContaContabil
-	@OneToMany(mappedBy="empresa", fetch=FetchType.LAZY)
-	private List<ContaContabil> contaContabils;
+	//bi-directional many-to-one association to Demonstrativo
+	@OneToMany(mappedBy="empresa")
+	private List<Demonstrativo> demonstrativos;
 
 	public Empresa() {
 	}
@@ -116,6 +82,30 @@ public class Empresa implements Serializable {
 		this.razaoSocial = razaoSocial;
 	}
 
+	public String getSegmento() {
+		return this.segmento;
+	}
+
+	public void setSegmento(String segmento) {
+		this.segmento = segmento;
+	}
+
+	public String getSegmentosetorial() {
+		return this.segmentosetorial;
+	}
+
+	public void setSegmentosetorial(String segmentosetorial) {
+		this.segmentosetorial = segmentosetorial;
+	}
+
+	public String getSetor() {
+		return this.setor;
+	}
+
+	public void setSetor(String setor) {
+		this.setor = setor;
+	}
+
 	public int getSituacao() {
 		return this.situacao;
 	}
@@ -123,27 +113,35 @@ public class Empresa implements Serializable {
 	public void setSituacao(int situacao) {
 		this.situacao = situacao;
 	}
-	@JsonIgnore
-	public List<ContaContabil> getContaContabils() {
-		return this.contaContabils;
+
+	public String getSubsetor() {
+		return this.subsetor;
 	}
 
-	public void setContaContabils(List<ContaContabil> contaContabils) {
-		this.contaContabils = contaContabils;
+	public void setSubsetor(String subsetor) {
+		this.subsetor = subsetor;
 	}
 
-	public ContaContabil addContaContabil(ContaContabil contaContabil) {
-		getContaContabils().add(contaContabil);
-		contaContabil.setEmpresa(this);
-
-		return contaContabil;
+	public List<Demonstrativo> getDemonstrativos() {
+		return this.demonstrativos;
 	}
 
-	public ContaContabil removeContaContabil(ContaContabil contaContabil) {
-		getContaContabils().remove(contaContabil);
-		contaContabil.setEmpresa(null);
+	public void setDemonstrativos(List<Demonstrativo> demonstrativos) {
+		this.demonstrativos = demonstrativos;
+	}
 
-		return contaContabil;
+	public Demonstrativo addDemonstrativo(Demonstrativo demonstrativo) {
+		getDemonstrativos().add(demonstrativo);
+		demonstrativo.setEmpresa(this);
+
+		return demonstrativo;
+	}
+
+	public Demonstrativo removeDemonstrativo(Demonstrativo demonstrativo) {
+		getDemonstrativos().remove(demonstrativo);
+		demonstrativo.setEmpresa(null);
+
+		return demonstrativo;
 	}
 
 }

@@ -8,6 +8,7 @@ import br.com.cvm.bd.helper.PersistenceManager;
 import br.com.cvm.bd.model.Abrangencia;
 import br.com.cvm.bd.model.Account;
 import br.com.cvm.bd.model.ContaContabil;
+import br.com.cvm.bd.model.Demonstrativo;
 import br.com.cvm.bd.model.Empresa;
 import br.com.cvm.bd.model.Periodo;
 import br.com.cvm.bd.model.TipoDemonstrativo;
@@ -27,6 +28,7 @@ public class PersisteAccounts {
 	}
 	public static void persisteDemonstrativo(Properties prop, int tipo,String cvm1, String dp1, String periodo) {
 		try {
+			
 		    for(Object key: prop.keySet()) {
 		    
 			    	String skey= (String) key;
@@ -37,14 +39,8 @@ public class PersisteAccounts {
 			    	cc.setDescricao(value); 
 			    	String p1 = dp1.substring(0, 2);
 			    	String p2 = dp1.substring(2,6);
-			    	cc.setData(Integer.parseInt(p2+p1));
-			    	Empresa e = em.find(Empresa.class, Integer.parseInt(cvm1));
-			    	cc.setEmpresa(e);
-			    	Periodo p = em.find(Periodo.class, 2);
-			    	cc.setPeriodo(p);
-			    	TipoDemonstrativo td = em.find(TipoDemonstrativo.class, tipo);
-			    	cc.setTipoDemonstrativo(td);
-			    	cc.setVersao(1);
+			    	cc.setDemonstrativo(dm);
+			    	
 			    	persiste(cc);
 			    	
 		    }    	
@@ -53,11 +49,20 @@ public class PersisteAccounts {
 		
 	}
 	}
+	static Demonstrativo dm = new Demonstrativo();
 	public static void persisteAbrangencia() {
 		em = PersistenceManager.INSTANCE.getEntityManager();
-	
-		
 					String cvm1="5258";
+					
+				  	Empresa e = em.find(Empresa.class, Integer.parseInt(cvm1));
+					dm.setEmpresa(e);
+					Periodo p = em.find(Periodo.class, 2);
+					dm.setPeriodo(p);
+					dm.setEstadoCriacao(0);
+					dm.setVersao(1);
+					dm.setData(201111);
+					
+					
 				
 					String dp1="122011";
 				
@@ -103,8 +108,9 @@ public class PersisteAccounts {
 			    abrangencia.setSiglaAbrangencia("T");
 			  
 			    persiste(abrangencia);*/
-			 }catch(Exception e) {
-				 e.printStackTrace();
+			 }catch(Exception e1) {
+				 e1.printStackTrace();
+				 
 			 }
 			 close();
 		 

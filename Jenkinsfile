@@ -4,6 +4,7 @@ pipeline {
         stage('Build') { 
             steps { 
                echo 'This is a minimal pipeline.' 
+	       java -version
             }
         }
     }

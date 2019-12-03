@@ -2,6 +2,9 @@ package br.com.cvm.bd.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.List;
 
 
@@ -56,7 +59,7 @@ public class Indicador implements Serializable {
 	public void setNomeIndicador(String nomeIndicador) {
 		this.nomeIndicador = nomeIndicador;
 	}
-
+	@JsonIgnore
 	public List<ContaContabil> getContaContabils() {
 		return this.contaContabils;
 	}

@@ -2,6 +2,9 @@ package br.com.cvm.bd.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.List;
 
 
@@ -81,7 +84,7 @@ public class Demonstrativo implements Serializable {
 	public void setVersao(int versao) {
 		this.versao = versao;
 	}
-
+	@JsonIgnore
 	public List<ContaContabil> getContaContabils() {
 		return this.contaContabils;
 	}
@@ -119,7 +122,7 @@ public class Demonstrativo implements Serializable {
 	public void setPeriodo(Periodo periodo) {
 		this.periodo = periodo;
 	}
-
+	@JsonIgnore
 	public List<ValorContabil> getValorContabils() {
 		return this.valorContabils;
 	}

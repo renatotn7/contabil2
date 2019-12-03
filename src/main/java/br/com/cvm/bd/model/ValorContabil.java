@@ -19,8 +19,8 @@ public class ValorContabil implements Serializable {
 	@Column(name="id_valor_contabil", unique=true, nullable=false)
 	private int idValorContabil;
 
-	@Column(nullable=false)
-	private double valor;
+	@Column(nullable=true)
+	private Double valor;
 
 	//bi-directional many-to-one association to ContaContabil
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -43,11 +43,11 @@ public class ValorContabil implements Serializable {
 		this.idValorContabil = idValorContabil;
 	}
 
-	public double getValor() {
+	public Double getValor() {
 		return this.valor;
 	}
 
-	public void setValor(double valor) {
+	public void setValor(Double valor) {
 		this.valor = valor;
 	}
 

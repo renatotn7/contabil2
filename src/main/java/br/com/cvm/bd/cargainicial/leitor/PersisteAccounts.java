@@ -3,6 +3,7 @@ package br.com.cvm.bd.cargainicial.leitor;
 import java.util.Properties;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import br.com.cvm.bd.helper.PersistenceManager;
 import br.com.cvm.bd.model.Abrangencia;
@@ -12,6 +13,7 @@ import br.com.cvm.bd.model.Demonstrativo;
 import br.com.cvm.bd.model.Empresa;
 import br.com.cvm.bd.model.Periodo;
 import br.com.cvm.bd.model.TipoDemonstrativo;
+import br.com.cvm.bd.model.ValorContabil;
 import br.com.cvm.leitor.PeriodoToProperties;
 
 public class PersisteAccounts {
@@ -27,33 +29,70 @@ public class PersisteAccounts {
 	    PersistenceManager.INSTANCE.close();
 	}
 	public static void persisteDemonstrativo(Properties prop, int tipo,String cvm1, String dp1, String periodo) {
-		try {
+		
 			
 		    for(Object key: prop.keySet()) {
-		    
+		    	try {
 			    	String skey= (String) key;
 			    	System.out.println(skey+ "   "  + prop.getProperty(skey));
-			    	String value = prop.getProperty(skey).split(";")[0];
+			    	String[] par=  prop.getProperty(skey).split(";");
+			    	String conta = prop.getProperty(skey).split(";")[0];
+			    	String value=null;
+			    	Double dvalor = null;
+			    	if(par.length>1) {
+			    		
+			    	 value = par[1].replaceAll("\\.", "").replaceAll(",", ".");
+			  //  try {
+			    	 dvalor = Double.parseDouble(value);
+			//    }catch(Exception ex) {
+			    //	ex.printStackTrace();
+			  //  }
+			    	}
+			   
+			    	ValorContabil vc  = new ValorContabil();
+			  
 			    	ContaContabil cc = new ContaContabil();
 			    	cc.setContaContabil(skey);
-			    	cc.setDescricao(value); 
+			    	cc.setDescricao(conta); 
+			    	 Query query = em.createQuery("SELECT e FROM TipoDemonstrativo e where e.idTipo="+tipo+"");
+			    	 TipoDemonstrativo  tp = (TipoDemonstrativo) query.getSingleResult();
+			    		cc.setAnalise(1);
+			    	cc.setTipoDemonstrativo(tp);
 			    	String p1 = dp1.substring(0, 2);
 			    	String p2 = dp1.substring(2,6);
+			    			    	persiste(cc);
+			    	
 			    	cc.setDemonstrativo(dm);
+			      	vc.setContaContabil(cc);
+			      	vc.setDemonstrativo(dm);
+			      	vc.setValor(dvalor);
+			      	
 			    	
-			    	persiste(cc);
-			    	
+			    	persiste(vc);
+		    	}catch(Exception e) {
+		    		String skey= (String) key;
+		    		String[] par=  prop.getProperty(skey).split(";");
+		    	
+		    		String conta = prop.getProperty(skey).split(";")[0];
+			    	String value=null;
+			    	if(par.length>1) {
+			    	 value = prop.getProperty(skey).split(";")[1].replace("\\.", "").replace(",", ".");
+			    	 
+			    	}
+			    	System.err.println(conta+ " - "+value);
+		    		e.printStackTrace();
+		    	}
 		    }    	
+		    
 		
-	}catch(Exception e) {
-		
-	}
+
 	}
 	static Demonstrativo dm = new Demonstrativo();
 	public static void persisteAbrangencia() {
-		em = PersistenceManager.INSTANCE.getEntityManager();
+					em = PersistenceManager.INSTANCE.getEntityManager();
 					String cvm1="5258";
-					
+					em.getTransaction()
+			        .begin();
 				  	Empresa e = em.find(Empresa.class, Integer.parseInt(cvm1));
 					dm.setEmpresa(e);
 					Periodo p = em.find(Periodo.class, 2);
@@ -61,9 +100,20 @@ public class PersisteAccounts {
 					dm.setEstadoCriacao(0);
 					dm.setVersao(1);
 					dm.setData(201111);
+				//	try {
+					em.persist(dm);
+					
+					 em.flush();
+					 em.clear();
+					 em.getTransaction()
+				        .commit();
+				//	}catch(Exception e1) {
+						// Query query = em.createQuery("SELECT e FROM Demonstrativo e where e.Empresa="+e.getCvm()+" and e.");
+				    	// TipoDemonstrativo  tp = (TipoDemonstrativo) query.getSingleResult();
+				//	}
+				//	
 					
 					
-				
 					String dp1="122011";
 				
 					String per1="A";

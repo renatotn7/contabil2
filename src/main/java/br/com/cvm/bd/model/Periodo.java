@@ -2,6 +2,9 @@ package br.com.cvm.bd.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.List;
 
 
@@ -57,7 +60,7 @@ public class Periodo implements Serializable {
 	public void setSiglaPeriodo(String siglaPeriodo) {
 		this.siglaPeriodo = siglaPeriodo;
 	}
-
+	@JsonIgnore
 	public List<Demonstrativo> getDemonstrativos() {
 		return this.demonstrativos;
 	}

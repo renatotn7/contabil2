@@ -84,6 +84,7 @@ public class PeriodoToProperties {
 			Properties pdr=new Properties();
 			Properties pdva=new Properties();
 			
+			
 		   for(ContaContabil c:planoContas) {
 		
 			   if(c.getTipoDemonstrativo().getSiglaTipo().equals( "DRA")) {

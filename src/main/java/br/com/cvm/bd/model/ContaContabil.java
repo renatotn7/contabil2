@@ -2,6 +2,9 @@ package br.com.cvm.bd.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.List;
 
 
@@ -28,6 +31,17 @@ public class ContaContabil implements Serializable {
 
 	@Column(name="id_refconta")
 	private int idRefconta;
+	
+	@Column(name="analise")
+	private int analise; 
+
+	public int getAnalise() {
+		return analise;
+	}
+
+	public void setAnalise(int analise) {
+		this.analise = analise;
+	}
 
 	//bi-directional many-to-one association to Demonstrativo
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -106,7 +120,7 @@ public class ContaContabil implements Serializable {
 	public void setTipoDemonstrativo(TipoDemonstrativo tipoDemonstrativo) {
 		this.tipoDemonstrativo = tipoDemonstrativo;
 	}
-
+	@JsonIgnore
 	public List<ValorContabil> getValorContabils() {
 		return this.valorContabils;
 	}

@@ -2,6 +2,9 @@ package br.com.cvm.bd.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.List;
 
 
@@ -61,7 +64,7 @@ public class TipoDemonstrativo implements Serializable {
 	public void setSiglaTipo(String siglaTipo) {
 		this.siglaTipo = siglaTipo;
 	}
-
+	@JsonIgnore
 	public List<ContaContabil> getContaContabils() {
 		return this.contaContabils;
 	}

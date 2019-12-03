@@ -2,6 +2,9 @@ package br.com.cvm.bd.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.List;
 
 
@@ -121,7 +124,7 @@ public class Empresa implements Serializable {
 	public void setSubsetor(String subsetor) {
 		this.subsetor = subsetor;
 	}
-
+	@JsonIgnore
 	public List<Demonstrativo> getDemonstrativos() {
 		return this.demonstrativos;
 	}

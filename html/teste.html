@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.getJSON demo</title>
+  <style>
+  img {
+    height: 100px;
+    float: left;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+ 
+<div id="contaComparada"></div>
+ <div id="opcoes"></div>
+ <div id="button"></div>
+
+<script>
+ function myFunction() {
+	 var jsonresponse  = {contacomparada:"",contaescolhida:""};
+	jsonresponse.contacomparada=$("input[name='contacomparada']").attr("data-jsondata");
+	jsonresponse.contaescolhida=$("input[name='chooseofaccount']:checked").attr("data-jsondata")	;
+	alert(jsonresponse.contaescolhida)
+if (typeof jsonresponse.contaescolhida === 'undefined') {
+  // color is undefined
+  jsonresponse.contaescolhida="";
+}
+	//   alert(jsonresponse.contaescolhida.contaContabil);
+//	alert(JSON.stringify(jsonresponse.contacomparada)	);
+	
+	
+	request = $.ajax({
+	  headers: { 
+        'Accept': 'application/json',
+        'Content-Type': 'application/json' 
+    },
+       url: "http://localhost:8080/postComparada1",
+        type: "post",
+        data: JSON.stringify(jsonresponse),
+	//	dataType :  'json'
+    });
+
+    // Callback handler that will be called on success
+    request.done(function (response, textStatus, jqXHR){
+        // Log a message to the console
+        console.log("Hooray, it worked!");
+    });
+
+    // Callback handler that will be called on failure
+    request.fail(function (jqXHR, textStatus, errorThrown){
+        // Log the error to the console
+        console.error(
+            "The following error occurred: "+
+            textStatus, errorThrown
+        );
+    });
+	
+	
+  }
+(function() {
+  var url = "http://localhost:8080/getMelhorCandidatoDif?cvmbd=5258&cvmprop=5258&databd=122011&dataprop=122012&perbd=A&perprop=A";
+  $.getJSON( url, {
+    tags: "mount rainier",
+    tagmode: "any",
+    format: "json"
+  })
+    .done(function( data ) {
+	alert("data");
+	var contacontabil = data.comparado;
+	 $(  "#contaComparada").append( "<input type='hidden' id='contacomparada' name='contacomparada' data-jsondata='"+JSON.stringify(contacontabil)+"'>")
+	  $(  "#contaComparada").append( "<br/><strong>raiz: </strong>"+data.raiz );
+	  $(  "#contaComparada").append( "<br/><strong>Conta Contabil Comparada: </strong>"+contacontabil.contaContabil );
+	    $(  "#contaComparada").append( "<br/><strong>Descricao: </strong>"+contacontabil.descricao );
+		  $(  "#contaComparada").append( "<br/><strong>Tipo Balanco: </strong>"+contacontabil.tipoDemonstrativo.descricaoTipo );
+		 $(  "#contaComparada").append( "<br/><strong>Data: </strong>"+contacontabil.data );
+		 
+	
+		
+		
+      $.each( data.candidatos, function( i, item ) {
+	//   $(  "#contaComparada").append( "#opcao"+i);
+	 	 var contacontabil = item.conta;
+		 
+		 $(  "#opcoes").append( "<br/><br/><input type='radio' name='chooseofaccount' data-jsondata='"+JSON.stringify(contacontabil)+"' />");
+ $(  "#opcoes").append( "<br/><strong>raiz: </strong>"+item.raiz +"<br/>");	 
+	 $(  "#opcoes").append( "<strong>Conta Contabil opcao: </strong>"+contacontabil.contaContabil );
+	    $(  "#opcoes").append( "<br/><strong>Descricao: </strong>"+contacontabil.descricao );
+		  $( "#opcoes").append( "<br/><strong>Tipo Balanco: </strong>"+contacontabil.tipoDemonstrativo.descricaoTipo );
+		 $( "#opcoes").append( "<br/><strong>Data: </strong>"+contacontabil.data );
+       $( "#opcoes").append( "<br/><strong>similaridade: </strong>"+item.similaridade );
+      
+      });
+		 $(  "#opcoes").append( "<br/><br/><input type='radio' name='chooseofaccount'  />NDA<br/>");
+	       $( "#button").append( " <button onclick='myFunction()'>Click me</button> ");
+	 
+    }).then(data => {
+    // Work with JSON data here
+    console.log(data)
+  });
+})();
+</script>
+ 
+</body>
+</html>

@@ -174,12 +174,24 @@ public class PersisteAccounts {
 	  }
 	public static void persisteAccount(ContaContabil cc) {
 		em = PersistenceManager.INSTANCE.getEntityManager();
+		if(cc.getIdContaContabil()>0) {
+			em.getTransaction()
+	        .begin();
+			ContaContabil e = em.find(ContaContabil.class, cc.getIdContaContabil());
+			e.setIdRefconta(cc.getIdRefconta());
+			e.setAnalise(cc.getAnalise());
+			em.getTransaction()
+	        .commit();
+	//		close();
+		}else {
+		
 		em.getTransaction()
         .begin();
 		persiste(cc);
 		em.getTransaction()
         .commit();
 		close();
+		}
 	}
 	}
 

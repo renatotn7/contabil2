@@ -4,6 +4,7 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * The persistent class for the demonstrativo database table.
  * 
  */
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Entity
 @Table(name="demonstrativo")
 @NamedQuery(name="Demonstrativo.findAll", query="SELECT d FROM Demonstrativo d")
@@ -31,21 +33,21 @@ public class Demonstrativo implements Serializable {
 
 	@Column(nullable=false)
 	private int versao;
-
+	@JsonIgnore
 	//bi-directional many-to-one association to ContaContabil
 	@OneToMany(mappedBy="demonstrativo")
 	private List<ContaContabil> contaContabils;
 
 	//bi-directional many-to-one association to Empresa
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="cvm", nullable=false)
 	private Empresa empresa;
 
 	//bi-directional many-to-one association to Periodo
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="id_periodo", nullable=false)
 	private Periodo periodo;
-
+	@JsonIgnore
 	//bi-directional many-to-one association to ValorContabil
 	@OneToMany(mappedBy="demonstrativo")
 	private List<ValorContabil> valorContabils;
@@ -84,7 +86,7 @@ public class Demonstrativo implements Serializable {
 	public void setVersao(int versao) {
 		this.versao = versao;
 	}
-	@JsonIgnore
+
 	public List<ContaContabil> getContaContabils() {
 		return this.contaContabils;
 	}
@@ -122,7 +124,7 @@ public class Demonstrativo implements Serializable {
 	public void setPeriodo(Periodo periodo) {
 		this.periodo = periodo;
 	}
-	@JsonIgnore
+
 	public List<ValorContabil> getValorContabils() {
 		return this.valorContabils;
 	}

@@ -4,6 +4,7 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.List;
 
@@ -12,6 +13,8 @@ import java.util.List;
  * The persistent class for the abrangencia database table.
  * 
  */
+
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Entity
 @Table(name="abrangencia")
 @NamedQuery(name="Abrangencia.findAll", query="SELECT a FROM Abrangencia a")
@@ -28,7 +31,7 @@ public class Abrangencia implements Serializable {
 
 	@Column(name="sigla_abrangencia", nullable=false, length=3)
 	private String siglaAbrangencia;
-
+	@JsonIgnore
 	//bi-directional many-to-one association to TipoDemonstrativo
 	@OneToMany(mappedBy="abrangencia")
 	private List<TipoDemonstrativo> tipoDemonstrativos;
@@ -59,7 +62,7 @@ public class Abrangencia implements Serializable {
 	public void setSiglaAbrangencia(String siglaAbrangencia) {
 		this.siglaAbrangencia = siglaAbrangencia;
 	}
-	@JsonIgnore
+
 	public List<TipoDemonstrativo> getTipoDemonstrativos() {
 		return this.tipoDemonstrativos;
 	}

@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.google.gson.Gson;
 
+import br.com.cvm.bd.ComparaContasJaro;
 import br.com.cvm.bd.cargainicial.leitor.PersisteAccounts;
 import br.com.cvm.bd.helper.PersistenceManager;
 import br.com.cvm.bd.model.ContaContabil;
@@ -30,6 +31,7 @@ import br.com.cvm.leitor.ExtratorDeDiferencasToObject;
 import br.com.cvm.rest.json.RespostaComparacao;
 import entities.ContaCandidata;
 import entities.ContaComparada;
+import entities.Divergencia;
 import entities.RelatorioDiferenca;
 
 
@@ -172,15 +174,15 @@ public class ApplicationController {
 			return null;
 		}
 		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
-		 Query query = em.createQuery("SELECT distinct e.contaContabil FROM ContaContabil e where e.data=201212");
-		  List<String> contasjainseridas= (List<String>) query.getResultList();
+		 Query query = em.createQuery("SELECT distinct e.idContaContabil FROM ContaContabil e where e.analise=1");
+		  List<Integer> contasjainseridas= (List<Integer>) query.getResultList();
 		  Properties p =new Properties();
-		   for(String c:contasjainseridas) {
-			   p.put(c, "ok");
+		   for(Integer c:contasjainseridas) {
+			   p.put(c+"", "ok");
 		   }
 		for(ContaComparada ccomp : ccomps) {
 			
-		if(p.getProperty(ccomp.getComparado().getContaContabil())!=null) {
+		if(p.getProperty(""+ccomp.getComparado().getIdContaContabil())!=null) {
 			continue;
 		}
 			
@@ -198,6 +200,21 @@ public class ApplicationController {
 		return ccompescolhida;
 	}
 	@CrossOrigin(origins = "*")
+	@GetMapping(path="/getMelhorCandidato")
+	//String cvmbd, String cvmprop, String databd, String dataProp,String perbd, String perprop
+	//http://localhost:8080/getRelatorioDiferencas?cvmbd=5258&cvmprop=5258&databd=122011&dataprop=122012&perbd=A&perprop=A
+	  public ContaComparada getMelhorCand() {
+		ComparaContasJaro ccj = new ComparaContasJaro();
+		Divergencia dv = ccj.analisar();
+		
+		ContaComparada	 ccompescolhida	=	escolheMelhorContaComparada(dv.getDiferentes());
+	//com problemas aqui
+		return ccompescolhida;
+	}
+	  
+	  
+	  
+	@CrossOrigin(origins = "*")
 	@GetMapping(path="/getMelhorCandidatoDif")
 	//String cvmbd, String cvmprop, String databd, String dataProp,String perbd, String perprop
 	//http://localhost:8080/getRelatorioDiferencas?cvmbd=5258&cvmprop=5258&databd=122011&dataprop=122012&perbd=A&perprop=A
@@ -209,6 +226,8 @@ public class ApplicationController {
 			  @RequestParam(value="perprop", defaultValue="5258") String perprop
 			  
 			  ) {
+		
+	
 		ExtratorDeDiferencasToObject edto = new ExtratorDeDiferencasToObject(cvmbd,cvmprop,databd,dataprop,perbd,perprop);
 		ArrayList<ContaComparada> ccompsEscolhidos =  new ArrayList<ContaComparada>();
 		ContaComparada ccompescolhida;
@@ -324,7 +343,9 @@ public class ApplicationController {
 			//ContaContabil cc = (ContaContabil) obj.get("contacomparada");
 			
 			ccomparada.setIdRefconta(contaescolhida.getIdContaContabil());
+			
 		}
+		ccomparada.setAnalise(1);
 		PersisteAccounts.persisteAccount(ccomparada);
 		System.out.println(ccomparada.getIdRefconta());
 	}

@@ -101,6 +101,80 @@ public static String possivelCorrespondente(List<ContaContabil> cbd, String key2
 	
 }
 
+public static String possivelCorrespondente2(List<ContaContabil> cbd, List<ContaContabil> cbd2) {
+	StringBuilder sb = new StringBuilder();
+	boolean encontrou = false;
+	/* for(Object key :p.keySet()) {
+		 String key1 = (String)key;
+		 String value1 = p.getProperty(key1.trim());
+		 if(value2.equals(value1.split(";")[0])) {
+			 encontrou = true;
+			 sb.append("\t\tmatch 100%: "+key1 +" "+ value1.split(";")[0]+"\n");
+		 }
+	 }*/
+	for(ContaContabil cnovo: cbd2) {
+
+	 
+	 
+	int count=0;
+	 for(ContaContabil cc:cbd) {
+		 String key1 = (String)cc.getContaContabil().trim();
+		 String value1 = cc.getDescricao().trim();
+		 double jaroscore = jw.score(cnovo.getDescricao().trim(), value1.split(";")[0]);
+		 if(count<3) {
+			 if(jaroscore>0.70) {
+				 count++;
+				 encontrou = true;
+				 double perc = Math.round((jaroscore*100.0) * 100.0) / 100.0;
+				 sb.append("\t\tmatch "+perc+"%: "+key1 +" "+ value1.split(";")[0]+"\n");
+				
+				 ContaCandidata ccand = new ContaCandidata();
+				 ccand.setSimilaridade(perc);
+				 ccand.setConta(cc);
+					String[] niveisConta1 = cc.getContaContabil().split("\\.");
+					String contaInicial1 = niveisConta1[0];
+					String contasPai1[] = new String[niveisConta1.length-1];
+					String sinicial1 = "";
+					for(int i=1;i<niveisConta1.length-1;i++) {
+						
+						contaInicial1 +="."+niveisConta1[i];
+						//encontra no valor contabil fixando o plano para este considerado a conta superior, pois é la que tem o plano fixo
+						 Query query1 = em.createQuery("SELECT e.contaContabil FROM ValorContabil e where e.contaContabil.contaContabil=\'"+contaInicial1+"\' and e.demonstrativo.idDemonstrativo="+cc.getDemonstrativo().getIdDemonstrativo());
+				    	 ContaContabil  tpai = (ContaContabil) query1.getSingleResult();
+						String estaConta = (String)tpai.getDescricao();
+						sinicial1+=" > "+estaConta.split(";")[0];
+						
+					}
+					ccand.setRaiz(sinicial1);
+			
+					ContaComparada ccomp = new ContaComparada();
+					ccomp.setComparado(cnovo);
+					ccomp.setTipoComparacao("N");
+					ccomp.addCandidato(ccand);
+					String[] niveisConta = cnovo.getContaContabil().trim().split("\\.");
+					String contaInicial = niveisConta[0];
+					String contasPai[] = new String[niveisConta.length-1];
+					String sinicial = cnovo.getTipoDemonstrativo().getSiglaTipo();
+					for(int i=1;i<niveisConta.length-1;i++) {
+						
+						contaInicial +="."+niveisConta[i];
+						String estaConta = (String)cnovo.getDescricao().trim();
+						sinicial+=" > "+estaConta.split(";")[0];
+						
+					}
+					
+					ccomp.setRaiz(sinicial);
+					 divergencia.addNaoExistencia(ccomp);
+				 
+			 }
+		 }
+	 }
+	}
+	if(encontrou) sb.append("\n");	
+	return sb.toString();
+	
+}
+
 public static String comparaExistencia(Properties novo,String sigla, Integer data, String cvm) {
 	int count = 0;
 	StringBuilder sb1 = new StringBuilder(); 

@@ -4,6 +4,7 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * The persistent class for the indicador database table.
  * 
  */
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Entity
 @Table(name="indicador")
 @NamedQuery(name="Indicador.findAll", query="SELECT i FROM Indicador i")
@@ -28,7 +30,7 @@ public class Indicador implements Serializable {
 
 	@Column(name="nome_indicador", nullable=false, length=100)
 	private String nomeIndicador;
-
+	@JsonIgnore
 	//bi-directional many-to-one association to ContaContabil
 	@OneToMany(mappedBy="indicador")
 	private List<ContaContabil> contaContabils;
@@ -59,7 +61,7 @@ public class Indicador implements Serializable {
 	public void setNomeIndicador(String nomeIndicador) {
 		this.nomeIndicador = nomeIndicador;
 	}
-	@JsonIgnore
+	
 	public List<ContaContabil> getContaContabils() {
 		return this.contaContabils;
 	}

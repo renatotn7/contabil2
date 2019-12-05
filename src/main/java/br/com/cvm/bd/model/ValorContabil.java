@@ -3,11 +3,14 @@ package br.com.cvm.bd.model;
 import java.io.Serializable;
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 /**
  * The persistent class for the valor_contabil database table.
  * 
  */
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Entity
 @Table(name="valor_contabil")
 @NamedQuery(name="ValorContabil.findAll", query="SELECT v FROM ValorContabil v")
@@ -23,12 +26,12 @@ public class ValorContabil implements Serializable {
 	private Double valor;
 
 	//bi-directional many-to-one association to ContaContabil
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="id_conta_contabil", nullable=false)
 	private ContaContabil contaContabil;
 
 	//bi-directional many-to-one association to Demonstrativo
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="id_demonstrativo", nullable=false)
 	private Demonstrativo demonstrativo;
 

@@ -2,7 +2,7 @@ package entities;
 
 import br.com.cvm.bd.model.ContaContabil;
 
-public class ContaCandidata {
+public class ContaCandidata implements Comparable<ContaCandidata>{
 	ContaContabil conta;
 	Double similaridade ;
 	String raiz;
@@ -24,4 +24,14 @@ public class ContaCandidata {
 	public void setSimilaridade(Double similaridade) {
 		this.similaridade = similaridade;
 	}
+
+    public int compareTo(ContaCandidata outraConta) {
+        if (this.similaridade < outraConta.similaridade) {
+            return -1;
+        }
+        if (this.similaridade > outraConta.similaridade) {
+            return 1;
+        }
+        return 0;
+    }
 }

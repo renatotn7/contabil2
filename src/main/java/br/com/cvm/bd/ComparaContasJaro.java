@@ -108,6 +108,19 @@ public  String possivelCorrespondente2(List<ContaContabil> cbd, List<ContaContab
 					for(int i = 0 ; i< Math.abs(niveisConta1.length - niveisConta.length);i++) {
 						perc-=valordescontado;
 					}
+					
+					if(perc>95) {
+						
+						
+						em.getTransaction()
+				        .begin();
+						cnovo.setAnalise(1);
+						cnovo.setRefConta(cc);
+					
+						em.getTransaction()
+				        .commit();
+						continue;
+					}
 					ccand.setSimilaridade(perc);
 					ccand.setRaiz(sinicial1);
 			
@@ -123,10 +136,23 @@ public  String possivelCorrespondente2(List<ContaContabil> cbd, List<ContaContab
 		
 	 }
 	 Collections.sort(ccands,Collections.reverseOrder());
+	 if(ccands.get(0).getSimilaridade()<70) {
+			
+			em.getTransaction()
+	        .begin();
+			cnovo.setAnalise(1);
+		
+		
+			em.getTransaction()
+	        .commit();
+			continue;
+	 }
 	 for(ContaCandidata ccand : ccands) {
 		 if(count<5) {
 			 count++;
+			 if(ccand.getSimilaridade()>=70) {
 			 ccomp.addCandidato(ccand);
+			 }
 		 }
 	 }
 		

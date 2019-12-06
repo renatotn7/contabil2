@@ -341,13 +341,15 @@ public class ApplicationController {
 		if(((String)obj.get("contaescolhida")).length()>0) {
 			ContaContabil contaescolhida=gson.fromJson((String)obj.get("contaescolhida"),ContaContabil.class);
 			//ContaContabil cc = (ContaContabil) obj.get("contacomparada");
+			EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+			ContaContabil c = em.find(ContaContabil.class, contaescolhida.getIdContaContabil());
 			
-			ccomparada.setIdRefconta(contaescolhida.getIdContaContabil());
+			ccomparada.setRefConta(c);
 			
 		}
 		ccomparada.setAnalise(1);
 		PersisteAccounts.persisteAccount(ccomparada);
-		System.out.println(ccomparada.getIdRefconta());
+		System.out.println(ccomparada.getRefConta().getIdContaContabil());
 	}
 
 }

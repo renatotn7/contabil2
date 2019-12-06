@@ -6,6 +6,7 @@ import javax.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+
 import java.util.List;
 
 
@@ -30,9 +31,27 @@ public class ContaContabil implements Serializable {
 
 	@Column(nullable=false, length=255)
 	private String descricao;
+	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="id_conta_pai")
+	private ContaContabil contaPai;
+	
+	@JsonIgnore
+	//bi-directional many-to-one association to ContaContabil
+	@OneToMany(mappedBy="contaPai")
+	private List<ContaContabil> contasFilhos;
 
-	@Column(name="id_refconta")
-	private int idRefconta;
+	//bi-directional many-to-one association to ContaContabil
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="id_refconta")
+	private ContaContabil refConta;
+	@JsonIgnore
+	//bi-directional many-to-one association to ContaContabil
+	@OneToMany(mappedBy="refConta")
+	private List<ContaContabil> refContas;
+	
+	
+	
 	
 	@Column(name="analise")
 	private int analise; 
@@ -91,13 +110,6 @@ public class ContaContabil implements Serializable {
 		this.descricao = descricao;
 	}
 
-	public int getIdRefconta() {
-		return this.idRefconta;
-	}
-
-	public void setIdRefconta(int idRefconta) {
-		this.idRefconta = idRefconta;
-	}
 
 	public Demonstrativo getDemonstrativo() {
 		return this.demonstrativo;
@@ -144,5 +156,65 @@ public class ContaContabil implements Serializable {
 
 		return valorContabil;
 	}
+	
 
+	public ContaContabil getContaPai() {
+		return this.contaPai;
+	}
+
+	public void setContaPai(ContaContabil contaContabil1) {
+		this.contaPai = contaContabil1;
+	}
+
+	public List<ContaContabil> getContasFilhos() {
+		return this.contasFilhos;
+	}
+
+	public void setContasFilhos(List<ContaContabil> contaContabils1) {
+		this.contasFilhos = contaContabils1;
+	}
+
+	public ContaContabil addContasFilhos(ContaContabil contaContabils1) {
+		getContasFilhos().add(contaContabils1);
+		contaContabils1.setContaPai(this);
+
+		return contaContabils1;
+	}
+
+	public ContaContabil removeContaContabils1(ContaContabil contaContabils1) {
+		getContasFilhos().remove(contaContabils1);
+		contaContabils1.setContaPai(null);
+
+		return contaContabils1;
+	}
+
+	public ContaContabil getRefConta() {
+		return this.refConta;
+	}
+
+	public void setRefConta(ContaContabil contaContabil2) {
+		this.refConta = contaContabil2;
+	}
+
+	public List<ContaContabil> getRefContas() {
+		return this.refContas;
+	}
+
+	public void setRefContas(List<ContaContabil> contaContabils2) {
+		this.refContas = contaContabils2;
+	}
+
+	public ContaContabil addRefContas(ContaContabil contaContabils2) {
+		getRefContas().add(contaContabils2);
+		contaContabils2.setRefConta(this);
+
+		return contaContabils2;
+	}
+
+	public ContaContabil removeRefContas(ContaContabil contaContabils2) {
+		getRefContas().remove(contaContabils2);
+		contaContabils2.setRefConta(null);
+
+		return contaContabils2;
+	}
 }

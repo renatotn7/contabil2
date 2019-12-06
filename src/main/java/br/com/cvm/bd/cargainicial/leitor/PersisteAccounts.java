@@ -7,7 +7,7 @@ import javax.persistence.Query;
 
 import br.com.cvm.bd.helper.PersistenceManager;
 import br.com.cvm.bd.model.Abrangencia;
-import br.com.cvm.bd.model.Account;
+
 import br.com.cvm.bd.model.ContaContabil;
 import br.com.cvm.bd.model.Demonstrativo;
 import br.com.cvm.bd.model.Empresa;
@@ -178,7 +178,7 @@ public class PersisteAccounts {
 			em.getTransaction()
 	        .begin();
 			ContaContabil e = em.find(ContaContabil.class, cc.getIdContaContabil());
-			e.setIdRefconta(cc.getIdRefconta());
+			e.setRefConta(cc);
 			e.setAnalise(cc.getAnalise());
 			em.getTransaction()
 	        .commit();

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="stylesheet" type="text/css" href="../../style/bradseg_styles.min.css">
+    <link rel="stylesheet" type="text/css" href="../../style/styleguide.min.css">
+    <link rel="stylesheet" type="text/css" href="../../style/bundle.css">
+    <link rel="stylesheet" data-href="../../style/accessibility/bradseg_black_white.min.css" id="bradsegBlackWhite"/>
+    <link rel="stylesheet" data-href="../../style/accessibility/bradseg_high_contrast.min.css" id="bradsegHighContrast"/>
+
+    <link href="../../style/icons/favicon/favicon-16x16.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <title>Bradesco Seguros - Guia de Estilos</title>
+
+</head>
+<body class="styleguide">
+    <!-- MENU -->
+    <div class="styleguide-header">
+        <img class="logo-bradseg hidden-sm" src="../../style/logo/bradseg_default.svg" data-grayscale="../../style/logo/bradseg_grayscale.svg" data-highcontrast="../../style/logo/bradseg_highcontrast.svg">
+        <img class="logo-bradseg visible-sm" src="../../style/logo/bradseg_sm_default.svg" data-grayscale="../../style/logo/bradseg_sm_grayscale.svg" data-highcontrast="../../style/logo/bradseg_sm_highcontrast.svg">
+        <span class="title" onclick="location.href='../../../index.html'">Guia de Estilos <span class="icon-nav-selecionar"></span></span>
+        <span class="nav-options">
+            <a href="../../index.html">Início</a>
+             
+            <a href="javascript:;" class="selected">Componentes</a>
+            <a href="../bradseg-css.html">CSS</a>
+            <a href="javascript.html">JS</a>
+            <a href="../taxonomia.html" style="display: none;">Taxonomia</a>
+        </span>
+        <span class="acessibilidade">
+            <a href="javascript:;" class="btn_smallFont"><span class="icon-acess-font-menor"></span></a>
+            <a href="javascript:;" class="btn_tallFont"><span class="icon-acess-font-maior"></span></a>
+            <a href="javascript:;" class="btn_colorBlind"><span class="icon-acess-baixa-visao"></span></a>
+        </span>
+    </div>
+
+    <div class="styleguide-content">
+        <!-- Sidebar -->
+        <aside class="styleguide-menu">
+            <ul>
+              <li><div><a href="tipografia.html" >Tipografia</a></div></li>
+      				<li><div><a href="iconografia.html" >Iconografia</a></div></li>
+      				<li><div><a href="cores.html" >Cores</a></div></li>
+      				<li><div><a href="header.html" >Template Básico</a></div></li>
+      				<li><div><a href="grid.html" >Grid</a></div></li>
+      				<li><div><a href="espacamentos.html" >Espaçamentos</a></div></li>
+      				<li><div><a href="formularios.html" >Formulários</a></div></li>
+      				<li><div><a href="preencher-dependentes.html" >Preencher Dependentes</a></div></li>
+      				<li><div><a href="separadores.html" >Separadores</a></div></li>
+      				<li><div><a href="tabs.html" >Tabs</a></div></li>
+      				<li><div><a href="paineis-e-cards.html" >Paineis e cards</a></div></li>
+      				<li><div><a href="tabelas-e-listas.html" >Tabelas e Listas</a></div></li>
+      				<li><div><a href="botoes.html" >Botões</a></div><li>
+      				<li><div><a href="boxes.html" >Boxes</a></div><li>
+              <li><div><a href="javascript.html" >Javascript</a></div><li>
+      				<li><div><a href="modal.html" >Modal</a></div><li>
+            </ul>
+        </aside>
+
+        <!-- Section -->
+        <section class="styleguide-section">
+            <div id="template-basico">
+                <div class="col-md-12">
+                    <h2 class="text-center">Template Básico</h2>
+					<hr class="red">
+                </div>
+                    <!-- Começo Base -->
+                    <div class="col-md-12">
+                        <h4 class="font-darkgray">Estrutura Básica</h4>
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-5">
+                                <main class="content">
+                                    <p class="font16px">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                </main>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="font16px font-OS-Bold">Classes utilizadas para padronizar as páginas</p>
+                                <br>
+                                <br>
+                                <p class="font16px"><span class="font-OS-Bold">content -</span> Bloco para inserção do conteúdo.</p>
+                                <p class="font16px"><span class="font-OS-Bold">conteiner -</span> Irá ajustar todo o conteúdo dento do bloco.</p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="code-box">
+                                    <span class="code-type">HTML</span>
+                                    <pre id="btn-outline1" class="prettyprint full-width">
+<main class="content">
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+    </div>
+</main></pre>
+                                        <a href="javascript:;" class="copy-code" data-clipboard-target="#btn-outline1">Copiar &lt /&gt</a><br/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- Final Base -->
+
+                    <!-- Começo Header -->
+                    <div class="col-md-12">
+                        <h4 class="font-darkgray">Header</h4>
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-5">
+                                <header class="header-component grid valign-middle">
+                                    <div class="grid col valign-middle">
+                                        <i class="header-icon icon-seta-esquerda-b" data-href="../"></i>
+                                        <h3 class="header-title" style="margin-top: 5px;">Seguros</h3>
+                                    </div>
+                                    <div class="header-box-img self-bottom">
+                                        <img class="header-img hidden" src="./assets/images/user-profile.jpg">
+                                    </div>
+                                </header>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="font16px font-OS-Bold">Link da seta</p>
+                                <br>
+                                <br>
+                                <p class="font16px"><span class="font-OS-Bold">data-href -</span> Adicionar o link para qual a página deve retornar.</p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="code-box">
+                                    <span class="code-type">HTML</span>
+                                    <pre id="btn-outline1" class="prettyprint full-width">
+<header class="header-component grid valign-middle">
+<div class="grid col valign-middle">
+<i class="header-icon icon-seta-esquerda-b"></i>
+<h3 class="header-title">Seguros</h3>
+</div>
+<div class="header-box-img self-bottom">
+<img class="header-img" src="../../images/user-profile.jpg">
+</div>
+</header></pre>
+                                        <a href="javascript:;" class="copy-code" data-clipboard-target="#btn-outline1">Copiar &lt /&gt</a><br/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Final Header -->
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../script/vendor/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<script type="text/javascript" src="../../script/bradseg_scripts.min.js"></script>
+<script type="text/javascript" src="../../script/styleguide.min.js"></script>
+<script type="text/javascript" src="../../script/vendor/clipboard.min.js"></script>
+
+</html>

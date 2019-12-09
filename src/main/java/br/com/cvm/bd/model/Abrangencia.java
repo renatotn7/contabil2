@@ -31,11 +31,11 @@ public class Abrangencia implements Serializable {
 
 	@Column(name="sigla_abrangencia", nullable=false, length=3)
 	private String siglaAbrangencia;
-	@JsonIgnore
+/*	@JsonIgnore
 	//bi-directional many-to-one association to TipoDemonstrativo
 	@OneToMany(mappedBy="abrangencia")
 	private List<TipoDemonstrativo> tipoDemonstrativos;
-
+*/
 	public Abrangencia() {
 	}
 
@@ -62,7 +62,7 @@ public class Abrangencia implements Serializable {
 	public void setSiglaAbrangencia(String siglaAbrangencia) {
 		this.siglaAbrangencia = siglaAbrangencia;
 	}
-
+/*
 	public List<TipoDemonstrativo> getTipoDemonstrativos() {
 		return this.tipoDemonstrativos;
 	}
@@ -70,7 +70,6 @@ public class Abrangencia implements Serializable {
 	public void setTipoDemonstrativos(List<TipoDemonstrativo> tipoDemonstrativos) {
 		this.tipoDemonstrativos = tipoDemonstrativos;
 	}
-
 	public TipoDemonstrativo addTipoDemonstrativo(TipoDemonstrativo tipoDemonstrativo) {
 		getTipoDemonstrativos().add(tipoDemonstrativo);
 		tipoDemonstrativo.setAbrangencia(this);
@@ -84,5 +83,6 @@ public class Abrangencia implements Serializable {
 
 		return tipoDemonstrativo;
 	}
+*/
 
 }

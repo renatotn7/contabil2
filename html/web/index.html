@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="robots" content="noindex, nofollow">
+
+		<link rel="stylesheet" type="text/css" href="style/bradseg_styles.min.css">
+		<link rel="stylesheet" type="text/css" href="style/styleguide.min.css">
+		<link rel="stylesheet" data-href="style/accessibility/bradseg_black_white.min.css" id="bradsegBlackWhite"/>
+		<link rel="stylesheet" data-href="style/accessibility/bradseg_high_contrast.min.css" id="bradsegHighContrast"/>
+
+		<link href="style/icons/favicon/favicon-16x16.ico" rel="shortcut icon" type="image/x-icon"/>
+
+		<title>Bradesco Seguros - Guia de Estilos</title>
+
+	</head>
+
+	<body class="styleguide">
+		<div class="styleguide-header">
+			<img class="logo-bradseg hidden-sm" src="style/logo/bradseg_default.svg" data-grayscale="style/logo/bradseg_grayscale.svg" data-highcontrast="style/logo/bradseg_highcontrast.svg">
+			<img class="logo-bradseg visible-sm" src="style/logo/bradseg_sm_default.svg" data-grayscale="style/logo/bradseg_sm_grayscale.svg" data-highcontrast="style/logo/bradseg_sm_highcontrast.svg">
+			<span class="title" onclick="location.href='../index.html'">Guia de Estilos <span class="icon-nav-selecionar"></span></span>
+			<span class="nav-options">
+				<a href="javascript:;" class="selected">Início</a>
+				<a href="pages/componentes/tipografia.html">Componentes</a>
+				<a href="pages/bradseg-css.html">CSS</a>
+				<a href="pages/componentes/javascript.html">JS</a>
+				<a href="pages/taxonomia.html" style="display: none;">Taxonomia</a>
+			</span>
+			<span class="acessibilidade">
+				<a href="javascript:;" class="btn_smallFont"><span class="icon-acess-font-menor"></span></a>
+				<a href="javascript:;" class="btn_tallFont"><span class="icon-acess-font-maior"></span></a>
+				<a href="javascript:;" class="btn_colorBlind"><span class="icon-acess-baixa-visao"></span></a>
+			</span>
+		</div>
+
+		<div class="styleguide-content">
+			<section class="styleguide-section" style="width: 100%">
+				<div class="row">
+					<h2 class="text-center">Guia de Estilos - Web</h2>
+					<hr class="red"></hr>
+					<div class="col-md-6 col-md-offset-3 font18px text-center">
+						<p>Esta é uma biblioteca de componentes, códigos de UI, padrões de design e guia da marca Bradesco Seguros que permitem que você trabalhe com liberdade para criação, mas ao mesmo tempo protegendo a identidade visual do site Institucional Bradesco Seguros.</p>
+						<br/>
+						<p>A finalidade deste guia é facilitar e oferecer um visual único para todas as páginas criadas por um ou diferentes times de desenvolvimento.</p>
+					</div>
+				</div>
+				<div class="section-divider"></div>
+				<div class="row">
+					<h2 class="text-center">Orientações Gerais</h2>
+					<hr class="red"></hr>
+					<div class="col-md-8 col-md-offset-2">
+						<h3 class="text-center">Navegadores</h3>
+						<br/><br/>
+						<p class="font18px text-center">
+							Com base nos dados estatísticos (do período de Junho de 2016 a Julho de 2017) referente ao uso de navegadores, suporte pelos fornecedores, versões mais utilizadas, evoluções de segurança e suporte ao HTML5, suporte ao <i>WebSphere Portal Server 8.5</i>, as versões listadas abaixo são recomendadas pela arquitetura para projetos da Bradesco Seguros, porém recomenda-se estudar cada projeto caso a caso, além de uma reanálise destas indicações se o período de consulta ultrapassar 12 meses da data de elaboração deste documento.
+						</p>
+						<br/><br/>
+						<br/><br/>
+						<div class="row">
+							<div class="col-md-6">
+								<h5 class="font-darkgray text-center">Desktop</h5>
+								<hr>
+								<table class="bradseg-table text-center" width="100%">
+									<thead class="hidden-xs">
+										<tr>
+											<th class="col-md-6 text-center">Browser</th>
+											<th class="col-md-6 text-center">Suporte a partir da versão:</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="col-md-6 col-sm-2 col-xs-12">Chrome</td>
+											<td class="col-md-6 col-sm-7 col-xs-12">49</td>
+										</tr>
+										<tr>
+											<td class="col-md-6 col-sm-2 col-xs-12">Firefox</td>
+											<td class="col-md-6 col-sm-7 col-xs-12">46</td>
+										</tr>
+										<tr>
+											<td class="col-md-6 col-sm-2 col-xs-12">IE</td>
+											<td class="col-md-6 col-sm-7 col-xs-12">11</td>
+										</tr>
+										<tr>
+											<td class="col-md-6 col-sm-2 col-xs-12">Safari</td>
+											<td class="col-md-6 col-sm-7 col-xs-12">9</td>
+										</tr>
+										<tr>
+											<td class="col-md-6 col-sm-2 col-xs-12">Edge</td>
+											<td class="col-md-6 col-sm-7 col-xs-12">13</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="col-md-6">
+								<h5 class="font-darkgray text-center">Mobile/Tablet</h5>
+								<hr>
+								<table class="bradseg-table text-center" width="100%">
+									<thead class="hidden-xs">
+										<tr>
+											<th class="col-md-6 text-center">Browser</th>
+											<th class="col-md-6 text-center">Suporte a partir da versão:</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="col-md-6 col-sm-2 col-xs-12">Chrome</td>
+											<td class="col-md-6 col-sm-7 col-xs-12">49</td>
+										</tr>
+										<tr>
+											<td class="col-md-6 col-sm-2 col-xs-12">Safari</td>
+											<td class="col-md-6 col-sm-7 col-xs-12">iOS 9</td>
+										</tr>
+										<tr>
+											<td class="col-md-6 col-sm-2 col-xs-12">Android Browser</td>
+											<td class="col-md-6 col-sm-7 col-xs-12">Android 4.1.x API 16</td>
+										</tr>
+										<tr>
+											<td class="col-md-6 col-sm-2 col-xs-12">Samsung Internet</td>
+											<td class="col-md-6 col-sm-7 col-xs-12">Android 4.1.x API 16</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<br><br>
+						<h3 class="text-center">Resolução para aplicações Web</h3>
+						<br><br>
+						<p class="font18px">Com o crescente número do uso de dispositivos móveis no Brasil e no mundo, e os <i>grids</i> propostos pelo <i>Bootstrap</i>, a recomendação da arquitetura para projetos web da Bradesco Seguros devem ter no mínimo versões responsivas para as seguintes quebras de layout:</p>
+						<br>
+						<ul>
+							<li><p class="font18px text-left">&#9679; Desktops (&#x02265;992px);</p></li>
+							<li><p class="font18px text-left">&#9679; Tablets (&#x02265;768px);</p></li>
+							<li><p class="font18px text-left">&#9679; Celulares (&#x03c;768px);</p></li>
+						</ul>
+						<br><br>
+						<div class="row">
+							<p class="font12px text-justify">*Como ressaltado na conclusão estas são indicações base e deverão ser avaliadas caso a caso, levando em consideração o tempo de desenvolvimento de cada projeto e outros fatores que se façam necessários.</p>
+							<br><br>
+
+					</div>
+				</div>
+				<div class="section-divider"></div>
+
+				<div class="section-divider"></div>
+
+			</section>
+		</div>
+	</body>
+
+	<script type="text/javascript" src="script/vendor/jquery-3.2.1.min.js"></script>
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	<script type="text/javascript" src="script/bradseg_scripts.min.js"></script>
+	<script type="text/javascript" src="script/styleguide.min.js"></script>
+	<script type="text/javascript" src="script/vendor/clipboard.min.js"></script>
+
+</html>

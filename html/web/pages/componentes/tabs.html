@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="stylesheet" type="text/css" href="../../style/bradseg_styles.min.css">
+    <link rel="stylesheet" type="text/css" href="../../style/styleguide.min.css">
+    <link rel="stylesheet" type="text/css" href="../../style/bundle.css">
+    <link rel="stylesheet" data-href="../../style/accessibility/bradseg_black_white.min.css" id="bradsegBlackWhite"/>
+    <link rel="stylesheet" data-href="../../style/accessibility/bradseg_high_contrast.min.css" id="bradsegHighContrast"/>
+
+    <link href="../../style/icons/favicon/favicon-16x16.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <title>Bradesco Seguros - Guia de Estilos</title>
+
+</head>
+
+<body class="styleguide">
+
+    <div class="styleguide-header">
+        <img class="logo-bradseg hidden-sm" src="../../style/logo/bradseg_default.svg" data-grayscale="../../style/logo/bradseg_grayscale.svg" data-highcontrast="../../style/logo/bradseg_highcontrast.svg">
+        <img class="logo-bradseg visible-sm" src="../../style/logo/bradseg_sm_default.svg" data-grayscale="../../style/logo/bradseg_sm_grayscale.svg" data-highcontrast="../../style/logo/bradseg_sm_highcontrast.svg">
+        <span class="title" onclick="location.href='../../../index.html'">Guia de Estilos <span class="icon-nav-selecionar"></span></span>
+        <span class="nav-options">
+            <a href="../../index.html">Início</a>
+             
+            <a href="javascript:;" class="selected">Componentes</a>
+            <a href="../bradseg-css.html">CSS</a>
+            <a href="javascript.html">JS</a>
+            <a href="../taxonomia.html" style="display: none;">Taxonomia</a>
+        </span>
+        <span class="acessibilidade">
+            <a href="javascript:;" class="btn_smallFont"><span class="icon-acess-font-menor"></span></a>
+            <a href="javascript:;" class="btn_tallFont"><span class="icon-acess-font-maior"></span></a>
+            <a href="javascript:;" class="btn_colorBlind"><span class="icon-acess-baixa-visao"></span></a>
+        </span>
+    </div>
+
+    <div class="styleguide-content">
+        <aside class="styleguide-menu">
+            <ul>
+              <li><div><a href="tipografia.html" >Tipografia</a></div></li>
+      				<li><div><a href="iconografia.html" >Iconografia</a></div></li>
+      				<li><div><a href="cores.html" >Cores</a></div></li>
+      				<li><div><a href="header.html" >Template Básico</a></div></li>
+      				<li><div><a href="grid.html" >Grid</a></div></li>
+      				<li><div><a href="espacamentos.html" >Espaçamentos</a></div></li>
+      				<li><div><a href="formularios.html" >Formulários</a></div></li>
+      				<li><div><a href="preencher-dependentes.html" >Preencher Dependentes</a></div></li>
+      				<li><div><a href="separadores.html" >Separadores</a></div></li>
+      				<li><div><a href="tabs.html" >Tabs</a></div></li>
+      				<li><div><a href="paineis-e-cards.html" >Paineis e cards</a></div></li>
+      				<li><div><a href="tabelas-e-listas.html" >Tabelas e Listas</a></div></li>
+      				<li><div><a href="botoes.html" >Botões</a></div><li>
+      				<li><div><a href="boxes.html" >Boxes</a></div><li>
+              <li><div><a href="javascript.html" >Javascript</a></div><li>
+      				<li><div><a href="modal.html" >Modal</a></div><li>
+            </ul>
+        </aside>
+
+        <section class="styleguide-section">
+            <div id="cnt-botoes" class="cnt-botoes">
+                <h2 class="text-center">Tabs</h2>
+                <h4 id="cnt-sub-1" class="font-darkgray">Tabs</h4>
+                <hr>
+                <div class="col-md-12">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="tabs-component tabs-primary">
+                            <ul class="tabs-list grid">
+                                <li class="tabs-item grid valign-middle halign-center col active" data-tab-open="mais-recentes">
+                                    <span>Mais recentes</span>
+                                </li>
+                                <li class="tabs-item grid valign-middle halign-center col" data-tab-open="mais-antigos">
+                                    <span>Mais antigos</span>
+                                </li>
+                            </ul>
+                            <div data-tab-group="">
+                                <div class="active" data-tab="mais-recentes">
+                                  Mais recentes
+                                </div>
+                                <div class="" data-tab="mais-antigos">
+                                  Mais antigos
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <p class="font16px">
+                            <br>
+                            <span class="font-NJ-Bold">Tabs - </span>Alterna entre opções<br /><br />
+                            <span class="font-NJ-Bold">Cores pré definidas - </span>É possível alterar as cores de background das tabs conforme as classes abaixo:<br /><br />
+                            <span class="font-NJ-Bold">'tabs-primary': </span> <span style="background: #e5173e;">#e5173e</span>,<br />
+                            <span class="font-NJ-Bold">'tabs-secondary': </span> <span style="background: #0181e6;">#0181e6</span>,<br />
+                            <span class="font-NJ-Bold">'tabs-gray': </span> <span style="background: #686868; color: #fff; ">#686868</span>,<br />
+                            <span class="font-NJ-Bold">'tabs-gray-dark': </span> <span style="background: #6c8791; color: #fff; "> #6c8791</span>,<br />
+                            <span class="font-NJ-Bold">'tabs-gray-light': </span><span style="background: #d6d6d6; color: #000; "> #d6d6d6</span>,<br />
+                            <span class="font-NJ-Bold">'tabs-white': </span> <span style="background: #fff; color: #000; "> #fff</span>,<br />
+                            <span class="font-NJ-Bold">'tabs-black': </span> <span style="background: #000; color: #fff; ">#000</span>,<br />
+                            <span class="font-NJ-Bold">'tabs-sucess':  </span><span style="background: #24901b; color: #fff; ">#24901b</span>,<br />
+                            <span class="font-NJ-Bold">'tabs-warning': </span> <span style="background: #e8c121; color: #fff; ">#e8c121</span><br /><br />
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div>
+                            <span class="code-type">HTML</span>
+                            <pre id="sep-tabs" class="prettyprint full-width">
+<div class="tabs-component tabs-primary">
+    <ul class="tabs-list grid">
+        <li class="tabs-item grid valign-middle halign-center col active" data-tab-open="mais-recentes">
+            <span>Mais recentes</span>
+        </li>
+        <li class="tabs-item grid valign-middle halign-center col" data-tab-open="mais-antigos">
+            <span>Mais antigos</span>
+        </li>
+    </ul>
+    <div data-tab-group="">
+        <div class="active" data-tab="mais-recentes">
+        </div>
+        <div class="" data-tab="mais-antigos">
+        </div>
+    </div>
+</div>
+                            </pre>
+                            <a href="javascript:;" class="copy-code" data-clipboard-target="#sep-titulo">Copiar &lt; /&gt;</a><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-divider"></div>
+        </section>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../script/vendor/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<script type="text/javascript" src="../../script/bradseg_scripts.min.js"></script>
+<script type="text/javascript" src="../../script/styleguide.min.js"></script>
+<script type="text/javascript" src="../../script/bundle.js"></script>
+<script type="text/javascript" src="../../script/vendor/clipboard.min.js"></script>
+
+</html>

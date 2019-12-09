@@ -1,0 +1,1203 @@
+{ "icons" : [
+        {
+          "name": "icon-viagem-abrangencia" ,
+          "class": "icon-viagem-abrangencia" ,
+          "value": "e900"
+        } ,
+        {
+          "name": "icon-viagem-acessoria" ,
+          "class": "icon-viagem-acessoria" ,
+          "value": "e901"
+        } ,
+        {
+          "name": "icon-viagem-bagagem" ,
+          "class": "icon-viagem-bagagem" ,
+          "value": "e902"
+        } ,
+        {
+          "name": "icon-viagem-hospedagem" ,
+          "class": "icon-viagem-hospedagem" ,
+          "value": "e903"
+        } ,
+        {
+          "name": "icon-viagem-perda" ,
+          "class": "icon-viagem-perda" ,
+          "value": "e904"
+        } ,
+        {
+          "name": "icon-viagem-pousar" ,
+          "class": "icon-viagem-pousar" ,
+          "value": "e905"
+        } ,
+        {
+          "name": "icon-viagem-seguro" ,
+          "class": "icon-viagem-seguro" ,
+          "value": "e906"
+        } ,
+        {
+          "name": "icon-vert-auto" ,
+          "class": "icon-vert-auto" ,
+          "value": "e907"
+        } ,
+        {
+          "name": "icon-vert-capitalizacao" ,
+          "class": "icon-vert-capitalizacao" ,
+          "value": "e908"
+        } ,
+        {
+          "name": "icon-vert-dental" ,
+          "class": "icon-vert-dental" ,
+          "value": "e909"
+        } ,
+        {
+          "name": "icon-vert-previdencia" ,
+          "class": "icon-vert-previdencia" ,
+          "value": "e90a"
+        } ,
+        {
+          "name": "icon-vert-residencial" ,
+          "class": "icon-vert-residencial" ,
+          "value": "e90b"
+        } ,
+        {
+          "name": "icon-vert-saude" ,
+          "class": "icon-vert-saude" ,
+          "value": "e90c"
+        } ,
+        {
+          "name": "icon-vert-vida" ,
+          "class": "icon-vert-vida" ,
+          "value": "e90d"
+        } ,
+        {
+          "name": "icon-vb-beneficios" ,
+          "class": "icon-vb-beneficios" ,
+          "value": "e90e"
+        } ,
+        {
+          "name": "icon-vb-bercario" ,
+          "class": "icon-vb-bercario" ,
+          "value": "e90f"
+        } ,
+        {
+          "name": "icon-vb-danca" ,
+          "class": "icon-vb-danca" ,
+          "value": "e910"
+        } ,
+        {
+          "name": "icon-vb-documentarios" ,
+          "class": "icon-vb-documentarios" ,
+          "value": "e911"
+        } ,
+        {
+          "name": "icon-vb-exposicoes" ,
+          "class": "icon-vb-exposicoes" ,
+          "value": "e912"
+        } ,
+        {
+          "name": "icon-vb-facilidades" ,
+          "class": "icon-vb-facilidades" ,
+          "value": "e913"
+        } ,
+        {
+          "name": "icon-vb-jazz" ,
+          "class": "icon-vb-jazz" ,
+          "value": "e914"
+        } ,
+        {
+          "name": "icon-vb-livro" ,
+          "class": "icon-vb-livro" ,
+          "value": "e915"
+        } ,
+        {
+          "name": "icon-vb-musical" ,
+          "class": "icon-vb-musical" ,
+          "value": "e916"
+        } ,
+        {
+          "name": "icon-vb-recompensas" ,
+          "class": "icon-vb-recompensas" ,
+          "value": "e917"
+        } ,
+        {
+          "name": "icon-vb-teatro" ,
+          "class": "icon-vb-teatro" ,
+          "value": "e918"
+        } ,
+        {
+          "name": "icon-vb-todas" ,
+          "class": "icon-vb-todas" ,
+          "value": "e919"
+        } ,
+        {
+          "name": "icon-seta-baixo-a" ,
+          "class": "icon-seta-baixo-a" ,
+          "value": "e91a"
+        } ,
+        {
+          "name": "icon-seta-baixo-b" ,
+          "class": "icon-seta-baixo-b" ,
+          "value": "e91b"
+        } ,
+        {
+          "name": "icon-seta-baixo-c" ,
+          "class": "icon-seta-baixo-c" ,
+          "value": "e91c"
+        } ,
+        {
+          "name": "icon-seta-cima-a" ,
+          "class": "icon-seta-cima-a" ,
+          "value": "e91d"
+        } ,
+        {
+          "name": "icon-seta-cima-b" ,
+          "class": "icon-seta-cima-b" ,
+          "value": "e91e"
+        } ,
+        {
+          "name": "icon-seta-cima-c" ,
+          "class": "icon-seta-cima-c" ,
+          "value": "e91f"
+        } ,
+        {
+          "name": "icon-seta-direita-a" ,
+          "class": "icon-seta-direita-a" ,
+          "value": "e920"
+        } ,
+        {
+          "name": "icon-seta-direita-b" ,
+          "class": "icon-seta-direita-b" ,
+          "value": "e921"
+        } ,
+        {
+          "name": "icon-seta-direita-c" ,
+          "class": "icon-seta-direita-c" ,
+          "value": "e922"
+        } ,
+        {
+          "name": "icon-seta-esquerda-a" ,
+          "class": "icon-seta-esquerda-a" ,
+          "value": "e923"
+        } ,
+        {
+          "name": "icon-seta-esquerda-b" ,
+          "class": "icon-seta-esquerda-b" ,
+          "value": "e924"
+        } ,
+        {
+          "name": "icon-seta-esquerda-c" ,
+          "class": "icon-seta-esquerda-c" ,
+          "value": "e925"
+        } ,
+        {
+          "name": "icon-saude-agendar-consulta" ,
+          "class": "icon-saude-agendar-consulta" ,
+          "value": "e926"
+        } ,
+        {
+          "name": "icon-saude-ambulancia" ,
+          "class": "icon-saude-ambulancia" ,
+          "value": "e927"
+        } ,
+        {
+          "name": "icon-saude-cardiograma" ,
+          "class": "icon-saude-cardiograma" ,
+          "value": "e928"
+        } ,
+        {
+          "name": "icon-saude-dental-cirurgia" ,
+          "class": "icon-saude-dental-cirurgia" ,
+          "value": "e929"
+        } ,
+        {
+          "name": "icon-saude-dental-dentista" ,
+          "class": "icon-saude-dental-dentista" ,
+          "value": "e92a"
+        } ,
+        {
+          "name": "icon-saude-dental-endodontia" ,
+          "class": "icon-saude-dental-endodontia" ,
+          "value": "e92b"
+        } ,
+        {
+          "name": "icon-saude-dental-odontopediatria" ,
+          "class": "icon-saude-dental-odontopediatria" ,
+          "value": "e92c"
+        } ,
+        {
+          "name": "icon-saude-dental-pais" ,
+          "class": "icon-saude-dental-pais" ,
+          "value": "e92d"
+        } ,
+        {
+          "name": "icon-saude-dental-periodontia" ,
+          "class": "icon-saude-dental-periodontia" ,
+          "value": "e92e"
+        } ,
+        {
+          "name": "icon-saude-dental-prevencao" ,
+          "class": "icon-saude-dental-prevencao" ,
+          "value": "e92f"
+        } ,
+        {
+          "name": "icon-saude-dental-protese" ,
+          "class": "icon-saude-dental-protese" ,
+          "value": "e930"
+        } ,
+        {
+          "name": "icon-saude-dental-radiologia" ,
+          "class": "icon-saude-dental-radiologia" ,
+          "value": "e931"
+        } ,
+        {
+          "name": "icon-saude-dermatologia" ,
+          "class": "icon-saude-dermatologia" ,
+          "value": "e932"
+        } ,
+        {
+          "name": "icon-saude-diaria-hospitalar" ,
+          "class": "icon-saude-diaria-hospitalar" ,
+          "value": "e933"
+        } ,
+        {
+          "name": "icon-saude-homeopatia" ,
+          "class": "icon-saude-homeopatia" ,
+          "value": "e934"
+        } ,
+        {
+          "name": "icon-saude-hospital" ,
+          "class": "icon-saude-hospital" ,
+          "value": "e935"
+        } ,
+        {
+          "name": "icon-saude-infantil" ,
+          "class": "icon-saude-infantil" ,
+          "value": "e936"
+        } ,
+        {
+          "name": "icon-saude-medico" ,
+          "class": "icon-saude-medico" ,
+          "value": "e937"
+        } ,
+        {
+          "name": "icon-saude-planos-saude" ,
+          "class": "icon-saude-planos-saude" ,
+          "value": "e938"
+        } ,
+        {
+          "name": "icon-saude-primeiros-socorros" ,
+          "class": "icon-saude-primeiros-socorros" ,
+          "value": "e939"
+        } ,
+        {
+          "name": "icon-residencial-antenas" ,
+          "class": "icon-residencial-antenas" ,
+          "value": "e93a"
+        } ,
+        {
+          "name": "icon-residencial-assist" ,
+          "class": "icon-residencial-assist" ,
+          "value": "e93b"
+        } ,
+        {
+          "name": "icon-residencial-bens" ,
+          "class": "icon-residencial-bens" ,
+          "value": "e93c"
+        } ,
+        {
+          "name": "icon-residencial-chaveiro" ,
+          "class": "icon-residencial-chaveiro" ,
+          "value": "e93d"
+        } ,
+        {
+          "name": "icon-residencial-cobertura" ,
+          "class": "icon-residencial-cobertura" ,
+          "value": "e93e"
+        } ,
+        {
+          "name": "icon-residencial-descarte" ,
+          "class": "icon-residencial-descarte" ,
+          "value": "e93f"
+        } ,
+        {
+          "name": "icon-residencial-eletricista" ,
+          "class": "icon-residencial-eletricista" ,
+          "value": "e940"
+        } ,
+        {
+          "name": "icon-residencial-encanador" ,
+          "class": "icon-residencial-encanador" ,
+          "value": "e941"
+        } ,
+        {
+          "name": "icon-residencial-explosao" ,
+          "class": "icon-residencial-explosao" ,
+          "value": "e942"
+        } ,
+        {
+          "name": "icon-residencial-linha-branca" ,
+          "class": "icon-residencial-linha-branca" ,
+          "value": "e943"
+        } ,
+        {
+          "name": "icon-residencial-lixeira" ,
+          "class": "icon-residencial-lixeira" ,
+          "value": "e944"
+        } ,
+        {
+          "name": "icon-residencial-obra" ,
+          "class": "icon-residencial-obra" ,
+          "value": "e945"
+        } ,
+        {
+          "name": "icon-residencial-patrimonio" ,
+          "class": "icon-residencial-patrimonio" ,
+          "value": "e946"
+        } ,
+        {
+          "name": "icon-residencial-personalizado" ,
+          "class": "icon-residencial-personalizado" ,
+          "value": "e947"
+        } ,
+        {
+          "name": "icon-residencial-provisoria" ,
+          "class": "icon-residencial-provisoria" ,
+          "value": "e948"
+        } ,
+        {
+          "name": "icon-residencial-quadros" ,
+          "class": "icon-residencial-quadros" ,
+          "value": "e949"
+        } ,
+        {
+          "name": "icon-residencial-raio" ,
+          "class": "icon-residencial-raio" ,
+          "value": "e94a"
+        } ,
+        {
+          "name": "icon-residencial-reparo" ,
+          "class": "icon-residencial-reparo" ,
+          "value": "e94b"
+        } ,
+        {
+          "name": "icon-residencial-restaurante" ,
+          "class": "icon-residencial-restaurante" ,
+          "value": "e94c"
+        } ,
+        {
+          "name": "icon-residencial-telhas" ,
+          "class": "icon-residencial-telhas" ,
+          "value": "e94d"
+        } ,
+        {
+          "name": "icon-residencial-vendaval" ,
+          "class": "icon-residencial-vendaval" ,
+          "value": "e94e"
+        } ,
+        {
+          "name": "icon-residencial-vidraceiro" ,
+          "class": "icon-residencial-vidraceiro" ,
+          "value": "e94f"
+        } ,
+        {
+          "name": "icon-residencial-vigilancia" ,
+          "class": "icon-residencial-vigilancia" ,
+          "value": "e950"
+        } ,
+        {
+          "name": "icon-redes-facebook" ,
+          "class": "icon-redes-facebook" ,
+          "value": "e951"
+        } ,
+        {
+          "name": "icon-redes-google" ,
+          "class": "icon-redes-google" ,
+          "value": "e952"
+        } ,
+        {
+          "name": "icon-redes-instagram" ,
+          "class": "icon-redes-instagram" ,
+          "value": "e953"
+        } ,
+        {
+          "name": "icon-redes-linkedin" ,
+          "class": "icon-redes-linkedin" ,
+          "value": "e954"
+        } ,
+        {
+          "name": "icon-redes-twitter" ,
+          "class": "icon-redes-twitter" ,
+          "value": "e955"
+        } ,
+        {
+          "name": "icon-redes-whatsapp" ,
+          "class": "icon-redes-whatsapp" ,
+          "value": "e956"
+        } ,
+        {
+          "name": "icon-redes-youtube" ,
+          "class": "icon-redes-youtube" ,
+          "value": "e957"
+        } ,
+        {
+          "name": "icon-nav-adicionar" ,
+          "class": "icon-nav-adicionar" ,
+          "value": "e958"
+        } ,
+        {
+          "name": "icon-nav-anexar" ,
+          "class": "icon-nav-anexar" ,
+          "value": "e959"
+        } ,
+        {
+          "name": "icon-nav-apresentacao" ,
+          "class": "icon-nav-apresentacao" ,
+          "value": "e95a"
+        } ,
+        {
+          "name": "icon-nav-atualizar" ,
+          "class": "icon-nav-atualizar" ,
+          "value": "e95b"
+        } ,
+        {
+          "name": "icon-nav-audio" ,
+          "class": "icon-nav-audio" ,
+          "value": "e95c"
+        } ,
+        {
+          "name": "icon-nav-baixar" ,
+          "class": "icon-nav-baixar" ,
+          "value": "e95d"
+        } ,
+        {
+          "name": "icon-nav-busca" ,
+          "class": "icon-nav-busca" ,
+          "value": "e95e"
+        } ,
+        {
+          "name": "icon-nav-cadastrar-senha" ,
+          "class": "icon-nav-cadastrar-senha" ,
+          "value": "e95f"
+        } ,
+        {
+          "name": "icon-nav-compartilhar" ,
+          "class": "icon-nav-compartilhar" ,
+          "value": "e960"
+        } ,
+        {
+          "name": "icon-nav-configuracoes" ,
+          "class": "icon-nav-configuracoes" ,
+          "value": "e961"
+        } ,
+        {
+          "name": "icon-nav-conversa" ,
+          "class": "icon-nav-conversa" ,
+          "value": "e962"
+        } ,
+        {
+          "name": "icon-nav-desligar" ,
+          "class": "icon-nav-desligar" ,
+          "value": "e963"
+        } ,
+        {
+          "name": "icon-nav-editar" ,
+          "class": "icon-nav-editar" ,
+          "value": "e964"
+        } ,
+        {
+          "name": "icon-nav-fechar" ,
+          "class": "icon-nav-fechar" ,
+          "value": "e965"
+        } ,
+        {
+          "name": "icon-nav-filme" ,
+          "class": "icon-nav-filme" ,
+          "value": "e966"
+        } ,
+        {
+          "name": "icon-nav-imprimir" ,
+          "class": "icon-nav-imprimir" ,
+          "value": "e967"
+        } ,
+        {
+          "name": "icon-nav-informacoes" ,
+          "class": "icon-nav-informacoes" ,
+          "value": "e968"
+        } ,
+        {
+          "name": "icon-nav-login" ,
+          "class": "icon-nav-login" ,
+          "value": "e969"
+        } ,
+        {
+          "name": "icon-nav-ocultar" ,
+          "class": "icon-nav-ocultar" ,
+          "value": "e96a"
+        } ,
+        {
+          "name": "icon-nav-pasta" ,
+          "class": "icon-nav-pasta" ,
+          "value": "e96b"
+        } ,
+        {
+          "name": "icon-nav-produtos" ,
+          "class": "icon-nav-produtos" ,
+          "value": "e96c"
+        } ,
+        {
+          "name": "icon-nav-remover" ,
+          "class": "icon-nav-remover" ,
+          "value": "e96d"
+        } ,
+        {
+          "name": "icon-nav-reportar" ,
+          "class": "icon-nav-reportar" ,
+          "value": "e96e"
+        } ,
+        {
+          "name": "icon-nav-sair" ,
+          "class": "icon-nav-sair" ,
+          "value": "e96f"
+        } ,
+        {
+          "name": "icon-nav-seguir" ,
+          "class": "icon-nav-seguir" ,
+          "value": "e970"
+        } ,
+        {
+          "name": "icon-nav-selecionar" ,
+          "class": "icon-nav-selecionar" ,
+          "value": "e971"
+        } ,
+        {
+          "name": "icon-nav-som" ,
+          "class": "icon-nav-som" ,
+          "value": "e972"
+        } ,
+        {
+          "name": "icon-nav-visualizar" ,
+          "class": "icon-nav-visualizar" ,
+          "value": "e973"
+        } ,
+        {
+          "name": "icon-nav-voltar" ,
+          "class": "icon-nav-voltar" ,
+          "value": "e974"
+        } ,
+        {
+          "name": "icon-info-anunciar" ,
+          "class": "icon-info-anunciar" ,
+          "value": "e975"
+        } ,
+        {
+          "name": "icon-info-bloqueio-aberto" ,
+          "class": "icon-info-bloqueio-aberto" ,
+          "value": "e976"
+        } ,
+        {
+          "name": "icon-info-desconto-loja" ,
+          "class": "icon-info-desconto-loja" ,
+          "value": "e977"
+        } ,
+        {
+          "name": "icon-info-dia-noite" ,
+          "class": "icon-info-dia-noite" ,
+          "value": "e978"
+        } ,
+        {
+          "name": "icon-info-diversidade" ,
+          "class": "icon-info-diversidade" ,
+          "value": "e979"
+        } ,
+        {
+          "name": "icon-info-educacao" ,
+          "class": "icon-info-educacao" ,
+          "value": "e97a"
+        } ,
+        {
+          "name": "icon-info-emergencia" ,
+          "class": "icon-info-emergencia" ,
+          "value": "e97b"
+        } ,
+        {
+          "name": "icon-info-empresa" ,
+          "class": "icon-info-empresa" ,
+          "value": "e97c"
+        } ,
+        {
+          "name": "icon-info-endereco" ,
+          "class": "icon-info-endereco" ,
+          "value": "e97d"
+        } ,
+        {
+          "name": "icon-info-estrategia" ,
+          "class": "icon-info-estrategia" ,
+          "value": "e97e"
+        } ,
+        {
+          "name": "icon-info-familiar" ,
+          "class": "icon-info-familiar" ,
+          "value": "e97f"
+        } ,
+        {
+          "name": "icon-info-foto" ,
+          "class": "icon-info-foto" ,
+          "value": "e980"
+        } ,
+        {
+          "name": "icon-info-funcionarios" ,
+          "class": "icon-info-funcionarios" ,
+          "value": "e981"
+        } ,
+        {
+          "name": "icon-info-ideia" ,
+          "class": "icon-info-ideia" ,
+          "value": "e982"
+        } ,
+        {
+          "name": "icon-info-incendio" ,
+          "class": "icon-info-incendio" ,
+          "value": "e983"
+        } ,
+        {
+          "name": "icon-info-informar" ,
+          "class": "icon-info-informar" ,
+          "value": "e984"
+        } ,
+        {
+          "name": "icon-info-informatica" ,
+          "class": "icon-info-informatica" ,
+          "value": "e985"
+        } ,
+        {
+          "name": "icon-info-invalidez" ,
+          "class": "icon-info-invalidez" ,
+          "value": "e986"
+        } ,
+        {
+          "name": "icon-info-ladrao" ,
+          "class": "icon-info-ladrao" ,
+          "value": "e987"
+        } ,
+        {
+          "name": "icon-info-lavadeira" ,
+          "class": "icon-info-lavadeira" ,
+          "value": "e988"
+        } ,
+        {
+          "name": "icon-info-limpeza" ,
+          "class": "icon-info-limpeza" ,
+          "value": "e989"
+        } ,
+        {
+          "name": "icon-info-livre-escolha" ,
+          "class": "icon-info-livre-escolha" ,
+          "value": "e98a"
+        } ,
+        {
+          "name": "icon-info-localizar-mapa" ,
+          "class": "icon-info-localizar-mapa" ,
+          "value": "e98b"
+        } ,
+        {
+          "name": "icon-info-loja" ,
+          "class": "icon-info-loja" ,
+          "value": "e98c"
+        } ,
+        {
+          "name": "icon-info-mobile" ,
+          "class": "icon-info-mobile" ,
+          "value": "e98d"
+        } ,
+        {
+          "name": "icon-info-morte" ,
+          "class": "icon-info-morte" ,
+          "value": "e98e"
+        } ,
+        {
+          "name": "icon-info-nautico" ,
+          "class": "icon-info-nautico" ,
+          "value": "e98f"
+        } ,
+        {
+          "name": "icon-info-outros-seguros" ,
+          "class": "icon-info-outros-seguros" ,
+          "value": "e990"
+        } ,
+        {
+          "name": "icon-info-perfil" ,
+          "class": "icon-info-perfil" ,
+          "value": "e991"
+        } ,
+        {
+          "name": "icon-info-pet" ,
+          "class": "icon-info-pet" ,
+          "value": "e992"
+        } ,
+        {
+          "name": "icon-info-play" ,
+          "class": "icon-info-play" ,
+          "value": "e993"
+        } ,
+        {
+          "name": "icon-info-previdencia" ,
+          "class": "icon-info-previdencia" ,
+          "value": "e994"
+        } ,
+        {
+          "name": "icon-info-qualidade" ,
+          "class": "icon-info-qualidade" ,
+          "value": "e995"
+        } ,
+        {
+          "name": "icon-info-responsabilidade-civil" ,
+          "class": "icon-info-responsabilidade-civil" ,
+          "value": "e996"
+        } ,
+        {
+          "name": "icon-info-resultado-sorteio" ,
+          "class": "icon-info-resultado-sorteio" ,
+          "value": "e997"
+        } ,
+        {
+          "name": "icon-info-solucoes-negocio" ,
+          "class": "icon-info-solucoes-negocio" ,
+          "value": "e998"
+        } ,
+        {
+          "name": "icon-info-traducao" ,
+          "class": "icon-info-traducao" ,
+          "value": "e999"
+        } ,
+        {
+          "name": "icon-info-trofeu" ,
+          "class": "icon-info-trofeu" ,
+          "value": "e99a"
+        } ,
+        {
+          "name": "icon-info-web" ,
+          "class": "icon-info-web" ,
+          "value": "e99b"
+        } ,
+        {
+          "name": "icon-fin-acordo" ,
+          "class": "icon-fin-acordo" ,
+          "value": "e99c"
+        } ,
+        {
+          "name": "icon-fin-banco" ,
+          "class": "icon-fin-banco" ,
+          "value": "e99d"
+        } ,
+        {
+          "name": "icon-fin-boleto" ,
+          "class": "icon-fin-boleto" ,
+          "value": "e99e"
+        } ,
+        {
+          "name": "icon-fin-caixa" ,
+          "class": "icon-fin-caixa" ,
+          "value": "e99f"
+        } ,
+        {
+          "name": "icon-fin-cartao" ,
+          "class": "icon-fin-cartao" ,
+          "value": "e9a0"
+        } ,
+        {
+          "name": "icon-fin-cheque" ,
+          "class": "icon-fin-cheque" ,
+          "value": "e9a1"
+        } ,
+        {
+          "name": "icon-fin-compra-online" ,
+          "class": "icon-fin-compra-online" ,
+          "value": "e9a2"
+        } ,
+        {
+          "name": "icon-fin-comprar" ,
+          "class": "icon-fin-comprar" ,
+          "value": "e9a3"
+        } ,
+        {
+          "name": "icon-fin-compras" ,
+          "class": "icon-fin-compras" ,
+          "value": "e9a4"
+        } ,
+        {
+          "name": "icon-fin-contribuicao" ,
+          "class": "icon-fin-contribuicao" ,
+          "value": "e9a5"
+        } ,
+        {
+          "name": "icon-fin-custo" ,
+          "class": "icon-fin-custo" ,
+          "value": "e9a6"
+        } ,
+        {
+          "name": "icon-fin-debito-online" ,
+          "class": "icon-fin-debito-online" ,
+          "value": "e9a7"
+        } ,
+        {
+          "name": "icon-fin-deposito-cheque" ,
+          "class": "icon-fin-deposito-cheque" ,
+          "value": "e9a8"
+        } ,
+        {
+          "name": "icon-fin-fatura" ,
+          "class": "icon-fin-fatura" ,
+          "value": "e9a9"
+        } ,
+        {
+          "name": "icon-fin-industria" ,
+          "class": "icon-fin-industria" ,
+          "value": "e9aa"
+        } ,
+        {
+          "name": "icon-fin-investimento" ,
+          "class": "icon-fin-investimento" ,
+          "value": "e9ab"
+        } ,
+        {
+          "name": "icon-fin-ir" ,
+          "class": "icon-fin-ir" ,
+          "value": "e9ac"
+        } ,
+        {
+          "name": "icon-fin-nota-fiscal" ,
+          "class": "icon-fin-nota-fiscal" ,
+          "value": "e9ad"
+        } ,
+        {
+          "name": "icon-fin-pgbl" ,
+          "class": "icon-fin-pgbl" ,
+          "value": "e9ae"
+        } ,
+        {
+          "name": "icon-fin-poupanca" ,
+          "class": "icon-fin-poupanca" ,
+          "value": "e9af"
+        } ,
+        {
+          "name": "icon-fin-preco-acessivel" ,
+          "class": "icon-fin-preco-acessivel" ,
+          "value": "e9b0"
+        } ,
+        {
+          "name": "icon-fin-premios" ,
+          "class": "icon-fin-premios" ,
+          "value": "e9b1"
+        } ,
+        {
+          "name": "icon-fin-receber" ,
+          "class": "icon-fin-receber" ,
+          "value": "e9b2"
+        } ,
+        {
+          "name": "icon-fin-recibo" ,
+          "class": "icon-fin-recibo" ,
+          "value": "e9b3"
+        } ,
+        {
+          "name": "icon-fin-rendimento" ,
+          "class": "icon-fin-rendimento" ,
+          "value": "e9b4"
+        } ,
+        {
+          "name": "icon-fin-resgate" ,
+          "class": "icon-fin-resgate" ,
+          "value": "e9b5"
+        } ,
+        {
+          "name": "icon-fin-sacar-cheque" ,
+          "class": "icon-fin-sacar-cheque" ,
+          "value": "e9b6"
+        } ,
+        {
+          "name": "icon-fin-saldo" ,
+          "class": "icon-fin-saldo" ,
+          "value": "e9b7"
+        } ,
+        {
+          "name": "icon-fin-sem-custo" ,
+          "class": "icon-fin-sem-custo" ,
+          "value": "e9b8"
+        } ,
+        {
+          "name": "icon-fin-simulacao" ,
+          "class": "icon-fin-simulacao" ,
+          "value": "e9b9"
+        } ,
+        {
+          "name": "icon-fin-tranquilidade" ,
+          "class": "icon-fin-tranquilidade" ,
+          "value": "e9ba"
+        } ,
+        {
+          "name": "icon-fin-transferencia" ,
+          "class": "icon-fin-transferencia" ,
+          "value": "e9bb"
+        } ,
+        {
+          "name": "icon-doc-add-calendario" ,
+          "class": "icon-doc-add-calendario" ,
+          "value": "e9bc"
+        } ,
+        {
+          "name": "icon-doc-alerta" ,
+          "class": "icon-doc-alerta" ,
+          "value": "e9bd"
+        } ,
+        {
+          "name": "icon-doc-analisar" ,
+          "class": "icon-doc-analisar" ,
+          "value": "e9be"
+        } ,
+        {
+          "name": "icon-doc-calendario" ,
+          "class": "icon-doc-calendario" ,
+          "value": "e9bf"
+        } ,
+        {
+          "name": "icon-doc-carencia" ,
+          "class": "icon-doc-carencia" ,
+          "value": "e9c0"
+        } ,
+        {
+          "name": "icon-doc-contratos" ,
+          "class": "icon-doc-contratos" ,
+          "value": "e9c1"
+        } ,
+        {
+          "name": "icon-doc-dicionario" ,
+          "class": "icon-doc-dicionario" ,
+          "value": "e9c2"
+        } ,
+        {
+          "name": "icon-doc-documento" ,
+          "class": "icon-doc-documento" ,
+          "value": "e9c3"
+        } ,
+        {
+          "name": "icon-doc-form" ,
+          "class": "icon-doc-form" ,
+          "value": "e9c4"
+        } ,
+        {
+          "name": "icon-doc-pdf" ,
+          "class": "icon-doc-pdf" ,
+          "value": "e9c5"
+        } ,
+        {
+          "name": "icon-doc-prancheta" ,
+          "class": "icon-doc-prancheta" ,
+          "value": "e9c6"
+        } ,
+        {
+          "name": "icon-doc-protocolos" ,
+          "class": "icon-doc-protocolos" ,
+          "value": "e9c7"
+        } ,
+        {
+          "name": "icon-dados-cpf" ,
+          "class": "icon-dados-cpf" ,
+          "value": "e9c8"
+        } ,
+        {
+          "name": "icon-dados-profissao" ,
+          "class": "icon-dados-profissao" ,
+          "value": "e9c9"
+        } ,
+        {
+          "name": "icon-dados-sexo" ,
+          "class": "icon-dados-sexo" ,
+          "value": "e9ca"
+        } ,
+        {
+          "name": "icon-dados-usuario" ,
+          "class": "icon-dados-usuario" ,
+          "value": "e9cb"
+        } ,
+        {
+          "name": "icon-shop-estrela" ,
+          "class": "icon-shop-estrela" ,
+          "value": "e9cc"
+        } ,
+        {
+          "name": "icon-shop-shopping" ,
+          "class": "icon-shop-shopping" ,
+          "value": "e9cd"
+        } ,
+        {
+          "name": "icon-auto-autoridades" ,
+          "class": "icon-auto-autoridades" ,
+          "value": "e9ce"
+        } ,
+        {
+          "name": "icon-auto-cambio" ,
+          "class": "icon-auto-cambio" ,
+          "value": "e9cf"
+        } ,
+        {
+          "name": "icon-auto-caminhao" ,
+          "class": "icon-auto-caminhao" ,
+          "value": "e9d0"
+        } ,
+        {
+          "name": "icon-auto-coberturas-adicionais" ,
+          "class": "icon-auto-coberturas-adicionais" ,
+          "value": "e9d1"
+        } ,
+        {
+          "name": "icon-auto-completo" ,
+          "class": "icon-auto-completo" ,
+          "value": "e9d2"
+        } ,
+        {
+          "name": "icon-auto-condutor" ,
+          "class": "icon-auto-condutor" ,
+          "value": "e9d3"
+        } ,
+        {
+          "name": "icon-auto-corretores" ,
+          "class": "icon-auto-corretores" ,
+          "value": "e9d4"
+        } ,
+        {
+          "name": "icon-auto-oficinas-guinchos" ,
+          "class": "icon-auto-oficinas-guinchos" ,
+          "value": "e9d5"
+        } ,
+        {
+          "name": "icon-auto-portas" ,
+          "class": "icon-auto-portas" ,
+          "value": "e9d6"
+        } ,
+        {
+          "name": "icon-auto-protecao" ,
+          "class": "icon-auto-protecao" ,
+          "value": "e9d7"
+        } ,
+        {
+          "name": "icon-auto-sinistro" ,
+          "class": "icon-auto-sinistro" ,
+          "value": "e9d8"
+        } ,
+        {
+          "name": "icon-auto-tracar-rota" ,
+          "class": "icon-auto-tracar-rota" ,
+          "value": "e9d9"
+        } ,
+        {
+          "name": "icon-auto-veiculo" ,
+          "class": "icon-auto-veiculo" ,
+          "value": "e9da"
+        } ,
+        {
+          "name": "icon-atend-adicionar-contato" ,
+          "class": "icon-atend-adicionar-contato" ,
+          "value": "e9db"
+        } ,
+        {
+          "name": "icon-atend-atendente" ,
+          "class": "icon-atend-atendente" ,
+          "value": "e9dc"
+        } ,
+        {
+          "name": "icon-atend-cel" ,
+          "class": "icon-atend-cel" ,
+          "value": "e9dd"
+        } ,
+        {
+          "name": "icon-atend-celular" ,
+          "class": "icon-atend-celular" ,
+          "value": "e9de"
+        } ,
+        {
+          "name": "icon-atend-chat" ,
+          "class": "icon-atend-chat" ,
+          "value": "e9df"
+        } ,
+        {
+          "name": "icon-atend-chatbot" ,
+          "class": "icon-atend-chatbot" ,
+          "value": "e9e0"
+        } ,
+        {
+          "name": "icon-atend-email-envio" ,
+          "class": "icon-atend-email-envio" ,
+          "value": "e9e1"
+        } ,
+        {
+          "name": "icon-atend-email" ,
+          "class": "icon-atend-email" ,
+          "value": "e9e2"
+        } ,
+        {
+          "name": "icon-atend-fixo" ,
+          "class": "icon-atend-fixo" ,
+          "value": "e9e3"
+        } ,
+        {
+          "name": "icon-atend-presencial" ,
+          "class": "icon-atend-presencial" ,
+          "value": "e9e4"
+        } ,
+        {
+          "name": "icon-atend-sms" ,
+          "class": "icon-atend-sms" ,
+          "value": "e9e5"
+        } ,
+        {
+          "name": "icon-atend-telefone" ,
+          "class": "icon-atend-telefone" ,
+          "value": "e9e6"
+        } ,
+        {
+          "name": "icon-alerta-atencao" ,
+          "class": "icon-alerta-atencao" ,
+          "value": "e9e7"
+        } ,
+        {
+          "name": "icon-alerta-duvida" ,
+          "class": "icon-alerta-duvida" ,
+          "value": "e9e8"
+        } ,
+        {
+          "name": "icon-alerta-erro" ,
+          "class": "icon-alerta-erro" ,
+          "value": "e9e9"
+        } ,
+        {
+          "name": "icon-alerta-sucesso" ,
+          "class": "icon-alerta-sucesso" ,
+          "value": "e9ea"
+        } ,
+        {
+          "name": "icon-acess-cadeirante" ,
+          "class": "icon-acess-cadeirante" ,
+          "value": "e9eb"
+        } ,
+        {
+          "name": "icon-acess-font-maior" ,
+          "class": "icon-acess-font-maior" ,
+          "value": "e9ec"
+        } ,
+        {
+          "name": "icon-acess-font-menor" ,
+          "class": "icon-acess-font-menor" ,
+          "value": "e9ed"
+        } ,
+        {
+          "name": "icon-acess-surdos" ,
+          "class": "icon-acess-surdos" ,
+          "value": "e9ee"
+        } ,
+        {
+          "name": "icon-acess-baixa-visao" ,
+          "class": "icon-acess-baixa-visao" ,
+          "value": "e9ef"
+        }
+    ]
+}

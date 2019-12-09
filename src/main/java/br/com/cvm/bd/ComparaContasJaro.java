@@ -69,7 +69,7 @@ public  String possivelCorrespondente2(List<ContaContabil> cbd, List<ContaContab
 				 encontrou = true;
 				 double perc = Math.round((jaroscore*100.0) * 100.0) / 100.0;
 				 
-				 System.out.println("\t\tmatch "+perc+"%: "+key1 +" "+ value1.split(";")[0]+"\n");
+			//	 System.out.println("\t\tmatch "+perc+"%: "+key1 +" "+ value1.split(";")[0]+"\n");
 				
 				 ContaCandidata ccand = new ContaCandidata();
 				 

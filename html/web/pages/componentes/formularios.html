@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="robots" content="noindex, nofollow">
+
+	<link rel="stylesheet" type="text/css" href="../../style/bradseg_styles.min.css">
+	<link rel="stylesheet" type="text/css" href="../../style/styleguide.min.css">
+	<link rel="stylesheet" type="text/css" href="../../style/bundle.css">
+	<link rel="stylesheet" data-href="../../style/accessibility/bradseg_black_white.min.css" id="bradsegBlackWhite"/>
+	<link rel="stylesheet" data-href="../../style/accessibility/bradseg_high_contrast.min.css" id="bradsegHighContrast"/>
+
+	<link href="../../style/icons/favicon/favicon-16x16.ico" rel="shortcut icon" type="image/x-icon"/>
+
+	<title>Bradesco Seguros - Guia de Estilos</title>
+	<style >
+		input[type="text"], input[type="number"], input[type="password"], select {
+				height: auto;
+				font-size: 14px;
+				border:0px;
+		}
+	</style>
+
+</head>
+
+<body class="styleguide">
+
+	<div class="styleguide-header">
+		<img class="logo-bradseg hidden-sm" src="../../style/logo/bradseg_default.svg" data-grayscale="../../style/logo/bradseg_grayscale.svg" data-highcontrast="../../style/logo/bradseg_highcontrast.svg">
+		<img class="logo-bradseg visible-sm" src="../../style/logo/bradseg_sm_default.svg" data-grayscale="../../style/logo/bradseg_sm_grayscale.svg" data-highcontrast="../../style/logo/bradseg_sm_highcontrast.svg">
+		<span class="title" onclick="location.href='../../../index.html'">Guia de Estilos <span class="icon-nav-selecionar"></span></span>
+		<span class="nav-options">
+			<a href="../../index.html">Início</a>
+			 
+			<a href="javascript:;" class="selected">Componentes</a>
+			<a href="../bradseg-css.html">CSS</a>
+			<a href="javascript.html">JS</a>
+		</span>
+		<span class="acessibilidade">
+			<a href="javascript:;" class="btn_smallFont"><span class="icon-acess-font-menor"></span></a>
+			<a href="javascript:;" class="btn_tallFont"><span class="icon-acess-font-maior"></span></a>
+			<a href="javascript:;" class="btn_colorBlind"><span class="icon-acess-baixa-visao"></span></a>
+		</span>
+	</div>
+
+	<div class="styleguide-content">
+		<aside class="styleguide-menu">
+			<ul>
+				<li><div><a href="tipografia.html" >Tipografia</a></div></li>
+				<li><div><a href="iconografia.html" >Iconografia</a></div></li>
+				<li><div><a href="cores.html" >Cores</a></div></li>
+				<li><div><a href="header.html" >Template Básico</a></div></li>
+				<li><div><a href="grid.html" >Grid</a></div></li>
+				<li><div><a href="espacamentos.html" >Espaçamentos</a></div></li>
+				<li><div><a href="formularios.html" >Formulários</a></div></li>
+				<li><div><a href="preencher-dependentes.html" >Preencher Dependentes</a></div></li>
+				<li><div><a href="separadores.html" >Separadores</a></div></li>
+				<li><div><a href="tabs.html" >Tabs</a></div></li>
+				<li><div><a href="paineis-e-cards.html" >Paineis e cards</a></div></li>
+				<li><div><a href="tabelas-e-listas.html" >Tabelas e Listas</a></div></li>
+				<li><div><a href="botoes.html" >Botões</a></div><li>
+				<li><div><a href="boxes.html" >Boxes</a></div><li>
+				<li><div><a href="javascript.html" >Javascript</a></div><li>
+				<li><div><a href="modal.html" >Modal</a></div><li>
+			</ul>
+		</aside>
+
+		<section class="styleguide-section">
+			<div id="cnt-botoes" class="cnt-botoes">
+				<h2 class="text-center">Formulário</h2>
+			</div>
+
+			<h4 id="cnt-sub-1" class="font-darkgray mg-top-50">Campos de Input</h4>
+			<hr>
+			<div class="row">
+					<div class="col-md-3">
+						<!-- input simples -->
+						<p class="font-OS-Bold font10px text-left mg-top-20">Aplicação de Input Simples:</p>
+						<div class="input-component">
+							<div class="input-box grid valign-middle">
+								<input id="doc-number-input" type="text" class="input-field col" name="doc-number-input" placeholder="Número do documento">
+							</div>
+						</div>
+
+						<!-- input com icon -->
+						<p class="font-OS-Bold font10px text-left mg-top-100">Aplicação de Input com icone:</p>
+						<div class="input-component">
+							<div class="input-box grid valign-middle ">
+								<i class="icon-gray-light icon-small icon-vert-auto input-icon"></i>
+								<input id="doc-number-input" type="text" class="input-field col" name="doc-number-input" placeholder="Número do documento">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+
+						<!-- Descrição  -->
+						<p class="font-OS-Bold font16px text-center">Campos de input</p>
+						<p class="font16px text-center">Ex: Para formulários mais extensos como: Cadastros, Endereço, Fuxo de compra;</p>
+						<br><br>
+
+						<!-- Descrição  -->
+
+						<p class="font-OS-Bold font16px text-center  mg-top-80">Campos de input com Icon</p>
+						<p class="font16px text-center">Ex: Para formulários e suas variações icones podem ser encontradas em <a href="iconografia.html">Iconografia</a></p>
+						<br><br>
+					</div>
+
+
+					<div class="col-md-6  pre-code-default">
+
+						<!-- Aplicação do cod -->
+						<span class="code-type">HTML</span>
+						<pre id="input-big1" class="prettyprint" style="">
+							<div class="input-component">
+								<div class="input-box grid valign-middle">
+									<input id="doc-number-input" type="text" class="input-field col" name="doc-number-input" placeholder="Número do documento">
+								</div>
+							</div>
+						</pre>
+						<a href="javascript:;" class="copy-code" data-clipboard-target="#input-big1">Copiar &lt; /&gt;</a><br><br>
+
+						<!-- Aplicação do cod -->
+						<p class="font-OS-Bold font10px text-left mg-top-10">Aplicação de Input com icone:</p>
+						<span class="code-type">HTML</span>
+						<pre id="input-big2" class="prettyprint" style="">
+							<div class="input-component">
+								<div class="input-box grid valign-middle mg-top-10">
+									<i class="icon-gray-light icon-small icon-vert-auto input-icon"></i>
+									<input id="doc-number-input" type="text" class="input-field col" name="doc-number-input" placeholder="Número do documento">
+								</div>
+							</div>
+						</pre>
+						<a href="javascript:;" class="copy-code" data-clipboard-target="#input-big2">Copiar &lt; /&gt;</a><br><br>
+					</div>
+				</div>
+
+			<h4 id="cnt-sub-1" class="font-darkgray mg-top-50">Campo de Seleção</h4>
+			<hr>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="select-component grid">
+						<div class="hidden">
+							<input id="documento-CPF" type="radio" name="documento" value="CPF">
+							<input id="documento-RG" type="radio" name="documento" value="RG">
+							<input type="radio" name="documento" value="" checked="checked">
+						</div>
+						<div class="select-fake grid col-12">
+							<div class="select-box col-12">
+								<label for="documento-CPF" class="select-item">
+									<span class="select-text">CPF</span>
+								</label>
+								<label for="documento-RG" class="select-item">
+									<span class="select-text">RG</span>
+								</label>
+								<p class="select-default">
+									<span class="select-text">Selecione o tipo de documento</span>
+								</p>
+							</div>
+							<i class="select-arrow icon-gray-dark icon-seta-baixo-b"></i>
+						</div>
+					</div>
+
+					<div class="font14px mg-top-20" >
+								Cor fundo: <b>#ffffff</b><br>
+								Cor fonte: <b>#0b67bd</b><br>
+								Cor Borda: <b>#d6d6d6</b><br>
+								Tamanho fonte: <b>12px</b><br>
+								Raio Borda: <b>2px</b>
+							</div>
+				</div>
+				<div class="col-md-3">
+					<!-- Descrição  -->
+					<p class="font-OS-Bold font16px text-center">Campo de seleção</p>
+					<p class="font16px text-center">Ex: Parte institucional do site e áreas com menor fluxo de preenchimento de dados.</p>
+					<br><br>
+				</div>
+				<div class="col-md-6">
+					<span class="code-type">HTML</span>
+					<pre id="input-Select" class="prettyprint" style="">
+							<div class="select-component grid">
+								<div class="hidden">
+									<input id="documento-CPF" type="radio" name="documento" value="CPF">
+									<input id="documento-RG" type="radio" name="documento" value="RG">
+									<input type="radio" name="documento" value="" checked="checked">
+								</div>
+								<div class="select-fake grid col-12">
+									<div class="select-box col-12">
+										<label for="documento-CPF" class="select-item">
+											<span class="select-text">CPF</span>
+										</label>
+										<label for="documento-RG" class="select-item">
+											<span class="select-text">RG</span>
+										</label>
+										<p class="select-default">
+											<span class="select-text">Selecione o tipo de documento</span>
+										</p>
+									</div>
+									<i class="select-arrow icon-gray-dark icon-seta-baixo-b"></i>
+								</div>
+							</div>
+					</pre>
+					<a href="javascript:;" class="copy-code" data-clipboard-target="#input-Select">Copiar &lt; /&gt;</a><br><br>
+				</div>
+			</div>
+
+			<h4 id="cnt-sub-1" class="font-darkgray mg-top-50">Campo de Radio</h4>
+			<hr>
+			<h5 id="cnt-sub-1" class="font-darkgray mg-top-50">Radio Tab: </h4>
+			<div class="row mg-top-20">
+				<div class="col-md-3">
+					<p class="font16px">Selecione abaixo:</p>
+					<div class="radio-component mg-top-10">
+						<ul class="grid halign-center -wrap">
+							<li class="radio-item grid valign-middle col radio-item-horizontal radio-item-primary" data-tab-open="tab_radio_endereco_positivo">
+								<input name="tab-radio-endereco" class="hidden radio-input grid valign-middle calign-middle" id="tab-radio-endereco-1" type="radio" checked="checked">
+								<label class="radio-input-label" for="tab-radio-endereco-1"><span class="radio-input-check"></span>
+								</label>
+								<span class="radio-title">
+									Sim
+								</span>
+							</li>
+							<li class="radio-item grid valign-middle col radio-item-horizontal radio-item-primary active" data-tab-open="tab_radio_endereco_negativo">
+								<input name="tab-radio-endereco" class="hidden radio-input grid valign-middle calign-middle" id="tab-radio-endereco-2" type="radio">
+								<label class="radio-input-label" for="tab-radio-endereco-2"><span class="radio-input-check"></span>
+								</label>
+								<span class="radio-title">
+									Não
+								</span>
+							</li>
+						</ul>
+						<div data-tab-group="">
+							<div class="active" data-tab="tab_radio_endereco_positivo">
+								<label class="text-medium pad-both-10 newjune-bold">Conteudo se a resposta do radio for SIM</label>
+							</div>
+							<div class="" data-tab="tab_radio_endereco_negativo">
+								<label class="text-medium newjune-medium pad-top-10">Conteudo se a resposta do radio for NÃO</label>
+							</div>
+						</div>
+					</div>
+
+					<p>Atributos Importantes:</p>
+					<p>Ao inserir o atributo data-tab-open="tab_radio_endereco_positivo" no radio e data-tab="tab_radio_endereco_positivo" na div do conteudo o radio estara aplicado</p>
+				</div>
+				<div class="col-md-3">
+					<p class="font-OS-Bold font16px text-center">Radio Button Tab</p>
+					<p class="font16px text-center">Ex: Uso geral em páginas e formulários onde as condições do formulario mudam de acordo com a resposta do Radio</p>
+					<br><br>
+				</div>
+				<div class="col-md-6">
+					<span class="code-type">HTML</span>
+					<pre id="input-radiotab" class="prettyprint" style="">
+						<div class="radio-component mg-top-10">
+							<ul class="grid halign-center -wrap">
+								<li class="radio-item grid valign-middle col radio-item-horizontal radio-item-primary" data-tab-open="tab_radio_endereco_positivo">
+									<input name="tab-radio-endereco" class="hidden radio-input grid valign-middle calign-middle" id="tab-radio-endereco-1" type="radio" checked="checked">
+									<label class="radio-input-label" for="tab-radio-endereco-1"><span class="radio-input-check"></span>
+									</label>
+									<span class="radio-title">
+										Sim
+									</span>
+								</li>
+								<li class="radio-item grid valign-middle col radio-item-horizontal radio-item-primary active" data-tab-open="tab_radio_endereco_negativo">
+									<input name="tab-radio-endereco" class="hidden radio-input grid valign-middle calign-middle" id="tab-radio-endereco-2" type="radio">
+									<label class="radio-input-label" for="tab-radio-endereco-2"><span class="radio-input-check"></span>
+									</label>
+									<span class="radio-title">
+										Não
+									</span>
+								</li>
+							</ul>
+							<!-- Tabs escondidas -->
+							<div data-tab-group="">
+								<div class="active" data-tab="tab_radio_endereco_positivo">
+									<label class="text-medium pad-both-10 newjune-bold">Conteudo se a resposta do radio for SIM</label>
+								</div>
+								<div class="" data-tab="tab_radio_endereco_negativo">
+									<label class="text-medium newjune-medium pad-top-10">Conteudo se a resposta do radio for NÃO</label>
+								</div>
+							</div>
+						</div>
+					</pre>
+					<a href="javascript:;" class="copy-code" data-clipboard-target="#input-radiotab">Copiar &lt; /&gt;</a><br><br>
+				</div>
+			</div>
+
+			<h5 id="cnt-sub-1" class="font-darkgray mg-top-50">Radio Simples: </h4>
+			<div class="row mg-top-20">
+				<div class="col-md-3">
+					<p class="font16px">Selecione abaixo:</p>
+					<div class="radio-component mg-top-10">
+						<ul class="grid halign-center -wrap">
+							<li class="radio-item grid valign-middle col radio-item-horizontal radio-item-primary">
+								<input name="tab-radio-tipo-imovel-negativo" class="hidden radio-input grid valign-middle calign-middle" id="tab-radio-tipo-imovel-negativo-1" type="radio">
+								<label class="radio-input-label" for="tab-radio-tipo-imovel-negativo-1"><span class="radio-input-check"></span>
+								</label>
+								<span class="radio-title">
+									Sim
+								</span>
+							</li>
+							<li class="radio-item grid valign-middle col radio-item-horizontal radio-item-primary">
+								<input name="tab-radio-tipo-imovel-negativo" class="hidden radio-input grid valign-middle calign-middle" id="tab-radio-tipo-imovel-negativo-2" type="radio">
+								<label class="radio-input-label" for="tab-radio-tipo-imovel-negativo-2"><span class="radio-input-check"></span>
+								</label>
+								<span class="radio-title">
+									Não
+								</span>
+							</li>
+						</ul>
+					</div>
+
+
+				</div>
+				<div class="col-md-3">
+					<p class="font-OS-Bold font16px text-center">Radio Button Simples</p>
+					<p class="font16px text-center">Ex: Uso geral em páginas e formulários </p>
+					<br><br>
+				</div>
+				<div class="col-md-6">
+					<span class="code-type">HTML</span>
+					<pre id="input-radio" class="prettyprint" style="">
+						<div class="radio-component mg-top-10">
+							<ul class="grid halign-center -wrap">
+								<li class="radio-item grid valign-middle col radio-item-horizontal radio-item-primary">
+									<input name="tab-radio-tipo-imovel-negativo" class="hidden radio-input grid valign-middle calign-middle" id="tab-radio-tipo-imovel-negativo-1" type="radio">
+									<label class="radio-input-label" for="tab-radio-tipo-imovel-negativo-1"><span class="radio-input-check"></span>
+									</label>
+									<span class="radio-title">
+										Sim
+									</span>
+								</li>
+								<li class="radio-item grid valign-middle col radio-item-horizontal radio-item-primary">
+									<input name="tab-radio-tipo-imovel-negativo" class="hidden radio-input grid valign-middle calign-middle" id="tab-radio-tipo-imovel-negativo-2" type="radio">
+									<label class="radio-input-label" for="tab-radio-tipo-imovel-negativo-2"><span class="radio-input-check"></span>
+									</label>
+									<span class="radio-title">
+										Não
+									</span>
+								</li>
+							</ul>
+						</div>
+					</pre>
+					<a href="javascript:;" class="copy-code" data-clipboard-target="#input-radio">Copiar &lt; /&gt;</a><br><br>
+				</div>
+			</div>
+
+			<h5 id="cnt-sub-1" class="font-darkgray mg-top-50">Radio Simples Vertical: </h4>
+			<div class="row mg-top-20">
+				<div class="col-md-3">
+					<p class="font16px">Selecione abaixo:</p>
+					<div class="radio-component mg-top-10">
+						<ul class="grid vallign-center -columns -wrap">
+							<li class="radio-item grid valign-middle col radio-item-horizontal radio-item-primary">
+								<input name="radio-simple" class="hidden radio-input grid valign-middle calign-middle" id="radio-simple-1" type="radio">
+								<label class="radio-input-label" for="radio-simple-1"><span class="radio-input-check"></span>
+								</label>
+								<span class="radio-title">
+									Sim
+								</span>
+							</li>
+							<li class="radio-item grid valign-middle col radio-item-horizontal radio-item-primary">
+								<input name="radio-simple" class="hidden radio-input grid valign-middle calign-middle" id="radio-simple-2" type="radio">
+								<label class="radio-input-label" for="radio-simple-2"><span class="radio-input-check"></span>
+								</label>
+								<span class="radio-title">
+									Não
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<p class="font-OS-Bold font16px text-center">Radio Button Simples Vertical</p>
+					<p class="font16px text-center">Ex: Uso geral em páginas e formulários </p>
+					<br><br>
+				</div>
+				<div class="col-md-6">
+					<span class="code-type">HTML</span>
+					<pre id="radiosimples" class="prettyprint" style="">
+						<div class="radio-component">
+							<ul class="grid vallign-center -columns -wrap">
+								<li class="radio-item grid valign-middle col radio-item-horizontal radio-item-primary">
+									<input name="radio-simple" class="hidden radio-input grid valign-middle calign-middle" id="radio-simple-1" type="radio">
+									<label class="radio-input-label" for="radio-simple-1"><span class="radio-input-check"></span>
+									</label>
+									<span class="radio-title">
+										Sim
+									</span>
+								</li>
+								<li class="radio-item grid valign-middle col radio-item-horizontal radio-item-primary">
+									<input name="radio-simple" class="hidden radio-input grid valign-middle calign-middle" id="radio-simple-2" type="radio">
+									<label class="radio-input-label" for="radio-simple-2"><span class="radio-input-check"></span>
+									</label>
+									<span class="radio-title">
+										Não
+									</span>
+								</li>
+							</ul>
+						</div>
+					</pre>
+					<a href="javascript:;" class="copy-code" data-clipboard-target="#radiosimples">Copiar &lt; /&gt;</a><br><br>
+				</div>
+			</div>
+
+			<h4 id="cnt-sub-1" class="font-darkgray mg-top-50">Campo Checkbox</h4>
+			<hr>
+
+			<h5 id="cnt-sub-1" class="font-darkgray mg-top-50">Checkbox Horizontal: </h4>
+			<div class="row mg-top-20">
+				<div class="col-md-3">
+					<p class="font16px mg-bottom-10">Selecione abaixo:</p>
+					<div class="checkbox-component ">
+						<ul class="grid valign-center -wrap">
+							<li class="checkbox-item grid valign-middle checkbox-item-primary">
+								<input name="checkbox-produto" class="hidden checkbox-input grid valign-middle calign-middle" id="checkbox-produto-1" type="checkbox">
+								<label class="check-input-label text-medium" for="checkbox-produto-1">
+									<span class="check-input-check"></span>
+								</label>
+								<p class="checkbox-title">
+									<strong>Item 1</strong>
+								</p>
+							</li>
+							<li class="checkbox-item grid valign-middle checkbox-item-primary">
+								<input name="checkbox-produto" class="hidden checkbox-input grid valign-middle calign-middle" id="checkbox-produto-2" type="checkbox">
+								<label class="check-input-label text-medium" for="checkbox-produto-2">
+									<span class="check-input-check"></span>
+								</label>
+								<p class="checkbox-title">
+									<strong>Item 2</strong>
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<p class="font-OS-Bold font16px text-center">Checkbox</p>
+					<p class="font16px text-center">Ex: Uso geral em páginas e formulários </p>
+					<br><br>
+				</div>
+				<div class="col-md-6">
+					<span class="code-type">HTML</span>
+					<pre id="input-checkbox" class="prettyprint">
+						<div class="checkbox-component">
+							<ul class="grid valign-center -wrap">
+								<li class="checkbox-item grid valign-middle checkbox-item-primary">
+									<input name="checkbox-produto" class="hidden checkbox-input grid valign-middle calign-middle" id="checkbox-produto-1" type="checkbox">
+									<label class="check-input-label text-medium" for="checkbox-produto-1">
+										<span class="check-input-check"></span>
+									</label>
+									<p class="checkbox-title">
+										<strong>Item 1</strong>
+									</p>
+								</li>
+								<li class="checkbox-item grid valign-middle checkbox-item-primary">
+									<input name="checkbox-produto" class="hidden checkbox-input grid valign-middle calign-middle" id="checkbox-produto-2" type="checkbox">
+									<label class="check-input-label text-medium" for="checkbox-produto-2">
+										<span class="check-input-check"></span>
+									</label>
+									<p class="checkbox-title">
+										<strong>Item 2</strong>
+									</p>
+								</li>
+							</ul>
+						</div>
+					</pre>
+					<a href="javascript:;" class="copy-code" data-clipboard-target="#input-checkbox">Copiar &lt; /&gt;</a><br><br>
+				</div>
+			</div>
+
+			<h5 id="cnt-sub-1" class="font-darkgray mg-top-50">Checkbox Vertical: </h4>
+			<div class="row mg-top-20">
+				<div class="col-md-3">
+					<p class="font16px mg-bottom-10">Selecione abaixo:</p>
+					<div class="checkbox-component mg-top-10">
+						<ul class="grid halign-center -wrap -columns">
+							<li class="checkbox-item grid valign-middle checkbox-item-primary">
+								<input name="checkbox-exemplo" class="hidden checkbox-input grid valign-middle calign-middle" id="checkbox-exemplo-1" type="checkbox">
+								<label class="check-input-label text-medium" for="checkbox-exemplo-1">
+									<span class="check-input-check"></span>
+								</label>
+								<p class="checkbox-title">
+									<strong>Item 1</strong>
+								</p>
+							</li>
+							<li class="checkbox-item grid valign-middle checkbox-item-primary">
+								<input name="checkbox-exemplo" class="hidden checkbox-input grid valign-middle calign-middle" id="checkbox-exemplo-2" type="checkbox">
+								<label class="check-input-label text-medium" for="checkbox-exemplo-2">
+									<span class="check-input-check"></span>
+								</label>
+								<p class="checkbox-title">
+									<strong>Item 2</strong>
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<p class="font-OS-Bold font16px text-center">Checkbox</p>
+					<p class="font16px text-center">Ex: Uso geral em páginas e formulários </p>
+					<br><br>
+				</div>
+				<div class="col-md-6">
+					<span class="code-type">HTML</span>
+					<pre id="checkvertical" class="prettyprint">
+						<div class="checkbox-component">
+							<ul class="grid halign-center -wrap -columns">
+								<li class="checkbox-item grid valign-middle checkbox-item-primary">
+									<input name="checkbox-exemplo" class="hidden checkbox-input grid valign-middle calign-middle" id="checkbox-exemplo-1" type="checkbox">
+									<label class="check-input-label text-medium" for="checkbox-exemplo-1">
+										<span class="check-input-check"></span>
+									</label>
+									<p class="checkbox-title">
+										<strong>Item 1</strong>
+									</p>
+								</li>
+								<li class="checkbox-item grid valign-middle checkbox-item-primary">
+									<input name="checkbox-exemplo" class="hidden checkbox-input grid valign-middle calign-middle" id="checkbox-exemplo-2" type="checkbox">
+									<label class="check-input-label text-medium" for="checkbox-exemplo-2">
+										<span class="check-input-check"></span>
+									</label>
+									<p class="checkbox-title">
+										<strong>Item 2</strong>
+									</p>
+								</li>
+							</ul>
+						</div>
+					</pre>
+					<a href="javascript:;" class="copy-code" data-clipboard-target="#checkvertical">Copiar &lt; /&gt;</a><br><br>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class="section-divider"></div>
+	</section>
+</div>
+</body>
+
+<script type="text/javascript" src="../../script/vendor/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<script type="text/javascript" src="../../script/bradseg_scripts.min.js"></script>
+<script type="text/javascript" src="../../script/bundle.js"></script>
+<script type="text/javascript" src="../../script/styleguide.min.js"></script>
+<script type="text/javascript" src="../../script/vendor/clipboard.min.js"></script>
+
+</html>

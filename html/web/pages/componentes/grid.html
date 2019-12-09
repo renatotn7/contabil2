@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+	    <link rel="stylesheet" type="text/css" href="../../style/bradseg_styles.min.css">
+	    <link rel="stylesheet" type="text/css" href="../../style/styleguide.min.css">
+      <link rel="stylesheet" type="text/css" href="../../style/bundle.css">
+      <link rel="stylesheet" type="text/css" href="../../style/new-components.css">
+	    <link rel="stylesheet" data-href="../../style/accessibility/bradseg_black_white.min.css" id="bradsegBlackWhite"/>
+      <link rel="stylesheet" data-href="../../style/accessibility/bradseg_high_contrast.min.css" id="bradsegHighContrast"/>
+      <link href="../../style/icons/favicon/favicon-16x16.ico" rel="shortcut icon" type="image/x-icon"/>
+
+		<title>Bradesco Seguros - Guia de Estilos</title>
+
+	</head>
+
+	<body class="styleguide">
+		<div class="styleguide-header">
+			<img class="logo-bradseg hidden-sm" src="../../style/logo/bradseg_default.svg" data-grayscale="../../style/logo/bradseg_grayscale.svg" data-highcontrast="../../style/logo/bradseg_highcontrast.svg">
+			<img class="logo-bradseg visible-sm" src="../../style/logo/bradseg_sm_default.svg" data-grayscale="../../style/logo/bradseg_sm_grayscale.svg" data-highcontrast="../../style/logo/bradseg_sm_highcontrast.svg">
+			<span class="title" onclick="location.href='../../../index.html'">Guia de Estilos <span class="icon-nav-selecionar"></span></span>
+			<span class="nav-options">
+				<a href="../../index.html">Início</a>
+				<a href="javascript:;" class="selected">Componentes</a>
+				<a href="../bradseg-css.html">CSS</a>
+				<a href="javascript.html">JS</a>
+				<a href="../taxonomia.html" style="display: none;">Taxonomia</a>
+			</span>
+			<span class="acessibilidade">
+				<a href="javascript:;" class="btn_smallFont"><span class="icon-acess-font-menor"></span></a>
+				<a href="javascript:;" class="btn_tallFont"><span class="icon-acess-font-maior"></span></a>
+				<a href="javascript:;" class="btn_colorBlind"><span class="icon-acess-baixa-visao"></span></a>
+			</span>
+		</div>
+
+		< class="styleguide-content">
+			<aside class="styleguide-menu">
+				<ul>
+					<li><div><a href="tipografia.html" >Tipografia</a></div></li>
+					<li><div><a href="iconografia.html" >Iconografia</a></div></li>
+					<li><div><a href="cores.html" >Cores</a></div></li>
+					<li><div><a href="header.html" >Template Básico</a></div></li>
+					<li><div><a href="grid.html" >Grid</a></div></li>
+					<li><div><a href="espacamentos.html" >Espaçamentos</a></div></li>
+					<li><div><a href="formularios.html" >Formulários</a></div></li>
+					<li><div><a href="preencher-dependentes.html" >Preencher Dependentes</a></div></li>
+					<li><div><a href="separadores.html" >Separadores</a></div></li>
+					<li><div><a href="tabs.html" >Tabs</a></div></li>
+					<li><div><a href="paineis-e-cards.html" >Paineis e cards</a></div></li>
+					<li><div><a href="tabelas-e-listas.html" >Tabelas e Listas</a></div></li>
+					<li><div><a href="botoes.html" >Botões</a></div><li>
+					<li><div><a href="boxes.html" >Boxes</a></div><li>
+					<li><div><a href="javascript.html" >javascript</a></div><li>
+					<li><div><a href="modal.html" >Modal</a></div><li>
+				</ul>
+			</aside>
+			<section class="styleguide-section">
+				<div id="grid">
+					<h2 class="text-center">Grid</h2>
+					<hr class="red center">
+
+          <!-- GRID EXAMPLE -->
+          <div class="grid-example">
+
+            <h5 class="font16px">
+              A classe <b>"grid"</b> permite que o <b>"elemento"</b> passe a ter o display: flex.
+              <br /><br />
+              O <b>grid</b> é totalmente responsivo e possui <b>12 colunas</b>. Para utiliza-las basta adicionar a classe <b>"col"</b> no elemento.
+              As classes indicam o número de colunas que você gostaria de usar das 12 possíveis por linha. Então, se você deseja que o elemento
+              utilize <b>4 colunas</b> de igual largura, basta usar a classe <b>"col-4"</b>.
+              <br /><br />
+              Caso na classe <b>col</b> não seja definido o número de colunas que o elemento deve ocupar, o elemento ocupará toda a largura restante.
+              <br /><br />
+              <b>Obs.:</b> É necessário que o <b>elemento pai</b> possua a classe <b>"grid"</b> para que as colunas tenham o devido comportamento.
+            </h5>
+
+            <div class="grid halign-center valign-middle">
+              <div class="col-example col-4 grid valign-middle halign-center">
+                col-4
+              </div>
+              <div class="col-example col grid valign-middle halign-center">
+                col
+              </div>
+            </div>
+
+            <div class="grid halign-center valign-middle">
+              <div class="col-example col-1 grid valign-middle halign-center">
+                col-1
+              </div>
+              <div class="col-example col-1 grid valign-middle halign-center">
+                col-1
+              </div>
+              <div class="col-example col-1 grid valign-middle halign-center">
+                col-1
+              </div>
+              <div class="col-example col-1 grid valign-middle halign-center">
+                col-1
+              </div>
+              <div class="col-example col-1 grid valign-middle halign-center">
+                col-1
+              </div>
+              <div class="col-example col-1 grid valign-middle halign-center">
+                col-1
+              </div>
+              <div class="col-example col-1 grid valign-middle halign-center">
+                col-1
+              </div>
+              <div class="col-example col-1 grid valign-middle halign-center">
+                col-1
+              </div>
+              <div class="col-example col-1 grid valign-middle halign-center">
+                col-1
+              </div>
+              <div class="col-example col-1 grid valign-middle halign-center">
+                col-1
+              </div>
+              <div class="col-example col-1 grid valign-middle halign-center">
+                col-1
+              </div>
+              <div class="col-example col-1 grid valign-middle halign-center">
+                col-1
+              </div>
+            </div>
+
+            <div class="grid halign-center valign-middle">
+              <div class="col-example col-12 grid valign-middle halign-center">
+                col-12
+              </div>
+            </div>
+
+          </div>
+				</div>
+
+				<div class="pad-top-40 grid halign-left -columns">
+					<h3>Classes Alinhamentos</h3>
+					<hr class="red"></hr>
+
+					<div class="alinhamentos">
+						<ul>
+							<li>
+								<p class="font16px font-red"><b>Posicionamento das Colunas</b></p><br/>
+							</li>
+							<li>
+								<p class="font16px"><b>-wrap</b> - Define o empilhamento das colunas quando necessário automaticamente .</p>
+							</li>
+							<li>
+								<p class="font16px"><b>-wrap-rev</b> - Define o empilhamento das colunas quando necessário automaticamente em ordem reversa.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>-row-rev</b> - Os itens são exibidos ao lado na ordem inversa.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>-columns</b> - Os itens são exibidos verticalmente.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>-columns-rev</b> - Os itens são exibidos verticalmente na ordem inversa.</p>
+							</li>
+						</ul>
+
+						<ul class="pad-top-20">
+							<li>
+								<p class="font16px font-red"><b>Alinhamentos Horizontais</b></p><br/>
+							</li>
+							<li>
+								<p class="font16px"><b>halign-left</b> - Alinha os itens à esquerda.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>halign-center</b> - Centraliza os itens.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>halign-right</b> - Alinha os itens à direita.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>halign-between</b> - Os itens possuem os mesmos espaçamentos porém encostados nas bordas laterais.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>halign-around</b> - Os itens possuem os mesmos espaçamentos entre sí, porém centralizados.</p>
+							</li>
+						</ul>
+
+						<ul class="pad-top-20">
+							<li>
+								<p class="font16px font-red"><b>Alinhamentos Verticais</b></p><br/>
+							</li>
+							<li>
+								<p class="font16px"><b>calign-top</b> - Alinha as linhas do container na parte superior.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>calign-middle</b> - Centraliza as linhas do container verticalmente.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>calign-bottom</b> - Alinha as linhas do container na parte inferior.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>valign-top</b> - Alinha os itens na parte superior.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>valign-middle</b> - Centraliza os itens verticalmente.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>valign-baseline</b> - Alinha os itens ao conteudo do elemento.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>valign-bottom</b> - Alinha os itens na parte inferior.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>self-top</b> - Alinha o item ao superior do elemento pai.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>self-middle</b> - Alinha o item ao centro.<p>
+							</li>
+							<li>
+								<p class="font16px"><b>self-bottom</b> - Alinha o item à parte inferior do elemento pai.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>self-stretch</b> - se o item não tiver um elemento pai (em outras palavras, o item é alinhado baseado no valor padrão ou valor
+									especificado na propriedade align-items, através da classe <b>"valign"</b>.</p>
+							</li>
+							<li>
+								<p class="font16px"><b>self-baseline</b> - Alinha o item baseado no seu conteudo.</p>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript" src="../../script/vendor/jquery-3.2.1.min.js"></script>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  <script type="text/javascript" src="../../script/bradseg_scripts.min.js"></script>
+  <script type="text/javascript" src="../../script/styleguide.min.js"></script>
+  <script type="text/javascript" src="../../script/vendor/clipboard.min.js"></script>
+
+</html>

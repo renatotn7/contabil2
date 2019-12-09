@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+			<meta http-equiv="Content-Type" charset="UTF-8">
+			<meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="robots" content="noindex, nofollow">
+
+      <link rel="stylesheet" type="text/css" href="../../style/bradseg_styles.min.css">
+	    <link rel="stylesheet" type="text/css" href="../../style/styleguide.min.css">
+	    <link rel="stylesheet" data-href="../../style/accessibility/bradseg_black_white.min.css" id="bradsegBlackWhite"/>
+      <link rel="stylesheet" data-href="../../style/accessibility/bradseg_high_contrast.min.css" id="bradsegHighContrast"/>
+      <link rel="stylesheet" type="text/css" href="../../style/bundle.css"/>
+
+      <link href="../../style/icons/favicon/favicon-16x16.ico" rel="shortcut icon" type="image/x-icon"/>
+
+		<title>Bradesco Seguros - Guia de Estilos</title>
+
+	</head>
+
+	<body class="styleguide">
+
+		<div class="styleguide-header">
+			<img class="logo-bradseg hidden-sm" src="../../style/logo/bradseg_default.svg" data-grayscale="../../style/logo/bradseg_grayscale.svg" data-highcontrast="../../style/logo/bradseg_highcontrast.svg">
+			<img class="logo-bradseg visible-sm" src="../../style/logo/bradseg_sm_default.svg" data-grayscale="../../style/logo/bradseg_sm_grayscale.svg" data-highcontrast="../../style/logo/bradseg_sm_highcontrast.svg">
+			<span class="title" onclick="location.href='../../../index.html'">Guia de Estilos <span class="icon-nav-selecionar"></span></span>
+			<span class="nav-options">
+				<a href="../../index.html">Início</a>
+				<a href="" class="selected">Componentes</a>
+				<a href="../bradseg-css.html">CSS</a>
+				<a href="javascript.html">JS</a>
+				<a href="../taxonomia.html" style="display: none;">Taxonomia</a>
+			</span>
+			<span class="acessibilidade">
+				<a href="javascript:;" class="btn_smallFont"><span class="icon-acess-font-menor"></span></a>
+				<a href="javascript:;" class="btn_tallFont"><span class="icon-acess-font-maior"></span></a>
+				<a href="javascript:;" class="btn_colorBlind"><span class="icon-acess-baixa-visao"></span></a>
+			</span>
+		</div>
+
+		<div class="styleguide-content">
+			<aside class="styleguide-menu">
+				<ul>
+					<li><div><a href="tipografia.html" >Tipografia</a></div></li>
+					<li><div><a href="iconografia.html" >Iconografia</a></div></li>
+					<li><div><a href="cores.html" >Cores</a></div></li>
+					<li><div><a href="header.html" >Template Básico</a></div></li>
+					<li><div><a href="grid.html" >Grid</a></div></li>
+					<li><div><a href="espacamentos.html" >Espaçamentos</a></div></li>
+					<li><div><a href="formularios.html" >Formulários</a></div></li>
+					<li><div><a href="preencher-dependentes.html" >Preencher Dependentes</a></div></li>
+					<li><div><a href="separadores.html" >Separadores</a></div></li>
+					<li><div><a href="tabs.html" >Tabs</a></div></li>
+					<li><div><a href="paineis-e-cards.html" >Paineis e cards</a></div></li>
+					<li><div><a href="tabelas-e-listas.html" >Tabelas e Listas</a></div></li>
+					<li><div><a href="botoes.html" >Botões</a></div><li>
+					<li><div><a href="boxes.html" >Boxes</a></div><li>
+					<li><div><a href="javascript.html" >Javascript</a></div><li>
+					<li><div><a href="modal.html" >Modal</a></div><li>
+	     </ul>
+			</aside>
+
+			<section class="styleguide-section">
+				<div id="cnt-botoes" class="cnt-botoes">
+					<h2 class="text-center">Botões</h2>
+          <hr class="red hr-red"></hr>
+
+
+          <p class="font-OS-Bold font16px select-color">Escolha a cor do botão:</p>
+          <select id="btn-cores" onchange="changeColor(this.value)">
+            <option value="btn-primary">Vermelho</option>
+            <option value="btn-secondary">Azul</option>
+            <option value="btn-gray">Cinza</option>
+            <option value="btn-gray-dark">Cinza Escuro</option>
+            <option value="btn-gray-light">Cinza Claro</option>
+            <option value="btn-white">Branco</option>
+            <option value="btn-black">Preto</option>
+            <option value="btn-sucess">Sucesso (Verde)</option>
+            <option value="btn-warning">Advertência (Amarelo)</option>
+          </select>
+
+
+          <div id="btn-default" class="row mg-top-20">
+						<div class="col-lg-2 col-sm-3">
+							<a id="demo-btn-default" class="btn-component btn-primary false">Botão</a>
+							<br/><br/>
+							<br/><br/>
+							<div class="font14px first-button">
+								Altura: <b>45px</b><br/>
+								Cor fundo: <b class="fundo-default">#e5173e</b><br/>
+                Cor fonte: <b class="fonte-default">#ffffff</b><br/>
+								Cor borda: <b class="borda-default">#e5173e</b><br/>
+								Tamanho fonte: <b>1.2em</b><br/>
+								Raio borda: <b>30px</b>
+							</div>
+						</div>
+						<div class="col-lg-5 col-sm-4">
+							<p class="font-OS-Bold font16px text-center">Para direcionamentos progressivos</p>
+							<p class="font16px text-center">Ex: Continuar, Li e Concordo, etc.</p>
+							<br/><br/>
+						</div>
+						<div class="col-sm-5 code-btn-enabled">
+							<div class="code-box">
+								<span class="code-type">HTML</span>
+                <pre id="btn-default1" class="prettyprint full-width"><a class="btn-component btn-primary false" href="tela-destino.html">Botão</a></pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#btn-default1">Copiar &lt /&gt</a><br/>
+							</div>
+						</div>
+					</div>
+					<div class="row mg-top-20">
+						<div class="col-lg-12">
+							<p id="cnt-sub-1" class="font-darkgray font16px">Botão Outline </p>
+						</div>
+					</div>
+          <div id="btn-outline" class="row mg-top-20">
+						<div class="col-lg-2 col-sm-3">
+							<a id="demo-btn-outline" class="btn-component btn-primary btn-outline">Botão</a>
+							<br/><br/>
+							<br/><br/>
+							<div class="font14px" style="margin-bottom: 25px;">
+								Altura: <b>45px</b><br/>
+								Cor fundo: <b class="fundo-outline">#ffffff</b><br/>
+								Cor fonte: <b class="fonte-outline">#e5173e</b><br/>
+								Cor borda: <b class="borda-outline">#e5173e</b><br/>
+								Tamanho fonte: <b>1.2em</b><br/>
+								Raio borda: <b>30px</b>
+							</div>
+							<!-- <a class="font14px" href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="Bradesco-UI-Kit:01-01-04 - Skin: skin_bradesco-enterprise_controls-buttons-strong-large">Disponível no <b>PEGA</b></a> -->
+						</div>
+						<div class="col-lg-5 col-sm-4">
+              <p class="font-OS-Bold font16px text-center">Para direcionamentos regressivos</p>
+							<p class="font16px text-center">Ex: Voltar, etc.</p>
+							<br/><br/>
+						</div>
+						<div class="col-sm-5 code-btn-enabled">
+							<div class="code-box">
+								<span class="code-type">HTML</span>
+                <pre id="btn-outline1" class="prettyprint full-width"><a class="btn-component btn-primary btn-outline" href="tela-origem.html">Botão</a></pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#btn-outline1">Copiar &lt /&gt</a><br/>
+							</div>
+						</div>
+					</div>
+
+
+					<hr>
+					<div class="row mg-top-20">
+						<div class="col-lg-12">
+							<p id="cnt-sub-1" class="font-darkgray font16px">Botão Reset </p>
+						</div>
+					</div>
+          <div id="btn-reset" class="row ">
+						<div class="col-lg-3 col-sm-3 mg-top-20">
+              <div class="checkbox-component">
+                  <ul class="grid halign-center -wrap -columns">
+                      <li class="checkbox-item grid valign-middle checkbox-item-primary">
+                          <input name="checkbox-exemplo" class="hidden checkbox-input grid valign-middle calign-middle" id="checkbox-exemplo-1" type="checkbox">
+                          <label class="check-input-label text-medium" for="checkbox-exemplo-1"><span class="check-input-check"></span></label>
+                          <p class="checkbox-title">
+                              <strong>Opção 1</strong>
+                          </p>
+                      </li>
+                      <li class="checkbox-item grid valign-middle checkbox-item-primary">
+                          <input name="checkbox-exemplo" class="hidden checkbox-input grid valign-middle calign-middle" id="checkbox-exemplo-2" type="checkbox">
+                          <label class="check-input-label text-medium" for="checkbox-exemplo-2"><span class="check-input-check"></span></label>
+                          <p class="checkbox-title">
+                              <strong>Opção 2</strong>
+                          </p>
+                      </li>
+                      <li class="checkbox-item grid valign-middle checkbox-item-primary">
+                          <input name="checkbox-exemplo" class="hidden checkbox-input grid valign-middle calign-middle" id="checkbox-exemplo-3" type="checkbox">
+                          <label class="check-input-label text-medium" for="checkbox-exemplo-3"><span class="check-input-check"></span></label>
+                          <p class="checkbox-title">
+                              <strong>Opção 3</strong>
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+							<button class="btn-component btn-primary btn-outline" data-reset="checkbox-exemplo">Botão</button>
+						</div>
+            <br/><br/>
+						<div class="col-lg-4 col-sm-4">
+							<p class="font-OS-Bold font16px text-center">Utilizado em botões do tipo "Limpar Filtro". Limpa os inputs de uma lista de checkboxes ou radios</p>
+							<p class="font16px text-center">Ex: Limpar dados, etc.</p>
+
+              <br/><br/>
+						</div>
+						<div class="col-sm-5 code-btn-enabled">
+							<div class="code-box">
+								<span class="code-type">HTML</span>
+                <pre id="btn-reset1" class="prettyprint full-width">
+<div class="checkbox-component">
+    <ul class="grid halign-center -wrap -columns">
+        <li class="checkbox-item grid valign-middle checkbox-item-primary">
+            <input name="checkbox-exemplo" class="hidden checkbox-input grid valign-middle calign-middle" id="checkbox-exemplo-1" type="checkbox">
+            <label class="check-input-label text-medium" for="checkbox-exemplo-1"><span class="check-input-check"></span></label>
+            <p class="checkbox-title">
+                <strong>Opção 1</strong>
+            </p>
+        </li>
+        <li class="checkbox-item grid valign-middle checkbox-item-primary">
+            <input name="checkbox-exemplo" class="hidden checkbox-input grid valign-middle calign-middle" id="checkbox-exemplo-2" type="checkbox">
+            <label class="check-input-label text-medium" for="checkbox-exemplo-2"><span class="check-input-check"></span></label>
+            <p class="checkbox-title">
+                <strong>Opção 2</strong>
+            </p>
+        </li>
+        <li class="checkbox-item grid valign-middle checkbox-item-primary">
+            <input name="checkbox-exemplo" class="hidden checkbox-input grid valign-middle calign-middle" id="checkbox-exemplo-3" type="checkbox">
+            <label class="check-input-label text-medium" for="checkbox-exemplo-3"><span class="check-input-check"></span></label>
+            <p class="checkbox-title">
+                <strong>Opção 3</strong>
+            </p>
+        </li>
+    </ul>
+</div>
+
+<button class="btn-component btn-primary btn-outline" data-reset="checkbox-exemplo">Botão</button>
+                </pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#btn-reset1">Copiar &lt /&gt</a><br/>
+							</div>
+						</div>
+					</div>
+
+          <br/><br/>
+					<hr>
+
+
+          <br/><br/>
+					<hr>
+
+					<div class="row mg-top-20">
+						<div class="col-lg-12">
+							<p id="cnt-sub-1" class="font-darkgray font16px">Botao Swipe Lateral </p>
+						</div>
+					</div>
+					<div id="btn-button-block" class="row mg-top-20">
+            <div class="col-md-4 col-sm-12">
+              <div class="list-swipe-component">
+                  <div class="list-swipe-container swiper-container swiper-container-horizontal">
+                      <div class="swiper-wrapper grid valign-middle">
+                          <div class="swiper-button-next hidden swiper-button-disabled"></div>
+                          <div class="swiper-button-prev hidden"></div>
+                          <div class="swiper-slide grid swiper-slide-prev">
+                              <div class="col">
+                                  <ul class="list-component grid -columns">
+                                      <li class="list-item grid -wrap list-item-noborder list-item-gray">
+                                          <div class="list-box grid col-12 -wrap valign-middle">
+                                              <div class="grid col valign-middle">
+                                                  <div>
+                                                      <p class="list-description">
+                                                          Clique na seta ou arraste
+                                                      </p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div data-slide="next" class="col-1 grid valign-middle halign-center">
+                                  <i class="icon-primary icon-seta-dupla-esquerda icon-small list-icon"></i>
+                              </div>
+                          </div>
+                          <div class="swiper-slide grid swiper-slide-active" style="width: 395px;">
+                              <div data-slide="prev" class="col-1 grid valign-middle halign-center">
+                                  <i class="icon-primary icon-seta-dupla-direita icon-small list-icon"></i>
+                              </div>
+                              <div class="col">
+                                  <ul class="button-block-list grid -wrap">
+                                      <li class="button-block-item col">
+                                          <a class="button-block-component col grid valign-middle halign-center">
+                                              <div class="col grid halign-center valign-middle button-block-padding">
+                                                  <i class="icon-nav-informacoes icon-small list-icon"></i>
+                                                  <p class="button-block-text">Ver Detalhes</p>
+                                              </div>
+                                          </a>
+                                      </li>
+                                      <li class="button-block-item col">
+                                          <a class="button-block-component col grid valign-middle halign-center">
+                                              <div class="col grid halign-center valign-middle button-block-padding">
+                                                  <i class="icon-alerta-erro icon-small list-icon"></i>
+                                                  <p class="button-block-text">Cancelar Solicitação</p>
+                                              </div>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <br/><br/>
+              <br/><br/>
+            </div>
+            <div class="col-md-4 col-sm-12">
+							<p class="font-OS-Bold font16px text-center">Utilizado dentro de listas, em forma de bloco</p>
+							<p class="font16px text-center">Ex: Itens de lista que podem direcionar o usuario para lugares diferentes.</p>
+
+              <br/><br/>
+            </div>
+            <div class="col-md-4 col-sm-12 code-btn-enabled">
+              <div class="code-box">
+                <span class="code-type">HTML</span>
+                <pre id="btn-outline1" class="prettyprint full-width">
+<div class="list-swipe-component">
+    <div class="list-swipe-container swiper-container swiper-container-horizontal">
+        <div class="swiper-wrapper grid valign-middle">
+            <div class="swiper-button-next hidden swiper-button-disabled"></div>
+            <div class="swiper-button-prev hidden"></div>
+            <div class="swiper-slide grid swiper-slide-prev">
+                <div class="col">
+                    <ul class="list-component grid -columns">
+                        <li class="list-item grid -wrap list-item-noborder list-item-gray">
+                            <div class="list-box grid col-12 -wrap valign-middle">
+                                <div class="grid col valign-middle">
+                                    <div>
+                                        <p class="list-description">
+                                            Clique na seta ou arraste
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div data-slide="next" class="col-1 grid valign-middle halign-center">
+                    <i class="icon-primary icon-seta-dupla-esquerda icon-small list-icon"></i>
+                </div>
+            </div>
+            <div class="swiper-slide grid swiper-slide-active" style="width: 395px;">
+                <div data-slide="prev" class="col-1 grid valign-middle halign-center">
+                    <i class="icon-primary icon-seta-dupla-direita icon-small list-icon"></i>
+                </div>
+                <div class="col">
+                    <ul class="button-block-list grid -wrap">
+                        <li class="button-block-item col">
+                            <a href="ver-detalhes.html" class="button-block-component col grid valign-middle halign-center">
+                                <div class="col grid halign-center valign-middle button-block-padding">
+                                    <i class="icon-nav-informacoes icon-small list-icon"></i>
+                                    <p class="button-block-text">Ver Detalhes</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="button-block-item col">
+                            <a href="cancelar-solicitacao.html" class="button-block-component col grid valign-middle halign-center">
+                                <div class="col grid halign-center valign-middle button-block-padding">
+                                    <i class="icon-alerta-erro icon-small list-icon"></i>
+                                    <p class="button-block-text">Cancelar Solicitação</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+								</pre>
+                <a href="javascript:;" class="copy-code" data-clipboard-target="#btn-outline1">Copiar &lt /&gt</a><br/>
+              </div>
+            </div>
+          </div>
+
+				</div>
+
+				<div class="section-divider"></div>
+			</section>
+		</div>
+
+    <style type="text/css">
+      .btn-gray:hover,
+      .btn-gray-dark:hover,
+      .btn-gray-light:hover,
+      .btn-sucess:hover,
+      .btn-warning:hover,
+      .btn-black:hover,
+      .btn-secondary:hover {
+        color: #fff;
+      }
+      .select-color {
+        margin: 20px 0 10px;
+      }
+
+      .modal-component .modal-content {
+        border: none;
+        box-shadow: none;
+      }
+
+      .checkbox-component {
+        margin-bottom: 20px;
+      }
+
+      .hr-red {
+         margin: 20px auto 60px;
+      }
+
+      #btn-default,
+      .first-button {
+         margin-bottom: 25px;
+      }
+
+			.button-block-component:hover {
+				color: #ffffff;
+			}
+
+			.list-title {
+				margin-top: 0;
+			}
+
+    </style>
+	</body>
+
+	<script type="text/javascript" src="../../script/vendor/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script type="text/javascript" src="../../script/bradseg_scripts.min.js"></script>
+    <script type="text/javascript" src="../../script/styleguide.min.js"></script>
+    <script type="text/javascript" src="../../script/vendor/clipboard.min.js"></script>
+		<script type="text/javascript" src="../../script/bundle.js"></script>
+
+    <script type="text/javascript">
+
+      function changeColor(color){
+
+        $("#demo-btn-default").removeClass().addClass(color).addClass("btn-component").addClass("false");
+        $("#demo-btn-outline").removeClass().addClass(color).addClass("btn-component").addClass("btn-outline");
+
+        $("#btn-default1 a").removeClass().addClass(color).addClass("btn-component").addClass("false");
+        $("#btn-outline1 a").removeClass().addClass(color).addClass("btn-component").addClass("btn-outline");
+
+        $("#btn-outline1 span.atv").first().text("btn-component "+color+" btn-outline");
+        $("#btn-default1 span.atv").first().text("btn-component "+color+" btn-default");
+
+        switch (color) {
+
+          case 'btn-primary':
+            $('#btn-outline .fonte-outline').text('#e5173e');
+            $('#btn-outline .borda-outline').text('#e5173e');
+            $('#btn-default .fundo-default').text('#e5173e');
+            $('#btn-default .borda-default').text('#e5173e');
+          break;
+
+          case 'btn-secondary':
+            $('#btn-outline .fonte-outline').text('#0181e6');
+            $('#btn-outline .borda-outline').text('#0181e6');
+            $('#btn-default .fundo-default').text('#0181e6');
+            $('#btn-default .borda-default').text('#0181e6');
+          break;
+
+          case 'btn-gray':
+            $('#btn-outline .fonte-outline').text('#686868');
+            $('#btn-outline .borda-outline').text('#686868');
+            $('#btn-default .fundo-default').text('#686868');
+            $('#btn-default .borda-default').text('#686868');
+          break;
+
+          case 'btn-gray-dark':
+            $('#btn-outline .fonte-outline').text('#6c8791');
+            $('#btn-outline .borda-outline').text('#6c8791');
+            $('#btn-default .fundo-default').text('#6c8791');
+            $('#btn-default .borda-default').text('#6c8791');
+          break;
+
+          case 'btn-gray-light':
+            $('#btn-outline .fonte-outline').text('#d6d6d6');
+            $('#btn-outline .borda-outline').text('#d6d6d6');
+            $('#btn-default .fundo-default').text('#d6d6d6');
+            $('#btn-default .borda-default').text('#d6d6d6');
+          break;
+
+          case 'btn-white':
+            $('#btn-outline .fonte-outline').text('#ffffff');
+            $('#btn-outline .borda-outline').text('#ffffff');
+            $('#btn-default .fundo-default').text('#ffffff');
+            $('#btn-default .borda-default').text('#ffffff');
+          break;
+
+          case 'btn-black':
+            $('#btn-outline .fonte-outline').text('#000000');
+            $('#btn-outline .borda-outline').text('#000000');
+            $('#btn-default .fundo-default').text('#000000');
+            $('#btn-default .borda-default').text('#000000');
+          break;
+
+          case 'btn-sucess':
+            $('#btn-outline .fonte-outline').text('#24901b');
+            $('#btn-outline .borda-outline').text('#24901b');
+            $('#btn-default .fundo-default').text('#24901b');
+            $('#btn-default .borda-default').text('#24901b');
+          break;
+
+          case 'btn-warning':
+            $('#btn-outline .fonte-outline').text('#e8c121');
+            $('#btn-outline .borda-outline').text('#e8c121');
+            $('#btn-default .fundo-default').text('#e8c121');
+            $('#btn-default .borda-default').text('#e8c121');
+          break;
+
+        }
+
+      };
+
+    </script>
+
+</html>

@@ -28,6 +28,7 @@ import br.com.cvm.bd.model.Empresa;
 import br.com.cvm.bd.model.Periodo;
 import br.com.cvm.bd.model.TipoDemonstrativo;
 import br.com.cvm.leitor.ExtratorDeDiferencasToObject;
+import br.com.cvm.rest.json.ContaContabilMinInfo;
 import br.com.cvm.rest.json.RespostaComparacao;
 import entities.ContaCandidata;
 import entities.ContaComparada;
@@ -199,19 +200,7 @@ public class ApplicationController {
 		}
 		return ccompescolhida;
 	}
-	@CrossOrigin(origins = "*")
-	@GetMapping(path="/getMelhorCandidato")
-	//String cvmbd, String cvmprop, String databd, String dataProp,String perbd, String perprop
-	//http://localhost:8080/getRelatorioDiferencas?cvmbd=5258&cvmprop=5258&databd=122011&dataprop=122012&perbd=A&perprop=A
-	  public ContaComparada getMelhorCand() {
-		ComparaContasJaro ccj = new ComparaContasJaro();
-		Divergencia dv = ccj.analisar();
-		
-		ContaComparada	 ccompescolhida	=	escolheMelhorContaComparada(dv.getDiferentes());
-	//com problemas aqui
-		return ccompescolhida;
-	}
-	  
+	
 	  
 	  
 	@CrossOrigin(origins = "*")
@@ -351,5 +340,79 @@ public class ApplicationController {
 		PersisteAccounts.persisteAccount(ccomparada);
 		System.out.println(ccomparada.getRefConta().getIdContaContabil());
 	}
-
+	@CrossOrigin(origins = "*")
+	@GetMapping(path="/getMelhorCandidato")
+	//String cvmbd, String cvmprop, String databd, String dataProp,String perbd, String perprop
+	//http://localhost:8080/getRelatorioDiferencas?cvmbd=5258&cvmprop=5258&databd=122011&dataprop=122012&perbd=A&perprop=A
+	  public ContaComparada getMelhorCand() {
+		ComparaContasJaro ccj = new ComparaContasJaro();
+		Divergencia dv = ccj.analisar();
+		
+		ContaComparada	 ccompescolhida	=	escolheMelhorContaComparada(dv.getDiferentes());
+	//com problemas aqui
+		return ccompescolhida;
+	}
+	
+	@CrossOrigin(origins = "*")
+	@GetMapping(path="/getirmaos")
+	//String cvmbd, String cvmprop, String databd, String dataProp,String perbd, String perprop
+	//http://localhost:8080/getRelatorioDiferencas?cvmbd=5258&cvmprop=5258&databd=122011&dataprop=122012&perbd=A&perprop=A
+	  public List<ContaContabilMinInfo> getIrmaos(@RequestParam(value="idconta") Integer idConta) throws JSONException {
+			
+			
+				
+				EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+				ContaContabil c = em.find(ContaContabil.class, idConta);
+				ContaContabil cpai = c.getContaPai();
+				String squery = "select c from ValorContabil a ,ContaContabil  c where a.demonstrativo.idDemonstrativo = "+c.getDemonstrativo().getIdDemonstrativo()+ " and a.contaContabil.idContaContabil=c.idContaContabil and c.contaPai="+cpai.getIdContaContabil();
+				
+				  Query query = em.createQuery(squery);
+				  List<ContaContabil> contasirmas= (List<ContaContabil>) query.getResultList();
+				List<ContaContabil> c1=contasirmas;
+				List<ContaContabilMinInfo> lista = new ArrayList<ContaContabilMinInfo> ();
+				for(ContaContabil cfilho :c1) {
+					ContaContabilMinInfo ccmi = new ContaContabilMinInfo();
+					ccmi.setContaContabil(cfilho.getContaContabil());
+					ccmi.setDescricao(cfilho.getDescricao());
+					ccmi.setIdContaContabil(cfilho.getIdContaContabil());
+					lista.add(ccmi);
+					System.out.println(cfilho.getContaContabil()+ cfilho.getDescricao());
+				}
+					return	lista;
+				//ccomparada.setRefConta(c);
+				
+			}
+		
+	@CrossOrigin(origins = "*")
+	@GetMapping(path="/getirmaospai")
+	//String cvmbd, String cvmprop, String databd, String dataProp,String perbd, String perprop
+	//http://localhost:8080/getRelatorioDiferencas?cvmbd=5258&cvmprop=5258&databd=122011&dataprop=122012&perbd=A&perprop=A
+	  public List<ContaContabilMinInfo> getIrmaosPai(@RequestParam(value="idconta") Integer idConta) throws JSONException {
+			
+			
+				
+				EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+				ContaContabil c = em.find(ContaContabil.class, idConta);
+				ContaContabil cpai = c.getContaPai();
+				String squery = "select c from ValorContabil a ,ContaContabil  c where a.demonstrativo.idDemonstrativo = "+c.getDemonstrativo().getIdDemonstrativo()+ " and a.contaContabil.idContaContabil=c.idContaContabil and c.contaPai="+cpai.getIdContaContabil();
+				
+				  Query query = em.createQuery(squery);
+				  List<ContaContabil> contasirmas= (List<ContaContabil>) query.getResultList();
+				List<ContaContabil> c1=contasirmas;
+				List<ContaContabilMinInfo> lista = new ArrayList<ContaContabilMinInfo> ();
+				for(ContaContabil cfilho :c1) {
+					ContaContabilMinInfo ccmi = new ContaContabilMinInfo();
+					ccmi.setContaContabil(cfilho.getContaContabil());
+					ccmi.setDescricao(cfilho.getDescricao());
+					ccmi.setIdContaContabil(cfilho.getIdContaContabil());
+					lista.add(ccmi);
+					System.out.println(cfilho.getContaContabil()+ cfilho.getDescricao());
+				}
+					return	lista;
+				//ccomparada.setRefConta(c);
+				
+			}
+		
+	
+	  
 }

@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="robots" content="noindex, nofollow">
+
+	    <link rel="stylesheet" type="text/css" href="../../style/bradseg_styles.min.css">
+	    <link rel="stylesheet" type="text/css" href="../../style/styleguide.min.css">
+		<link rel="stylesheet" type="text/css" href="../../style/bundle.css">
+	    <link rel="stylesheet" data-href="../../style/accessibility/bradseg_black_white.min.css" id="bradsegBlackWhite"/>
+        <link rel="stylesheet" data-href="../../style/accessibility/bradseg_high_contrast.min.css" id="bradsegHighContrast"/>
+
+        <link href="../../style/icons/favicon/favicon-16x16.ico" rel="shortcut icon" type="image/x-icon"/>
+
+		<title>Bradesco Seguros - Guia de Estilos</title>
+
+	</head>
+
+	<body class="styleguide">
+
+		<div class="styleguide-header">
+			<img class="logo-bradseg hidden-sm" src="../../style/logo/bradseg_default.svg" data-grayscale="../../style/logo/bradseg_grayscale.svg" data-highcontrast="../../style/logo/bradseg_highcontrast.svg">
+			<img class="logo-bradseg visible-sm" src="../../style/logo/bradseg_sm_default.svg" data-grayscale="../../style/logo/bradseg_sm_grayscale.svg" data-highcontrast="../../style/logo/bradseg_sm_highcontrast.svg">
+			<span class="title" onclick="location.href='../../../index.html'">Guia de Estilos <span class="icon-nav-selecionar"></span></span>
+			<span class="nav-options">
+				<a href="../../index.html">Início</a>
+				 
+				<a href="javascript:;" class="selected">Componentes</a>
+				<a href="../bradseg-css.html">CSS</a>
+				<a href="javascript.html">JS</a>
+				<a href="../taxonomia.html" style="display: none;">Taxonomia</a>
+			</span>
+			<span class="acessibilidade">
+				<a href="javascript:;" class="btn_smallFont"><span class="icon-acess-font-menor"></span></a>
+				<a href="javascript:;" class="btn_tallFont"><span class="icon-acess-font-maior"></span></a>
+				<a href="javascript:;" class="btn_colorBlind"><span class="icon-acess-baixa-visao"></span></a>
+			</span>
+		</div>
+
+		<div class="styleguide-content">
+			<aside class="styleguide-menu">
+				<ul>
+					<li><div><a href="tipografia.html" >Tipografia</a></div></li>
+					<li><div><a href="iconografia.html" >Iconografia</a></div></li>
+					<li><div><a href="cores.html" >Cores</a></div></li>
+					<li><div><a href="header.html" >Template Básico</a></div></li>
+					<li><div><a href="grid.html" >Grid</a></div></li>
+					<li><div><a href="espacamentos.html" >Espaçamentos</a></div></li>
+					<li><div><a href="formularios.html" >Formulários</a></div></li>
+					<li><div><a href="preencher-dependentes.html" >Preencher Dependentes</a></div></li>
+					<li><div><a href="separadores.html" >Separadores</a></div></li>
+					<li><div><a href="tabs.html" >Tabs</a></div></li>
+					<li><div><a href="paineis-e-cards.html" >Paineis e cards</a></div></li>
+					<li><div><a href="tabelas-e-listas.html" >Tabelas e Listas</a></div></li>
+					<li><div><a href="botoes.html" >Botões</a></div><li>
+					<li><div><a href="boxes.html" >Boxes</a></div><li>
+					<li><div><a href="javascript.html" >Javascript</a></div><li>
+					<li><div><a href="modal.html" >Modal</a></div><li>
+				</ul>
+			</aside>
+
+			<section class="styleguide-section">
+				<div id="cnt-tabelas-e-listas" class="cnt-tabelas-e-listas">
+					<h2 class="text-center">Tabelas e Listas</h2>
+
+					<h4 id="cnt-sub-4" class="font-darkgray">List</h4>
+					<hr>
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<ul class="list-component grid -columns">
+                  <li class="list-item grid -wrap list-item-noborder" data-href="">
+                      <div class="list-box grid col-12 -wrap valign-middle pad-both-20">
+                          <div class="grid col valign-middle">
+                              <div>
+                                  <p class="list-description">
+                                      Bradesco Seguros - Item 1
+                                  </p>
+                              </div>
+                          </div>
+                          <i class="icon-primary icon-seta-direita-b icon-smaller list-icon-arrow"></i>
+                      </div>
+                  </li>
+									<li class="list-item grid -wrap list-item-noborder" data-href="#">
+										<div class="list-box grid col-12 -wrap valign-middle pad-both-20">
+											<div class="grid col valign-middle">
+												<div>
+													<p class="list-description">
+														Bradesco Seguros - Item 2
+													</p>
+												</div>
+											</div>
+											<i class="icon-primary icon-seta-direita-b icon-smaller list-icon-arrow"></i>
+										</div>
+									</li>
+              </ul>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<p class="font-OS-Bold font16px">List padrão com seta</p>
+							<p class="font16px">Redirecionamento de tela ao clicar</p>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<div class="code-box">
+	                            <span class="code-type">HTML</span>
+	                            <pre id="list1" class="prettyprint full-width">
+<ul class="list-component grid -columns">
+	<li class="list-item grid -wrap list-item-noborder" data-href="#">
+		<div class="list-box grid col-12 -wrap valign-middle pad-both-20">
+			<div class="grid col valign-middle">
+				<div>
+					<p class="list-description">
+						Bradesco Seguros - Item 1
+					</p>
+				</div>
+			</div>
+			<i class="icon-primary icon-seta-direita-b icon-smaller list-icon-arrow"></i>
+		</div>
+	</li>
+	<li class="list-item grid -wrap list-item-noborder" data-href="#">
+		<div class="list-box grid col-12 -wrap valign-middle pad-both-20">
+			<div class="grid col valign-middle">
+				<div>
+					<p class="list-description">
+						Bradesco Seguros - Item 2
+					</p>
+				</div>
+			</div>
+			<i class="icon-primary icon-seta-direita-b icon-smaller list-icon-arrow"></i>
+		</div>
+	</li>
+</ul>
+								</pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#list1">Copiar &lt; /&gt;</a>
+								<br />
+							</div>
+						</div>
+					</div>
+
+					<div class="section-divider"></div>
+
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<ul class="list-component grid -columns">
+                <li class="list-item grid -wrap -toggle no-space">
+                    <div class="list-box grid col-12 -wrap valign-middle pad-both-20">
+                        <div class="grid col valign-middle">
+                            <div>
+                                <h3 class="list-title list-title-toggle list-title-gray">
+                                    Bradesco Seguros - Item 1
+                                </h3>
+                            </div>
+                        </div>
+                        <i class="icon-primary icon-seta-direita-b icon-smaller list-icon-arrow"></i>
+                    </div>
+                    <div class="list-toggle-content col-12">
+                        <div class="list-infos-component">
+                            <ul class="list-infos-box grid -columns">
+                                <li class="list-infos-item grid -columns pad-bottom-25">
+                                    <div class="grid -columns">
+                                        <h2 class="list-infos-title">Nome Completo</h2>
+                                        <div class="list-infos-content">
+                                            <p class="list-item-text newjune-bold">José Morais</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-infos-item grid -columns pad-bottom-25">
+                                    <div class="grid -columns">
+                                        <h2 class="list-infos-title">CPF</h2>
+                                        <div class="list-infos-content">
+                                            <p class="list-item-text newjune-bold">323.125.874-10</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-infos-item grid -columns pad-bottom-25">
+                                    <div class="grid -columns">
+                                        <h2 class="list-infos-title">Estado Civil</h2>
+                                        <div class="list-infos-content">
+                                            <p class="list-item-text newjune-bold">Solteiro</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-infos-item grid -columns pad-bottom-25">
+                                    <div class="grid -columns">
+                                        <h2 class="list-infos-title">Data de Nascimento</h2>
+                                        <div class="list-infos-content">
+                                            <p class="list-item-text newjune-bold">15/002/1992</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-infos-item grid -columns pad-bottom-25">
+                                    <div class="grid -columns">
+                                        <h2 class="list-infos-title">Sexo</h2>
+                                        <div class="list-infos-content">
+                                            <p class="list-item-text newjune-bold">Masculino</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-infos-item grid -columns pad-bottom-25">
+                                    <div class="grid -columns">
+                                        <h2 class="list-infos-title">Email</h2>
+                                        <div class="list-infos-content">
+                                            <p class="list-item-text newjune-bold">jose.morais@email.com.br</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-infos-item grid -columns pad-bottom-10">
+                                    <div class="grid -columns">
+                                        <h2 class="list-infos-title">Telefone</h2>
+                                        <div class="list-infos-content">
+                                            <p class="list-item-text newjune-bold">(11)9.8761-5432</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+								<li class="list-item grid -wrap -toggle no-space">
+										<div class="list-box grid col-12 -wrap valign-middle pad-both-20">
+												<div class="grid col valign-middle">
+														<div>
+																<h3 class="list-title list-title-toggle list-title-gray">
+																		Bradesco Seguros - Item 2
+																</h3>
+														</div>
+												</div>
+												<i class="icon-primary icon-seta-direita-b icon-smaller list-icon-arrow"></i>
+										</div>
+										<div class="list-toggle-content col-12">
+												<div class="list-infos-component">
+														<ul class="list-infos-box grid -columns">
+																<li class="list-infos-item grid -columns pad-bottom-25">
+																		<div class="grid -columns">
+																				<h2 class="list-infos-title">Nome Completo</h2>
+																				<div class="list-infos-content">
+																						<p class="list-item-text newjune-bold">José Morais</p>
+																				</div>
+																		</div>
+																</li>
+																<li class="list-infos-item grid -columns pad-bottom-25">
+																		<div class="grid -columns">
+																				<h2 class="list-infos-title">CPF</h2>
+																				<div class="list-infos-content">
+																						<p class="list-item-text newjune-bold">323.125.874-10</p>
+																				</div>
+																		</div>
+																</li>
+																<li class="list-infos-item grid -columns pad-bottom-25">
+																		<div class="grid -columns">
+																				<h2 class="list-infos-title">Estado Civil</h2>
+																				<div class="list-infos-content">
+																						<p class="list-item-text newjune-bold">Solteiro</p>
+																				</div>
+																		</div>
+																</li>
+																<li class="list-infos-item grid -columns pad-bottom-25">
+																		<div class="grid -columns">
+																				<h2 class="list-infos-title">Data de Nascimento</h2>
+																				<div class="list-infos-content">
+																						<p class="list-item-text newjune-bold">15/002/1992</p>
+																				</div>
+																		</div>
+																</li>
+																<li class="list-infos-item grid -columns pad-bottom-25">
+																		<div class="grid -columns">
+																				<h2 class="list-infos-title">Sexo</h2>
+																				<div class="list-infos-content">
+																						<p class="list-item-text newjune-bold">Masculino</p>
+																				</div>
+																		</div>
+																</li>
+																<li class="list-infos-item grid -columns pad-bottom-25">
+																		<div class="grid -columns">
+																				<h2 class="list-infos-title">Email</h2>
+																				<div class="list-infos-content">
+																						<p class="list-item-text newjune-bold">jose.morais@email.com.br</p>
+																				</div>
+																		</div>
+																</li>
+																<li class="list-infos-item grid -columns pad-bottom-10">
+																		<div class="grid -columns">
+																				<h2 class="list-infos-title">Telefone</h2>
+																				<div class="list-infos-content">
+																						<p class="list-item-text newjune-bold">(11)9.8761-5432</p>
+																				</div>
+																		</div>
+																</li>
+														</ul>
+												</div>
+										</div>
+								</li>
+              </ul>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<p class="font-OS-Bold font16px">Lista com alternância de dados</p>
+							<p class="font16px">Expande dados ao clicar no item</p>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<div class="code-box">
+                <span class="code-type">HTML</span>
+                <pre id="list2" class="prettyprint full-width">
+<ul class="list-component grid -columns">
+	<li class="list-item grid -wrap -toggle no-space">
+			<div class="list-box grid col-12 -wrap valign-middle pad-both-20">
+					<div class="grid col valign-middle">
+							<div>
+									<h3 class="list-title list-title-toggle list-title-gray">
+											Bradesco Seguros - Item 1
+									</h3>
+							</div>
+					</div>
+					<i class="icon-primary icon-seta-direita-b icon-smaller list-icon-arrow"></i>
+			</div>
+			<div class="list-toggle-content col-12">
+					<div class="list-infos-component">
+							<ul class="list-infos-box grid -columns">
+									<li class="list-infos-item grid -columns pad-bottom-25">
+											<div class="grid -columns">
+													<h2 class="list-infos-title">Nome Completo</h2>
+													<div class="list-infos-content">
+															<p class="list-item-text newjune-bold">José Morais</p>
+													</div>
+											</div>
+									</li>
+									<li class="list-infos-item grid -columns pad-bottom-25">
+											<div class="grid -columns">
+													<h2 class="list-infos-title">CPF</h2>
+													<div class="list-infos-content">
+															<p class="list-item-text newjune-bold">323.125.874-10</p>
+													</div>
+											</div>
+									</li>
+									<li class="list-infos-item grid -columns pad-bottom-25">
+											<div class="grid -columns">
+													<h2 class="list-infos-title">Estado Civil</h2>
+													<div class="list-infos-content">
+															<p class="list-item-text newjune-bold">Solteiro</p>
+													</div>
+											</div>
+									</li>
+									<li class="list-infos-item grid -columns pad-bottom-25">
+											<div class="grid -columns">
+													<h2 class="list-infos-title">Data de Nascimento</h2>
+													<div class="list-infos-content">
+															<p class="list-item-text newjune-bold">15/002/1992</p>
+													</div>
+											</div>
+									</li>
+									<li class="list-infos-item grid -columns pad-bottom-25">
+											<div class="grid -columns">
+													<h2 class="list-infos-title">Sexo</h2>
+													<div class="list-infos-content">
+															<p class="list-item-text newjune-bold">Masculino</p>
+													</div>
+											</div>
+									</li>
+									<li class="list-infos-item grid -columns pad-bottom-25">
+											<div class="grid -columns">
+													<h2 class="list-infos-title">Email</h2>
+													<div class="list-infos-content">
+															<p class="list-item-text newjune-bold">jose.morais@email.com.br</p>
+													</div>
+											</div>
+									</li>
+									<li class="list-infos-item grid -columns pad-bottom-10">
+											<div class="grid -columns">
+													<h2 class="list-infos-title">Telefone</h2>
+													<div class="list-infos-content">
+															<p class="list-item-text newjune-bold">(11)9.8761-5432</p>
+													</div>
+											</div>
+									</li>
+							</ul>
+					</div>
+			</div>
+	</li>
+	<li class="list-item grid -wrap -toggle no-space">
+			<div class="list-box grid col-12 -wrap valign-middle pad-both-20">
+					<div class="grid col valign-middle">
+							<div>
+									<h3 class="list-title list-title-toggle list-title-gray">
+											Bradesco Seguros - Item 2
+									</h3>
+							</div>
+					</div>
+					<i class="icon-primary icon-seta-direita-b icon-smaller list-icon-arrow"></i>
+			</div>
+			<div class="list-toggle-content col-12">
+					<div class="list-infos-component">
+							<ul class="list-infos-box grid -columns">
+									<li class="list-infos-item grid -columns pad-bottom-25">
+											<div class="grid -columns">
+													<h2 class="list-infos-title">Nome Completo</h2>
+													<div class="list-infos-content">
+															<p class="list-item-text newjune-bold">José Morais</p>
+													</div>
+											</div>
+									</li>
+									<li class="list-infos-item grid -columns pad-bottom-25">
+											<div class="grid -columns">
+													<h2 class="list-infos-title">CPF</h2>
+													<div class="list-infos-content">
+															<p class="list-item-text newjune-bold">323.125.874-10</p>
+													</div>
+											</div>
+									</li>
+									<li class="list-infos-item grid -columns pad-bottom-25">
+											<div class="grid -columns">
+													<h2 class="list-infos-title">Estado Civil</h2>
+													<div class="list-infos-content">
+															<p class="list-item-text newjune-bold">Solteiro</p>
+													</div>
+											</div>
+									</li>
+									<li class="list-infos-item grid -columns pad-bottom-25">
+											<div class="grid -columns">
+													<h2 class="list-infos-title">Data de Nascimento</h2>
+													<div class="list-infos-content">
+															<p class="list-item-text newjune-bold">15/002/1992</p>
+													</div>
+											</div>
+									</li>
+									<li class="list-infos-item grid -columns pad-bottom-25">
+											<div class="grid -columns">
+													<h2 class="list-infos-title">Sexo</h2>
+													<div class="list-infos-content">
+															<p class="list-item-text newjune-bold">Masculino</p>
+													</div>
+											</div>
+									</li>
+									<li class="list-infos-item grid -columns pad-bottom-25">
+											<div class="grid -columns">
+													<h2 class="list-infos-title">Email</h2>
+													<div class="list-infos-content">
+															<p class="list-item-text newjune-bold">jose.morais@email.com.br</p>
+													</div>
+											</div>
+									</li>
+									<li class="list-infos-item grid -columns pad-bottom-10">
+											<div class="grid -columns">
+													<h2 class="list-infos-title">Telefone</h2>
+													<div class="list-infos-content">
+															<p class="list-item-text newjune-bold">(11)9.8761-5432</p>
+													</div>
+											</div>
+									</li>
+							</ul>
+					</div>
+			</div>
+	</li>
+</ul>
+								</pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#list2">Copiar &lt; /&gt;</a>
+								<br />
+							</div>
+						</div>
+					</div>
+
+					<div class="section-divider"></div>
+
+					<h4 id="cnt-sub-1" class="font-darkgray">List-check</h4>
+					<hr>
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<div class="list-check-component">
+							  <ul class="list-check-title grid">
+							    <div class="col-2"></div>
+							    <li class="col grid">
+							      <p class="grid valign-middle">
+							          Título
+							      </p>
+							    </li>
+							  </ul>
+							  <ul>
+							    <li class="list-check-item list-check-item-border grid valign-middle">
+							      <div class="grid col-2 halign-center valign-middle">
+							        <input name="opcao" class="hidden list-check-input grid valign-middle calign-middle" id="opcao1-1" type="radio">
+							        <label class="list-check-label" for="opcao1-1"><span class="list-check-label-check"></span></label>
+							      </div>
+							      <span class="list-check-text col grid valign-middle">Opção 1</span>
+							    </li>
+							    <li class="list-check-item list-check-item-border grid valign-middle">
+							      <div class="grid col-2 halign-center valign-middle">
+							        <input name="opcao" class="hidden list-check-input grid valign-middle calign-middle" id="opcao1-2" type="radio">
+							        <label class="list-check-label" for="opcao1-2"><span class="list-check-label-check"></span></label>
+							      </div>
+							      <span class="list-check-text col grid valign-middle">Opção 2</span>
+							    </li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<p class="font-OS-Bold font16px">Lista padrão</p>
+							<p class="font16px">Para cada radio, colocar seu próprio id e label correspondente</p>
+							<br/><br/>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<div class="code-box">
+                <span class="code-type">HTML</span>
+                <pre id="list-check1" class="prettyprint full-width">
+<div class="list-check-component">
+  <ul class="list-check-title grid">
+    <div class="col-2"></div>
+    <li class="col grid">
+      <p class="grid valign-middle">
+          Título
+      </p>
+    </li>
+  </ul>
+  <ul>
+    <li class="list-check-item list-check-item-border grid valign-middle">
+      <div class="grid col-2 halign-center valign-middle">
+        <input name="opcao" class="hidden list-check-input grid valign-middle calign-middle" id="opcao-1" type="radio">
+        <label class="list-check-label" for="opcao-1"><span class="list-check-label-check"></span></label>
+      </div>
+      <span class="list-check-text col grid valign-middle">Opção 1</span>
+    </li>
+    <li class="list-check-item list-check-item-border grid valign-middle">
+      <div class="grid col-2 halign-center valign-middle">
+        <input name="opcao" class="hidden list-check-input grid valign-middle calign-middle" id="opcao-2" type="radio">
+        <label class="list-check-label" for="opcao-2"><span class="list-check-label-check"></span></label>
+      </div>
+      <span class="list-check-text col grid valign-middle">Opção 2</span>
+    </li>
+	</ul>
+</div>
+								</pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#list-check1">Copiar &lt; /&gt;</a>
+								<br />
+							</div>
+						</div>
+					</div>
+
+					<div class="section-divider"></div>
+
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<div class="list-check-component">
+                  <ul class="list-check-title grid">
+                      <div class="col-2"></div>
+                      <li class="col grid">
+                          <p class="grid valign-middle">
+                              Título 1
+                          </p>
+                      </li>
+                      <li class="col grid">
+                          <p class="grid valign-middle">
+                              Título 2
+                          </p>
+                      </li>
+                      <li class="col grid">
+                          <p class="grid valign-middle">
+                              Título 3
+                          </p>
+                      </li>
+                  </ul>
+                  <ul>
+                      <li class="list-check-item list-check-item-border grid valign-middle">
+                          <div class="grid col-2 halign-center valign-middle">
+                              <input name="opcao" class="hidden list-check-input grid valign-middle calign-middle" id="opcao2-1" type="radio">
+                              <label class="list-check-label" for="opcao2-1"><span class="list-check-label-check"></span></label>
+                          </div>
+                          <span class="list-check-text col grid valign-middle">Opção 1</span>
+                          <span class="list-check-text col grid valign-middle">Opção 1</span>
+                          <span class="list-check-text col grid valign-middle">Opção 1</span>
+                      </li>
+                      <li class="list-check-item list-check-item-border grid valign-middle">
+                          <div class="grid col-2 halign-center valign-middle">
+                              <input name="opcao" class="hidden list-check-input grid valign-middle calign-middle" id="opcao2-2" type="radio">
+                              <label class="list-check-label" for="opcao2-2"><span class="list-check-label-check"></span></label>
+                          </div>
+                          <span class="list-check-text col grid valign-middle">Opção 2</span>
+                          <span class="list-check-text col grid valign-middle">Opção 2</span>
+                          <span class="list-check-text col grid valign-middle">Opção 2</span>
+                      </li>
+                  </ul>
+              </div>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<p class="font-OS-Bold font16px">Lista com colunas</p>
+							<p class="font16px">Para cada radio, colocar seu próprio id e label correspondente</p>
+							<br/><br/>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<div class="code-box">
+                <span class="code-type">HTML</span>
+                <pre id="list-check2" class="prettyprint full-width">
+<div class="list-check-component">
+	<ul class="list-check-title grid">
+		<div class="col-2"></div>
+		<li class="col grid">
+			<p class="grid valign-middle">
+					Título 1
+			</p>
+		</li>
+		<li class="col grid">
+			<p class="grid valign-middle">
+					Título 2
+			</p>
+		</li>
+		<li class="col grid">
+			<p class="grid valign-middle">
+					Título 3
+			</p>
+		</li>
+	</ul>
+	<ul>
+		<li class="list-check-item list-check-item-border grid valign-middle">
+			<div class="grid col-2 halign-center valign-middle">
+				<input name="opcao" class="hidden list-check-input grid valign-middle calign-middle" id="opcao-1" type="radio">
+				<label class="list-check-label" for="opcao-1"><span class="list-check-label-check"></span></label>
+			</div>
+			<span class="list-check-text col grid valign-middle">Opção 1</span>
+			<span class="list-check-text col grid valign-middle">Opção 1</span>
+			<span class="list-check-text col grid valign-middle">Opção 1</span>
+		</li>
+		<li class="list-check-item list-check-item-border grid valign-middle">
+			<div class="grid col-2 halign-center valign-middle">
+				<input name="opcao" class="hidden list-check-input grid valign-middle calign-middle" id="opcao-2" type="radio">
+				<label class="list-check-label" for="opcao-2"><span class="list-check-label-check"></span></label>
+			</div>
+			<span class="list-check-text col grid valign-middle">Opção 2</span>
+			<span class="list-check-text col grid valign-middle">Opção 2</span>
+			<span class="list-check-text col grid valign-middle">Opção 2</span>
+		</li>
+	</ul>
+</div>
+								</pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#list-check2">Copiar &lt; /&gt;</a>
+								<br />
+							</div>
+						</div>
+					</div>
+
+					<div class="section-divider"></div>
+
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<div class="list-check-component">
+							  <ul class="list-check-title grid">
+							    <div class="col-2"></div>
+							    <li class="col grid">
+							      <p class="grid valign-middle">
+							          Título
+							      </p>
+							    </li>
+							  </ul>
+							  <ul>
+							    <li class="list-check-item list-check-item-border grid valign-middle">
+							      <div class="grid col-2 halign-center valign-middle">
+							        <input name="opcao" class="hidden list-check-input grid valign-middle calign-middle" id="opcao3-1" type="radio" checked>
+							        <label class="list-check-label" for="opcao3-1"><span class="list-check-label-check"></span></label>
+							      </div>
+							      <span class="list-check-text col grid valign-middle">Opção 1</span>
+							    </li>
+							    <li class="list-check-item list-check-item-border grid valign-middle">
+							      <div class="grid col-2 halign-center valign-middle">
+							        <input name="opcao" class="hidden list-check-input grid valign-middle calign-middle" id="opcao3-2" type="radio">
+							        <label class="list-check-label" for="opcao3-2"><span class="list-check-label-check"></span></label>
+							      </div>
+							      <span class="list-check-text col grid valign-middle">Opção 2</span>
+							    </li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<p class="font-OS-Bold font16px">Lista padrão iniciando com opção checada</p>
+							<p class="font16px">
+								Para cada radio, colocar seu próprio id e label correspondente
+								<br />
+								Colocar o "checked" na opção que deseja iniciar checada
+							</p>
+							<br/><br/>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<div class="code-box">
+                  <span class="code-type">HTML</span>
+                  <pre id="list-check3" class="prettyprint full-width">
+<div class="list-check-component">
+  <ul class="list-check-title grid">
+    <div class="col-2"></div>
+    <li class="col grid">
+      <p class="grid valign-middle">
+          Título
+      </p>
+    </li>
+  </ul>
+  <ul>
+    <li class="list-check-item list-check-item-border grid valign-middle">
+      <div class="grid col-2 halign-center valign-middle">
+        <input name="opcao" class="hidden list-check-input grid valign-middle calign-middle" id="opcao-1" type="radio" checked>
+        <label class="list-check-label" for="opcao-1"><span class="list-check-label-check"></span></label>
+      </div>
+      <span class="list-check-text col grid valign-middle">Opção 1</span>
+    </li>
+    <li class="list-check-item list-check-item-border grid valign-middle">
+      <div class="grid col-2 halign-center valign-middle">
+        <input name="opcao" class="hidden list-check-input grid valign-middle calign-middle" id="opcao-2" type="radio">
+        <label class="list-check-label" for="opcao-2"><span class="list-check-label-check"></span></label>
+      </div>
+      <span class="list-check-text col grid valign-middle">Opção 2</span>
+    </li>
+	</ul>
+</div>
+								</pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#list-check3">Copiar &lt; /&gt;</a>
+								<br />
+							</div>
+						</div>
+					</div>
+
+				</br/>
+					<div class="section-divider"></div>
+					<h4 id="cnt-sub-2" class="font-darkgray">List-swipe</h4>
+					<hr>
+
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<div class="list-swipe-component">
+                  <div class="list-swipe-container swiper-container">
+                      <div class="swiper-wrapper grid valign-middle">
+                          <div class="swiper-button-next hidden"></div>
+                          <div class="swiper-button-prev hidden"></div>
+                          <div class="swiper-slide grid">
+                              <div class="col">
+                                  <ul class="list-component grid -columns">
+                                      <li class="list-item grid -wrap list-item-noborder list-item-gray">
+                                          <div class="list-box grid col-12 -wrap valign-middle">
+                                              <div class="grid col valign-middle">
+                                                  <div>
+                                                      <h3 class="list-title newjune-bold">
+                                                          Contratação
+                                                      </h3>
+                                                      <p class="list-description">
+                                                          Bradesco Seguro Auto
+                                                      </p>
+                                                      <p class="list-description">
+                                                          0123456789876543
+                                                      </p>
+                                                      <p class="list-status">
+                                                          Status: <span class="list-status-text cl-sucess">CONTRATADO</span>
+                                                      </p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div data-slide="next" class="col-1 grid valign-middle halign-center">
+                                  <i class="icon-primary icon-seta-dupla-esquerda icon-small list-icon"></i>
+                              </div>
+                          </div>
+                          <div class="swiper-slide grid">
+                              <div data-slide="prev" class="col-1 grid valign-middle halign-center">
+                                  <i class="icon-primary icon-seta-dupla-direita icon-small list-icon"></i>
+                              </div>
+                              <div class="col">
+                                  <ul class="button-block-list grid -wrap">
+                                      <li class="button-block-item col">
+                                          <a href="#" class="button-block-component col grid valign-middle halign-center">
+                                              <div class="col grid halign-center valign-middle button-block-padding">
+                                                  <i class="icon-nav-informacoes icon-small list-icon"></i>
+                                                  <p class="button-block-text">Detalhes</p>
+                                              </div>
+                                          </a>
+                                      </li>
+                                      <li class="button-block-item col">
+                                          <a href="#" class="button-block-component col grid valign-middle halign-center">
+                                              <div class="col grid halign-center valign-middle button-block-padding">
+                                                  <i class="icon-alerta-erro icon-small list-icon"></i>
+                                                  <p class="button-block-text">Cancelar</p>
+                                              </div>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+						</div>
+
+						<div class="col-md-4 col-sm-4">
+							<p class="font-OS-Bold font16px">List-swipe padrão</p>
+							<br/><br/>
+						</div>
+
+						<div class="col-md-4 com-sm-12">
+							<div class="code-box">
+                <span class="code-type">HTML</span>
+                <pre id="list-swipe1" class="prettyprint full-width">
+<div class="list-swipe-component">
+	<div class="list-swipe-container swiper-container">
+		<div class="swiper-wrapper grid valign-middle">
+			<div class="swiper-button-next hidden"></div>
+			<div class="swiper-button-prev hidden"></div>
+			<div class="swiper-slide grid">
+				<div class="col">
+					<ul class="list-component grid -columns">
+						<li class="list-item grid -wrap list-item-noborder list-item-gray">
+							<div class="list-box grid col-12 -wrap valign-middle">
+								<div class="grid col valign-middle">
+									<div>
+										<h3 class="list-title newjune-bold">
+											Contratação
+										</h3>
+										<p class="list-description">
+											Bradesco Seguro Auto
+										</p>
+										<p class="list-description">
+											0123456789876543
+										</p>
+										<p class="list-status">
+											Status: <span class="list-status-text cl-sucess">CONTRATADO</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div data-slide="next" class="col-1 grid valign-middle halign-center">
+					<i class="icon-primary icon-seta-dupla-esquerda icon-small list-icon"></i>
+				</div>
+			</div>
+			<div class="swiper-slide grid">
+				<div data-slide="prev" class="col-1 grid valign-middle halign-center">
+					<i class="icon-primary icon-seta-dupla-direita icon-small list-icon"></i>
+				</div>
+				<div class="col">
+					<ul class="button-block-list grid -wrap">
+						<li class="button-block-item col">
+							<a href="#" class="button-block-component col grid valign-middle halign-center">
+								<div class="col grid halign-center valign-middle button-block-padding">
+									<i class="icon-nav-informacoes icon-small list-icon"></i>
+									<p class="button-block-text">Detalhes</p>
+								</div>
+							</a>
+						</li>
+						<li class="button-block-item col">
+							<a href="#" class="button-block-component col grid valign-middle halign-center">
+								<div class="col grid halign-center valign-middle button-block-padding">
+									<i class="icon-alerta-erro icon-small list-icon"></i>
+									<p class="button-block-text">Cancelar</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+								</pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#list-swipe1">Copiar &lt; /&gt;</a>
+								<br />
+							</div>
+						</div>
+					</div>
+
+					<div class="section-divider"></div>
+
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<div class="list-swipe-component">
+									<div class="list-swipe-container swiper-container list-swipe-no-border-bottom list-swipe-no-border-top">
+											<div class="swiper-wrapper grid valign-middle">
+													<div class="swiper-button-next hidden"></div>
+													<div class="swiper-button-prev hidden"></div>
+													<div class="swiper-slide grid">
+															<div class="col">
+																	<ul class="list-component grid -columns">
+																			<li class="list-item grid -wrap list-item-noborder list-item-gray">
+																					<div class="list-box grid col-12 -wrap valign-middle">
+																							<div class="grid col valign-middle">
+																									<div>
+																											<h3 class="list-title newjune-bold">
+																													Contratação
+																											</h3>
+																											<p class="list-description">
+																													Bradesco Seguro Auto
+																											</p>
+																											<p class="list-description">
+																													0123456789876543
+																											</p>
+																											<p class="list-status">
+																													Status: <span class="list-status-text cl-sucess">CONTRATADO</span>
+																											</p>
+																									</div>
+																							</div>
+																					</div>
+																			</li>
+																	</ul>
+															</div>
+															<div data-slide="next" class="col-1 grid valign-middle halign-center">
+																	<i class="icon-primary icon-seta-dupla-esquerda icon-small list-icon"></i>
+															</div>
+													</div>
+													<div class="swiper-slide grid">
+															<div data-slide="prev" class="col-1 grid valign-middle halign-center">
+																	<i class="icon-primary icon-seta-dupla-direita icon-small list-icon"></i>
+															</div>
+															<div class="col">
+																	<ul class="button-block-list grid -wrap">
+																			<li class="button-block-item col">
+																					<a href="#" class="button-block-component col grid valign-middle halign-center">
+																							<div class="col grid halign-center valign-middle button-block-padding">
+																									<i class="icon-nav-informacoes icon-small list-icon"></i>
+																									<p class="button-block-text">Detalhes</p>
+																							</div>
+																					</a>
+																			</li>
+																			<li class="button-block-item col">
+																					<a href="#" class="button-block-component col grid valign-middle halign-center">
+																							<div class="col grid halign-center valign-middle button-block-padding">
+																									<i class="icon-alerta-erro icon-small list-icon"></i>
+																									<p class="button-block-text">Cancelar</p>
+																							</div>
+																					</a>
+																			</li>
+																	</ul>
+															</div>
+													</div>
+											</div>
+									</div>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-4">
+							<p class="font-OS-Bold font16px">List-swipe - controle de bordas</p>
+							<p class="font16px">
+								Para retirar as bordas, utilizar as classes (na tag com a classe 'list-swipe-container'):
+								<br /><br />
+								<div class="font14px first-button">
+									'list-swipe-no-border-top': <b>retira a borda de cima</b><br>
+									'list-swipe-no-border-bottom': <b>retira a borda de baixo</b><br>
+								</div>
+							</p>
+							<br/><br/>
+						</div>
+
+						<div class="col-md-4 com-sm-12">
+							<div class="code-box">
+								<span class="code-type">HTML</span>
+								<pre id="list-swipe2" class="prettyprint full-width">
+<div class="list-swipe-component">
+	<div class="list-swipe-container swiper-container list-swipe-no-border-bottom list-swipe-no-border-top">
+		<div class="swiper-wrapper grid valign-middle">
+			<div class="swiper-button-next hidden"></div>
+			<div class="swiper-button-prev hidden"></div>
+			<div class="swiper-slide grid">
+				<div class="col">
+					<ul class="list-component grid -columns">
+						<li class="list-item grid -wrap list-item-noborder list-item-gray">
+							<div class="list-box grid col-12 -wrap valign-middle">
+								<div class="grid col valign-middle">
+									<div>
+										<h3 class="list-title newjune-bold">
+											Contratação
+										</h3>
+										<p class="list-description">
+											Bradesco Seguro Auto
+										</p>
+										<p class="list-description">
+											0123456789876543
+										</p>
+										<p class="list-status">
+											Status: <span class="list-status-text cl-sucess">CONTRATADO</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			<div data-slide="next" class="col-1 grid valign-middle halign-center">
+				<i class="icon-primary icon-seta-dupla-esquerda icon-small list-icon"></i>
+			</div>
+			</div>
+			<div class="swiper-slide grid">
+				<div data-slide="prev" class="col-1 grid valign-middle halign-center">
+					<i class="icon-primary icon-seta-dupla-direita icon-small list-icon"></i>
+				</div>
+				<div class="col">
+					<ul class="button-block-list grid -wrap">
+						<li class="button-block-item col">
+							<a href="#" class="button-block-component col grid valign-middle halign-center">
+								<div class="col grid halign-center valign-middle button-block-padding">
+									<i class="icon-nav-informacoes icon-small list-icon"></i>
+									<p class="button-block-text">Detalhes</p>
+								</div>
+							</a>
+						</li>
+						<li class="button-block-item col">
+							<a href="#" class="button-block-component col grid valign-middle halign-center">
+								<div class="col grid halign-center valign-middle button-block-padding">
+									<i class="icon-alerta-erro icon-small list-icon"></i>
+									<p class="button-block-text">Cancelar</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#list-swipe2">Copiar &lt; /&gt;</a>
+								<br />
+							</div>
+						</div>
+					</div>
+
+					<div class="section-divider"></div>
+
+					<h4 id="cnt-sub-3" class="font-darkgray">List-card</h4>
+					<hr>
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<ul class="list-card-component grid -wrap">
+                <div class="list-card-box grid col-12 -columns is-mobile">
+                    <li class="list-card-item grid -columns halign-center">
+                      <!-- main content -->
+                      <div class="list-card-main grid valign-middle pad-both-15">
+                          <div class="grid col valign-middle halign-center -wrap">
+                              <div class="list-card-content col">
+                                  <h3 class="list-card-title">Plano 1</h3>
+                                  <!-- content default -->
+                                  <p class="list-card-content">6x de </p>
+                                  <p class="list-card-content"><strong>R$ 200,00 sem juros</strong></p>
+                                  <p class="list-card-content">R$ 3.000,00 à vista</p>
+                                  <p class="list-card-content">Franquia de R$ 6.000,00</p>
+                                  <!-- content with values -->
+                              </div>
+                          </div>
+                      </div>
+                      <!-- /main content -->
+											<!-- buttons -->
+											<div class="grid col-12 -wrap">
+												<div class="list-card-button grid valign-middle halign-center col" data-href="">Escolher plano</div>
+											</div>
+											<!-- /buttons -->
+                    </li>
+                </div>
+							</ul>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+								<p class="font-OS-Bold font16px">List-card padrão com botão</p>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<div class="code-box">
+	                            <span class="code-type">HTML</span>
+	                            <pre id="list-card1" class="prettyprint full-width">
+<ul class="list-card-component grid -wrap">
+	<div class="list-card-box grid col-12 -columns is-mobile">
+		<li class="list-card-item grid -columns halign-center">
+			<div class="list-card-main grid valign-middle pad-both-15">
+				<div class="grid col valign-middle halign-center -wrap">
+					<div class="list-card-content col">
+						<h3 class="list-card-title">Plano 1</h3>
+						<p class="list-card-content">6x de </p>
+						<p class="list-card-content"><strong>R$ 200,00 sem juros</strong></p>
+						<p class="list-card-content">R$ 3.000,00 à vista</p>
+						<p class="list-card-content">Franquia de R$ 6.000,00</p>
+					</div>
+				</div>
+			</div>
+			<div class="grid col-12 -wrap">
+				<div class="list-card-button grid valign-middle halign-center col" data-href="tela-destino.html">Escolher plano</div>
+			</div>
+		</li>
+	</div>
+</ul>
+								</pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#list-card1">Copiar &lt; /&gt;</a>
+								<br />
+							</div>
+						</div>
+					</div>
+
+					<div class="section-divider"></div>
+
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<ul class="list-card-component grid -wrap">
+                <div class="list-card-box grid col-12 -columns is-mobile">
+                    <li class="list-card-item grid -columns halign-center list-card-item-secondary">
+                      <!-- main content -->
+                      <div class="list-card-main grid valign-middle list-card-toggle-button pad-both-15">
+                          <div class="grid col valign-middle halign-center -wrap">
+                              <div class="list-card-content col">
+                                  <h3 class="list-card-title list-card-title-primary">Plano 1</h3>
+                                  <!-- content default -->
+                                  <p class="list-card-content">6x de <strong>R$ 200,00 sem juros</strong></p>
+                                  <p class="list-card-content">R$ 3.000,00 à vista</p>
+                                  <p class="list-card-content">Franquia de R$ 6.000,00</p>
+                                  <!-- content with values -->
+                              </div>
+                          </div>
+                      </div>
+                      <!-- /main content -->
+                      <ul class="list-card-toggle">
+                        <li class="list-card-toggle-item">
+                            <ul class="list-component grid -columns">
+                                <li class="list-item grid -wrap list-item-noborder" data-href="">
+                                    <div class="list-box grid col-12 -wrap valign-middle pad-both-20">
+                                        <div class="grid col valign-middle">
+                                            <div>
+                                                <p class="list-description">
+                                                    Ver mais opções de parcelamento
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <i class="icon-primary icon-seta-direita-b icon-smaller list-icon-arrow"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-card-toggle-item">
+                            <ul class="list-component grid -columns">
+                                <li class="list-item grid -wrap list-item-noborder" data-href="">
+                                    <div class="list-box grid col-12 -wrap valign-middle pad-both-20">
+                                        <div class="grid col valign-middle">
+                                            <div>
+                                                <p class="list-description">
+                                                    Personalizar plano
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <i class="icon-primary icon-seta-direita-b icon-smaller list-icon-arrow"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-card-toggle-item">
+                            <ul class="list-component grid -columns">
+                                <li class="list-item grid -wrap list-item-noborder" data-href="">
+                                    <div class="list-box grid col-12 -wrap valign-middle pad-both-20">
+                                        <div class="grid col valign-middle">
+                                            <div>
+                                                <p class="list-description">
+                                                    Comparar planos
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <i class="icon-primary icon-seta-direita-b icon-smaller list-icon-arrow"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="grid -wrap">
+                        <!-- dividers -->
+                        <!-- /dividers -->
+                        <!-- buttons -->
+                        <div class="grid col-12 -wrap">
+                            <div class="list-card-button grid valign-middle halign-center col" data-href="">Saiba Mais</div>
+                            <div class="list-card-button grid valign-middle halign-center col" data-href="">Contratar</div>
+                        </div>
+                        <!-- /buttons -->
+                    </div>
+                  </li>
+                </div>
+              </ul>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+								<p class="font-OS-Bold font16px">List-card com alternância de dados</p>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<div class="code-box">
+                <span class="code-type">HTML</span>
+                <pre id="list-card2" class="prettyprint full-width">
+<ul class="list-card-component grid -wrap">
+	<div class="list-card-box grid col-12 -columns is-mobile">
+			<li class="list-card-item grid -columns halign-center list-card-item-secondary">
+				<div class="list-card-main grid valign-middle list-card-toggle-button pad-both-15">
+						<div class="grid col valign-middle halign-center -wrap">
+								<div class="list-card-content col">
+										<h3 class="list-card-title list-card-title-primary">Plano 1</h3>
+										<p class="list-card-content">6x de <strong>R$ 200,00 sem juros</strong></p>
+										<p class="list-card-content">R$ 3.000,00 à vista</p>
+										<p class="list-card-content">Franquia de R$ 6.000,00</p>
+								</div>
+						</div>
+				</div>
+				<ul class="list-card-toggle">
+					<li class="list-card-toggle-item">
+							<ul class="list-component grid -columns">
+									<li class="list-item grid -wrap list-item-noborder" data-href="">
+											<div class="list-box grid col-12 -wrap valign-middle pad-both-20">
+													<div class="grid col valign-middle">
+															<div>
+																	<p class="list-description">
+																			Ver mais opções de parcelamento
+																	</p>
+															</div>
+													</div>
+													<i class="icon-primary icon-seta-direita-b icon-smaller list-icon-arrow"></i>
+											</div>
+									</li>
+							</ul>
+					</li>
+					<li class="list-card-toggle-item">
+							<ul class="list-component grid -columns">
+									<li class="list-item grid -wrap list-item-noborder" data-href="">
+											<div class="list-box grid col-12 -wrap valign-middle pad-both-20">
+													<div class="grid col valign-middle">
+															<div>
+																	<p class="list-description">
+																			Personalizar plano
+																	</p>
+															</div>
+													</div>
+													<i class="icon-primary icon-seta-direita-b icon-smaller list-icon-arrow"></i>
+											</div>
+									</li>
+							</ul>
+					</li>
+					<li class="list-card-toggle-item">
+							<ul class="list-component grid -columns">
+									<li class="list-item grid -wrap list-item-noborder" data-href="">
+											<div class="list-box grid col-12 -wrap valign-middle pad-both-20">
+													<div class="grid col valign-middle">
+															<div>
+																	<p class="list-description">
+																			Comparar planos
+																	</p>
+															</div>
+													</div>
+													<i class="icon-primary icon-seta-direita-b icon-smaller list-icon-arrow"></i>
+											</div>
+									</li>
+							</ul>
+					</li>
+			</ul>
+			<div class="grid -wrap">
+					<div class="grid col-12 -wrap">
+							<div class="list-card-button grid valign-middle halign-center col" data-href="">Saiba Mais</div>
+							<div class="list-card-button grid valign-middle halign-center col" data-href="">Contratar</div>
+					</div>
+			</div>
+		</li>
+	</div>
+</ul>
+								</pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#list-card2">Copiar &lt; /&gt;</a>
+								<br />
+							</div>
+						</div>
+					</div>
+
+					<div class="section-divider"></div>
+					<h4 id="cnt-sub-5" class="font-darkgray">List-table</h4>
+					<hr>
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<table class="list-table-component list-table">
+                  <tr class="list-table-heading">
+                      <th class="list-table-item">Código</th>
+                      <th class="list-table-item">Descrição</th>
+                  </tr>
+                  <tr class="last-tr">
+                      <td class="list-table-item list-table-item-">1</td>
+                      <td class="list-table-item list-table-item-left">Cobertura Básica 1 - CR - Colisão, Incêndio e Roubo</td>
+                  </tr>
+              		<tr class="last-tr">
+                      <td class="list-table-item list-table-item-">6</td>
+                      <td class="list-table-item list-table-item-left">Cobertura ADC Extens Perimetro Países Mercosul</td>
+                  </tr>
+									<tr class="last-tr">
+                      <td class="list-table-item list-table-item-">10</td>
+                      <td class="list-table-item list-table-item-left">Franquia</td>
+                  </tr>
+              </table>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<p class="font-OS-Bold font16px">Lista em forma de tabela</p>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<div class="code-box">
+                <span class="code-type">HTML</span>
+                <pre id="list-table1" class="prettyprint full-width">
+<table class="list-table-component list-table">
+	<tr class="list-table-heading">
+		<th class="list-table-item">Código</th>
+		<th class="list-table-item">Descrição</th>
+	</tr>
+	<tr class="last-tr">
+		<td class="list-table-item list-table-item-">1</td>
+		<td class="list-table-item list-table-item-left">Cobertura Básica 1 - CR - Colisão, Incêndio e Roubo</td>
+	</tr>
+	<tr class="last-tr">
+		<td class="list-table-item list-table-item-">6</td>
+		<td class="list-table-item list-table-item-left">Cobertura ADC Extens Perimetro Países Mercosul</td>
+	</tr>
+	<tr class="last-tr">
+		<td class="list-table-item list-table-item-">10</td>
+		<td class="list-table-item list-table-item-left">Franquia</td>
+	</tr>
+</table>
+								</pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#list-table1">Copiar &lt; /&gt;</a>
+								<br />
+							</div>
+						</div>
+					</div>
+
+					<div class="section-divider"></div>
+
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<table class="list-table-component list-table">
+                  <tr class="list-table-heading">
+                      <th class="list-table-item">Código</th>
+                      <th class="list-table-item">Descrição</th>
+                  </tr>
+                  <tr class="last-tr">
+                      <td class="list-table-item list-table-item-">1</td>
+                      <td class="list-table-item list-table-item-left">Cobertura Básica 1 - CR - Colisão, Incêndio e Roubo</td>
+                  </tr>
+              		<tr class="last-tr">
+                      <td class="list-table-item list-table-item-">6</td>
+                      <td class="list-table-item list-table-item-left">Cobertura ADC Extens Perimetro Países Mercosul</td>
+                  </tr>
+									<tr class="last-tr">
+                      <td class="list-table-item list-table-item-">10</td>
+                      <td class="list-table-item list-table-item-left">Franquia</td>
+                  </tr>
+									<tr class="last-tr">
+						        <td colspan="2" class="newjune-bold list-table-item list-table-item-left">
+											<p>Total pago até o momento </p>  R$ 20.000,00
+										</td>
+						      </tr>
+              </table>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<p class="font-OS-Bold font16px">Lista em forma de tabela com footer</p>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<div class="code-box">
+                <span class="code-type">HTML</span>
+                <pre id="list-table1" class="prettyprint full-width">
+<table class="list-table-component list-table">
+	<tr class="list-table-heading">
+		<th class="list-table-item">Código</th>
+		<th class="list-table-item">Descrição</th>
+	</tr>
+	<tr class="last-tr">
+		<td class="list-table-item list-table-item-">1</td>
+		<td class="list-table-item list-table-item-left">Cobertura Básica 1 - CR - Colisão, Incêndio e Roubo</td>
+	</tr>
+	<tr class="last-tr">
+		<td class="list-table-item list-table-item-">6</td>
+		<td class="list-table-item list-table-item-left">Cobertura ADC Extens Perimetro Países Mercosul</td>
+	</tr>
+	<tr class="last-tr">
+		<td class="list-table-item list-table-item-">10</td>
+		<td class="list-table-item list-table-item-left">Franquia</td>
+	</tr>
+	<tr class="last-tr">
+		<td colspan="2" class="newjune-bold list-table-item list-table-item-left">
+			<p>Total pago até o momento </p>  R$ 20.000,00
+		</td>
+	</tr>
+</table>
+								</pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#list-table1">Copiar &lt; /&gt;</a>
+								<br />
+							</div>
+						</div>
+					</div>
+
+					<div class="section-divider"></div>
+					<h4 id="cnt-sub-6" class="font-darkgray">List-gray</h4>
+					<hr>
+					<div class="row">
+						<div class="col-md-4 co-sm-12">
+							<ul class="list-gray-component grid -columns">
+			            <li class="item-list grid -wrap valign-middle" data-href="">
+			                <div class="grid col valign-middle">
+			                    <div class="item-content">
+			                        <h3 class="item-title item-title-primary">
+			                        </h3>
+			                        <p class="item-description">
+			                            Você possui 5 seguros ativos
+			                        </p>
+			                    </div>
+			                </div>
+			                <i class="icon-primary item-icon-seta-graylist icon-seta-direita-b"></i>
+			            </li>
+			        </ul>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<p class="font-OS-Bold font16px">List-gray padrão</p>
+						</div>
+
+						<div class="col-md-4 co-sm-12">
+							<div class="code-box">
+                <span class="code-type">HTML</span>
+                <pre id="list-gray1" class="prettyprint full-width">
+<ul class="list-gray-component grid -columns">
+	<li class="item-list grid -wrap valign-middle" data-href="">
+		<div class="grid col valign-middle">
+			<div class="item-content">
+				<h3 class="item-title item-title-primary">
+				</h3>
+				<p class="item-description">
+					Você possui 5 seguros ativos
+				</p>
+			</div>
+		</div>
+		<i class="icon-primary item-icon-seta-graylist icon-seta-direita-b"></i>
+	</li>
+</ul>
+								</pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#list-gray1">Copiar &lt; /&gt;</a>
+								<br />
+							</div>
+						</div>
+					</div>
+
+					<div class="section-divider"></div>
+
+					<div class="row">
+						<div class="col-md-4 co-sm-12">
+							<ul class="list-gray-component grid -columns">
+			            <li class="item-list grid -wrap valign-middle" data-href="">
+			                <div class="grid col valign-middle">
+												<i class="icon-primary icon-auto-coberturas-adicionais icon-small item-icon"></i>
+			                    <div class="item-content">
+			                        <h3 class="item-title item-title-primary">
+			                        </h3>
+			                        <p class="item-description">
+			                            Você possui 5 seguros ativos
+			                        </p>
+			                    </div>
+			                </div>
+			                <i class="icon-primary item-icon-seta-graylist icon-seta-direita-b"></i>
+			            </li>
+			        </ul>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<p class="font-OS-Bold font16px">Lista padrão cinza com ícone</p>
+						</div>
+
+						<div class="col-md-4 co-sm-12">
+							<div class="code-box">
+                <span class="code-type">HTML</span>
+                <pre id="list-gray2" class="prettyprint full-width">
+<ul class="list-gray-component grid -columns">
+	<li class="item-list grid -wrap valign-middle" data-href="">
+		<div class="grid col valign-middle">
+			<i class="icon-primary icon-auto-coberturas-adicionais icon-small item-icon"></i>
+				<div class="item-content">
+					<h3 class="item-title item-title-primary">
+					</h3>
+					<p class="item-description">
+							Você possui 5 seguros ativos
+					</p>
+				</div>
+		</div>
+		<i class="icon-primary item-icon-seta-graylist icon-seta-direita-b"></i>
+	</li>
+</ul>
+								</pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#list-gray2">Copiar &lt; /&gt;</a>
+								<br />
+							</div>
+						</div>
+					</div>
+
+					<div class="section-divider"></div>
+					<h4 id="cnt-sub-7" class="font-darkgray">List-circle</h4>
+					<hr>
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<div class="box-circles-component grid -wrap halign-center valign-top">
+                  <div class="item-circle grid col halign-center -wrap" data-href="">
+                      <div class="circle grid valign-middle halign-center">
+                          <i class="icon-info-incendio icon-primary icon-medium"></i>
+                      </div>
+                      <p class="value col-12">
+                          Incêndio, Queda de Raio e Explosão de qualquer natureza
+                      </p>
+                  </div>
+                  <div class="item-circle grid col halign-center -wrap" data-href="">
+                      <div class="circle grid valign-middle halign-center">
+                          <i class="icon-fin-recibo icon-primary icon-medium"></i>
+                      </div>
+                      <p class="value col-12">
+                          Perda ou Pagamento de Aluguel
+                      </p>
+                  </div>
+                  <div class="item-circle grid col halign-center -wrap" data-href="">
+                      <div class="circle grid valign-middle halign-center">
+                          <i class="icon-residencial-vendaval icon-primary icon-medium"></i>
+                      </div>
+                      <p class="value col-12">
+                          Vendaval até Fumaça
+                      </p>
+                  </div>
+              </div>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<p class="font-OS-Bold font16px">Lista de itens com bordas circulares</p>
+							<p class="font16px">Com ícone dentro do círculo</p>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<div class="code-box">
+                <span class="code-type">HTML</span>
+                <pre id="list-circle" class="prettyprint full-width">
+<div class="box-circles-component grid -wrap halign-center valign-top">
+	<div class="item-circle grid col halign-center -wrap" data-href="">
+		<div class="circle grid valign-middle halign-center">
+			<i class="icon-info-incendio icon-primary icon-medium"></i>
+		</div>
+		<p class="value col-12">
+			Incêndio, Queda de Raio e Explosão de qualquer natureza
+		</p>
+	</div>
+	<div class="item-circle grid col halign-center -wrap" data-href="">
+		<div class="circle grid valign-middle halign-center">
+			<i class="icon-fin-recibo icon-primary icon-medium"></i>
+		</div>
+		<p class="value col-12">
+			Perda ou Pagamento de Aluguel
+		</p>
+	</div>
+	<div class="item-circle grid col halign-center -wrap" data-href="">
+		<div class="circle grid valign-middle halign-center">
+			<i class="icon-residencial-vendaval icon-primary icon-medium"></i>
+		</div>
+	<p class="value col-12">
+		Vendaval até Fumaça
+	</p>
+	</div>
+</div>
+								</pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#list-circle">Copiar &lt; /&gt;</a>
+								<br />
+							</div>
+						</div>
+					</div>
+
+
+					<div class="section-divider"></div>
+					<h4 id="cnt-sub-8" class="font-darkgray">List-values</h4>
+					<hr>
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<div class="list-values-component">
+	                <ul class="list-values-box">
+	                    <li class="list-values-item grid halign-center -wrap">
+	                        <h3 class="list-values-title">VALORES</h3>
+	                        <div class="list-values-content grid col-12 -wrap">
+	                            <span class="list-values-value col grid halign-center valign-middle">100%</span>
+	                            <span class="list-values-value col grid halign-center valign-middle">100%</span>
+	                        </div>
+													<div class="list-values-content grid col-12 -wrap">
+	                            <span class="list-values-value col grid halign-center valign-middle">100%</span>
+	                            <span class="list-values-value col grid halign-center valign-middle">100%</span>
+	                        </div>
+													<div class="list-values-content grid col-12 -wrap">
+	                            <span class="list-values-value col grid halign-center valign-middle">100%</span>
+	                            <span class="list-values-value col grid halign-center valign-middle">100%</span>
+	                        </div>
+	                    </li>
+	                </ul>
+	            </div>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<p class="font-OS-Bold font16px">Lista de valores</p>
+							<p class="font16px">Múltiplas colunas</p>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<div class="code-box">
+	                            <span class="code-type">HTML</span>
+	                            <pre id="list-values" class="prettyprint full-width">
+<div class="list-values-component">
+	<ul class="list-values-box">
+		<li class="list-values-item grid halign-center -wrap">
+			<h3 class="list-values-title">VALORES</h3>
+			<div class="list-values-content grid col-12 -wrap">
+				<span class="list-values-value col grid halign-center valign-middle">100%</span>
+				<span class="list-values-value col grid halign-center valign-middle">100%</span>
+			</div>
+			<div class="list-values-content grid col-12 -wrap">
+				<span class="list-values-value col grid halign-center valign-middle">100%</span>
+				<span class="list-values-value col grid halign-center valign-middle">100%</span>
+			</div>
+			<div class="list-values-content grid col-12 -wrap">
+				<span class="list-values-value col grid halign-center valign-middle">100%</span>
+				<span class="list-values-value col grid halign-center valign-middle">100%</span>
+			</div>
+		</li>
+	</ul>
+</div>
+								</pre>
+								<a href="javascript:;" class="copy-code" data-clipboard-target="#list-values">Copiar &lt; /&gt;</a>
+								<br />
+							</div>
+						</div>
+					</div>
+
+					<div class="section-divider"></div>
+
+					<h4 id="cnt-sub-9" class="font-darkgray">List-infos</h4>
+					<hr>
+
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<div class="list-infos-component">
+                <ul class="list-infos-box grid -columns">
+                  <li class="list-infos-item grid -columns pad-both-10">
+                    <div class="grid -columns">
+                      <h2 class="list-infos-title">Informações</h2>
+                      <div class="list-infos-content">
+                        <p class="list-item-text newjune-bold">Info 1</p>
+                      </div>
+											<div class="list-infos-content">
+                        <p class="list-item-text newjune-bold">Info 2</p>
+                      </div>
+											<div class="list-infos-content">
+                        <p class="list-item-text newjune-bold">Info 3</p>
+                      </div>
+                    </div>
+                  </li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<p class="font-OS-Bold font16px">Lista de informações</p>
+						</div>
+
+						<div class="col-md-4 col-sm-12">
+							<div class="code-box">
+                <span class="code-type">HTML</span>
+                <pre id="list-infos" class="prettyprint full-width">
+<div class="list-infos-component">
+	<ul class="list-infos-box grid -columns">
+		<li class="list-infos-item grid -columns pad-both-10">
+			<div class="grid -columns">
+				<h2 class="list-infos-title">Informações</h2>
+				<div class="list-infos-content">
+					<p class="list-item-text newjune-bold">Info 1</p>
+				</div>
+				<div class="list-infos-content">
+					<p class="list-item-text newjune-bold">Info 2</p>
+				</div>
+				<div class="list-infos-content">
+					<p class="list-item-text newjune-bold">Info 3</p>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+</pre>
+                  <a href="javascript:;" class="copy-code" data-clipboard-target="#list-infos">Copiar &lt /&gt</a><br/>
+              </div>
+						</div>
+					</div>
+				</div>
+				<div class="section-divider"></div>
+			</section>
+		</div>
+	</body>
+
+	<style>
+		.list-title,
+		.item-title,
+		.list-card-title,
+		.list-values-title,
+		.list-infos-title
+		 {
+			margin-top: 0;
+		}
+
+		.list-infos-title {
+			font-size: 14px;
+		}
+
+		.button-block-component:hover {
+			color: #ffffff;
+		}
+	</style>
+
+	<script type="text/javascript" src="../../script/vendor/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script type="text/javascript" src="../../script/bradseg_scripts.min.js"></script>
+	<script type="text/javascript" src="../../script/bundle.js"></script>
+    <script type="text/javascript" src="../../script/styleguide.min.js"></script>
+    <script type="text/javascript" src="../../script/vendor/clipboard.min.js"></script>
+
+</html>

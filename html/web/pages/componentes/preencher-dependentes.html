@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="stylesheet" type="text/css" href="../../style/bradseg_styles.min.css">
+    <link rel="stylesheet" type="text/css" href="../../style/styleguide.min.css">
+    <link rel="stylesheet" type="text/css" href="../../style/bundle.css">
+    <link rel="stylesheet" data-href="../../style/accessibility/bradseg_black_white.min.css" id="bradsegBlackWhite"/>
+    <link rel="stylesheet" data-href="../../style/accessibility/bradseg_high_contrast.min.css" id="bradsegHighContrast"/>
+
+    <link href="../../style/icons/favicon/favicon-16x16.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <title>Bradesco Seguros - Guia de Estilos</title>
+
+</head>
+
+<body class="styleguide">
+
+    <div class="styleguide-header">
+        <img class="logo-bradseg hidden-sm" src="../../style/logo/bradseg_default.svg" data-grayscale="../../style/logo/bradseg_grayscale.svg" data-highcontrast="../../style/logo/bradseg_highcontrast.svg">
+        <img class="logo-bradseg visible-sm" src="../../style/logo/bradseg_sm_default.svg" data-grayscale="../../style/logo/bradseg_sm_grayscale.svg" data-highcontrast="../../style/logo/bradseg_sm_highcontrast.svg">
+        <span class="title" onclick="location.href='../../../index.html'">Guia de Estilos <span class="icon-nav-selecionar"></span></span>
+        <span class="nav-options">
+            <a href="../../index.html">Início</a>
+             
+            <a href="javascript:;" class="selected">Componentes</a>
+            <a href="../bradseg-css.html">CSS</a>
+            <a href="javascript.html">JS</a>
+            <a href="../taxonomia.html" style="display: none;">Taxonomia</a>
+        </span>
+        <span class="acessibilidade">
+            <a href="javascript:;" class="btn_smallFont"><span class="icon-acess-font-menor"></span></a>
+            <a href="javascript:;" class="btn_tallFont"><span class="icon-acess-font-maior"></span></a>
+            <a href="javascript:;" class="btn_colorBlind"><span class="icon-acess-baixa-visao"></span></a>
+        </span>
+    </div>
+
+    <div class="styleguide-content">
+        <aside class="styleguide-menu">
+            <ul>
+              <li><div><a href="tipografia.html" >Tipografia</a></div></li>
+      				<li><div><a href="iconografia.html" >Iconografia</a></div></li>
+      				<li><div><a href="cores.html" >Cores</a></div></li>
+      				<li><div><a href="header.html" >Template Básico</a></div></li>
+      				<li><div><a href="grid.html" >Grid</a></div></li>
+      				<li><div><a href="espacamentos.html" >Espaçamentos</a></div></li>
+      				<li><div><a href="formularios.html" >Formulários</a></div></li>
+      				<li><div><a href="preencher-dependentes.html" >Preencher Dependentes</a></div></li>
+      				<li><div><a href="separadores.html" >Separadores</a></div></li>
+      				<li><div><a href="tabs.html" >Tabs</a></div></li>
+      				<li><div><a href="paineis-e-cards.html" >Paineis e cards</a></div></li>
+      				<li><div><a href="tabelas-e-listas.html" >Tabelas e Listas</a></div></li>
+      				<li><div><a href="botoes.html" >Botões</a></div><li>
+      				<li><div><a href="boxes.html" >Boxes</a></div><li>
+              <li><div><a href="javascript.html" >Javascript</a></div><li>
+      				<li><div><a href="modal.html" >Modal</a></div><li>
+            </ul>
+        </aside>
+
+        <section class="styleguide-section">
+            <div id="cnt-botoes" class="cnt-botoes">
+                <h2 class="text-center">Preencher Dependentes</h2>
+                <hr class="red">
+                <h4 id="cnt-sub-1" class="font-darkgray">Preencher Dependentes</h4>
+                <hr>
+                <div class="col-md-12 col-sm-12">
+
+                    <div class="col-md-4">
+                        <div class="componente-preencher-dependente">
+                            <a class="componente-preencher-dependente-item grid valign-middle" href="preencher-dependentes.html">
+                                <div class="grid col-8 -columns">
+                                    <div class="componente-preencher-dependente-title">
+                                        <p>Titular do Plano</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="componente-preencher-dependente-item grid valign-middle no-border-top" href="preencher-dependentes.html">
+                                <div class="grid col-8 -columns">
+                                    <div class="componente-preencher-dependente-title">
+                                        <p>Dependente 1</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="componente-preencher-dependente-item grid valign-middle no-border-top" href="preencher-dependentes.html">
+                                <div class="grid col-8 -columns">
+                                    <div class="componente-preencher-dependente-title">
+                                        <p>Dependente 2</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p class="font16px"><span class="font-OS-Bold">Título -</span> Defini o título do componente.<p>
+                    </div>
+                    <div class="col-md-4 col-sm-12 code-btn-enabled">
+                        <div>
+                            <span class="code-type">HTML</span>
+                            <pre id="sep-titulo" class="prettyprint full-width">
+<div class="componente-preencher-dependente">
+    <a class="componente-preencher-dependente-item grid valign-middle" href="preencher-dependente.html">
+        <div class="grid col-8 -columns">
+            <div class="componente-preencher-dependente-title">
+                <p>Titular do Plano</p>
+            </div>
+            <div class="componente-preencher-dependente-text">
+                <p>Paulo Henrique</p>
+            </div>
+        </div>
+    </a>
+    <a class="componente-preencher-dependente-item grid valign-middle no-border-top" href="preencher-dependentes.html">
+        <div class="grid col-8 -columns">
+            <div class="componente-preencher-dependente-title">
+                <p>Dependente 1</p>
+            </div>
+            <div class="componente-preencher-dependente-text">
+                <p>João das Neves</p>
+            </div>
+        </div>
+    </a>
+    <a class="componente-preencher-dependente-item grid valign-middle no-border-top" href="preencher-dependente.html">
+        <div class="grid col-8 -columns">
+            <div class="componente-preencher-dependente-title">
+                <p>Dependente 2</p>
+            </div>
+            <div class="componente-preencher-dependente-text">
+                <p>Walter Branco</p>
+            </div>
+        </div>
+    </a>
+</div>
+                            </pre>
+                            <a href="javascript:;" class="copy-code" data-clipboard-target="#sep-titulo">Copiar &lt; /&gt;</a><br>
+                        </div>
+                    </div>
+                </div>
+
+                <!--==========================================================Bloco 2======================================================================-->
+                <div class="col-md-12 col-sm-12">
+                    <hr />
+                    <div class="col-md-4">
+                        <div class="componente-preencher-dependente">
+                            <a class="componente-preencher-dependente-item grid valign-middle" href="preencher-dependentes.html">
+                                <div class="grid col-8 -columns">
+                                    <div class="componente-preencher-dependente-title">
+                                        <p>Titular do Plano</p>
+                                    </div>
+                                    <div class="componente-preencher-dependente-text">
+                                        <p>Paulo Henrique</p>
+                                    </div>
+                                </div>
+
+                            </a>
+                            <a class="componente-preencher-dependente-item grid valign-middle no-border-top" href="preencher-dependentes.html">
+                                <div class="grid col-8 -columns">
+                                    <div class="componente-preencher-dependente-title">
+                                        <p>Dependente 1</p>
+                                    </div>
+                                    <div class="componente-preencher-dependente-text">
+                                        <p>João das Neves</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="componente-preencher-dependente-item grid valign-middle no-border-top" href="preencher-dependentes.html">
+                                <div class="grid col-8 -columns">
+                                    <div class="componente-preencher-dependente-title">
+                                        <p>Dependente 2</p>
+                                    </div>
+                                    <div class="componente-preencher-dependente-text">
+                                        <p>Walter Branco</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p class="font16px"><span class="font-OS-Bold">Texto do componente - </span>É possível inserir um texto menor na parte inferior de cada item como mostra o exemplo.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-12 code-btn-enabled">
+                        <div>
+                            <span class="code-type">HTML</span>
+                            <pre id="sep-titulo-2" class="prettyprint full-width">
+<div class="componente-preencher-dependente">
+    <a class="componente-preencher-dependente-item grid valign-middle" href="preencher-dependentes.html">
+        <div class="grid col-8 -columns">
+            <div class="componente-preencher-dependente-title">
+                <p>Titular do Plano</p>
+            </div>
+            <div class="componente-preencher-dependente-text">
+                <p>Paulo Henrique</p>
+            </div>
+        </div>
+
+    </a>
+    <a class="componente-preencher-dependente-item grid valign-middle no-border-top" href="preencher-dependentes.html">
+        <div class="grid col-8 -columns">
+            <div class="componente-preencher-dependente-title">
+                <p>Dependente 1</p>
+            </div>
+            <div class="componente-preencher-dependente-text">
+                <p>João das Neves</p>
+            </div>
+        </div>
+    </a>
+    <a class="componente-preencher-dependente-item grid valign-middle no-border-top" href="preencher-dependentes.html">
+        <div class="grid col-8 -columns">
+            <div class="componente-preencher-dependente-title">
+                <p>Dependente 2</p>
+            </div>
+            <div class="componente-preencher-dependente-text">
+                <p>Walter Branco</p>
+            </div>
+        </div>
+    </a>
+</div>
+                            </pre>
+                            <a href="javascript:;" class="copy-code" data-clipboard-target="#sep-titulo-2">Copiar &lt; /&gt;</a><br>
+                        </div>
+                    </div>
+                </div>
+                <!--===============================Bloco 3================================================================================================-->
+                <div class="col-md-12 col-sm-12">
+                    <hr>
+                    <div class="col-md-4">
+                        <div class="componente-preencher-dependente">
+                            <a class="componente-preencher-dependente-item grid valign-middle" href="preencher-dependentes.html">
+                                <div class="grid col-8 -columns">
+                                    <div class="componente-preencher-dependente-title">
+                                        <p>Titular do Plano</p>
+                                    </div>
+                                </div>
+                                <div class="col grid halign-right">
+                                    <div class="componente-preencher-dependente-after grid valign-middle arrow">
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="componente-preencher-dependente-item grid valign-middle no-border-top" href="preencher-dependentes.html">
+                                <div class="grid col-8 -columns">
+                                    <div class="componente-preencher-dependente-title">
+                                        <p>Dependente 1</p>
+                                    </div>
+                                </div>
+                                <div class="col grid halign-right">
+                                    <div class="componente-preencher-dependente-after grid valign-middle arrow">
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="componente-preencher-dependente-item grid valign-middle no-border-top" href="preencher-dependentes.html">
+                                <div class="grid col-8 -columns">
+                                    <div class="componente-preencher-dependente-title">
+                                        <p>Dependente 2</p>
+                                    </div>
+                                </div>
+                                <div class="col grid halign-right">
+                                    <div class="componente-preencher-dependente-after grid valign-middle arrow">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                            <p class="font16px"><span class="font-OS-Bold">Seta à direita - </span>Insere uma seta a direita como mostra o exemplo.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-12 code-btn-enabled">
+                        <div>
+                            <span class="code-type">HTML</span>
+                            <pre id="sep-titulo-3" class="prettyprint full-width">
+<div class="componente-preencher-dependente">
+    <a class="componente-preencher-dependente-item grid valign-middle" href="preencher-dependentes.html">
+        <div class="grid col-8 -columns">
+            <div class="componente-preencher-dependente-title">
+                <p>Titular do Plano</p>
+            </div>
+        </div>
+        <div class="col grid halign-right">
+            <div class="componente-preencher-dependente-after grid valign-middle arrow">
+            </div>
+        </div>
+    </a>
+    <a class="componente-preencher-dependente-item grid valign-middle no-border-top" href="preencher-dependentes.html">
+        <div class="grid col-8 -columns">
+            <div class="componente-preencher-dependente-title">
+                <p>Dependente 1</p>
+            </div>
+        </div>
+        <div class="col grid halign-right">
+            <div class="componente-preencher-dependente-after grid valign-middle arrow">
+            </div>
+        </div>
+    </a>
+    <a class="componente-preencher-dependente-item grid valign-middle no-border-top" href="preencher-dependentes.html">
+        <div class="grid col-8 -columns">
+            <div class="componente-preencher-dependente-title">
+                <p>Dependente 2</p>
+            </div>
+        </div>
+        <div class="col grid halign-right">
+            <div class="componente-preencher-dependente-after grid valign-middle arrow">
+            </div>
+        </div>
+    </a>
+</div>
+                            </pre>
+                            <a href="javascript:;" class="copy-code" data-clipboard-target="#sep-titulo-3">Copiar &lt; /&gt;</a><br>
+                        </div>
+                    </div>
+                </div>
+
+                <!--=============Bloco 4============-->
+                <div class="col-md-12 col-sm-12">
+                    <hr>
+                    <div class="col-md-4">
+                        <div class="componente-preencher-dependente">
+                            <a class="componente-preencher-dependente-item grid valign-middle" href="preencher-dependentes.html">
+                                <div class="grid col-8 -columns">
+                                    <div class="componente-preencher-dependente-title">
+                                        <p>Titular do Plano</p>
+                                    </div>
+                                    <div class="componente-preencher-dependente-text">
+                                        <p>Paulo Henrique</p>
+                                    </div>
+                                </div>
+                                <div class="col grid halign-right">
+                                    <div class="componente-preencher-dependente-after grid valign-middle arrow">
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="componente-preencher-dependente-item grid valign-middle no-border-top" href="preencher-dependentes.html">
+                                <div class="grid col-8 -columns">
+                                    <div class="componente-preencher-dependente-title">
+                                        <p>Dependente 1</p>
+                                    </div>
+                                    <div class="componente-preencher-dependente-text">
+                                        <p>João das Neves</p>
+                                    </div>
+                                </div>
+                                <div class="col grid halign-right">
+                                    <div class="componente-preencher-dependente-after grid valign-middle arrow">
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="componente-preencher-dependente-item grid valign-middle no-border-top" href="preencher-dependentes.html">
+                                <div class="grid col-8 -columns">
+                                    <div class="componente-preencher-dependente-title">
+                                        <p>Dependente 2</p>
+                                    </div>
+                                    <div class="componente-preencher-dependente-text">
+                                        <p>Walter Branco</p>
+                                    </div>
+                                </div>
+                                <div class="col grid halign-right">
+                                    <div class="componente-preencher-dependente-after grid valign-middle arrow">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                            <p class="font16px"><span class="font-OS-Bold">Exemplo completo - </span>Um exemplo do componente completo, com seta a direita e texto.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-12 code-btn-enabled">
+                        <div>
+                            <span class="code-type">HTML</span>
+                            <pre id="sep-titulo-4" class="prettyprint full-width">
+<div class="componente-preencher-dependente">
+    <a class="componente-preencher-dependente-item grid valign-middle" href="preencher-dependente.html">
+        <div class="grid col-8 -columns">
+            <div class="componente-preencher-dependente-title">
+                <p>Titular do Plano</p>
+            </div>
+            <div class="componente-preencher-dependente-text">
+                <p>Paulo Henrique</p>
+            </div>
+        </div>
+        <div class="col grid halign-right">
+            <div class="componente-preencher-dependente-after grid valign-middle arrow">
+            </div>
+        </div>
+    </a>
+    <a class="componente-preencher-dependente-item grid valign-middle no-border-top" href="preencher-dependentes.html">
+        <div class="grid col-8 -columns">
+            <div class="componente-preencher-dependente-title">
+                <p>Dependente 1</p>
+            </div>
+            <div class="componente-preencher-dependente-text">
+                <p>João das Neves</p>
+            </div>
+        </div>
+        <div class="col grid halign-right">
+            <div class="componente-preencher-dependente-after grid valign-middle arrow">
+            </div>
+        </div>
+    </a>
+    <a class="componente-preencher-dependente-item grid valign-middle no-border-top" href="preencher-dependente.html">
+        <div class="grid col-8 -columns">
+            <div class="componente-preencher-dependente-title">
+                <p>Dependente 2</p>
+            </div>
+            <div class="componente-preencher-dependente-text">
+                <p>Walter Branco</p>
+            </div>
+        </div>
+        <div class="col grid halign-right">
+            <div class="componente-preencher-dependente-after grid valign-middle arrow">
+            </div>
+        </div>
+    </a>
+</div>
+                            </pre>
+                            <a href="javascript:;" class="copy-code" data-clipboard-target="#sep-titulo-4">Copiar &lt; /&gt;</a><br>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+
+    <script type="text/javascript" src="../../script/vendor/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script type="text/javascript" src="../../script/bradseg_scripts.min.js"></script>
+    <script type="text/javascript" src="../../script/styleguide.min.js"></script>
+    <script type="text/javascript" src="../../script/vendor/clipboard.min.js"></script>
+
+    </html>

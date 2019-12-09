@@ -1,0 +1,9 @@
+/* GRID COMPONENT */
+
+.col-example {
+	height: 200px;
+  background-color: #fafafa;
+  font-size: 16px;
+  border: 1px solid #666;
+  margin-top: 40px;
+}

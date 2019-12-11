@@ -1368,11 +1368,11 @@
 }
 
 .icon-primary {
-  color: #e5173e;
+  color: #ff7e06;
 }
 
 .icon-primary.icon-circle:before {
-  border-color: #e5173e;
+  border-color: #ffa806;
 }
 
 .icon-secondary {
@@ -3283,7 +3283,7 @@ textarea {
 .list-card-component .list-card-toggle-button:before,
 .list-card-component .list-card-item:not([class*='item-list-']) .list-card-icon-arrow,
 .list-card-component .list-card-item:not([class*='item-list-']) .list-card-title:not([class*='list-card-title-']) {
-  color: #e5173e;
+  color: #ffa806;
 }
 
 .list-card-component .list-card-item,

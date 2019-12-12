@@ -1,0 +1,43 @@
+
+
+		.list-title,
+		.item-title,
+		.list-card-title,
+		.list-values-title,
+		.list-infos-title
+		 {
+			margin-top: 0;
+		}
+
+		.list-infos-title {
+			font-size: 14px;
+		}
+ #contaComparada {
+position: fixed;
+z-index:999999 !important;
+background-color: #FFFFFF;
+}
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+.styleguide-menu::-webkit-scrollbar {
+    width: 5px;
+    background: #dad7d7;
+}
+body::-webkit-scrollbar {
+      width: 9px;
+    
+    background: #dad7d7;
+}
+html::-webkit-scrollbar {
+     width: 9px;
+   
+    background: #dad7d7;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(248, 144, 7);
+}
+		.button-block-component:hover {
+			color: #ffffff;
+		}
+

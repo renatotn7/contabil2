@@ -14,7 +14,7 @@ import br.com.cvm.leitor.PeriodoToProperties;
 public class AccountBDReader {
  public static void main(String args[]) {
 	 EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
-		String cvm1="5258";
+		String cvm1="5258"; 
 		String cvm2="5258";
 		String dp1="122012";
 		String dp2="122011";

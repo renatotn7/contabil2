@@ -23,14 +23,14 @@
     -webkit-transition: background .8s;
     -o-transition: background .8s;
     transition: background .8s;
-    background: -webkit-linear-gradient(280deg, #ee5a76 30%, #e5173e);
-    background: -o-linear-gradient(280deg, #ee5a76 30%, #e5173e);
-    background: linear-gradient(170deg, #ee5a76 30%, #e5173e);
+    background: -webkit-linear-gradient(280deg, #ee5a76 30%, #e58917);
+    background: -o-linear-gradient(280deg, #ee5a76 30%, #e58917);
+    background: linear-gradient(170deg, #ee5a76 30%, #e58917);
 }
 .btn:hover, .btn:focus {
-    background: -webkit-linear-gradient(280deg, #e5173e 30%, #ee5a76);
-    background: -o-linear-gradient(280deg, #e5173e 30%, #ee5a76);
-    background: linear-gradient(170deg, #e5173e 30%, #ee5a76);
+    background: -webkit-linear-gradient(280deg, #e58917 30%, #ee5a76);
+    background: -o-linear-gradient(280deg, #e58917 30%, #ee5a76);
+    background: linear-gradient(170deg, #e58917 30%, #ee5a76);
     color: #FFF;
 }
 .btn.selected {

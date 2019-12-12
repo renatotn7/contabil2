@@ -24,6 +24,7 @@ import br.com.cvm.bd.ComparaContasJaro;
 import br.com.cvm.bd.cargainicial.leitor.PersisteAccounts;
 import br.com.cvm.bd.helper.PersistenceManager;
 import br.com.cvm.bd.model.ContaContabil;
+import br.com.cvm.bd.model.Demonstrativo;
 import br.com.cvm.bd.model.Empresa;
 import br.com.cvm.bd.model.Periodo;
 import br.com.cvm.bd.model.TipoDemonstrativo;
@@ -45,6 +46,8 @@ public class ApplicationController {
 	 
 	  }
 	
+	
+	@CrossOrigin(origins = "*")
 	@GetMapping(path="/getempresas/{cvm}")
 	
 	  public Object getEmpresa(@PathVariable String cvm
@@ -414,5 +417,12 @@ public class ApplicationController {
 			}
 		
 	
-	  
+	@GetMapping(path="/getdemonstrativo/all")
+	
+	  public List<Demonstrativo> getAllDemonstrativos() {
+		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		 Query query = em.createQuery("SELECT e FROM Demonstrativo e");
+		    return (List<Demonstrativo>) query.getResultList();
+
+	}
 }

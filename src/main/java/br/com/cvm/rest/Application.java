@@ -19,7 +19,7 @@ public class Application {
 		
 		 
 	}
-	  @Bean
+	  /*@Bean
 	  public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 	    return args -> {
 
@@ -32,6 +32,6 @@ public class Application {
 	      }
 
 	    };
-	  }
+	  }*/
 
 }

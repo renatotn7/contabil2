@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="dist/diff2html.css">
+  <title>jQuery.getJSON demo</title>
+  <style>
+ 
+  #contaComparada {
+position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+ 
+  padding-left:20px;
+   background:#F2F2F2;
+}
+
+  </style>
+ 
+ 
+<!--  https://github.com/trekhleb/javascript-algorithms/blob/master/src/algorithms/sets/longest-common-subsequence/longestCommonSubsequence.js -->
+<!--   https://github.com/rtfpessoa/diff2html -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type = "text/javascript"
+         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+      </script>
+</head>
+<body>
+ <script src="dist/diff2html.js"></script>
+
+  <script src="dist/diff_match_patch.js"></script>
+ 
+
+<div id="contaComparada"></div>
+<br/><br/><br/><br/><br/>
+ <div id="nda"> </div>
+ <div id="button"></div>
+ <div id="diffresult"></div>
+ <div id="opcoes"></div>
+ <div id="opcoeshided"></div>
+ <div id="buttonshow"> </div>
+
+ <div id="destination-elem-id"></div>
+
+
+   <script>
+     function diff1( texto1, texto2){
+     var str = "";
+      var dmp = new diff_match_patch();
+      var diff = dmp.diff_main( texto1, texto2);
+      
+      dmp.diff_cleanupSemantic(diff);
+     
+     var i=0;
+     
+      for(i = 0 ; i < diff.length;i++){
+      if(diff[i][0]==0){
+    	
+    		   str+="<span style='background-color: #a1ff9c'>"	+ diff[i][1] + "</span>";
+      } 
+       if(diff[i][0]==-1){
+    	
+    		     str+="<font color='#ff6961'>"	+ diff[i][1] + "</font>";
+      } 
+      if(diff[i][0]==1){
+    	
+    		    str+="[<strike>"+diff[i][1]+"</strike>]" ;
+      } 
+      
+      
+      
+     
+      }
+      return str;
+      }
+      
+     
+    </script>
+<script>
+var diffHtml = Diff2Html.getPrettyHtml(
+  '<Unified Diff String>',
+  {inputFormat: 'diff', showFiles: true, matching: 'lines', outputFormat: 'side-by-side'}
+);
+
+document.getElementById("destination-elem-id").innerHTML = diffHtml;
+
+
+
+
+
+ function myFunction() {
+	 var jsonresponse  = {contacomparada:"",contaescolhida:""};
+	jsonresponse.contacomparada=$("input[name='contacomparada']").attr("data-jsondata");
+	jsonresponse.contaescolhida=$("input[name='chooseofaccount']:checked").attr("data-jsondata")	;
+//	alert(jsonresponse.contaescolhida)
+if (typeof jsonresponse.contaescolhida === 'undefined') {
+  // color is undefined
+  jsonresponse.contaescolhida="";
+}
+	//   alert(jsonresponse.contaescolhida.contaContabil);
+//	alert(JSON.stringify(jsonresponse.contacomparada)	);
+	
+	
+	request = $.ajax({
+	  headers: { 
+        'Accept': 'application/json',
+        'Content-Type': 'application/json' 
+    },
+       url: "http://localhost:8081/postComparada1",
+        type: "post",
+        data: JSON.stringify(jsonresponse),
+	//	dataType :  'json'
+    });
+
+    // Callback handler that will be called on success
+    request.done(function (response, textStatus, jqXHR){
+        // Log a message to the console
+        console.log("Hooray, it worked!");
+    });
+
+    // Callback handler that will be called on failure
+    request.fail(function (jqXHR, textStatus, errorThrown){
+        // Log the error to the console
+        console.error(
+            "The following error occurred: "+
+            textStatus, errorThrown
+        );
+    });
+	
+	window.location.reload();
+  }
+   function trogglehided() {
+      $("#opcoeshided").show( "fold", {horizFirst: true }, 2000 );
+   }
+ 
+(function() {
+  var url = "http://localhost:8081/getMelhorCandidato";
+  $.getJSON( url, {
+    tags: "mount rainier",
+    tagmode: "any",
+    format: "json"
+  })
+    .done(function( data ) {
+	//alert("data");
+	var contacontabil = data.comparado;
+	 $(  "#contaComparada").append( "<input type='hidden' id='contacomparada' name='contacomparada' data-jsondata='"+JSON.stringify(contacontabil)+"'>")
+	  $(  "#contaComparada").append( "<br/><strong>raiz: </strong>"+data.raiz );
+	  $(  "#contaComparada").append( "<br/><strong>Conta Contabil: </strong>"+contacontabil.contaContabil+": "+contacontabil.descricao  );
+	
+		  $(  "#contaComparada").append( "<br/><strong>Tipo Balanco: </strong>"+contacontabil.tipoDemonstrativo.descricaoTipo );
+		 $(  "#contaComparada").append( "<br/><strong>Data: </strong>"+contacontabil.demonstrativo.data );
+		 
+		 var existehided = false;
+		
+		
+      $.each( data.candidatos, function( i, item ) {
+	//   $(  "#contaComparada").append( "#opcao"+i);
+	 	 var contacontabil = item.conta;
+	 
+		 if(item.similaridade>70){
+				 $(  "#opcoes").append( "<br/><br/><input type='radio' name='chooseofaccount' data-jsondata='"+JSON.stringify(contacontabil)+"' />");
+		 		$(  "#opcoes").append( "<br/><strong>raiz: </strong>"+item.raiz +"<br/>"+diff1(item.raiz,data.raiz)+"<br/>");	 
+				$(  "#opcoes").append( "<strong>Conta Contabil: </strong>"+contacontabil.contaContabil+": "+contacontabil.descricao + " - <br/>"+  diff1(contacontabil.descricao ,  data.comparado.descricao) );
+			 
+				  $( "#opcoes").append( "<br/><strong>Tipo Balanco: </strong>"+contacontabil.tipoDemonstrativo.descricaoTipo );
+				 $( "#opcoes").append( "<br/><strong>Data: </strong>"+contacontabil.demonstrativo.data );
+		       $( "#opcoes").append( "<br/><strong>similaridade: </strong>"+item.similaridade );
+      }else{
+      	 	$(  "#opcoeshided").append( "<br/><br/><input type='radio' name='chooseofaccount' data-jsondata='"+JSON.stringify(contacontabil)+"' />");
+ 			$(  "#opcoeshided").append( "<br/><strong>raiz: </strong>"+item.raiz +"<br/>");	 
+	 		$(  "#opcoeshided").append( "<strong>Conta Contabil: </strong>"+contacontabil.contaContabil+": "+contacontabil.descricao  );
+
+			  $( "#opcoeshided").append( "<br/><strong>Tipo Balanco: </strong>"+contacontabil.tipoDemonstrativo.descricaoTipo );
+			 $( "#opcoeshided").append( "<br/><strong>Data: </strong>"+contacontabil.demonstrativo.data );
+      		 $( "#opcoeshided").append( "<br/><strong>similaridade: </strong>"+item.similaridade );
+      		 existehided=true;
+      }
+    
+      });
+       if(existehided){
+         $("#opcoeshided").hide( "fold", {horizFirst: true }, 2000 );
+          $( "#buttonshow").append( " <button onclick='trogglehided()' id='showhidedclick'>show</button> ");
+      }
+		 $(  "#nda").append( "<br/><br/><input type='radio' name='chooseofaccount'  />NDA<br/>");
+	       $( "#button").append( " <button onclick='myFunction()'>Click me</button> ");
+	       
+	 
+    }).then(data => {
+    // Work with JSON data here
+    console.log(data)
+  });
+})();
+</script>
+ 
+</body>
+</html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* --- */
 
 /* --- BUTTON | LIST --- */
@@ -99,3 +100,106 @@
     display: flex;
     justify-content: space-between;
 }
+=======
+/* --- */
+
+/* --- BUTTON | LIST --- */
+
+.btn-list.horizontal .item-list { display: inline-block; }
+
+/* --- */
+
+/* --- GERAL --- */
+.btn {
+    width: 220px;
+    padding: 15px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1.2em;
+    margin-right: 15px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: background .8s;
+    -o-transition: background .8s;
+    transition: background .8s;
+    background: -webkit-linear-gradient(280deg, #ee5a76 30%, #e58917);
+    background: -o-linear-gradient(280deg, #ee5a76 30%, #e58917);
+    background: linear-gradient(170deg, #ee5a76 30%, #e58917);
+}
+.btn:hover, .btn:focus {
+    background: -webkit-linear-gradient(280deg, #e58917 30%, #ee5a76);
+    background: -o-linear-gradient(280deg, #e58917 30%, #ee5a76);
+    background: linear-gradient(170deg, #e58917 30%, #ee5a76);
+    color: #FFF;
+}
+.btn.selected {
+    background: -webkit-linear-gradient(280deg, #35a6fe 30%, #0181e6);
+    background: -o-linear-gradient(280deg, #35a6fe 30%, #0181e6);
+    background: linear-gradient(170deg, #35a6fe 30%, #0181e6);
+    color: #fff;
+}
+
+.btn.btn-download {
+    display: block;
+    width: 100%;
+    margin-top: 100px;
+    background: -webkit-linear-gradient(280deg, #35a6fe 30%, #0181e6);
+    background: -o-linear-gradient(280deg, #35a6fe 30%, #0181e6);
+    background: linear-gradient(170deg, #35a6fe 30%, #0181e6);
+}
+.btn.btn-download:hover {
+    background: -webkit-linear-gradient(280deg, #0181e6 30%, #35a6fe);
+    background: -o-linear-gradient(280deg, #0181e6 30%, #35a6fe);
+    background: linear-gradient(170deg, #0181e6 30%, #35a6fe);
+}
+
+.break-line { margin: 40px 0; }
+
+/* --- */
+
+/* --- DESCRIPTION --- */
+
+.chosen {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px;
+    display: flex;
+    height: 500px;
+    overflow-y: scroll;
+    background: #eaeaea;
+}
+
+.description-container { max-width: 500px; }
+
+.description-text {
+    font-family: Arial;
+    font-weight: bold;
+    padding: 30px 0;
+    color: #EAEAEA;
+}
+
+.description-image {
+    display: block;
+    margin: 0 auto;
+}
+
+/* --- */
+
+.text-center {
+    text-align: center !important;
+}
+
+.all {
+    display: flex;
+    align-items: flex-end;
+}
+
+.all ul {
+    display: flex;
+    justify-content: space-between;
+}
+>>>>>>> 1b3cc95ac6ed742efad545ed04881aa5cb465025

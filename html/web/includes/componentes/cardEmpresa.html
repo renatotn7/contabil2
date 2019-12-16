@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 function empresas(){
 var response1 = '<?php  echo file_get_contents("http://localhost:8081/getempresas/all") ?>';
@@ -11,3 +12,18 @@ var replaced=jsonresponse1 ;
      
      return replaced;
 }
+=======
+
+function empresas(){
+var response1 = '<?php  echo file_get_contents("http://localhost:8081/getempresas/all") ?>';
+var response2=  '<?php  $order   = array("\r\n", "\n", "\r"); echo str_replace($order,'',file_get_contents("http://localhost/cogg/includes/componentes/templatecardempresa.html")) ?>';
+var jsonresponse1 = JSON.parse(response1)
+var replaced=jsonresponse1 ;
+    for (i = 0; i < replaced.length; i++) {
+     replaced[i]=(response2.replace("::nomeEmpresa",jsonresponse1[i].razaoSocial).replace("::ncontasanalise",1).replace("::nomeativo",jsonresponse1[i].nomePregao).replace("::segmento",jsonresponse1[i].segmento).replace("::segmentosetorial",jsonresponse1[i].segmentosetorial).replace("::setor",jsonresponse1[i].setor).replace("::subsetor",jsonresponse1[i].subsetor).replace("null",""))
+     
+     };
+     
+     return replaced;
+}
+>>>>>>> 1b3cc95ac6ed742efad545ed04881aa5cb465025

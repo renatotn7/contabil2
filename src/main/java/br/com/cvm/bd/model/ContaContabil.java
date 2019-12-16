@@ -32,13 +32,25 @@ public class ContaContabil implements Serializable {
 	@Column(nullable=false, length=255)
 	private String descricao;
 	
+	@Column(nullable=true, name="id_conta_pai",insertable=false, updatable=false)
+	private Integer idcontaPai;
+	public Integer getIdcontaPai() {
+		return idcontaPai;
+	}
+
+	public void setIdcontaPai(Integer idcontaPai) {
+		this.idcontaPai = idcontaPai;
+	}
+
+	@JsonIgnore
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="id_conta_pai")
 	private ContaContabil contaPai;
 	
 	@JsonIgnore
 	//bi-directional many-to-one association to ContaContabil
-	@OneToMany(mappedBy="contaPai")
+	
+	@OneToMany(mappedBy="contaPai",fetch=FetchType.LAZY)
 	private List<ContaContabil> contasFilhos;
 
 	//bi-directional many-to-one association to ContaContabil
@@ -46,8 +58,9 @@ public class ContaContabil implements Serializable {
 	@JoinColumn(name="id_refconta")
 	private ContaContabil refConta;
 	@JsonIgnore
+	
 	//bi-directional many-to-one association to ContaContabil
-	@OneToMany(mappedBy="refConta")
+	@OneToMany(mappedBy="refConta",fetch=FetchType.LAZY)
 	private List<ContaContabil> refContas;
 	
 	

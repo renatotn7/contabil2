@@ -1547,7 +1547,7 @@
 }
 
 .bg-primary {
-  background: #e5173e;
+  background: #e58017;
 }
 
 .bg-secondary {
@@ -1583,7 +1583,7 @@
 }
 
 .cl-primary {
-  color: #e5173e;
+  color: #e58017;
 }
 
 .cl-secondary {
@@ -2238,7 +2238,7 @@ textarea {
 
 .box-notification-component .box-notification-icon,
 .box-notification-component .box-notification-toggle > .box-notification-button:before {
-  color: #e5173e;
+  color: #e58017;
 }
 
 .box-notification-component {
@@ -2333,7 +2333,7 @@ textarea {
 
 .box-notification-component.box-notification-primary,
 .box-notification-component.box-notification-primary .box-notification-icon {
-  color: #e5173e;
+  color: #e58017;
 }
 
 .box-notification-component.box-notification-secondary,
@@ -2539,27 +2539,27 @@ textarea {
 }
 
 .btn-component.btn-primary:not(.btn-outline) {
-  background: -webkit-linear-gradient(280deg, #ee5a76 30%, #e5173e);
-  background: -o-linear-gradient(280deg, #ee5a76 30%, #e5173e);
-  background: linear-gradient(170deg, #ee5a76 30%, #e5173e);
+  background: -webkit-linear-gradient(280deg, #ee5a76 30%, #e58017);
+  background: -o-linear-gradient(280deg, #ee5a76 30%, #e58017);
+  background: linear-gradient(170deg, #ee5a76 30%, #e58017);
 }
 
 .btn-component.btn-primary:not(.btn-outline):hover,
 .btn-component.btn-primary:not(.btn-outline):focus {
-  background: -webkit-linear-gradient(280deg, #e5173e 30%, #ee5a76);
-  background: -o-linear-gradient(280deg, #e5173e 30%, #ee5a76);
-  background: linear-gradient(170deg, #e5173e 30%, #ee5a76);
+  background: -webkit-linear-gradient(280deg, #e58017 30%, #ee5a76);
+  background: -o-linear-gradient(280deg, #e58017 30%, #ee5a76);
+  background: linear-gradient(170deg, #e58017 30%, #ee5a76);
 }
 
 .btn-component.btn-primary.btn-outline {
   background: transparent;
-  border: 1px solid #e5173e;
-  color: #e5173e;
+  border: 1px solid #e58017;
+  color: #e58017;
 }
 
 .btn-component.btn-primary.btn-outline:hover,
 .btn-component.btn-primary.btn-outline:focus {
-  background: #e5173e;
+  background: #e58017;
 }
 
 .btn-component.btn-secondary:not(.btn-outline) {
@@ -2782,7 +2782,7 @@ textarea {
 @charset "UTF-8";
 
 .checkbox-component .checkbox-input:checked ~ .check-input-label .check-input-check:after {
-  color: #e5173e;
+  color: #e58017;
 }
 
 .checkbox-component {
@@ -2851,7 +2851,7 @@ textarea {
 }
 
 .checkbox-component .checkbox-item.checkbox-item-primary .checkbox-input:before {
-  color: #e5173e;
+  color: #e58017;
 }
 
 .checkbox-component .checkbox-item.checkbox-item-secondary .checkbox-input:before {
@@ -2935,7 +2935,7 @@ textarea {
 }
 
 .input-component.error .input-box .input-icon {
-  color: #e5173e;
+  color: #e58017;
 }
 
 .input-component .input-field,
@@ -3001,12 +3001,12 @@ textarea {
 }
 
 .input-component.error .input-box {
-  border-color: #e5173e;
+  border-color: #e58017;
 }
 
 .list-component > .list-item:not([class*='list-item-']) .list-icon-arrow,
 .list-component > .list-item:not([class*='list-item-']) .list-title:not([class*='list-title-']) {
-  color: #e5173e;
+  color: #e58017;
 }
 
 .list-component > .list-item {
@@ -3079,11 +3079,11 @@ textarea {
 
 .list-component > .list-item.list-item-primary .list-icon-arrow,
 .list-component > .list-item.list-item-primary .list-title:not([class*='list-title-']) {
-  color: #e5173e;
+  color: #e58017;
 }
 
 .list-component > .list-item .list-component > .list-title-primary {
-  color: #e5173e;
+  color: #e58017;
 }
 
 .list-component > .list-item.list-item-secondary .list-icon-arrow,
@@ -3190,7 +3190,7 @@ textarea {
 }
 
 .list-check-component .list-check-input:checked ~ .list-check-label .list-check-label-check:after {
-  background: #e5173e;
+  background: #e58017;
 }
 
 .list-check-component {
@@ -3243,7 +3243,7 @@ textarea {
 }
 
 .list-check-component .list-check-item.list-check-item-primary .list-check-input:before {
-  background: #e5173e;
+  background: #e58017;
 }
 
 .list-check-component .list-check-item.list-check-item-secondary .list-check-input:before {
@@ -3393,20 +3393,20 @@ textarea {
 }
 
 .list-card-component .list-card-item:not([class*='item-list-']) {
-  border-left: 6px solid #e5173e;
+  border-left: 6px solid #e58017;
 }
 
 .list-card-component .list-card-item.list-card-itemprimary {
-  border-left: 6px solid #e5173e;
+  border-left: 6px solid #e58017;
 }
 
 .list-card-component .list-card-item.list-card-itemprimary .list-card-icon-arrow,
 .list-card-component .list-card-item.list-card-itemprimary .list-card-title:not([class*='item-title-']) {
-  color: #e5173e;
+  color: #e58017;
 }
 
 .list-card-component .list-card-item .list-card-title-primary {
-  color: #e5173e;
+  color: #e58017;
 }
 
 .list-card-component .list-card-item.list-card-itemsecondary {
@@ -4048,7 +4048,7 @@ textarea {
 
 .componente-preencher-dependente-title,
 .componente-preencher-dependente-after.arrow:before {
-  color: #e5173e;
+  color: #e58017;
 }
 
 .componente-preencher-dependente-text {
@@ -4221,7 +4221,7 @@ textarea {
 }
 
 .radio-component .radio-input:checked ~ .radio-input-label .radio-input-check:after {
-  background: #e5173e;
+  background: #e58017;
 }
 
 .radio-component,
@@ -4294,7 +4294,7 @@ textarea {
 }
 
 .radio-component .radio-item.radio-item-primary .radio-input:before {
-  background: #e5173e;
+  background: #e58017;
 }
 
 .radio-component .radio-item.radio-item-secondary .radio-input:before {
@@ -4562,15 +4562,15 @@ textarea {
 }
 
 .tabs-component.tabs-primary .tabs-item {
-  border: 1px solid #e5173e;
+  border: 1px solid #e58017;
 }
 
 .tabs-component.tabs-primary .tabs-item.active {
-  background: #e5173e;
+  background: #e58017;
 }
 
 .tabs-component.tabs-primary .tabs-item:not(.active) {
-  color: #e5173e;
+  color: #e58017;
 }
 
 .tabs-component.tabs-secondary .tabs-item {
@@ -4694,7 +4694,7 @@ textarea {
 
 .block-title-component .block-title-title,
 .block-title-component .block-title-icon {
-  color: #e5173e;
+  color: #e58017;
 }
 
 .block-title-component .block-title-action {
@@ -4750,7 +4750,7 @@ textarea {
 .block-title-component.block-title-primary .block-title-title,
 .block-title-component.block-title-primary .block-title-icon,
 .block-title-component.block-title-primary .block-title-action:active {
-  color: #e5173e;
+  color: #e58017;
 }
 
 .block-title-component.block-title-secondary .block-title-title,
@@ -5049,7 +5049,7 @@ Styleguide Componentes.Select
 .select-component.error .select-fake,
 .select-component.error .select-fake .select-box,
 .select-component.error .select-fake .select-default {
-  border-color: #e5173e;
+  border-color: #e58017;
 }
 
 .select-component.error .select-box {

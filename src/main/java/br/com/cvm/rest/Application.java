@@ -16,10 +16,10 @@ public class Application {
 		// TODO Stub de método gerado automaticamente
 		 SpringApplication.run(Application.class,args);
 	
-		
+		System.out.println("ola");
 		 
 	}
-	  @Bean
+	  /*@Bean
 	  public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 	    return args -> {
 
@@ -32,6 +32,6 @@ public class Application {
 	      }
 
 	    };
-	  }
+	  }*/
 
 }

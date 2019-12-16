@@ -15,8 +15,11 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 .settings/
-.apt_generated
+.settings/.*
+.apt_generated/
+.apt_generated/.*
 .target/
+.target/.*
 .project
 .tern-project
 .factorypath

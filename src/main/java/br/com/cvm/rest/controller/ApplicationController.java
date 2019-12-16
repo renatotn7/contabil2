@@ -402,6 +402,7 @@ public class ApplicationController {
 				
 				  Query query = em.createQuery(squery);
 				  List<ContaContabil> contasirmas= (List<ContaContabil>) query.getResultList();
+				  
 				List<ContaContabil> c1=contasirmas;
 				List<ContaContabilMinInfo> lista = new ArrayList<ContaContabilMinInfo> ();
 				for(ContaContabil cfilho :c1) {
@@ -409,8 +410,16 @@ public class ApplicationController {
 					ccmi.setContaContabil(cfilho.getContaContabil());
 					ccmi.setDescricao(cfilho.getDescricao());
 					ccmi.setIdContaContabil(cfilho.getIdContaContabil());
+					squery = "select count(1) from ValorContabil a ,ContaContabil  c where a.demonstrativo.idDemonstrativo = "+c.getDemonstrativo().getIdDemonstrativo()+ " and a.contaContabil.idContaContabil=c.idContaContabil and c.contaPai="+cfilho.getIdContaContabil();
+					
+					   query = em.createQuery(squery);
+					Long nfilhos= (Long) query.getSingleResult();
+					
+					ccmi.setCountfilhos(nfilhos);
 					lista.add(ccmi);
 					System.out.println(cfilho.getContaContabil()+ cfilho.getDescricao());
+					
+					
 				}
 					return	lista;
 				//ccomparada.setRefConta(c);

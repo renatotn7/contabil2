@@ -365,7 +365,7 @@ private static void expoeEncontrado(ArrayList<Integer> datas, Map<String, Intege
 	Set<String> sets = new HashSet<String>();
 	StringBuilder sb = new StringBuilder();
 	for (String key : map.keySet()) {
-		if( datas.size()- map.get(key) <=1) {
+		if( datas.size()- map.get(key) <=0) {
 			if(sets.contains(key)) {
 				continue;
 			}

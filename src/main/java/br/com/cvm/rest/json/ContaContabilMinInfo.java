@@ -10,6 +10,14 @@ public class ContaContabilMinInfo {
 	}
 	String contaContabil;
 	String descricao;
+	Long countfilhos;
+	
+	public Long getCountfilhos() {
+		return countfilhos;
+	}
+	public void setCountfilhos(Long countfilhos) {
+		this.countfilhos = countfilhos;
+	}
 	public String getContaContabil() {
 		return contaContabil;
 	}

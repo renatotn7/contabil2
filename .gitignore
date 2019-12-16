@@ -1,17 +1,39 @@
-@ManyToOne
-	@JoinColumn(name="cvm", nullable=false)
-	private Empresa empresa;
 
-	@JsonIgnore
+# Created by https://www.gitignore.io/api/java
+# Edit at https://www.gitignore.io/?templates=java
 
+### Java ###
+# Compiled class file
+*.class
 
-<plugins>
-    <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>             
-        <configuration>    
-            <mainClass>br.com.cvm.rest.Application</mainClass>
-        </configuration>
-    </plugin>
-</plugins>
-/target/
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+.settings/
+.settings/.*
+.apt_generated/
+.apt_generated/.*
+.target/
+.target/.*
+.project
+.tern-project
+.factorypath
+.classpath
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# End of https://www.gitignore.io/api/java

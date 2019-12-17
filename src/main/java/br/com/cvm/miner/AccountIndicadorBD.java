@@ -24,10 +24,10 @@ public class AccountIndicadorBD {
 		String cvm2 = "5258";
 
 		ArrayList<Long> valores = new ArrayList<Long>();
-		valores.add(296L);
-		valores.add(414L);
-		valores.add(611L);
-		valores.add(843L);
+		valores.add(2657L);
+		valores.add(2936L);
+		valores.add(3250L);
+		valores.add(3535L);
 		ArrayList<Integer> datas = new ArrayList<Integer>();
 		datas.add(201512);
 		datas.add(201612);

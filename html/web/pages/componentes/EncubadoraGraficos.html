@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+			<meta http-equiv="Content-Type" charset="UTF-8">
+			<meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="robots" content="noindex, nofollow">
+        </head>
+	 <?php  include_once (__DIR__. '\..\..\includes\head\configs\admin\head.html'); ?>
+	
+	 <?php  include_once (__DIR__. '\..\..\includes\head\configs\admin\importjavascript.html'); ?>
+	
+
+		
+	<body class="styleguide">
+	 <?php  include (__DIR__. '\..\..\includes\head/menu\admin\barrasuperior.html'); ?>
+
+		<div class="styleguide-content">
+
+
+	 <?php  include (__DIR__. '\..\..\includes\head/menu\admin\menulateral.html'); ?>
+
+			<section class="styleguide-section">
+				<div id="cnt-tipografia" class="cnt-tipografia">
+					<h2 class="text-center">Encubadora</h2>
+					<hr class="red center">
+				
+				<div class="row">
+			
+
+ 
+  <div id="container"></div>
+  <script>
+
+
+anychart.onDocumentReady(function () {
+    // The data used in this sample can be obtained from the CDN
+    // https://cdn.anychart.com/csv-data/csco-daily.csv
+    anychart.data.loadCsvFile('http://localhost/cogg/cvs/csco-daily.csv', function (data) {
+        // create data table on loaded data
+        var dataTable = anychart.data.table();
+        dataTable.addData(data);
+
+        // map loaded data
+        var mapping = dataTable.mapAs({'value': 4});
+
+        // create stock chart
+        var chart = anychart.stock();
+        // setting chart padding to fit both Y axes
+        chart.padding(10, 50, 20, 50);
+
+        // create plot on the chart
+        var plot = chart.plot(0);
+
+        // create line series
+        plot.line()
+                .name('CSCO')
+                .data(mapping)
+                .stroke('2px #64b5f6');
+
+        // create EMA indicator with period 50
+        var ema50 = plot.ema(mapping,3).series();
+        ema50.stroke('#ffa000');
+
+        // adding extra Y axis to the right side
+        plot.yAxis(1).orientation('right');
+
+        // create scroller series with mapped data
+        chart.scroller().line(mapping);
+
+        // set chart selected date/time range
+        chart.selectRange('1990-03-26', '1995-01-03');
+        // set container id for the chart
+        chart.container('container');
+        // initiate chart drawing
+        chart.draw();
+
+        // create range picker
+        var rangePicker = anychart.ui.rangePicker();
+        // init range picker
+        rangePicker.render(chart);
+
+        // create range selector
+        var rangeSelector = anychart.ui.rangeSelector();
+        // init range selector
+        rangeSelector.render(chart);
+    });
+});
+</script>
+
+                
+                
+              </div>
+						
+
+					
+
+					
+					</div>
+				
+			</section>
+		</div>
+	</body>
+
+   
+
+</html>

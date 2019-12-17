@@ -29,6 +29,7 @@ import br.com.cvm.bd.model.Demonstrativo;
 import br.com.cvm.bd.model.Empresa;
 import br.com.cvm.bd.model.Periodo;
 import br.com.cvm.bd.model.TipoDemonstrativo;
+import br.com.cvm.bd.model.ValorContabil;
 import br.com.cvm.leitor.ExtratorDeDiferencasToObject;
 import br.com.cvm.rest.json.ContaContabilMinInfo;
 import br.com.cvm.rest.json.RespostaComparacao;
@@ -398,26 +399,48 @@ public class ApplicationController {
 				EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
 				ContaContabil c = em.find(ContaContabil.class, idConta);
 				ContaContabil cpai = c.getContaPai();
-				String squery = "select c from ValorContabil a ,ContaContabil  c where a.demonstrativo.idDemonstrativo = "+c.getDemonstrativo().getIdDemonstrativo()+ " and a.contaContabil.idContaContabil=c.idContaContabil and c.contaPai="+cpai.getIdContaContabil();
+				String squery = "select a from ValorContabil a ,ContaContabil  c where a.demonstrativo.idDemonstrativo = "+c.getDemonstrativo().getIdDemonstrativo()+ " and a.contaContabil.idContaContabil=c.idContaContabil and c.contaPai="+cpai.getIdContaContabil();
 				
 				  Query query = em.createQuery(squery);
-				  List<ContaContabil> contasirmas= (List<ContaContabil>) query.getResultList();
+				  List<ValorContabil> valorcontabil= (List<ValorContabil>) query.getResultList();
 				  
-				List<ContaContabil> c1=contasirmas;
+				List<ValorContabil> c1=valorcontabil;
 				List<ContaContabilMinInfo> lista = new ArrayList<ContaContabilMinInfo> ();
-				for(ContaContabil cfilho :c1) {
+				for(ValorContabil cfilho :c1) {
 					ContaContabilMinInfo ccmi = new ContaContabilMinInfo();
-					ccmi.setContaContabil(cfilho.getContaContabil());
-					ccmi.setDescricao(cfilho.getDescricao());
-					ccmi.setIdContaContabil(cfilho.getIdContaContabil());
-					squery = "select count(1) from ValorContabil a ,ContaContabil  c where a.demonstrativo.idDemonstrativo = "+c.getDemonstrativo().getIdDemonstrativo()+ " and a.contaContabil.idContaContabil=c.idContaContabil and c.contaPai="+cfilho.getIdContaContabil();
+					ccmi.setContaContabil(cfilho.getContaContabil().getContaContabil());
+					ccmi.setDescricao(cfilho.getContaContabil().getDescricao());
+					ccmi.setIdContaContabil(cfilho.getContaContabil().getIdContaContabil());
+					ccmi.setDemonstrativo(cfilho.getDemonstrativo());
+					ccmi.setValorContabil(cfilho.getValor()+"");
+					
+					squery = "select count(1) from ValorContabil a ,ContaContabil  c where a.demonstrativo.idDemonstrativo = "+c.getDemonstrativo().getIdDemonstrativo()+ " and a.contaContabil.idContaContabil=c.idContaContabil and c.contaPai="+cfilho.getContaContabil().getIdContaContabil();
 					
 					   query = em.createQuery(squery);
 					Long nfilhos= (Long) query.getSingleResult();
 					
+					
+					
+					
 					ccmi.setCountfilhos(nfilhos);
+					
+					String[] niveisConta = cfilho.getContaContabil().getContaContabil().trim().split("\\.");
+					String contaInicial = niveisConta[0];
+					String contasPai[] = new String[niveisConta.length-1];
+					String sinicial = cfilho.getContaContabil().getTipoDemonstrativo().getSiglaTipo();
+					
+					for(int i=1;i<niveisConta.length-1;i++) {
+						
+						contaInicial +="."+niveisConta[i];
+						 Query query1 = em.createQuery("SELECT e.contaContabil FROM ValorContabil e where e.contaContabil.contaContabil=\'"+contaInicial+"\' and e.demonstrativo.idDemonstrativo="+cfilho.getContaContabil().getDemonstrativo().getIdDemonstrativo());
+				    	 ContaContabil  tpai = (ContaContabil) query1.getSingleResult();
+						String estaConta = (String)tpai.getDescricao();
+						sinicial+=" > "+estaConta.split(";")[0];
+						
+					}
+					ccmi.setRaiz(sinicial);
 					lista.add(ccmi);
-					System.out.println(cfilho.getContaContabil()+ cfilho.getDescricao());
+				//	System.out.println(cfilho.getContaContabil()+ cfilho.getDescricao());
 					
 					
 				}

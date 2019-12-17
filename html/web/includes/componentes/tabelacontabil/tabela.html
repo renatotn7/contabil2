@@ -1,24 +1,30 @@
-function tabelacontacontabil(iddiv){
+function tabelacontacontabil(){
 //service
-var response1 = '<?php  echo file_get_contents("http://localhost:8081/getirmaospai?idconta=3743") ?>';
-
+var response1 = '<?php  echo file_get_contents("http://localhost:8081/getirmaospai?idconta=". htmlspecialchars($_GET["idconta1"])) ?>';
+var idConta1 =  '<?php  echo $_GET["idconta1"] ?>';
 //preparacao tabela
 var response2=  '<?php  $order   = array("\r\n", "\n", "\r"); echo str_replace($order,'',file_get_contents("http://localhost/cogg/includes/componentes/tabelacontabil/templateTabela.html")) ?>';
 var response3=  '<?php  $order   = array("\r\n", "\n", "\r"); echo str_replace($order,'',file_get_contents("http://localhost/cogg/includes/componentes/tabelacontabil/templateLinhaTabela.html")) ?>';
+ var jsonresponse1 = JSON.parse(response1)
+  response2=response2.replace("::empresa",jsonresponse1[0].demonstrativo.empresa.razaoSocial).replace("::data",jsonresponse1[0].demonstrativo.data).replace("::versao",jsonresponse1[0].demonstrativo.versao).replace("::raiz",jsonresponse1[0].raiz)
 
-
-   $(  "#"+iddiv).append(	"<br/><br/>	"+response2+"");
-
-
-  var jsonresponse1 = JSON.parse(response1)
 var replaced=jsonresponse1 ;
+   $(  "#tabelacontabil").append(	"<br/><br/>	"+response2+"");
+
+
+
   //replaced=(response3.replace("::nomePregao",jsonresponse1.comparado.demonstrativo.empresa.nomePregao).replace("::raiz",jsonresponse1.raiz).replace("::contaContabil",jsonresponse1.comparado.contaContabil+": "+ jsonresponse1.comparado.descricao).replace("::versao",jsonresponse1.comparado.demonstrativo.versao).replace("::data",jsonresponse1.comparado.demonstrativo.data))
  // $(  "#linhastabelacontacomparada").append(	replaced);
 
 
     for (i = 0; i < replaced.length; i++) {
-     replaced[i]=(response3.replace("::contaContabil",jsonresponse1[i].contaContabil).replace("::descricao",jsonresponse1[i].descricao).replace("::valor","0").replace("::contasfilhas",jsonresponse1[i].countfilhos))
-   
+     if(idConta1!=jsonresponse1[i])
+     	  buffer=(response3.replace("::valor",jsonresponse1[i].valorContabil).replace("::contasfilhas",jsonresponse1[i].countfilhos))
+   if(jsonresponse1[i].idContaContabil != Number(idConta1)){
+    replaced[i]=  buffer.replace("::contaContabil",jsonresponse1[i].contaContabil).replace("::descricao",jsonresponse1[i].descricao)
+   }else{
+    replaced[i]=  buffer.replace("::contaContabil","<b>"+jsonresponse1[i].contaContabil+"</b>").replace("::descricao","<b>"+jsonresponse1[i].descricao+"</b>")
+   }
    		 $(  "#linhastabelacontabil").append(	replaced[i]);
 
      };

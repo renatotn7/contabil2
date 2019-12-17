@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+			<meta http-equiv="Content-Type" charset="UTF-8">
+			<meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="robots" content="noindex, nofollow">
+        </head>
+	 <?php  include_once (__DIR__. '\..\..\includes\head\configs\admin\head.html'); ?>
+	
+	 <?php  include_once (__DIR__. '\..\..\includes\head\configs\admin\importjavascript.html'); ?>
+	
+
+		
+	<body class="styleguide">
+	 <?php  include (__DIR__. '\..\..\includes\head/menu\admin\barrasuperior.html'); ?>
+
+		<div class="styleguide-content">
+
+
+	 <?php  include (__DIR__. '\..\..\includes\head/menu\admin\menulateral.html'); ?>
+
+			<section class="styleguide-section">
+				<div id="cnt-tipografia" class="cnt-tipografia">
+					<h2 class="text-center">Encubadora</h2>
+					<hr class="red center">
+				
+				<div class="row">
+			
+
+ 
+  <div id="container"></div>
+  <script>
+anychart.onDocumentReady(function () {
+    // The data used in this sample can be obtained from the CDN
+    // https://cdn.anychart.com/csv-data/csco-daily.csv
+    anychart.data.loadCsvFile('http://localhost/cogg/cvs/csco-daily.csv', function (data) {
+        // create data table on loaded data
+        var dataTable = anychart.data.table();
+        dataTable.addData(data);
+
+        // map loaded data for the ohlc series
+        var mapping = dataTable.mapAs({
+            'open': 1,
+            'high': 2,
+            'low': 3,
+            'close': 4,
+            'value': {'column': 4, 'type': 'close'}
+        });
+
+        // map loaded data for the scroller
+        var scrollerMapping = dataTable.mapAs();
+        scrollerMapping.addField('value', 5);
+
+        // create stock chart
+        var chart = anychart.stock();
+
+        // create first plot on the chart
+        var plot = chart.plot();
+        // grid settings
+        plot.yGrid(true)
+                .xGrid(true)
+                .xMinorGrid(true)
+                .yMinorGrid(true);
+
+        var series = plot.candlestick(mapping).name('CSCO');
+        series.legendItem().iconType('rising-falling');
+
+        // create BBands indicator with period = 20, deviation = 3
+        plot.bbands(mapping, 3, 2);
+
+        var indicatorPlot = chart.plot(1);
+        indicatorPlot.height('30%');
+
+        // create BBands Width indicator with period 20, deviation = 3
+        var bBandsWidthIndicator = indicatorPlot.bbandsWidth(mapping, 20, 3, 'spline-area');
+        bBandsWidthIndicator.series()
+                .stroke('1.5 #F18126')
+                .fill(anychart.color.lighten(bBandsWidthIndicator.series().stroke().color, 0.5));
+
+        // create scroller series with mapped data
+        chart.scroller().spline(mapping);
+
+        // set chart selected date/time range
+        chart.selectRange('2001-06-05', '2002-09-26');
+        // set container id for the chart
+        chart.container('container');
+        // initiate chart drawing
+        chart.draw();
+
+        // create range picker
+        var rangePicker = anychart.ui.rangePicker();
+        // init range picker
+        rangePicker.render(chart);
+
+        // create range selector
+        var rangeSelector = anychart.ui.rangeSelector();
+        // init range selector
+        rangeSelector.render(chart);
+    });
+});
+
+</script>
+
+                
+                
+              </div>
+						
+
+					
+
+					
+					</div>
+				
+			</section>
+		</div>
+	</body>
+
+   
+
+</html>

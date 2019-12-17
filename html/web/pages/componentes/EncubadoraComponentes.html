@@ -30,10 +30,11 @@
 				<div class="row">
 						<div class="row">
 											<div class="col-sm-6">				
-					<div id="tabelacontacontabil"></div>
+					<div id="tabelacontabil"></div>
 				</div>
-				<div class="col-sm-6">				
-					<div id="tabelacontacontabil2"></div>
+				<div class="col-sm-6">		
+				<div id="tabelacontabilcomparada"></div>		
+			
 				</div>
 				</div>
 
@@ -56,10 +57,10 @@
 
 
 <?php  include_once (__DIR__. '\..\..\includes\componentes\tabelacontabil\tabela.html'); ?>
+<?php  include_once (__DIR__. '\..\..\includes\componentes\tabelacontabilcomparada\tabela.html'); ?>
 
-
-tabelacontacontabil("tabelacontacontabil");
-tabelacontacontabil("tabelacontacontabil2");
+tabelacontacontabil();
+tabelacontacontabilcomparada();
  //   $(  "#contaComparada").append(	contacomparada1);
 
 </script>

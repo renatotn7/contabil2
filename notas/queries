@@ -1,1 +1,4 @@
 SELECT b.valor,d.data FROM `conta_contabil` a,`valor_contabil` b, `indicador` c, `demonstrativo` d WHERE a.id_conta_contabil = b.id_conta_contabil and a.id_indicador = c.id_indicador and c.nome_indicador like 'Patrim%' and b.id_demonstrativo = d.id_demonstrativo and d.cvm = 5258 and d.versao =1 order by d.data
+
+
+	SELECT b.valor,d.data FROM `conta_contabil` a,`valor_contabil` b, `indicador` c, `demonstrativo` d WHERE a.id_conta_contabil = b.id_conta_contabil and a.id_indicador = c.id_indicador and c.nome_indicador like 'Lucro%' and b.id_demonstrativo = d.id_demonstrativo and d.cvm = 5258 and d.versao =1 order by d.data

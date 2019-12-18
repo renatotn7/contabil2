@@ -103,21 +103,53 @@
 					</div>
 					<div class="wrapper">
 						<ul class="list list-unstyled list-nav" id="indicatorNavPanel">
-							<li><select name="" id="chartDataSelect"
+							<li>
+							
+							<select name="" id="chartDataSelect"
 								class="select selectpicker show-tick" title="Select Data Chart"><option
 										value="1" selected="selected" data-json="test.json">MSFT</option>
 									<option value="2" data-json="./data/orcl.json">ORCL</option>
 									<option value="3" data-json="./data/csco.json">CSCO</option>
 									<option value="4" data-json="./data/ibm.json">IBM</option></select></li>
+							
+														<div class="select-component grid">
+									<div class="hidden">
+									<input id="documento-CPF" type="radio" name="documento" value="1" checked="checked"  data-json="test.json">
+									<input id="documento-RG" type="radio" name="documento" value="2" data-json="./data/orcl.json">
+									<input type="radio" name="documento" value="3"  data-json="./data/csco.json">
+								</div>
+								<div class="select-fake grid col-12">
+									<div class="select-box col-12">
+										<label for="documento-CPF" class="select-item">
+											<span class="select-text">MSFT</span>
+										</label>
+										<label for="documento-RG" class="select-item">
+											<span class="select-text">ORCL</span>
+										</label>
+										<label for="documento-RG" class="select-item">
+											<span class="select-text">CSCO</span>
+										</label>
+										<p class="select-default">
+											<span class="select-text">Selecione o tipo de documento</span>
+										</p>
+									</div>
+									<i class="select-arrow icon-gray-dark icon-seta-baixo-b"></i>
+								</div>
+							</div>
+					
+							
+							
+							
+							
 							<li><select name="" id="seriesTypeSelect"
 								class="select selectpicker show-tick">
 									<!--series constructors-->
 									<option value="area">Area Chart</option>
-									<option value="candlestick" selected="selected">Candlestick
+									<option value="candlestick" >Candlestick
 										Chart</option>
 									<option value="column">Column Chart</option>
 									<option value="jumpLine">Jump Line Chart</option>
-									<option value="line">Line Chart</option>
+									<option value="line" selected="selected">Line Chart </option>
 									<option value="marker">Marker Chart</option>
 									<option value="ohlc">OHLC Chart</option>
 									<option value="rangeArea">Range Area Chart</option>

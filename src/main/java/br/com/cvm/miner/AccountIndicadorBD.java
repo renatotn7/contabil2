@@ -24,10 +24,10 @@ public class AccountIndicadorBD {
 		String cvm2 = "5258";
 
 		ArrayList<Long> valores = new ArrayList<Long>();
-		valores.add(2657L);
-		valores.add(2936L);
-		valores.add(3250L);
-		valores.add(3535L);
+		valores.add(296L);
+		valores.add(414L);
+		valores.add(611L);
+		valores.add(843L);
 		ArrayList<Integer> datas = new ArrayList<Integer>();
 		datas.add(201512);
 		datas.add(201612);
@@ -54,8 +54,9 @@ public class AccountIndicadorBD {
 					if(encontrou == false) {
 					encontrou=true;
 					}
-				
+					
 				}
+				valoresC=new ArrayList<ValorContabil>();
 			}
 		}
 		if(encontrou) {
@@ -378,7 +379,7 @@ private static void expoeEncontrado(ArrayList<Integer> datas, Map<String, Intege
 					sb.append("\n\t"+data+"\n");
 					for(ValorContabil vc: vcs) {
 						
-						sb.append("\t\t"+vc.getDemonstrativo().getData()+" "+vc.getDemonstrativo().getEmpresa().getCvm()+" "+vc.getContaContabil().getContaContabil()+" "+ vc.getContaContabil().getDescricao()+"\n");
+						sb.append("\t\t"+vc.getDemonstrativo().getData()+" "+vc.getDemonstrativo().getEmpresa().getCvm()+" "+vc.getContaContabil().getContaContabil()+" "+ vc.getContaContabil().getDescricao()+" "+ vc.getContaContabil().getIdContaContabil()+" "+ vc.getValor()+"\n");
 					}
 				}
 			}
@@ -407,19 +408,31 @@ private static boolean comparaValores(ArrayList<Long> valores, Map<String, Integ
 		
 		if(vc.getValor()!=null && (Long)Math.round(valor/Math.pow(10, idivisor))>0) {	
 			valor = valor/Math.pow(10, idivisor);
-			soma = soma/Math.pow(10, idivisor);
+			Double soman = soma/Math.pow(10, idivisor);
 			Long valorf = (Long)Math.round(valor);
-			Long valors = (Long)Math.round(soma);
+			Long valors = (Long)Math.round(soman);
 					Long v  = (Long)(valores.get(ientrada));
 					Long v1 = (valorf+valors);
-					
-					if(v.compareTo(v1)==0) {
-
+				
+					if(v.compareTo(v1)==0) { 	
+					if(valorf.compareTo(valorf+valors)==0 && soma >0) {
+							break;
+						}
 						String chave=vc.getContaContabil().getDescricao()+":"+getRaiz(vc);
 					Integer valuemap=	map.getOrDefault(chave + " "+addInMap, 0);
 					
-					map.put(chave+ " "+addInMap,++valuemap);
+					
 					valoresC.add(vc);
+					for( ValorContabil vc1:valoresC) {
+						Double valor1 = vc1.getValor()/Math.pow(10, idivisor);
+						Long valorf1 = (Long)Math.round(valor1);
+					
+						if(vc1.getValor()<Math.pow(10, idivisor) ||(valorf1.compareTo(v)==0 && valoresC.size()>1)) {
+							valoresC=new ArrayList<ValorContabil>();
+							return false;
+						}
+					}
+					map.put(chave+ " "+addInMap,++valuemap);
 					//System.out.println("idivisor:"+idivisor);
 				//	valoresC.addAll(valoresContabeis);
 					mapvalores.put(vc.getDemonstrativo().getData()+":"+chave+ " "+addInMap,valoresC);
@@ -457,9 +470,5 @@ private static String getRaiz(ValorContabil vc) {
 	return null;
 }
  
- 
- public static void teste1() {
-	 
- }
 }
 

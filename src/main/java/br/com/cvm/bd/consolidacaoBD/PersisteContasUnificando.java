@@ -470,7 +470,7 @@ static Divergencia divergencia;
 public RelatorioDiferenca rdif = new RelatorioDiferenca();
 public PersisteContasUnificando( String cvmProp,  String dataProp, String perProp ){
 
-	
+try {
 //	String cvm1=cvmbd;
 	String cvm2=cvmProp ; //"5258";
 	
@@ -610,15 +610,23 @@ public PersisteContasUnificando( String cvmProp,  String dataProp, String perPro
 	 	}else {
 	 		System.out.println("\tSem diferenças");
 	 	}
+}catch(Exception e) {
+	 		e.printStackTrace();
+	 	}
 	 //	em.close();
 }
 public static void main(String []args) {
-	String cvm ="5258";
+	String cvm ="9342";
 //	new PersisteIgualdes("5258","5258","122011","122012","A", "A");
-	//new PersisteIgualdes(cvm,"122015", "A");
-//	new PersisteIgualdes(cvm,"122016", "A");
-//	new PersisteIgualdes(cvm,"122017", "A");
-//	new PersisteIgualdes(cvm,"122018", "A");
+	new PersisteContasUnificando(cvm,"122011", "A");
+	new PersisteContasUnificando(cvm,"122012", "A");
+	new PersisteContasUnificando(cvm,"122013", "A");
+	new PersisteContasUnificando(cvm,"122014", "A");
+	new PersisteContasUnificando(cvm,"122015", "A");
+	new PersisteContasUnificando(cvm,"122016", "A");
+	new PersisteContasUnificando(cvm,"122017", "A");
+	new PersisteContasUnificando(cvm,"122018", "A");
+	
 	new PersisteContasUnificando(cvm,"032011", "T");
 	new PersisteContasUnificando(cvm,"062011", "T");
 	new PersisteContasUnificando(cvm,"092011", "T");

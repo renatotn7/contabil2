@@ -45,12 +45,15 @@ public class PeriodoToProperties {
 				prop = new Properties();
 				prop.loadFromXML(input);
 				edp.setBpp(prop);
-			 
+			 try {
 				input = new FileInputStream(prefixo+"/DemonstracaoResultadoAbrangente");
 
 				prop = new Properties();
 				prop.loadFromXML(input);
 				edp.setDra(prop);
+			 }catch(Exception e) {
+				 edp.setDra(new Properties());
+			 }
 				input = new FileInputStream(prefixo+"/DemValorAdicionado");
 
 				prop = new Properties();

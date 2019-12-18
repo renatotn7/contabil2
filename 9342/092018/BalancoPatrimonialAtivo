@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="1.02.04.02">Goodwill;</entry>
+<entry key="1.02.04.01">Intangíveis;23.121</entry>
+<entry key="1.02.02.01.05">Outros Investimentos;284</entry>
+<entry key="1.02.02.01.04">Participações em Controladas em Conjunto;</entry>
+<entry key="1.02.02.01.01">Participações em Coligadas;</entry>
+<entry key="1.02.04.01.01">Contrato de Concessão;</entry>
+<entry key="1.02.01.01.01">Títulos Designados a Valor Justo;</entry>
+<entry key="1.01.02.03">Aplicações Financeiras Avaliadas ao Custo Amortizado;</entry>
+<entry key="1.01.08">Outros Ativos Circulantes;</entry>
+<entry key="1.01.02.02">Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes;</entry>
+<entry key="1.01.07">Despesas Antecipadas;</entry>
+<entry key="1.01.02.01">Aplicações Financeiras Avaliadas a Valor Justo através do Resultado;</entry>
+<entry key="1.01.06">Tributos a Recuperar;30.914</entry>
+<entry key="1.02.02.02">Propriedades para Investimento;</entry>
+<entry key="1.01.05">Ativos Biológicos;</entry>
+<entry key="1.02.02.01">Participações Societárias;284</entry>
+<entry key="1.01.04">Estoques;409.342</entry>
+<entry key="1.01.03">Contas a Receber;234.429</entry>
+<entry key="1.01.02">Aplicações Financeiras;</entry>
+<entry key="1.01.01">Caixa e Equivalentes de Caixa;10.697</entry>
+<entry key="1.02.01.04.02">Outras Contas a Receber;</entry>
+<entry key="1.02.01.04.01">Clientes;</entry>
+<entry key="1.02.01.09.04">Créditos com Outras Partes Relacionadas;</entry>
+<entry key="1.02.01.09.03">Créditos com Controladores;</entry>
+<entry key="1.02.01.10.05">Outros Ativos;415</entry>
+<entry key="1.02.01.10.04">Depósitos Judiciais;9.411</entry>
+<entry key="1.02.01.09.01">Créditos com Coligadas;</entry>
+<entry key="1.02.01.10.03">Demais Impostos a Recuperar;1.929</entry>
+<entry key="1.02.01.10.02">Ativos de Operações Descontinuadas;</entry>
+<entry key="1.02.01.10.01">Ativos Não-Correntes a Venda;</entry>
+<entry key="1">Ativo Total;954.818</entry>
+<entry key="1.02.01.10">Outros Ativos Não Circulantes;11.755</entry>
+<entry key="1.02">Ativo Não Circulante;269.436</entry>
+<entry key="1.01">Ativo Circulante;685.382</entry>
+<entry key="1.02.01.07.01">Imposto de Renda e Contribuição Social Diferidos;5.171</entry>
+<entry key="Conta">Descrição;30/09/2018</entry>
+<entry key="1.01.03.02">Outras Contas a Receber;37.559</entry>
+<entry key="1.02.03.03">Imobilizado em Andamento;</entry>
+<entry key="1.01.03.01">Clientes;196.870</entry>
+<entry key="1.02.03.02">Direito de Uso em Arrendamento;</entry>
+<entry key="1.02.04">Intangível;23.121</entry>
+<entry key="1.02.03.01">Imobilizado em Operação;229.105</entry>
+<entry key="1.02.03">Imobilizado;229.105</entry>
+<entry key="1.01.08.03">Outros;</entry>
+<entry key="1.02.02">Investimentos;284</entry>
+<entry key="1.01.08.02">Ativos de Operações Descontinuadas;</entry>
+<entry key="1.01.08.01">Ativos Não-Correntes a Venda;</entry>
+<entry key="1.02.01">Ativo Realizável a Longo Prazo;16.926</entry>
+<entry key="1.02.01.09">Créditos com Partes Relacionadas;</entry>
+<entry key="1.02.01.08">Despesas Antecipadas;</entry>
+<entry key="1.02.01.07">Tributos Diferidos;5.171</entry>
+<entry key="1.02.01.06">Ativos Biológicos;</entry>
+<entry key="1.02.01.05">Estoques;</entry>
+<entry key="1.02.01.04">Contas a Receber;</entry>
+<entry key="1.02.01.03">Aplicações Financeiras Avaliadas ao Custo Amortizado;</entry>
+<entry key="1.02.01.02">Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes;</entry>
+<entry key="1.02.01.01">Aplicações Financeiras Avaliadas a Valor Justo através do Resultado;</entry>
+<entry key="1.01.06.01">Tributos Correntes a Recuperar;30.914</entry>
+<entry key="1.01.02.01.02">Títulos Designados a Valor Justo;</entry>
+<entry key="1.01.02.01.01">Títulos para Negociação;</entry>
+<entry key="1.01.06.01.02">Demais Impostos a Recuperar;7.803</entry>
+<entry key="1.01.06.01.01">Imposto de Renda e Contribuição Social a Recuperar;23.111</entry>
+</properties>

@@ -112,10 +112,12 @@ public class IngestaoDemonstrativos {
 								"https://www.rad.cvm.gov.br/enetconsulta/frmDemonstracaoFinanceiraITR.aspx?Informacao="+ninfo+"&Demonstracao=4&Periodo=0&Grupo=&Quadro=&NomeTipoDocumento="+docto+"&Empresa=&DataReferencia=&Versao=&CodTipoDocumento=4&NumeroSequencialDocumento="
 										+ codDocumento + "&NumeroSequencialRegistroCvm=" + codcvm + "&CodigoTipoInstituicao=",
 								prefixo + "/DemonstracaoResultado");
+						try {
 						new javaCVMTable(driver,
 								"https://www.rad.cvm.gov.br/enetconsulta/frmDemonstracaoFinanceiraITR.aspx?Informacao="+ninfo+"&Demonstracao=5&Periodo=0&Grupo=&Quadro=&NomeTipoDocumento="+docto+"&Empresa=&DataReferencia=&Versao=&CodTipoDocumento=4&NumeroSequencialDocumento="
 										+ codDocumento + "&NumeroSequencialRegistroCvm=" + codcvm + "&CodigoTipoInstituicao=",
 								prefixo + "/DemonstracaoResultadoAbrangente");
+						}catch(Exception e) {}
 						new javaCVMTable(driver,
 								"https://www.rad.cvm.gov.br/enetconsulta/frmDemonstracaoFinanceiraITR.aspx?Informacao="+ninfo+"&Demonstracao=99&Periodo=0&Grupo=&Quadro=&NomeTipoDocumento="+docto+"&Empresa=&DataReferencia=&Versao=&CodTipoDocumento=4&NumeroSequencialDocumento="
 										+ codDocumento + "&NumeroSequencialRegistroCvm=" + codcvm + "&CodigoTipoInstituicao=",

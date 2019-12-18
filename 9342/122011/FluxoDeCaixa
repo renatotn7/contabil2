@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.03.07">Amortização de principal e juros de financiamentos;-4.180</entry>
+<entry key="6.03.06">Pagamento de arrendamento mercantis;-277</entry>
+<entry key="6.03.05">Arrendamentos mercantis efetuados;0</entry>
+<entry key="6.03.04">Captações de empréstimos/financiamentos (principal);4.189</entry>
+<entry key="6.03.03">Aquisição de ações próprias;-634</entry>
+<entry key="6.03.02">Mutuos com partes relacionadas;</entry>
+<entry key="6.03.01">Pagamento de dividendos e juros sobre o capital próprio;-9.500</entry>
+<entry key="6.01.02.09">Aumento (redução) de credores diversos;0</entry>
+<entry key="6.01.02.08">Aumento (redução) dos impostos, contribuições e obrigações sociais a pagar;-13.544</entry>
+<entry key="6.01.02.07">(Aumento) redução de pagamentos de IRPJ e CSLL;0</entry>
+<entry key="6.01.02.06">Aumento (redução) de fornecedores;22.635</entry>
+<entry key="6.01.02.05">(Aumento) redução demais impostos a recuperar;-2.296</entry>
+<entry key="6.01.02.04">(Aumento) redução de impostos de renda e contr. social a recuperar;-2.697</entry>
+<entry key="6.01.02.03">(Aumento) redução dos depósitos judiciais;980</entry>
+<entry key="6.01.02.02">(Aumento) redução dos estoques;-16.307</entry>
+<entry key="6.01.03">Outros;</entry>
+<entry key="6.01.02.01">(Aumento) redução dos créditos a receber de clientes;-13.191</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;-13.735</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;64.328</entry>
+<entry key="6.01.01.10">Provisão Programa Fidelidade;2.851</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;14.013</entry>
+<entry key="Conta">Descrição;01/01/2011 
+ a 
+ 31/12/2011</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;-10.402</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-26.178</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;50.593</entry>
+<entry key="6.02.03">Dividendos de controladas;</entry>
+<entry key="6.02.02">Aquisição de intangível;-3.882</entry>
+<entry key="6.02.01">Aquisição de imobilizado;-22.296</entry>
+<entry key="6.01.01.09">Juros provisionados;1.169</entry>
+<entry key="6.01.01.08">Provisão para devedores duvidosos;3.646</entry>
+<entry key="6.01.01.07">Provisão para perda com estoques;79</entry>
+<entry key="6.01.01.06">Imposto de renda e contribuição social diferidos;-575</entry>
+<entry key="6.01.01.05">Custo do permanente baixado ou vendido;730</entry>
+<entry key="6.01.01.04">Resultado de equivalência patrimonial;</entry>
+<entry key="6.01.01.03">Provisão para passivos contingentes;-2.251</entry>
+<entry key="6.01.01.02">Depreciações e amortizações;7.110</entry>
+<entry key="6.01.01.01">Lucro líquido do exercício;51.569</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;36.322</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;22.309</entry>
+<entry key="6.01.02.12">Aumento (redução) de subvenção para investimentos;5.026</entry>
+<entry key="6.01.02.11">Aumento (redução) dos demais grupos do passivo;8.056</entry>
+<entry key="6.01.02.10">(Aumento) redução dos demais grupos do ativo;-2.397</entry>
+</properties>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="3.04.06">Resultado de Equivalência Patrimonial;</entry>
+<entry key="3.04.05">Outras Despesas Operacionais;</entry>
+<entry key="3.04.04">Outras Receitas Operacionais;21.844</entry>
+<entry key="3.04.03">Perdas pela Não Recuperabilidade de Ativos;</entry>
+<entry key="Conta">Descrição;01/01/2016 
+ a 
+ 31/03/2016</entry>
+<entry key="3.09">Resultado Líquido das Operações Continuadas;10.218</entry>
+<entry key="3.04.02">Despesas Gerais e Administrativas;-13.440</entry>
+<entry key="3.10.02">Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas;</entry>
+<entry key="3.08">Imposto de Renda e Contribuição Social sobre o Lucro;-5.339</entry>
+<entry key="3.04.01">Despesas com Vendas;-112.792</entry>
+<entry key="3.10.01">Lucro/Prejuízo Líquido das Operações Descontinuadas;</entry>
+<entry key="3.07">Resultado Antes dos Tributos sobre o Lucro;15.557</entry>
+<entry key="3.99">Lucro por Ação - (Reais / Ação);</entry>
+<entry key="3.06">Resultado Financeiro;-5.269</entry>
+<entry key="3.99.01.02">PN;2,44000</entry>
+<entry key="3.05">Resultado Antes do Resultado Financeiro e dos Tributos;20.826</entry>
+<entry key="3.99.01.01">ON;2,22000</entry>
+<entry key="3.04">Despesas/Receitas Operacionais;-104.388</entry>
+<entry key="3.03">Resultado Bruto;125.214</entry>
+<entry key="3.02">Custo dos Bens e/ou Serviços Vendidos;-403.687</entry>
+<entry key="3.11.02">Atribuído a Sócios Não Controladores;</entry>
+<entry key="3.01">Receita de Venda de Bens e/ou Serviços;528.901</entry>
+<entry key="3.11.01">Atribuído a Sócios da Empresa Controladora;10.218</entry>
+<entry key="3.99.02.02">PN;2,44000</entry>
+<entry key="3.99.02.01">ON;2,22000</entry>
+<entry key="3.99.02">Lucro Diluído por Ação;</entry>
+<entry key="3.06.02">Despesas Financeiras;-6.786</entry>
+<entry key="3.99.01">Lucro Básico por Ação;</entry>
+<entry key="3.06.01">Receitas Financeiras;1.517</entry>
+<entry key="3.11">Lucro/Prejuízo Consolidado do Período;10.218</entry>
+<entry key="3.10">Resultado Líquido de Operações Descontinuadas;</entry>
+<entry key="3.08.02">Diferido;1.241</entry>
+<entry key="3.08.01">Corrente;-6.580</entry>
+</properties>

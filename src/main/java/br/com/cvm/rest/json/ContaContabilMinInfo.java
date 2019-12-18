@@ -1,7 +1,7 @@
 package br.com.cvm.rest.json;
 
-import br.com.cvm.bd.model.Demonstrativo;
-import br.com.cvm.bd.model.Empresa;
+import br.com.cvm.bd.modelBD.Demonstrativo;
+import br.com.cvm.bd.modelBD.Empresa;
 
 public class ContaContabilMinInfo {
 	Integer idContaContabil;

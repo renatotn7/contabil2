@@ -1,6 +1,6 @@
 package br.com.cvm.rest.json;
 
-import br.com.cvm.bd.model.ContaContabil;
+import br.com.cvm.bd.modelBD.ContaContabil;
 
 public class RespostaComparacao {
  public ContaContabil contacomparada;

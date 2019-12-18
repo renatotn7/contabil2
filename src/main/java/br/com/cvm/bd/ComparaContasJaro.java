@@ -8,8 +8,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
 import br.com.cvm.bd.helper.PersistenceManager;
-import br.com.cvm.bd.model.ContaContabil;
-import br.com.cvm.bd.model.TipoDemonstrativo;
+import br.com.cvm.bd.modelBD.ContaContabil;
+import br.com.cvm.bd.modelBD.TipoDemonstrativo;
 import br.com.cvm.utils.JaroWinklerStrategy;
 import entities.ContaCandidata;
 import entities.ContaComparada;

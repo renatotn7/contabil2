@@ -1,6 +1,6 @@
 package entities;
 
-import br.com.cvm.bd.model.ContaContabil;
+import br.com.cvm.bd.modelBD.ContaContabil;
 
 public class ContaCandidata implements Comparable<ContaCandidata>{
 	ContaContabil conta;

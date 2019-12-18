@@ -3,7 +3,7 @@ package entities;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.cvm.bd.model.ContaContabil;
+import br.com.cvm.bd.modelBD.ContaContabil;
 
 public class ContaComparada {
 	ContaContabil comparado;

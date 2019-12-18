@@ -6,8 +6,10 @@ import java.io.InputStream;
 import java.util.List;
 import java.util.Properties;
 
-import br.com.cvm.bd.model.ContaContabil;
-import br.com.cvm.bd.model.Empresa;
+import br.com.cvm.bd.modelBD.ContaContabil;
+import br.com.cvm.bd.modelBD.Empresa;
+import br.com.cvm.leitor.entidades.EntidadeCVM;
+import br.com.cvm.leitor.entidades.EntidadeDemonstracaoProperties;
 
 public class PeriodoToProperties {
 	public EntidadeDemonstracaoProperties getEdp() {

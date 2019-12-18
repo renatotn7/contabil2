@@ -13,8 +13,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
 import br.com.cvm.bd.helper.PersistenceManager;
-import br.com.cvm.bd.model.ContaContabil;
-import br.com.cvm.bd.model.ValorContabil;
+import br.com.cvm.bd.modelBD.ContaContabil;
+import br.com.cvm.bd.modelBD.ValorContabil;
 import br.com.cvm.leitor.PeriodoToProperties;
 
 public class AccountIndicadorBD {

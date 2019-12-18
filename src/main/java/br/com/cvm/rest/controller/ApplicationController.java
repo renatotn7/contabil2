@@ -29,7 +29,7 @@ import br.com.cvm.bd.modelBD.Empresa;
 import br.com.cvm.bd.modelBD.Periodo;
 import br.com.cvm.bd.modelBD.TipoDemonstrativo;
 import br.com.cvm.bd.modelBD.ValorContabil;
-import br.com.cvm.bd.origemProperties.PersisteAccounts;
+import br.com.cvm.bd.origemProperties.deprecated.PersisteAccounts;
 import br.com.cvm.leitor.usoemservicos.ExtratorDeDiferencasToObject;
 import br.com.cvm.rest.json.ContaContabilMinInfo;
 import br.com.cvm.rest.json.RespostaComparacao;
@@ -456,6 +456,28 @@ public class ApplicationController {
 		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
 		 Query query = em.createQuery("SELECT e FROM Demonstrativo e");
 		    return (List<Demonstrativo>) query.getResultList();
+
+	}
+	
+	@GetMapping(path="/getjsongraphics")
+	
+	  public Object[][] getAllDemonstrativos(@RequestParam(value="idindicador") Integer idindicador,@RequestParam(value="cvm") Integer cvm) {
+		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		 Query query = em.createQuery("SELECT b FROM ValorContabil b where b.contaContabil.indicador = "+idindicador+" and b.demonstrativo.empresa.cvm = "+cvm+" and   b.demonstrativo.versao =1 order by  b.demonstrativo.data");
+		 List<ValorContabil> valoresContabeis= (List<ValorContabil>) query.getResultList();
+		 Object[][] retorno = new Object[valoresContabeis.size()][6];   
+		 for(int i = 0 ; i < valoresContabeis.size(); i++) {
+			 ValorContabil vc = valoresContabeis.get(i);
+			 String sdata = (vc.getDemonstrativo().getData()+"").substring(0,4)+"-"+(vc.getDemonstrativo().getData()+"").substring(4,6)+"-"+31;
+			 retorno[i][0] = sdata;
+			 retorno[i][1] = vc.getValor();
+			 retorno[i][2] = vc.getValor();
+			 retorno[i][3] = vc.getValor();
+			 retorno[i][4] = vc.getValor();
+			 retorno[i][5] = 1;
+					
+		 }
+		 return retorno;
 
 	}
 }

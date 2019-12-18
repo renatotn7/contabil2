@@ -2,43 +2,41 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment>teste1</comment>
-<entry key="3.99.01.01">ON;0,00000</entry>
-<entry key="3.11.02">Atribuído a Sócios Não Controladores;</entry>
-<entry key="3.11.01">Atribuído a Sócios da Empresa Controladora;0</entry>
-<entry key="3.11">Lucro/Prejuízo Consolidado do Período;0</entry>
-<entry key="3.10">Resultado Líquido de Operações Descontinuadas;</entry>
-<entry key="3.99.02">Lucro Diluído por Ação;</entry>
-<entry key="3.99.01">Lucro Básico por Ação;</entry>
-<entry key="3.08.02">Diferido;0</entry>
-<entry key="3.08.01">Corrente;0</entry>
-<entry key="3.01.03">Abatimentos;0</entry>
-<entry key="3.01.02">Impostos Incidentes Sobre Vendas;0</entry>
-<entry key="3.01.01">Receita Bruta de Vendas e/ou Serviços;0</entry>
-<entry key="3.09">Resultado Líquido das Operações Continuadas;0</entry>
-<entry key="3.08">Imposto de Renda e Contribuição Social sobre o Lucro;0</entry>
-<entry key="3.06.02">Despesas Financeiras;0</entry>
-<entry key="3.07">Resultado Antes dos Tributos sobre o Lucro;0</entry>
-<entry key="3.06.01">Receitas Financeiras;0</entry>
-<entry key="3.06">Resultado Financeiro;0</entry>
-<entry key="3.05">Resultado Antes do Resultado Financeiro e dos Tributos;0</entry>
-<entry key="3.04">Despesas/Receitas Operacionais;0</entry>
-<entry key="3.03">Resultado Bruto;0</entry>
-<entry key="3.99">Lucro por Ação - (Reais / Ação);</entry>
-<entry key="3.99.02.01">ON;0,00000</entry>
-<entry key="3.02">Custo dos Bens e/ou Serviços Vendidos;0</entry>
-<entry key="3.01">Receita de Venda de Bens e/ou Serviços;0</entry>
-<entry key="3.04.06">Resultado de Equivalência Patrimonial;</entry>
-<entry key="3.04.05">Outras Despesas Operacionais;0</entry>
+<entry key="3.04.06">Resultado de Equivalência Patrimonial;0</entry>
+<entry key="3.04.05">Outras Despesas Operacionais;-9.473</entry>
 <entry key="3.04.04">Outras Receitas Operacionais;</entry>
 <entry key="3.04.03">Perdas pela Não Recuperabilidade de Ativos;</entry>
-<entry key="3.04.02">Despesas Gerais e Administrativas;0</entry>
-<entry key="3.04.01">Despesas com Vendas;0</entry>
 <entry key="Conta">Descrição;01/01/2014 
  a 
  31/12/2014</entry>
+<entry key="3.09">Resultado Líquido das Operações Continuadas;221.386</entry>
+<entry key="3.04.02">Despesas Gerais e Administrativas;-382.526</entry>
 <entry key="3.10.02">Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas;</entry>
+<entry key="3.08">Imposto de Renda e Contribuição Social sobre o Lucro;-80.838</entry>
+<entry key="3.04.01">Despesas com Vendas;-1.409.067</entry>
 <entry key="3.10.01">Lucro/Prejuízo Líquido das Operações Descontinuadas;</entry>
-<entry key="3.04.02.02">Depreciações e Amortizações;0</entry>
-<entry key="3.04.02.01">Administrativas;0</entry>
-<entry key="3.04.05.01">Despesas Extraordinárias;0</entry>
+<entry key="3.07">Resultado Antes dos Tributos sobre o Lucro;302.224</entry>
+<entry key="3.99">Lucro por Ação - (Reais / Ação);</entry>
+<entry key="3.06">Resultado Financeiro;-6.902</entry>
+<entry key="3.04.05.01">Despesas Extraordinárias;-9.473</entry>
+<entry key="3.05">Resultado Antes do Resultado Financeiro e dos Tributos;309.126</entry>
+<entry key="3.99.01.01">ON;0,67232</entry>
+<entry key="3.04">Despesas/Receitas Operacionais;-1.801.066</entry>
+<entry key="3.03">Resultado Bruto;2.110.192</entry>
+<entry key="3.02">Custo dos Bens e/ou Serviços Vendidos;-5.281.377</entry>
+<entry key="3.01">Receita de Venda de Bens e/ou Serviços;7.391.569</entry>
+<entry key="3.99.02.01">ON;0,67232</entry>
+<entry key="3.99.02">Lucro Diluído por Ação;</entry>
+<entry key="3.06.02">Despesas Financeiras;-25.249</entry>
+<entry key="3.99.01">Lucro Básico por Ação;</entry>
+<entry key="3.06.01">Receitas Financeiras;18.347</entry>
+<entry key="3.11">Lucro/Prejuízo do Período;221.386</entry>
+<entry key="3.10">Resultado Líquido de Operações Descontinuadas;</entry>
+<entry key="3.01.03">Abatimentos;-45.588</entry>
+<entry key="3.01.02">Impostos Incidentes sobre Vendas;-221.733</entry>
+<entry key="3.01.01">Receita Bruta de Vendas e/ou Serviços;7.658.890</entry>
+<entry key="3.08.02">Diferido;-32.062</entry>
+<entry key="3.04.02.02">Depreciações e Amortizações;-187.568</entry>
+<entry key="3.08.01">Corrente;-48.776</entry>
+<entry key="3.04.02.01">Administrativas;-194.958</entry>
 </properties>

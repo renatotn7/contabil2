@@ -2,4 +2,48 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment>teste1</comment>
+<entry key="6.03.08">Juros Sobre Capital Próprio e Dividendo Pagos;-31.251</entry>
+<entry key="6.03.07">Recebimento da Alienação de Ações Mantidas em Tesouraria;125.510</entry>
+<entry key="6.03.06">Recebimento de Exercício do Plano de Opção de Ação;262</entry>
+<entry key="6.03.05">Recompra de Ações;0</entry>
+<entry key="6.03.04">Juros Pagos;-1.265</entry>
+<entry key="6.03.03">Pagamentos de Financiamentos;-20.385</entry>
+<entry key="6.03.02">Financiamentos Tomados;28.543</entry>
+<entry key="6.03.01">Pagamentos de Empréstimos - Compror;0</entry>
+<entry key="6.01.02.09">Outras Obrigações;7.025</entry>
+<entry key="6.01.02.08">Impostos, Taxas e Contribuições;-4.090</entry>
+<entry key="6.01.02.07">Salários e Encargos Sociais;-3.225</entry>
+<entry key="6.01.02.06">Fornecedores;-3.325</entry>
+<entry key="6.01.02.05">Ativos no Realizável a Longo Prazo;-10.171</entry>
+<entry key="6.01.02.04">Outros Ativos Circulantes;-6.784</entry>
+<entry key="6.01.02.03">Estoques;-35.022</entry>
+<entry key="6.01.02.02">Contas a Receber;-18.521</entry>
+<entry key="6.01.03">Outros;-31.795</entry>
+<entry key="6.01.02.01">Aplicações Financeiras;-810</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;-74.188</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;158.429</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;53.154</entry>
+<entry key="Conta">Descrição;01/01/2010 
+ a 
+ 31/12/2010</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;101.414</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-100.706</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;52.446</entry>
+<entry key="6.02.04">Recebimentos por Vendas de Imobilizados;871</entry>
+<entry key="6.02.03">Aquisições de Imobilizado e Intangível;-101.577</entry>
+<entry key="6.01.03.01">Imposto de Renda e Contribuição Social Pagos;-31.795</entry>
+<entry key="6.02.02">Caixa da Empresa Incorporada;0</entry>
+<entry key="6.02.01">Aquisição de Empresa;0</entry>
+<entry key="6.01.01.08">Despesas de Juros;4.380</entry>
+<entry key="6.01.01.07">Provisão (Reversão) para Crédito de Liquidação Duvidosa;-51</entry>
+<entry key="6.01.01.06">Provisão para Demandas Judiciais;1.092</entry>
+<entry key="6.01.01.05">Resultado de Equivalência Patrimonial;0</entry>
+<entry key="6.01.01.04">Resultado na Venda ou Baixa do Imobilizado e Intagivel;58</entry>
+<entry key="6.01.01.03">Plano de Opções de Ações;829</entry>
+<entry key="6.01.01.02">Depreciações e Amortizações;31.292</entry>
+<entry key="6.01.01.01">Lucro Antes do Imposto de Renda e C.S.L.L;120.829</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;180.846</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;127.692</entry>
+<entry key="6.01.02.10">Aluguéis a Pagar;735</entry>
 </properties>

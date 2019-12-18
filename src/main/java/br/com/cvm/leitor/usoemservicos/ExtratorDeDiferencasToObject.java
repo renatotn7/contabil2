@@ -14,7 +14,7 @@ import br.com.cvm.bd.modelBD.Demonstrativo;
 import br.com.cvm.bd.modelBD.Empresa;
 import br.com.cvm.bd.modelBD.Periodo;
 import br.com.cvm.bd.modelBD.TipoDemonstrativo;
-import br.com.cvm.leitor.PeriodoToProperties;
+import br.com.cvm.leitor.origemBDeProperties.PeriodoToProperties;
 import br.com.cvm.utils.JaroWinklerStrategy;
 import entities.ContaCandidata;
 import entities.ContaComparada;

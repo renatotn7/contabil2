@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="4.03">Resultado Abrangente do Período;70.327</entry>
+<entry key="4.02">Outros Resultados Abrangentes;</entry>
+<entry key="4.01">Lucro Líquido do Período;70.327</entry>
+<entry key="Conta">Descrição;01/01/2015 
+ a 
+ 31/03/2015</entry>
+</properties>

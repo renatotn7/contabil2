@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="3.04.06">Resultado de Equivalência Patrimonial;</entry>
+<entry key="3.04.05">Outras Despesas Operacionais;-1.350</entry>
+<entry key="3.04.04">Outras Receitas Operacionais;</entry>
+<entry key="3.04.03">Perdas pela Não Recuperabilidade de Ativos;</entry>
+<entry key="Conta">Descrição;01/01/2014 
+ a 
+ 31/03/2014</entry>
+<entry key="3.09">Resultado Líquido das Operações Continuadas;29.131</entry>
+<entry key="3.04.02">Despesas Gerais e Administrativas;-92.180</entry>
+<entry key="3.10.02">Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas;</entry>
+<entry key="3.08">Imposto de Renda e Contribuição Social sobre o Lucro;-11.506</entry>
+<entry key="3.04.01">Despesas com Vendas;-326.250</entry>
+<entry key="3.10.01">Lucro/Prejuízo Líquido das Operações Descontinuadas;</entry>
+<entry key="3.07">Resultado Antes dos Tributos sobre o Lucro;40.637</entry>
+<entry key="3.99">Lucro por Ação - (Reais / Ação);</entry>
+<entry key="3.06">Resultado Financeiro;-1.692</entry>
+<entry key="3.04.05.01">Despesas Extraordinárias;-1.350</entry>
+<entry key="3.05">Resultado Antes do Resultado Financeiro e dos Tributos;42.329</entry>
+<entry key="3.99.01.01">ON;0,08817</entry>
+<entry key="3.04">Despesas/Receitas Operacionais;-419.780</entry>
+<entry key="3.03">Resultado Bruto;462.109</entry>
+<entry key="3.02">Custo dos Bens e/ou Serviços Vendidos;-1.196.585</entry>
+<entry key="3.01">Receita de Venda de Bens e/ou Serviços;1.658.694</entry>
+<entry key="3.99.02.01">ON;0,08817</entry>
+<entry key="3.99.02">Lucro Diluído por Ação;</entry>
+<entry key="3.06.02">Despesas Financeiras;-6.562</entry>
+<entry key="3.99.01">Lucro Básico por Ação;</entry>
+<entry key="3.06.01">Receitas Financeiras;4.870</entry>
+<entry key="3.11">Lucro/Prejuízo do Período;29.131</entry>
+<entry key="3.10">Resultado Líquido de Operações Descontinuadas;</entry>
+<entry key="3.01.03">Abatimentos;-10.410</entry>
+<entry key="3.01.02">Impostos Incidentes Sobre Vendas;-49.806</entry>
+<entry key="3.01.01">Receita Bruta de Vendas e/ou Serviços;1.718.910</entry>
+<entry key="3.04.02.03">Depreciações e Amortizações;-43.644</entry>
+<entry key="3.08.02">Diferido;-6.569</entry>
+<entry key="3.08.01">Corrente;-4.937</entry>
+<entry key="3.04.02.01">Administrativas;-48.536</entry>
+</properties>

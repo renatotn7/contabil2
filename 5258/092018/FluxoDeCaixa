@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.03.04">Juros Sobre Capital Proprio e Dividendo pagos;-87.178</entry>
+<entry key="6.03.03">Recompra de Ações;-46.925</entry>
+<entry key="6.03.02">Pagamentos de Empréstimos e Financiamentos;-134.820</entry>
+<entry key="6.03.01">Empréstimos e Financiamentos Tomados;406.960</entry>
+<entry key="6.01.02.09">Alugueis a Pagar;6.925</entry>
+<entry key="6.01.02.08">Outras Obrigações;-2.321</entry>
+<entry key="6.01.02.07">Impostos, Taxas e Contribuições;-53.832</entry>
+<entry key="6.01.02.06">Salários e Encargos Sociais;85.837</entry>
+<entry key="6.01.02.05">Fornecedores;42.747</entry>
+<entry key="6.01.02.04">Ativos no Realizável a Longo Prazo;-46.764</entry>
+<entry key="6.01.02.03">Outros Ativos Circulantes;-7.938</entry>
+<entry key="6.01.02.02">Estoques;-288.272</entry>
+<entry key="6.01.03">Outros;-123.152</entry>
+<entry key="6.01.02.01">Clientes e Outras Contas a Receber;-116.562</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;-380.180</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;856.040</entry>
+<entry key="6.01.01.11">Amortizações de Custos de Transação de Debêntures;-2.883</entry>
+<entry key="6.01.01.10">Despesa de Juros;42.618</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;8.682</entry>
+<entry key="Conta">Descrição;01/01/2018 
+ a 
+ 30/09/2018</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;138.037</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-482.063</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;352.708</entry>
+<entry key="6.01.03.02">I.R. e Contribuição Social Pagos;-103.444</entry>
+<entry key="6.01.03.01">Juros Pagos;-19.708</entry>
+<entry key="6.02.02">Recebimentos por Venda de Imobilizados;10</entry>
+<entry key="6.02.01">Aquisições de Imobilizado e Intangível;-482.073</entry>
+<entry key="6.01.01.09">Provisão (Reversão) para Encerramento de Lojas;-1.228</entry>
+<entry key="6.01.01.08">Provisão (Reversão) Estimada para Créditos de Liquidação Duvidosa;-4.104</entry>
+<entry key="6.01.01.07">Provisão (Reversão) para Perdas no Estoque;-1.036</entry>
+<entry key="6.01.01.06">Provisão (Reversão) para Demandas Judiciais;-3.677</entry>
+<entry key="6.01.01.05">Resultado na Venda ou Baixa do Ativo Imobilizado e Intangível;7.272</entry>
+<entry key="6.01.01.04">Juros sobre Opção de Compra de Ações Adicionais;4.159</entry>
+<entry key="6.01.01.03">Plano de Remuneração com Ações Restritas, Líquido;9.329</entry>
+<entry key="6.01.01.02">Depreciações e Amortizações;301.824</entry>
+<entry key="6.01.01.01">Lucro Líquido Antes do I.R e C.S.L.L;503.766</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;273.555</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;264.873</entry>
+</properties>

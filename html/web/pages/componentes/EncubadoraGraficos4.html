@@ -13,7 +13,14 @@
 	 <?php  include_once (__DIR__. '\..\..\includes\head\configs\admin\importjavascript.html'); ?>
 	
 
-		
+	<style>	
+ #container {
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+}
+</style>	
 	<body class="styleguide">
 	 <?php  include (__DIR__. '\..\..\includes\head/menu\admin\barrasuperior.html'); ?>
 
@@ -36,8 +43,12 @@
 anychart.onDocumentReady(function () {
     // The data used in this sample can be obtained from the CDN
     // https://cdn.anychart.com/csv-data/csco-daily.csv
-    anychart.data.loadCsvFile('http://localhost/cogg/cvs/csco-daily.csv', function (data) {
+     //anychart.data.loadCsvFile('http://localhost/cogg/cvs/csco-daily.csv', function (data) {
         // create data table on loaded data
+        
+       var data= JSON.parse('[["2011-11-31",2201174.0,2201174.0,2201174.0,2201174.0,1],["2012-03-31",2213560.0,2213560.0,2213560.0,2213560.0,1],["2012-06-31",2234786.0,2234786.0,2234786.0,2234786.0,1],["2012-09-31",2255015.0,2255015.0,2255015.0,2255015.0,1],["2012-12-31",2264659.0,2264659.0,2264659.0,2264659.0,1],["2013-03-31",2275538.0,2275538.0,2275538.0,2275538.0,1],["2013-06-31",2291749.0,2291749.0,2291749.0,2291749.0,1],["2013-09-31",2304867.0,2304867.0,2304867.0,2304867.0,1],["2013-12-31",2326983.0,2326983.0,2326983.0,2326983.0,1],["2015-12-31",2656798.0,2656798.0,2656798.0,2656798.0,1],["2016-03-31",2655480.0,2655480.0,2655480.0,2655480.0,1],["2016-06-31",2767763.0,2767763.0,2767763.0,2767763.0,1],["2016-09-31",2838416.0,2838416.0,2838416.0,2838416.0,1],["2016-12-31",2935955.0,2935955.0,2935955.0,2935955.0,1],["2017-03-31",2930398.0,2930398.0,2930398.0,2930398.0,1],["2017-06-31",3023250.0,3023250.0,3023250.0,3023250.0,1],["2017-09-31",3112051.0,3112051.0,3112051.0,3112051.0,1],["2017-12-31",3250372.0,3250372.0,3250372.0,3250372.0,1],["2018-03-31",3224392.0,3224392.0,3224392.0,3224392.0,1],["2018-06-31",3314660.0,3314660.0,3314660.0,3314660.0,1],["2018-09-31",3394855.0,3394855.0,3394855.0,3394855.0,1],["2018-12-31",3534767.0,3534767.0,3534767.0,3534767.0,1],["2019-03-31",3571437.0,3571437.0,3571437.0,3571437.0,1],["2019-06-31",3591225.0,3591225.0,3591225.0,3591225.0,1],["2019-09-31",4005550.0,4005550.0,4005550.0,4005550.0,1]]');
+    
+        
         var dataTable = anychart.data.table();
         dataTable.addData(data);
 
@@ -65,26 +76,26 @@ anychart.onDocumentReady(function () {
                 .xMinorGrid(true)
                 .yMinorGrid(true);
 
-        var series = plot.candlestick(mapping).name('CSCO');
+        var series = plot.line(mapping).name('CSCO');
         series.legendItem().iconType('rising-falling');
 
         // create BBands indicator with period = 20, deviation = 3
-        plot.bbands(mapping, 3, 2);
+        plot.bbands(mapping, 4, 2);
 
         var indicatorPlot = chart.plot(1);
         indicatorPlot.height('30%');
 
         // create BBands Width indicator with period 20, deviation = 3
-        var bBandsWidthIndicator = indicatorPlot.bbandsWidth(mapping, 20, 3, 'spline-area');
+        var bBandsWidthIndicator = indicatorPlot.bbandsWidth(mapping, 4, 2, 'spline-area');
         bBandsWidthIndicator.series()
-                .stroke('1.5 #F18126')
-                .fill(anychart.color.lighten(bBandsWidthIndicator.series().stroke().color, 0.5));
+                .stroke('0.1 #F18126')
+                .fill(anychart.color.lighten(bBandsWidthIndicator.series().stroke().color, 0.01));
 
         // create scroller series with mapped data
         chart.scroller().spline(mapping);
 
         // set chart selected date/time range
-        chart.selectRange('2001-06-05', '2002-09-26');
+        chart.selectRange('2001-06-05', '2018-09-26');
         // set container id for the chart
         chart.container('container');
         // initiate chart drawing
@@ -99,7 +110,7 @@ anychart.onDocumentReady(function () {
         var rangeSelector = anychart.ui.rangeSelector();
         // init range selector
         rangeSelector.render(chart);
-    });
+    
 });
 
 </script>

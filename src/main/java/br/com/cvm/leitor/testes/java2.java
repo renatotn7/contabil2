@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import br.com.cvm.leitor.PeriodoToProperties;
+import br.com.cvm.leitor.origemBDeProperties.PeriodoToProperties;
 
 public class java2 {
 public static Double getDouble(String value) {

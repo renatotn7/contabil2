@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.01.03">Outros;-2.646</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;-179.734</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;60.327</entry>
+<entry key="Conta">Descrição;01/01/2012 
+ a 
+ 31/03/2012</entry>
+<entry key="6.02.02">Recebimentos por Venda de Imobilizados;2</entry>
+<entry key="6.02.01">Aquisições de Imobilizado e Intangível;-38.542</entry>
+<entry key="6.03.03">Juros Pagos;-4.771</entry>
+<entry key="6.03.02">Pagamentos de Financiamentos;-15.492</entry>
+<entry key="6.03.01">Financiamentos Tomados;10.326</entry>
+<entry key="6.01.01.07">Provisão Para Perdas no Estoque;1.098</entry>
+<entry key="6.01.01.06">Despesas de Juros;4.287</entry>
+<entry key="6.01.01.05">Provisão Para Créditos de Liquidação Duvidosa;535</entry>
+<entry key="6.01.01.04">Reversão de Provisão Para Demandas Judiciais;-784</entry>
+<entry key="6.01.01.03">Resultado na Venda ou Baixa do Ativo Imobilizado e Intangível;249</entry>
+<entry key="6.01.02.09">Alugueis a Pagar;438</entry>
+<entry key="6.01.01.02">Depreciações e Amortizações;28.913</entry>
+<entry key="6.01.02.08">Outras Obrigações;-18.015</entry>
+<entry key="6.01.01.01">Lucro Líquido Antes do I.R e C.S.L.L;26.029</entry>
+<entry key="6.01.02.07">Impostos, Taxas e Contribuições;1.856</entry>
+<entry key="6.01.02.06">Salários e Encargos Sociais;-7.115</entry>
+<entry key="6.01.02.05">Fornecedores;-40.645</entry>
+<entry key="6.01.02.04">Ativos no Realizável a Longo Prazo;-12.609</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;169.441</entry>
+<entry key="6.01.02.03">Outros Ativos Circulantes;4.397</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;339.971</entry>
+<entry key="6.01.02.02">Estoques;-96.735</entry>
+<entry key="6.01.02.01">Contas a Receber;-11.306</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;-170.530</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;-9.937</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-38.540</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;-122.053</entry>
+<entry key="6.01.03.01">I.R. e Contribuição Social Pagos;-2.646</entry>
+</properties>

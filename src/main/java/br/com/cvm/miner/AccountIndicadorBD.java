@@ -15,7 +15,7 @@ import javax.persistence.Query;
 import br.com.cvm.bd.helper.PersistenceManager;
 import br.com.cvm.bd.modelBD.ContaContabil;
 import br.com.cvm.bd.modelBD.ValorContabil;
-import br.com.cvm.leitor.PeriodoToProperties;
+import br.com.cvm.leitor.origemBDeProperties.PeriodoToProperties;
 
 public class AccountIndicadorBD {
  public static void main(String args[]) {

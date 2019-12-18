@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.03.05">Pagamentos de Arrendamento Mercantil;-395.921</entry>
+<entry key="6.03.04">Juros Sobre Capital Próprio e Dividendo Pagos;-93.646</entry>
+<entry key="6.03.03">Recompra de Ações;0</entry>
+<entry key="6.03.02">Pagamentos de Empréstimos e Financiamentos;-340.431</entry>
+<entry key="6.03.01">Empréstimos e Financiamentos Tomados;716.781</entry>
+<entry key="6.01.02.09">Aluguéis a Pagar;-21.922</entry>
+<entry key="6.01.02.08">Outras Obrigações;4.587</entry>
+<entry key="6.01.02.07">Impostos, Taxas e Contribuições;10.318</entry>
+<entry key="6.01.02.06">Salários e Encargos Sociais;94.974</entry>
+<entry key="6.01.02.05">Fornecedores;93.995</entry>
+<entry key="6.01.02.04">Ativos no Realizável a Longo Prazo;-339.613</entry>
+<entry key="6.01.02.03">Outros Ativos Circulantes;78.516</entry>
+<entry key="6.01.02.02">Estoques;-286.261</entry>
+<entry key="6.01.03">Outros;-228.169</entry>
+<entry key="6.01.02.01">Clientes e Outras Contas a Receber;-263.074</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;-628.480</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;1.331.117</entry>
+<entry key="6.01.01.14">Ganho Adquirido em Combinação de Negócio;-350.397</entry>
+<entry key="6.01.01.13">Despesas de Juros - Arrendamento Mercantil;81.933</entry>
+<entry key="6.01.01.12">Resultado de Equivalência Patrimonial;</entry>
+<entry key="6.01.01.11">Amortizações de Custos de Transação de Financiamentos;1.989</entry>
+<entry key="6.01.01.10">Despesas de Juros;51.073</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;165.113</entry>
+<entry key="Conta">Descrição;01/01/2019 
+ a 
+ 30/09/2019</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;-113.217</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-196.138</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;474.468</entry>
+<entry key="6.02.06">Caixa da Empresa Incorporada;</entry>
+<entry key="6.02.05">Empréstimos Concedidos a Controladas;-1</entry>
+<entry key="6.02.04">Recebimentos por Vendas de Imobilizados;439</entry>
+<entry key="6.01.03.03">Juros Pagos - Arrendamento Mercantil;-81.933</entry>
+<entry key="6.01.03.02">I.R. e Contribuições Social Pagos;-111.087</entry>
+<entry key="6.02.03">Aquisições de Imobilizado e Intangível;-480.261</entry>
+<entry key="6.01.03.01">Juros Pagos;-35.149</entry>
+<entry key="6.02.02">Caixa Adquirido em Combinação de Negócio;283.685</entry>
+<entry key="6.02.01">Aquisição de Controlada;</entry>
+<entry key="6.01.01.09">Provisão (Reversão) para Encerramento de Lojas;-6.504</entry>
+<entry key="6.01.01.08">Provisão (Reversão) Estimada para Créditos de Liquidação Duvidosa;-115</entry>
+<entry key="6.01.01.07">Provisão (Reversão) para Perdas no Estoque;-153</entry>
+<entry key="6.01.01.06">Provisão (Reversão) para Demandas Judiciais;-10.399</entry>
+<entry key="6.01.01.05">Resultado na Venda ou Baixa do Ativo Imobilizado e Intangível;39.237</entry>
+<entry key="6.01.01.04">Juros Sobre Obrigações com Controlada;9.830</entry>
+<entry key="6.01.01.03">Plano de Remuneração com Ações Restritas, Liquido;10.216</entry>
+<entry key="6.01.01.02">Depreciações e Amortizações;803.215</entry>
+<entry key="6.01.01.01">Lucro Antes do I.R. e C.S.L.L.;701.192</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;406.681</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;241.568</entry>
+</properties>

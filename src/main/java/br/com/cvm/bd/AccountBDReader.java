@@ -10,7 +10,7 @@ import javax.persistence.Query;
 import br.com.cvm.bd.helper.PersistenceManager;
 import br.com.cvm.bd.modelBD.ContaContabil;
 import br.com.cvm.bd.modelBD.ValorContabil;
-import br.com.cvm.leitor.PeriodoToProperties;
+import br.com.cvm.leitor.origemBDeProperties.PeriodoToProperties;
 
 public class AccountBDReader {
  public static void main(String args[]) {
@@ -18,7 +18,7 @@ public class AccountBDReader {
 		String cvm1="5258"; 
 		String cvm2="5258";
 		String dp1="122012";
-		String dp2="122011";
+		String dp2="122014";
 		String per1="A";
 		String per2="A";
 		String desc1= cvm1 + "_" + dp1+ "_"+ per1;

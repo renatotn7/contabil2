@@ -24,10 +24,10 @@ public class AccountIndicadorBD {
 		String cvm2 = "5258";
 
 		ArrayList<Long> valores = new ArrayList<Long>();
-		valores.add(296L);
-		valores.add(414L);
-		valores.add(611L);
-		valores.add(843L);
+		valores.add(121L);
+		valores.add(195L);
+		valores.add(203L);
+		valores.add(210L);
 		ArrayList<Integer> datas = new ArrayList<Integer>();
 		datas.add(201512);
 		datas.add(201612);
@@ -366,7 +366,7 @@ private static void expoeEncontrado(ArrayList<Integer> datas, Map<String, Intege
 	Set<String> sets = new HashSet<String>();
 	StringBuilder sb = new StringBuilder();
 	for (String key : map.keySet()) {
-		if( datas.size()- map.get(key) <=0) {
+		if( datas.size()- map.get(key) <=1) {
 			if(sets.contains(key)) {
 				continue;
 			}
@@ -378,8 +378,9 @@ private static void expoeEncontrado(ArrayList<Integer> datas, Map<String, Intege
 				if(vcs!=null) {
 					sb.append("\n\t"+data+"\n");
 					for(ValorContabil vc: vcs) {
-						
-						sb.append("\t\t"+vc.getDemonstrativo().getData()+" "+vc.getDemonstrativo().getEmpresa().getCvm()+" "+vc.getContaContabil().getContaContabil()+" "+ vc.getContaContabil().getDescricao()+" "+ vc.getContaContabil().getIdContaContabil()+" "+ vc.getValor()+"\n");
+						sb.append("\t\t"+getRaiz(vc)+"\n");
+						sb.append("\t\t\t"+vc.getDemonstrativo().getData()+" "+vc.getDemonstrativo().getEmpresa().getCvm()+" "+vc.getContaContabil().getContaContabil()+" "+ vc.getContaContabil().getDescricao()+" "+ vc.getContaContabil().getIdContaContabil()+" "+ vc.getValor()+"\n");
+					
 					}
 				}
 			}
@@ -437,7 +438,7 @@ private static boolean comparaValores(ArrayList<Long> valores, Map<String, Integ
 				//	valoresC.addAll(valoresContabeis);
 					mapvalores.put(vc.getDemonstrativo().getData()+":"+chave+ " "+addInMap,valoresC);
 				
-					if(valuemap==valores.size()) {
+					if(valores.size()-valuemap<=1) {
 						return true;
 					}
 						//sb.append("\n"+vc.getContaContabil().getContaContabil() +"   "+vc.getContaContabil().getDescricao()+"   "+ vc.getDemonstrativo().getData() +"   "+vc.getValor());

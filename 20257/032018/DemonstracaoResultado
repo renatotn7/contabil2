@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="3.99.01.01">ON;0,21023</entry>
+<entry key="3.11.02">Atribuído a Sócios Não Controladores;</entry>
+<entry key="3.11.01">Atribuído a Sócios da Empresa Controladora;217.277</entry>
+<entry key="3.11">Lucro/Prejuízo Consolidado do Período;217.277</entry>
+<entry key="3.10">Resultado Líquido de Operações Descontinuadas;</entry>
+<entry key="3.99.02">Lucro Diluído por Ação;</entry>
+<entry key="3.99.01">Lucro Básico por Ação;</entry>
+<entry key="3.08.02">Diferido;2.476</entry>
+<entry key="3.08.01">Corrente;-47.377</entry>
+<entry key="3.01.01">Receita de Venda de Bens e/ou Serviços;316.705</entry>
+<entry key="3.04.06.01">Resultado de Equivalência Patrimonial;62.629</entry>
+<entry key="3.09">Resultado Líquido das Operações Continuadas;217.277</entry>
+<entry key="3.08">Imposto de Renda e Contribuição Social sobre o Lucro;-44.901</entry>
+<entry key="3.06.02">Despesas Financeiras;-63.547</entry>
+<entry key="3.07">Resultado Antes dos Tributos sobre o Lucro;262.178</entry>
+<entry key="3.06.01">Receitas Financeiras;11.599</entry>
+<entry key="3.06">Resultado Financeiro;-51.948</entry>
+<entry key="3.05">Resultado Antes do Resultado Financeiro e dos Tributos;314.126</entry>
+<entry key="3.04">Despesas/Receitas Operacionais;32.473</entry>
+<entry key="3.99.02.02">PN;0,21023</entry>
+<entry key="3.99">Lucro por Ação - (Reais / Ação);</entry>
+<entry key="3.03">Resultado Bruto;281.653</entry>
+<entry key="3.99.02.01">ON;0,21023</entry>
+<entry key="3.02">Custo dos Bens e/ou Serviços Vendidos;-35.052</entry>
+<entry key="3.01">Receita de Venda de Bens e/ou Serviços;316.705</entry>
+<entry key="3.04.06">Resultado de Equivalência Patrimonial;62.629</entry>
+<entry key="3.04.05">Outras Despesas Operacionais;</entry>
+<entry key="3.04.04">Outras Receitas Operacionais;</entry>
+<entry key="3.04.03">Perdas pela Não Recuperabilidade de Ativos;</entry>
+<entry key="3.04.02">Despesas Gerais e Administrativas;-30.156</entry>
+<entry key="3.04.01">Despesas com Vendas;</entry>
+<entry key="Conta">Descrição;01/01/2018 
+ a 
+ 31/03/2018</entry>
+<entry key="3.10.02">Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas;</entry>
+<entry key="3.10.01">Lucro/Prejuízo Líquido das Operações Descontinuadas;</entry>
+<entry key="3.04.02.04">Outras Despesas Gerais e Administrativas;-3.112</entry>
+<entry key="3.04.02.03">Depreciação e Amortização;-1.312</entry>
+<entry key="3.04.02.02">Serviços de Terceiros;-6.139</entry>
+<entry key="3.04.02.01">Pessoal e Administradores;-19.593</entry>
+<entry key="3.02.05">Outros Custos Operacionais;-2.090</entry>
+<entry key="3.02.04">Depreciação e Amortização;-172</entry>
+<entry key="3.02.03">Serviços de Terceiros;-3.976</entry>
+<entry key="3.02.02">Material;-18.843</entry>
+<entry key="3.02.01">Pessoal;-9.971</entry>
+<entry key="3.99.01.02">PN;0,21023</entry>
+</properties>

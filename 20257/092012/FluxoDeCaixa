@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.03.08">Dividendos Pagos;-214.267</entry>
+<entry key="6.03.07">Emissão de Ações na Controladora;1.729.336</entry>
+<entry key="6.03.06">Pagamento de Debêntures - Juros;-108.594</entry>
+<entry key="6.03.05">Pagamento de Empréstimos e Financiamentos - Juros;-36.722</entry>
+<entry key="6.03.04">Pagamento de Empréstimos e Financiamentos - Principal;-70.072</entry>
+<entry key="6.03.03">Emissão de Notas Promissórias;904.839</entry>
+<entry key="6.03.02">Capitação de Empréstimos;808</entry>
+<entry key="6.03.01">Empréstimos e Financiamentos - Aquisição de Controladas;</entry>
+<entry key="6.01.02.09">Aumento no saldo de Taxas Regulamentares;4.978</entry>
+<entry key="6.01.02.08">Aumento (redução) no saldo de Fornecedores;8.794</entry>
+<entry key="6.01.02.07">(Aumento) redução no saldo de Outros Créditos;-12.716</entry>
+<entry key="6.01.02.06">Imposto de renda e contribuição social pagos;</entry>
+<entry key="6.01.02.05">Redução no saldo de Tributos diferidos ativos líquido do passivo;</entry>
+<entry key="6.01.02.04">Redução no saldo de Impostos e Contrib. diferidos ativos líquido do passivo;</entry>
+<entry key="6.01.02.03">(Aumento) redução no saldo de Impostos e Contribuições Sociais ativos líquido do passivo;21.823</entry>
+<entry key="6.01.02.02">Redução do Ativo Financeiro;672.652</entry>
+<entry key="6.01.03">Outros;</entry>
+<entry key="6.01.02.01">(Aumento) de Clientes;-3.702</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;658.939</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;65.426</entry>
+<entry key="6.01.01.10">Ganho na remensuração na aquisição do controle da UNISA;-45.169</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;317.828</entry>
+<entry key="Conta">Descrição;01/01/2012 
+ a 
+ 30/09/2012</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;2.205.328</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-2.611.865</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;724.365</entry>
+<entry key="6.02.04">Aquisição de 50% remanescente da UNISA líquida do caixa adquirido;-658.874</entry>
+<entry key="6.02.03">Adição/Baixas no Imobilizado e Intangível;-3.339</entry>
+<entry key="6.02.02">(Aumento) no saldo de aplicações financeiras ao custo amortizado (circulante e não circulante);-99.652</entry>
+<entry key="6.02.01">(Aumento) no saldo de aplicações financeiras avaliadas a valor justo (circulante);-1.850.000</entry>
+<entry key="6.01.01.09">Impostos renda e contribuição social correntes;</entry>
+<entry key="6.01.01.08">Remuneração do Ativo Financeiro;-778.197</entry>
+<entry key="6.01.01.07">Tributos Diferidos;5.948</entry>
+<entry key="6.01.01.06">Imposto de Renda e Contribuição Social Diferidos;128.108</entry>
+<entry key="6.01.01.05">Juros e Variações Monetárias sobre Empréstimos, Financiamentos, Debêntures e Mútuo;283.761</entry>
+<entry key="6.01.01.04">Provisões fiscais, previdenciárias, trabalhistas e cíveis;358</entry>
+<entry key="6.01.01.03">Depreciação e Amortização;1.307</entry>
+<entry key="6.01.01.02">Receita de Equivalência Patrimonial;</entry>
+<entry key="6.01.01.01">Resultado no Período;469.310</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;813.234</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;495.406</entry>
+<entry key="6.01.02.10">(Redução) aumento no saldo de Outras Contas a Pagar;-32.890</entry>
+</properties>

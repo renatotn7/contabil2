@@ -468,7 +468,7 @@ static Empresa e1;
 static EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
 static Divergencia divergencia;
 public RelatorioDiferenca rdif = new RelatorioDiferenca();
-public PersisteContasUnificando( String cvmProp,  String dataProp, String perProp ){
+public PersisteContasUnificando( String cvmProp,  String dataProp, String perProp,String protocolo ){
 
 try {
 //	String cvm1=cvmbd;
@@ -512,7 +512,7 @@ try {
 	//String desc1= cvm1 + "_" + dp1+ "_"+ per1;
 	String desc2= cvm2 + "_" + dp2+ "_"+ per2;
 //	 PeriodoToProperties ptp = new PeriodoToProperties(dp1,cvm1,per1);
-	 PeriodoToProperties ptp2 = new PeriodoToProperties(dp2,cvm2,per2);
+	 PeriodoToProperties ptp2 = new PeriodoToProperties(dp2,cvm2,per2,protocolo);
 	 
 	// Properties dr1 = ptp.getEdp().getDr();
 	 Properties dr2=ptp2.getEdp().getDr();
@@ -616,56 +616,55 @@ try {
 	 //	em.close();
 }
 public static void main(String []args) {
-	String cvm ="9342";
+	String cvm ="5258";
 //	new PersisteIgualdes("5258","5258","122011","122012","A", "A");
-	new PersisteContasUnificando(cvm,"122011", "A");
-	new PersisteContasUnificando(cvm,"122012", "A");
-	new PersisteContasUnificando(cvm,"122013", "A");
-	new PersisteContasUnificando(cvm,"122014", "A");
-	new PersisteContasUnificando(cvm,"122015", "A");
-	new PersisteContasUnificando(cvm,"122016", "A");
-	new PersisteContasUnificando(cvm,"122017", "A");
-	new PersisteContasUnificando(cvm,"122018", "A");
+	new PersisteContasUnificando(cvm,"122011", "A",null);
+	new PersisteContasUnificando(cvm,"122012", "A",null);
+	new PersisteContasUnificando(cvm,"122013", "A",null);
+	new PersisteContasUnificando(cvm,"122014", "A",null);
+	new PersisteContasUnificando(cvm,"122015", "A",null);
+	new PersisteContasUnificando(cvm,"122016", "A",null);
+	new PersisteContasUnificando(cvm,"122017", "A",null);
+	new PersisteContasUnificando(cvm,"122018", "A",null);
 	
-	new PersisteContasUnificando(cvm,"032011", "T");
-	new PersisteContasUnificando(cvm,"062011", "T");
-	new PersisteContasUnificando(cvm,"092011", "T");
+	new PersisteContasUnificando(cvm,"032011", "T",null);
+	new PersisteContasUnificando(cvm,"062011", "T",null);
+	new PersisteContasUnificando(cvm,"092011", "T",null);
 	
-	new PersisteContasUnificando(cvm,"032012", "T");
-	new PersisteContasUnificando(cvm,"062012", "T");
-	new PersisteContasUnificando(cvm,"092012", "T");
-	
-	
-	new PersisteContasUnificando(cvm,"032013", "T");
-	new PersisteContasUnificando(cvm,"062013", "T");
-	new PersisteContasUnificando(cvm,"092013", "T");
-	
-	new PersisteContasUnificando(cvm,"032014", "T");
-	new PersisteContasUnificando(cvm,"062014", "T");
-	new PersisteContasUnificando(cvm,"092014", "T");
-	
-	new PersisteContasUnificando(cvm,"032015", "T");
-	new PersisteContasUnificando(cvm,"062015", "T");
-	new PersisteContasUnificando(cvm,"092015", "T");
-	
-	new PersisteContasUnificando(cvm,"032016", "T");
-	new PersisteContasUnificando(cvm,"062016", "T");
-	new PersisteContasUnificando(cvm,"092016", "T");
-	
-	new PersisteContasUnificando(cvm,"032017", "T");
-	new PersisteContasUnificando(cvm,"062017", "T");
-	new PersisteContasUnificando(cvm,"092017", "T");
+	new PersisteContasUnificando(cvm,"032012", "T",null);
+	new PersisteContasUnificando(cvm,"062012", "T",null);
+	new PersisteContasUnificando(cvm,"092012", "T",null);
 	
 	
+	new PersisteContasUnificando(cvm,"032013", "T",null);
+	new PersisteContasUnificando(cvm,"062013", "T",null);
+	new PersisteContasUnificando(cvm,"092013", "T",null);
 	
-	new PersisteContasUnificando(cvm,"032018", "T");
-	new PersisteContasUnificando(cvm,"062018", "T");
-	new PersisteContasUnificando(cvm,"092018", "T");
+	new PersisteContasUnificando(cvm,"032014", "T",null);
+	new PersisteContasUnificando(cvm,"062014", "T",null);
+	new PersisteContasUnificando(cvm,"092014", "T",null);
 	
+	new PersisteContasUnificando(cvm,"032015", "T",null);
+	new PersisteContasUnificando(cvm,"062015", "T",null);
+	new PersisteContasUnificando(cvm,"092015", "T",null);
+	
+	new PersisteContasUnificando(cvm,"032016", "T",null);
+	new PersisteContasUnificando(cvm,"062016", "T",null);
+	new PersisteContasUnificando(cvm,"092016", "T",null);
+	
+	new PersisteContasUnificando(cvm,"032017", "T",null);
+	new PersisteContasUnificando(cvm,"062017", "T",null);
+	new PersisteContasUnificando(cvm,"092017", "T",null);
+	
+	
+	
+	new PersisteContasUnificando(cvm,"032018", "T",null);
+	new PersisteContasUnificando(cvm,"062018", "T",null);
+	new PersisteContasUnificando(cvm,"092018", "T",null);
 
-	new PersisteContasUnificando(cvm,"032019", "T");
-	new PersisteContasUnificando(cvm,"062019", "T");
-	new PersisteContasUnificando(cvm,"092019", "T");
+	new PersisteContasUnificando(cvm,"032019", "T",null);
+	new PersisteContasUnificando(cvm,"062019", "T",null);
+	new PersisteContasUnificando(cvm,"092019", "T",null);
 //	new PersisteIgualdes(cvm,"122016", "A");
 //	new PersisteIgualdes(cvm,"122017", "A");
 //	new PersisteIgualdes(cvm,"122018", "A");

@@ -15,17 +15,26 @@ public class PeriodoToProperties {
 	public EntidadeDemonstracaoProperties getEdp() {
 		return edp;
 	}
+
 	EntidadeDemonstracaoProperties edp;
-	public PeriodoToProperties(String periodo,String cvm,String tipo) {
+	public PeriodoToProperties(String periodo,String cvm,String tipo,String protocolo) {
 		   Properties p  = null;
 		
 		   edp =new EntidadeDemonstracaoProperties();
-		 try (InputStream inputc = new FileInputStream(cvm+"/"+cvm+"_"+tipo) ) {
+		   EntidadeCVM ecvm=null;
+		 try {
+			 if(protocolo ==null) {
+		 InputStream inputc = new FileInputStream(cvm+"/"+cvm+"_"+tipo) ;
 			 p = new Properties();
 		     p.loadFromXML(inputc);
 			 p.get(periodo);
 		     
-			  EntidadeCVM ecvm= new EntidadeCVM((String) p.get(periodo));
+			 ecvm= new EntidadeCVM((String) p.get(periodo));
+			 
+			 }else
+			 {
+				 ecvm= new EntidadeCVM(protocolo);
+			 }
 			   String prefixo = cvm + "/" + ecvm.dataDocto ;
 			  
 			   InputStream input = new FileInputStream(prefixo+"/DemonstracaoResultado");

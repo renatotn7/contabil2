@@ -17,6 +17,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import br.com.cvm.bd.consolidacaoBD.PersisteContasUnificando;
 import br.com.readsitecvm.entidades.EntidadeCVM;
 import br.com.readsitecvm.ingestao.subsistema.javaCVMTable;
 
@@ -251,6 +252,8 @@ public class IngestaoDemonstrativos {
 						ninfo=1;
 						continue;
 					}
+					new PersisteContasUnificando(cvm,ecvm.dataDocto, tipo,cod);
+					
 					// new
 					// javaCVMMutacoes(driver,"https://www.rad.cvm.gov.br/enetconsulta/frmDemonstracaoFinanceiraITR.aspx?Informacao=200&Demonstracao=8&Periodo=1&Grupo=&Quadro=&NomeTipoDocumento=DFP&Empresa=&DataReferencia=&Versao=5&CodTipoDocumento=4&NumeroSequencialDocumento=82904&NumeroSequencialRegistroCvm=1749&CodigoTipoInstituicao=1","MutacoesNoPatrimonio.xml");
 

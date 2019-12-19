@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.03.08">Custo de captação de Debêntures;-32</entry>
+<entry key="6.03.07">Pagamento na liquidação de instrumentos financeiros;-15.094</entry>
+<entry key="6.03.06">Captação de novos empréstimos;350.000</entry>
+<entry key="6.03.05">Pagamento de Instrumentos Financeiros Derivativos - Juros;-3.772</entry>
+<entry key="6.03.04">Pagamento de dividendos e JCP;-413.169</entry>
+<entry key="6.03.03">Pagamento de Debêntures - Juros;-8.859</entry>
+<entry key="6.03.02">Pagamento de Empréstimos e Financiamentos - Juros;-6.070</entry>
+<entry key="6.03.01">Pagamento de Empréstimos e Financiamentos - Principal;-339.423</entry>
+<entry key="6.01.02.09">(Redução) no Saldo de Outras Contas a Pagar;-12.469</entry>
+<entry key="6.01.02.08">(Redução) Aumento no Saldo de Taxas Regulamentares;-4.788</entry>
+<entry key="6.01.02.07">(Redução) no Saldo de Fornecedores;-10.453</entry>
+<entry key="6.01.02.06">(Aumento) no Saldo de Outros créditos;-1.678</entry>
+<entry key="6.01.02.05">Imposto de Renda e Contribuição Social Pagos;-74.414</entry>
+<entry key="6.01.02.03">Redução (aumento) no Saldo de Impostos e Contrib. Sociais Ativos Líquido do Passivo;2.054</entry>
+<entry key="6.01.02.02">Redução no saldo do ativo financeiro de concessão;624.791</entry>
+<entry key="6.01.03">Outros;</entry>
+<entry key="6.01.02.01">(Aumento) nas contas a receber;-1.308</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;597.004</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;50.091</entry>
+<entry key="6.01.01.17">Remuneração de aplicações financeiras;-24.534</entry>
+<entry key="6.01.01.15">Custo de Construção;-2.474</entry>
+<entry key="6.01.01.14">Provisão de Parcela Variável;10.640</entry>
+<entry key="6.01.01.13">Instrumentos Financeiros Derivativos;-23.225</entry>
+<entry key="6.01.01.12">Receita de construção;-42.463</entry>
+<entry key="6.01.01.11">Correção monetária do ativo financeiro de concessão;-173.183</entry>
+<entry key="6.01.01.10">Remuneração do ativo financeiro de concessão;-258.993</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;55.699</entry>
+<entry key="Conta">Descrição;01/01/2018 
+ a 
+ 30/06/2018</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;-436.419</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-154.977</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;647.095</entry>
+<entry key="6.02.05">Aquisição de coligadas, líquido do caixa adquirido;-3.514</entry>
+<entry key="6.02.04">Aumento de capital nas controladas em conjunto;-20.100</entry>
+<entry key="6.02.03">Adições no Imobilizado e Intangível;-9.514</entry>
+<entry key="6.02.01">(Aumento) no Saldo de Títulos e Valores Mobiliários;-121.849</entry>
+<entry key="6.01.01.09">Tributos Diferidos;-7.296</entry>
+<entry key="6.01.01.08">Imposto de Renda e Contribuição Social Diferidos;</entry>
+<entry key="6.01.01.07">Imposto de Renda e Contribuição Social;75.421</entry>
+<entry key="6.01.01.06">Juros e Variações Monetárias Sobre Debêntures;120.894</entry>
+<entry key="6.01.01.05">Juros, Variações Monetárias e Cambiais Líquidas e Ajuste a Valor Justo Sobre Empréstimos e Financ.;30.208</entry>
+<entry key="6.01.01.04">Provisões Fiscais, Previdenciárias, Trabalhistas e Cíveis;2.754</entry>
+<entry key="6.01.01.03">Depreciação e Amortização;3.081</entry>
+<entry key="6.01.01.02">Resultado de Equivalência Patrimonial;-137.267</entry>
+<entry key="6.01.01.01">Resultado líquido do período;476.528</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;112.379</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;56.680</entry>
+<entry key="6.01.02.10">Dividendos e JCP Recebidos das Controladas em Conjunto e Coligadas;75.269</entry>
+</properties>

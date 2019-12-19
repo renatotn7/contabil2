@@ -17,7 +17,7 @@ import java.util.List;
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Entity
 @Table(name="conta_contabil")
-@NamedQuery(name="ContaContabil.findAll", query="SELECT c FROM ContaContabil c")
+@NamedQuery(name="ContaContabil.findAll", query="SELECT c FROM ContaContabil c")  
 public class ContaContabil implements Serializable {
 	private static final long serialVersionUID = 1L;
 

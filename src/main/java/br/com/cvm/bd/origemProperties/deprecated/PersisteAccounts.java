@@ -121,7 +121,7 @@ public class PersisteAccounts {
 					try {
 					em.getTransaction()
 			        .begin();
-					 PeriodoToProperties ptp = new PeriodoToProperties(dp1,cvm1,per1);
+					 PeriodoToProperties ptp = new PeriodoToProperties(dp1,cvm1,per1,null);
 					 Properties prop =ptp.getEdp().getDr();
 					 persisteDemonstrativo(prop, 2, cvm1,dp1,per1);
 					 em.flush();

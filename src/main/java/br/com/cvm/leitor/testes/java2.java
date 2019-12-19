@@ -20,7 +20,7 @@ Double ebitda = 0.0;
 Double receita = 0.0;
 Double dividac=0.0;
    Double dividanc=0.0;
-   PeriodoToProperties ptp = new PeriodoToProperties("122018","20257","A");
+   PeriodoToProperties ptp = new PeriodoToProperties("122018","20257","A",null);
    
   
  

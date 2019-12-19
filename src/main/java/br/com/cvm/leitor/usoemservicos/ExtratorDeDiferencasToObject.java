@@ -290,7 +290,7 @@ public ExtratorDeDiferencasToObject(String cvmbd, String cvmProp, String databd,
 	String desc1= cvm1 + "_" + dp1+ "_"+ per1;
 	String desc2= cvm2 + "_" + dp2+ "_"+ per2;
 	 PeriodoToProperties ptp = new PeriodoToProperties(e1,cc1);
-	 PeriodoToProperties ptp2 = new PeriodoToProperties(dp2,cvm2,per2);
+	 PeriodoToProperties ptp2 = new PeriodoToProperties(dp2,cvm2,per2,null);
 	 
 	 Properties dr1 = ptp.getEdp().getDr();
 	 Properties dr2=ptp2.getEdp().getDr();

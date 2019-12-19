@@ -45,7 +45,7 @@ public class AccountBDReader {
 				 p.put(c.getContaContabil(),c );
 			}
 			
-			 PeriodoToProperties ptp2 = new PeriodoToProperties(dp2,cvm2,per2);
+			 PeriodoToProperties ptp2 = new PeriodoToProperties(dp2,cvm2,per2,null);
 			 Properties pdra = ptp2.getEdp().getBpa();
 			 Properties pbpa = ptp2.getEdp().getBpa();
 			 Properties pbpp = ptp2.getEdp().getBpa();

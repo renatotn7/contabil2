@@ -117,8 +117,8 @@ public static void main(String []args) {
 	String per2="A";
 	String desc1= cvm1 + "_" + dp1+ "_"+ per1;
 	String desc2= cvm2 + "_" + dp2+ "_"+ per2;
-	 PeriodoToProperties ptp = new PeriodoToProperties(dp1,cvm1,per1);
-	 PeriodoToProperties ptp2 = new PeriodoToProperties(dp2,cvm2,per2);
+	 PeriodoToProperties ptp = new PeriodoToProperties(dp1,cvm1,per1,null);
+	 PeriodoToProperties ptp2 = new PeriodoToProperties(dp2,cvm2,per2,null);
 	 
 	 Properties dr1 = ptp.getEdp().getDr();
 	 Properties dr2=ptp2.getEdp().getDr();

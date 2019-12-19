@@ -22,9 +22,9 @@ public class IngestaoEspecifico {
 				// C:\Users\renat\Downloads\chromedriver_win32
 				//String cvm="20257";]
 			
-		            String cvm="9342";
+		            String cvm="20257";
+		            new IngestaoDemonstrativos(cvm,"A",driver);
 		            new IngestaoDemonstrativos(cvm,"T",driver);
-	            
 	            
 	            driver.quit();
 	          //  System.out.println(prop.getProperty("3.09")); //lucro liquido

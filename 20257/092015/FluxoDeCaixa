@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.03.09">Emissão de Ações na Controladora;</entry>
+<entry key="6.03.08">Dividendos e JCP Pagos;-564.799</entry>
+<entry key="6.03.07">Pagamento de Debêntures - Juros;-64.586</entry>
+<entry key="6.03.06">Pagamento de Debêntures - Principal;-232.780</entry>
+<entry key="6.03.05">Pagamento de Empréstimos e Financiamentos - Juros;-6.993</entry>
+<entry key="6.03.04">Pagamento de Empréstimos e Financiamentos - Principal;-140.631</entry>
+<entry key="6.03.03">Emissão de Notas Promissórias;</entry>
+<entry key="6.03.02">Captação de novos empréstimos;5.437</entry>
+<entry key="6.03.01">Empréstimos e Financiamentos - Aquisição de Controladas;</entry>
+<entry key="6.01.02.09">Aumento no saldo de Taxas Regulamentares;9.520</entry>
+<entry key="6.01.02.08">Redução no saldo de Fornecedores;-9.024</entry>
+<entry key="6.01.02.07">Aumento no saldo de Outros Ativos;-6.027</entry>
+<entry key="6.01.02.06">Imposto de renda e contribuição social pagos;-30.136</entry>
+<entry key="6.01.02.05">Redução no saldo de Tributos diferidos ativos líquido do passivo;</entry>
+<entry key="6.01.02.04">Redução no saldo de Impostos e Contrib. diferidos ativos líquido do passivo;</entry>
+<entry key="6.01.02.03">Redução no saldo de Impostos e Contribuições Sociais ativos líquido do passivo;28.050</entry>
+<entry key="6.01.02.02">Redução do Ativo Financeiro;912.308</entry>
+<entry key="6.01.03">Outros;</entry>
+<entry key="6.01.02.01">Redução (aumento) em Clientes;25.322</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;1.156.039</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;155.368</entry>
+<entry key="6.01.01.15">Instrumentos financeiros derivativos;-193.953</entry>
+<entry key="6.01.01.14">Provisão para multa;0</entry>
+<entry key="6.01.01.13">Provisão parcela variável;2.704</entry>
+<entry key="6.01.01.12">Variações cambiais líquidas - depósitos vinculados;0</entry>
+<entry key="6.01.01.11">Ganho na remensuração na aquisição do controle da UNISA;</entry>
+<entry key="6.01.01.10">Ganho na venda do imóvel - sede da Companhia;0</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;226.075</entry>
+<entry key="Conta">Descrição;01/01/2015 
+ a 
+ 30/09/2015</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;-1.000.237</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-85.095</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;1.311.407</entry>
+<entry key="6.02.04">Receita na venda do imóvel - sede da Companhia;0</entry>
+<entry key="6.02.03">Adição no Imobilizado e Intangível;-912</entry>
+<entry key="6.02.02">Aquisição de coligadas;</entry>
+<entry key="6.02.01">Aumento no saldo de títulos e valores mobiliários;-84.183</entry>
+<entry key="6.03.13">Recebimento (pagamento) na liquidação de instrumentos financeiros derivativos - Principal;35.857</entry>
+<entry key="6.03.12">Pagamento de instrumentos financeiros derivativos - Juros;-31.742</entry>
+<entry key="6.03.11">Pagamento de notas promissórias - Juros;0</entry>
+<entry key="6.01.01.09">Remuneração do Ativo Financeiro;-818.658</entry>
+<entry key="6.03.10">Pagamento de notas promissórias - Principal;0</entry>
+<entry key="6.01.01.08">Tributos Diferidos;-1.151</entry>
+<entry key="6.01.01.07">Imposto de Renda e Contribuição Social;119.808</entry>
+<entry key="6.01.01.06">Juros e Variações Monetárias sobre Debêntures;357.316</entry>
+<entry key="6.01.01.05">Juros e Variações Monetárias e Cambiais líquidas e ajuste a valor justo sobre empréstimos e financ.;231.246</entry>
+<entry key="6.01.01.04">Provisão (reversão) fiscais, trabalhistas e cíveis;1.602</entry>
+<entry key="6.01.01.03">Depreciação e Amortização;1.222</entry>
+<entry key="6.01.01.02">Resultado de Equivalência Patrimonial;-146.215</entry>
+<entry key="6.01.01.01">Resultado do Período;601.447</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;327.928</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;101.853</entry>
+<entry key="6.01.02.11">Dividendos recebidos de controladas em conjunto e coligadas;148.843</entry>
+<entry key="6.01.02.10">Aumento no saldo de Outras Contas a Pagar;77.183</entry>
+</properties>

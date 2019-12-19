@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="7.07">Valor Adicionado Total a Distribuir;1.799.090</entry>
+<entry key="7.06">Vlr Adicionado Recebido em Transferência;315.259</entry>
+<entry key="7.05">Valor Adicionado Líquido Produzido;1.483.831</entry>
+<entry key="7.04">Retenções;-1.445</entry>
+<entry key="7.03">Valor Adicionado Bruto;1.485.276</entry>
+<entry key="7.02">Insumos Adquiridos de Terceiros;-155.498</entry>
+<entry key="7.01">Receitas;1.640.774</entry>
+<entry key="7.08.01.04">Outros;</entry>
+<entry key="7.08.01.03">F.G.T.S.;4.293</entry>
+<entry key="7.08.01.02">Benefícios;22.691</entry>
+<entry key="7.08.01.01">Remuneração Direta;51.432</entry>
+<entry key="7.08.05">Outros;307.845</entry>
+<entry key="7.08.04">Remuneração de Capitais Próprios;597.000</entry>
+<entry key="7.08.03">Remuneração de Capitais de Terceiros;466.354</entry>
+<entry key="7.08.02">Impostos, Taxas e Contribuições;349.475</entry>
+<entry key="7.08.01">Pessoal;78.416</entry>
+<entry key="7.08.04.04">Part. Não Controladores nos Lucros Retidos;</entry>
+<entry key="7.08.04.03">Lucros Retidos / Prejuízo do Período;</entry>
+<entry key="7.01.04">Provisão/Reversão de Créds. Liquidação Duvidosa;</entry>
+<entry key="7.08.04.02">Dividendos;400.000</entry>
+<entry key="7.01.03">Receitas refs. à Construção de Ativos Próprios;</entry>
+<entry key="7.08.04.01">Juros sobre o Capital Próprio;197.000</entry>
+<entry key="7.01.02">Outras Receitas;8.407</entry>
+<entry key="7.01.01">Vendas de Mercadorias, Produtos e Serviços;1.632.367</entry>
+<entry key="7.06.03">Outros;</entry>
+<entry key="7.06.02">Receitas Financeiras;52.242</entry>
+<entry key="7.06.01">Resultado de Equivalência Patrimonial;263.017</entry>
+<entry key="7.08.03.03.02">Outras;-886</entry>
+<entry key="7.08.03.03.01">Instrumentos financeiros derivativos;-27.913</entry>
+<entry key="7.08.02.03">Municipais;197</entry>
+<entry key="7.08.02.02">Estaduais;254</entry>
+<entry key="7.08.02.01">Federais;349.024</entry>
+<entry key="7.01.02.01">Ganho na alienação de bens;8.407</entry>
+<entry key="7.04.02">Outras;</entry>
+<entry key="7.04.01">Depreciação, Amortização e Exaustão;-1.445</entry>
+<entry key="Conta">Descrição;01/01/2014 
+ a 
+ 31/12/2014</entry>
+<entry key="7.08.05.04">Reserva Especial;0</entry>
+<entry key="7.08.05.03">Dividendos Adicionais Propostos;254.757</entry>
+<entry key="7.02.04">Outros;-24.555</entry>
+<entry key="7.08.05.02">Reserva de Incentivo Fiscal;7.846</entry>
+<entry key="7.02.03">Perda/Recuperação de Valores Ativos;</entry>
+<entry key="7.08.05.01">Reserva Legal;45.242</entry>
+<entry key="7.02.02">Materiais, Energia, Servs. de Terceiros e Outros;-130.943</entry>
+<entry key="7.02.01">Custos Prods., Mercs. e Servs. Vendidos;</entry>
+<entry key="7.08.03.03">Outras;-28.799</entry>
+<entry key="7.08.03.02">Aluguéis;</entry>
+<entry key="7.08.03.01">Juros;495.153</entry>
+<entry key="7.06.03.02">Outros;</entry>
+<entry key="7.06.03.01">Ganho na remensuração na aquisição do controle da UNISA;</entry>
+<entry key="7.08">Distribuição do Valor Adicionado;1.799.090</entry>
+</properties>

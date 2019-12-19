@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="3.04.06">Resultado de Equivalência Patrimonial;</entry>
+<entry key="3.04.05">Outras Despesas Operacionais;-138.496</entry>
+<entry key="3.04.04">Outras Receitas Operacionais;9.048</entry>
+<entry key="3.04.03">Perdas pela Não Recuperabilidade de Ativos;-50.177</entry>
+<entry key="Conta">Descrição;01/01/2016 
+ a 
+ 31/03/2016</entry>
+<entry key="3.09">Resultado Líquido das Operações Continuadas;65.515</entry>
+<entry key="3.04.02">Despesas Gerais e Administrativas;-120.667</entry>
+<entry key="3.10.02">Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas;</entry>
+<entry key="3.08">Imposto de Renda e Contribuição Social sobre o Lucro;-15.948</entry>
+<entry key="3.04.01">Despesas com Vendas;-353.110</entry>
+<entry key="3.10.01">Lucro/Prejuízo Líquido das Operações Descontinuadas;</entry>
+<entry key="3.07">Resultado Antes dos Tributos sobre o Lucro;81.463</entry>
+<entry key="3.99">Lucro por Ação - (Reais / Ação);</entry>
+<entry key="3.06">Resultado Financeiro;-24.080</entry>
+<entry key="3.05">Resultado Antes do Resultado Financeiro e dos Tributos;105.543</entry>
+<entry key="3.99.01.01">ON;0,10240</entry>
+<entry key="3.04">Despesas/Receitas Operacionais;-653.402</entry>
+<entry key="3.03">Resultado Bruto;758.945</entry>
+<entry key="3.02">Custo dos Bens e/ou Serviços Vendidos;-488.424</entry>
+<entry key="3.11.02">Atribuído a Sócios Não Controladores;</entry>
+<entry key="3.01">Receita de Venda de Bens e/ou Serviços;1.247.369</entry>
+<entry key="3.11.01">Atribuído a Sócios da Empresa Controladora;65.515</entry>
+<entry key="3.99.02.01">ON;0,10180</entry>
+<entry key="3.99.02">Lucro Diluído por Ação;</entry>
+<entry key="3.06.02">Despesas Financeiras;-54.583</entry>
+<entry key="3.99.01">Lucro Básico por Ação;</entry>
+<entry key="3.06.01">Receitas Financeiras;30.503</entry>
+<entry key="3.11">Lucro/Prejuízo Consolidado do Período;65.515</entry>
+<entry key="3.10">Resultado Líquido de Operações Descontinuadas;</entry>
+<entry key="3.01.02">Receita líquida com produtos e serviços financeiros;171.221</entry>
+<entry key="3.01.01">Receita líquida com venda de mercadorias;1.076.148</entry>
+<entry key="3.08.02">Diferido;-7.264</entry>
+<entry key="3.08.01">Corrente;-8.684</entry>
+<entry key="3.02.02">Custo dos produtos e serviços financeiros;-10.842</entry>
+<entry key="3.02.01">Custos das mercadorias vendidas;-477.582</entry>
+</properties>

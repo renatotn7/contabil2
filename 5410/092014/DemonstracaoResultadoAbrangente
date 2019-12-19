@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="4.03.01">Atribuído a Sócios da Empresa Controladora;344.093</entry>
+<entry key="4.03">Resultado Abrangente Consolidado do Período;348.357</entry>
+<entry key="4.02">Outros Resultados Abrangentes;85.761</entry>
+<entry key="4.02.01">Ajuste de Conversão do Período;85.761</entry>
+<entry key="4.01">Lucro Líquido Consolidado do Período;262.596</entry>
+<entry key="Conta">Descrição;01/07/2014 
+ a 
+ 30/09/2014</entry>
+<entry key="4.03.02">Atribuído a Sócios Não Controladores;4.264</entry>
+</properties>

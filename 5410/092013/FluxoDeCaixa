@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.01.03">Outros;75.522</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;-380.019</entry>
+<entry key="6.02.08">Aquisição de Participação de Não Controladores;-6.268</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;1.039.825</entry>
+<entry key="6.02.07">Aquisição de Controlada;0</entry>
+<entry key="6.02.06">Ágio em Transação de Capital;-5.169</entry>
+<entry key="6.02.05">Aplicações Financeiras de Longo Prazo;261.199</entry>
+<entry key="6.02.04">Ajuste Acumulado de Conversão;38.894</entry>
+<entry key="Conta">Descrição;01/01/2013 
+ a 
+ 30/09/2013</entry>
+<entry key="6.02.03">Baixa do Ativo Permanente;12.448</entry>
+<entry key="6.02.02">Intangível;-20.877</entry>
+<entry key="6.02.01">Imobilizado;-186.951</entry>
+<entry key="6.03.05">Dividendos/Juros s/ Capital Próprio Pagos;-392.059</entry>
+<entry key="6.03.04">Ações em Tesouraria;717</entry>
+<entry key="6.03.03">Juros Pagos sobre Empréstimos e Financiamentos;-120.230</entry>
+<entry key="6.03.02">Pagamento de Empréstimos e Financiamentos;-1.019.081</entry>
+<entry key="6.03.01">Captação de Empréstimos e Financiamentos Obtidos;1.337.629</entry>
+<entry key="6.01.01.05">Despesas com plano de opções de compra de ações;551</entry>
+<entry key="6.01.01.04">Participação nos Resultados dos Colaboradores;102.179</entry>
+<entry key="6.01.01.03">Equivalência Patrimonial;</entry>
+<entry key="6.01.01.02">Depreciação, Amortização e Exaustão;161.504</entry>
+<entry key="6.01.01.01">Lucro antes dos Impostos;775.591</entry>
+<entry key="6.01.02.05">Part. nos Resultados dos Colaboradores Pagos;-116.525</entry>
+<entry key="6.01.02.04">Imposto de Renda e Contribuição Social Pagos;-192.547</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;2.937.836</entry>
+<entry key="6.01.02.03">Aumento/Redução nos Estoques;-164.417</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;2.302.256</entry>
+<entry key="6.01.02.02">Aumento/Redução nas contas a Pagar;216.998</entry>
+<entry key="6.01.02.01">Aumento/Redução nas contas a Receber;-123.528</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;635.580</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;-193.024</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;93.276</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;735.328</entry>
+</properties>

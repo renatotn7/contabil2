@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="3.04.06">Resultado de Equivalência Patrimonial;</entry>
+<entry key="3.04.05">Outras Despesas Operacionais;-50.721</entry>
+<entry key="3.04.04">Outras Receitas Operacionais;4.108</entry>
+<entry key="3.04.03">Perdas pela Não Recuperabilidade de Ativos;</entry>
+<entry key="Conta">Descrição;01/04/2016 
+ a 
+ 30/06/2016</entry>
+<entry key="3.09">Resultado Líquido das Operações Continuadas;258.206</entry>
+<entry key="3.04.02">Despesas Gerais e Administrativas;-120.947</entry>
+<entry key="3.10.02">Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas;</entry>
+<entry key="3.08">Imposto de Renda e Contribuição Social sobre o Lucro;-24.565</entry>
+<entry key="3.04.01">Despesas com Vendas;-233.148</entry>
+<entry key="3.10.01">Lucro/Prejuízo Líquido das Operações Descontinuadas;</entry>
+<entry key="3.07">Resultado Antes dos Tributos sobre o Lucro;282.771</entry>
+<entry key="3.99">Lucro por Ação - (Reais / Ação);</entry>
+<entry key="3.06">Resultado Financeiro;41.811</entry>
+<entry key="3.05">Resultado Antes do Resultado Financeiro e dos Tributos;240.960</entry>
+<entry key="3.99.01.01">ON;0,15806</entry>
+<entry key="3.04">Despesas/Receitas Operacionais;-400.708</entry>
+<entry key="3.03">Resultado Bruto;641.668</entry>
+<entry key="3.02">Custo dos Bens e/ou Serviços Vendidos;-1.693.587</entry>
+<entry key="3.11.02">Atribuído a Sócios Não Controladores;3.209</entry>
+<entry key="3.01">Receita de Venda de Bens e/ou Serviços;2.335.255</entry>
+<entry key="3.11.01">Atribuído a Sócios da Empresa Controladora;254.997</entry>
+<entry key="3.99.02.01">ON;0,15797</entry>
+<entry key="3.99.02">Lucro Diluído por Ação;</entry>
+<entry key="3.06.02">Despesas Financeiras;-112.423</entry>
+<entry key="3.99.01">Lucro Básico por Ação;</entry>
+<entry key="3.06.01">Receitas Financeiras;154.234</entry>
+<entry key="3.11">Lucro/Prejuízo Consolidado do Período;258.206</entry>
+<entry key="3.10">Resultado Líquido de Operações Descontinuadas;</entry>
+<entry key="3.08.02">Diferido;17.402</entry>
+<entry key="3.04.02.02">Outras Despesas Administrativas;-115.302</entry>
+<entry key="3.08.01">Corrente;-41.967</entry>
+<entry key="3.04.02.01">Honorário dos Administradores;-5.645</entry>
+</properties>

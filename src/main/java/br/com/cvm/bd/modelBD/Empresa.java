@@ -39,6 +39,29 @@ public class Empresa implements Serializable {
 
 	@Column(length=255)
 	private String segmentosetorial;
+	@Column(length=400)
+	private String descricao;
+	@Lob
+	@Column(name="fund_json")
+	private String fundJson;
+	@Column(nullable=true)
+	private Double nota;
+	
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public Double getNota() {
+		return nota;
+	}
+
+	public void setNota(Double nota) {
+		this.nota = nota;
+	}
 
 	@Column(length=255)
 	private String setor;
@@ -147,6 +170,14 @@ public class Empresa implements Serializable {
 		demonstrativo.setEmpresa(null);
 
 		return demonstrativo;
+	}
+
+	public String getFundJson() {
+		return fundJson;
+	}
+
+	public void setFundJson(String fundJson) {
+		this.fundJson = fundJson;
 	}
 
 }

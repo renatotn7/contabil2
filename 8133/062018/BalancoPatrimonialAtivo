@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="1.02.04.02">Goodwill;</entry>
+<entry key="1.02.04.01">Intangíveis;</entry>
+<entry key="1.02.02.01.04">Participações em Controladas em Conjunto;</entry>
+<entry key="1.02.02.01.01">Participações em Coligadas;</entry>
+<entry key="1.02.04.01.01">Contrato de Concessão;</entry>
+<entry key="1.02.01.01.01">Títulos Designados a Valor Justo;</entry>
+<entry key="1.01.02.03">Aplicações Financeiras Avaliadas ao Custo Amortizado;</entry>
+<entry key="1.01.08">Outros Ativos Circulantes;90.898</entry>
+<entry key="1.01.02.02">Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes;</entry>
+<entry key="1.01.07">Despesas Antecipadas;17.590</entry>
+<entry key="1.01.02.01">Aplicações Financeiras Avaliadas a Valor Justo através do Resultado;88.181</entry>
+<entry key="1.01.06">Tributos a Recuperar;209.967</entry>
+<entry key="1.02.02.02">Propriedades para Investimento;</entry>
+<entry key="1.01.05">Ativos Biológicos;</entry>
+<entry key="1.02.02.01">Participações Societárias;</entry>
+<entry key="1.01.04">Estoques;1.085.675</entry>
+<entry key="1.01.03">Contas a Receber;2.359.387</entry>
+<entry key="1.01.02">Aplicações Financeiras;88.181</entry>
+<entry key="1.01.01">Caixa e Equivalentes de Caixa;757.693</entry>
+<entry key="1.02.01.04.02">Outras Contas a Receber;</entry>
+<entry key="1.02.01.04.01">Clientes;</entry>
+<entry key="1.02.01.09.04">Créditos com Outras Partes Relacionadas;</entry>
+<entry key="1.02.01.09.03">Créditos com Controladores;</entry>
+<entry key="1.02.01.10.05">Outros ativos;7.712</entry>
+<entry key="1.02.01.10.04">Tributos a recuperar;85.231</entry>
+<entry key="1.02.01.09.01">Créditos com Coligadas;</entry>
+<entry key="1.02.01.10.03">Depósitos judiciais;10.007</entry>
+<entry key="1.02.01.10.02">Ativos de Operações Descontinuadas;</entry>
+<entry key="1.02.01.10.01">Ativos Não-Correntes a Venda;</entry>
+<entry key="1">Ativo Total;7.305.307</entry>
+<entry key="1.02.01.10">Outros Ativos Não Circulantes;102.950</entry>
+<entry key="1.02">Ativo Não Circulante;2.695.916</entry>
+<entry key="1.01">Ativo Circulante;4.609.391</entry>
+<entry key="1.02.01.07.01">Imposto de Renda e Contribuição Social Diferidos;173.568</entry>
+<entry key="Conta">Descrição;30/06/2018</entry>
+<entry key="1.01.03.02">Outras Contas a Receber;</entry>
+<entry key="1.02.03.03">Imobilizado em Andamento;71.400</entry>
+<entry key="1.01.03.01">Clientes;2.359.387</entry>
+<entry key="1.02.03.02">Direito de Uso em Arrendamento;</entry>
+<entry key="1.02.04">Intangível;565.794</entry>
+<entry key="1.02.03.01">Imobilizado em Operação;1.781.863</entry>
+<entry key="1.02.03">Imobilizado;1.853.263</entry>
+<entry key="1.01.08.03">Outros;90.898</entry>
+<entry key="1.02.02">Investimentos;46</entry>
+<entry key="1.01.08.02">Ativos de Operações Descontinuadas;</entry>
+<entry key="1.01.08.01">Ativos Não-Correntes a Venda;</entry>
+<entry key="1.02.01">Ativo Realizável a Longo Prazo;276.813</entry>
+<entry key="1.01.08.03.02">Outros ativos;46.288</entry>
+<entry key="1.02.01.09">Créditos com Partes Relacionadas;</entry>
+<entry key="1.01.08.03.01">FIDC Lojas Renner;44.610</entry>
+<entry key="1.02.01.08">Despesas Antecipadas;295</entry>
+<entry key="1.02.01.07">Tributos Diferidos;173.568</entry>
+<entry key="1.02.01.06">Ativos Biológicos;</entry>
+<entry key="1.02.01.05">Estoques;</entry>
+<entry key="1.02.01.04">Contas a Receber;</entry>
+<entry key="1.02.01.03">Aplicações Financeiras Avaliadas ao Custo Amortizado;</entry>
+<entry key="1.02.01.02">Aplicações Financeiras Avaliadas a Valor Justo através de Outros Resultados Abrangentes;</entry>
+<entry key="1.02.01.01">Aplicações Financeiras Avaliadas a Valor Justo através do Resultado;</entry>
+<entry key="1.01.06.01">Tributos Correntes a Recuperar;209.967</entry>
+<entry key="1.01.02.01.02">Títulos Designados a Valor Justo;88.181</entry>
+<entry key="1.01.02.01.01">Títulos para Negociação;</entry>
+</properties>

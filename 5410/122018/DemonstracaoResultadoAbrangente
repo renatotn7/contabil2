@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="4.03.01">Atribuído a Sócios da Empresa Controladora;1.655.301</entry>
+<entry key="4.03">Resultado Abrangente Consolidado do Período;1.663.813</entry>
+<entry key="4.02.02">Hedge Accounting;-7.302</entry>
+<entry key="4.02">Outros Resultados Abrangentes;319.665</entry>
+<entry key="4.02.01">Ajustes Acumulados de Conversão de moedas;326.967</entry>
+<entry key="4.01">Lucro Líquido Consolidado do Período;1.344.148</entry>
+<entry key="Conta">Descrição;01/01/2018 
+ a 
+ 31/12/2018</entry>
+<entry key="4.03.02">Atribuído a Sócios Não Controladores;8.512</entry>
+</properties>

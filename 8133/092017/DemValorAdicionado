@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="7.07">Valor Adicionado Total a Distribuir;3.017.616</entry>
+<entry key="7.06">Vlr Adicionado Recebido em Transferência;49.364</entry>
+<entry key="7.05">Valor Adicionado Líquido Produzido;2.968.252</entry>
+<entry key="7.04">Retenções;-241.592</entry>
+<entry key="7.03">Valor Adicionado Bruto;3.209.844</entry>
+<entry key="7.02">Insumos Adquiridos de Terceiros;-3.067.555</entry>
+<entry key="7.01">Receitas;6.277.399</entry>
+<entry key="7.08.01.04">Outros;35.753</entry>
+<entry key="7.08.01.03">F.G.T.S.;47.280</entry>
+<entry key="7.08.01.02">Benefícios;103.397</entry>
+<entry key="7.08.01.01">Remuneração Direta;538.465</entry>
+<entry key="7.08.05">Outros;</entry>
+<entry key="7.08.04">Remuneração de Capitais Próprios;400.878</entry>
+<entry key="7.08.03">Remuneração de Capitais de Terceiros;542.714</entry>
+<entry key="7.08.02">Impostos, Taxas e Contribuições;1.349.129</entry>
+<entry key="7.08.01">Pessoal;724.895</entry>
+<entry key="7.08.04.04">Part. Não Controladores nos Lucros Retidos;</entry>
+<entry key="7.08.04.03">Lucros Retidos / Prejuízo do Período;256.829</entry>
+<entry key="7.01.04">Provisão/Reversão de Créds. Liquidação Duvidosa;</entry>
+<entry key="7.08.04.02">Dividendos;</entry>
+<entry key="7.01.03">Receitas refs. à Construção de Ativos Próprios;</entry>
+<entry key="7.08.04.01">Juros sobre o Capital Próprio;144.049</entry>
+<entry key="7.01.02">Outras Receitas;-162.367</entry>
+<entry key="7.01.01">Vendas de Mercadorias, Produtos e Serviços;6.439.766</entry>
+<entry key="7.06.03">Outros;</entry>
+<entry key="7.06.02">Receitas Financeiras;49.364</entry>
+<entry key="7.06.01">Resultado de Equivalência Patrimonial;</entry>
+<entry key="7.08.03.03.01">Despesas financeiras;115.823</entry>
+<entry key="7.08.02.03">Municipais;40.070</entry>
+<entry key="7.08.02.02">Estaduais;786.010</entry>
+<entry key="7.01.02.03">Resultado da baixa de ativos fixos, líquido;</entry>
+<entry key="7.08.02.01">Federais;523.049</entry>
+<entry key="7.01.02.02">Perdas em crédito, liquidas;-177.051</entry>
+<entry key="7.01.02.01">Outros resultados operacionais;14.684</entry>
+<entry key="7.04.02">Outras;</entry>
+<entry key="7.04.01">Depreciação, Amortização e Exaustão;-241.592</entry>
+<entry key="Conta">Descrição;01/01/2017 
+ a 
+ 30/09/2017</entry>
+<entry key="7.02.04">Outros;</entry>
+<entry key="7.02.03">Perda/Recuperação de Valores Ativos;-46.882</entry>
+<entry key="7.02.02">Materiais, Energia, Servs. de Terceiros e Outros;-743.914</entry>
+<entry key="7.02.01">Custos Prods., Mercs. e Servs. Vendidos;-2.276.759</entry>
+<entry key="7.08.01.04.02">Remuneração dos administradores;8.987</entry>
+<entry key="7.08.01.04.01">Plano de opção de compra de ações;26.766</entry>
+<entry key="7.08.03.03">Outras;115.823</entry>
+<entry key="7.08.03.02">Aluguéis;426.891</entry>
+<entry key="7.08.03.01">Juros;</entry>
+<entry key="7.08">Distribuição do Valor Adicionado;3.017.616</entry>
+</properties>

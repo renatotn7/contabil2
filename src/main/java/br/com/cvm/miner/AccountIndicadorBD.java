@@ -14,25 +14,19 @@ import javax.persistence.Query;
 
 import br.com.cvm.bd.helper.PersistenceManager;
 import br.com.cvm.bd.modelBD.ContaContabil;
+import br.com.cvm.bd.modelBD.FundIndicador;
 import br.com.cvm.bd.modelBD.ValorContabil;
 import br.com.cvm.leitor.origemBDeProperties.PeriodoToProperties;
 
 public class AccountIndicadorBD {
- public static void main(String args[]) {
-		EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+	public static EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+	public static void miner(String cvm2, 	ArrayList<Long> valores, ArrayList<Integer> datas,String titulo) {
+		
 
-		String cvm2 = "5258";
+		
+		
+		
 
-		ArrayList<Long> valores = new ArrayList<Long>();
-		valores.add(121L);
-		valores.add(195L);
-		valores.add(203L);
-		valores.add(210L);
-		ArrayList<Integer> datas = new ArrayList<Integer>();
-		datas.add(201512);
-		datas.add(201612);
-		datas.add(201712);
-		datas.add(201812);
 		// 683
 		// 629
 		// 556
@@ -45,6 +39,7 @@ public class AccountIndicadorBD {
 			aalistvalores.add( getListValorContabil(em, cvm2, datas, ientrada));
 		}
 		StringBuffer sb = new StringBuffer();
+		System.out.println(titulo);
 		System.out.println("p1");
 		for (int ientrada = 0; ientrada < valores.size(); ientrada++) {
 			List<ValorContabil> listContas =aalistvalores.get(ientrada);
@@ -351,12 +346,102 @@ public class AccountIndicadorBD {
 		
 	
 		
-		System.out.println("p4");
+		System.out.println("......................................................................");
 	//	System.out.println(sb.toString());
 
 	//	for (String key : map.keySet()) {
 	//		System.out.println(key + " - " + map.get(key) + " de " + datas.size());
 	//	}
+		
+	}
+ public static void main(String args[]) {
+
+		String cvm2 = "20257";
+		Query query = em.createQuery("SELECT e FROM FundIndicador e where e.demonstrativo.empresa.cvm=\'" + cvm2
+			+"\'"	);
+		
+		
+		List<FundIndicador> cc1 = (List<FundIndicador>) query.getResultList();
+		ArrayList<Long> valores = new ArrayList<Long>();
+		//valores.add(121L);
+		//valores.add(195L);
+		///valores.add(203L);
+	//	valores.add(210L);
+		ArrayList<Integer> datas = new ArrayList<Integer>();
+	//	datas.add(201512);
+	//	datas.add(201612);
+	//	datas.add(201712);
+	//	datas.add(201812);
+		for(FundIndicador fi : cc1) {
+	//		valores.add((long)fi.getPat_Liq());
+			datas.add(fi.getDemonstrativo().getData());
+		}
+		
+		System.out.println("patrimonio liquido:");
+		valores.clear();
+		for(FundIndicador fi : cc1) {
+			
+			valores.add((long)fi.getPat_Liq());
+			//datas.add(fi.getDemonstrativo().getData());
+		}
+		miner(cvm2,valores,datas,"patrimonio liquido:");
+	
+		System.out.println("Ebitda:");
+		valores.clear();
+		for(FundIndicador fi : cc1) {
+			
+			valores.add((long)fi.getEbitda());
+			
+		}
+		miner(cvm2,valores,datas,"Ebitda:");
+		valores.clear();
+		System.out.println("Divida:");
+		for(FundIndicador fi : cc1) {
+			
+			valores.add((long)fi.getDivida());
+			
+		}
+		miner(cvm2,valores,datas,"Divida:");
+		
+		System.out.println("Capex:");
+		valores.clear();
+		for(FundIndicador fi : cc1) {
+			
+			valores.add((long)fi.getCapex());
+			
+		}
+		miner(cvm2,valores,datas,"Capex:");
+		System.out.println("Fco:");
+		valores.clear();
+		for(FundIndicador fi : cc1) {
+			
+			valores.add((long)fi.getFco());
+			
+		}
+		miner(cvm2,valores,datas,"Fco:");
+		System.out.println("FCF:");
+		valores.clear();
+		for(FundIndicador fi : cc1) {
+			
+			valores.add((long)fi.getFcf());
+			
+		}
+		miner(cvm2,valores,datas,"FCF:");
+	
+		System.out.println("Proventos:");
+		valores.clear();
+		for(FundIndicador fi : cc1) {
+			
+			valores.add((long)fi.getProv());
+			
+		}
+		miner(cvm2,valores,datas,"Proventos:");
+	
+		
+		
+	//	miner(cvm2,valores,datas);
+		
+	//	miner(cvm2,valores,datas);
 		em.close();
 		System.exit(0);
  }

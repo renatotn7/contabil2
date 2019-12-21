@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.03.07">Juros sobre capital próprio e dividendos pagos;-394.946</entry>
+<entry key="6.03.06">Contraprestação de arrendamento mercantil financeiro;-168.962</entry>
+<entry key="6.03.04">Amortização de empréstimos e debêntures;-324.630</entry>
+<entry key="6.03.03">Captações de empréstimos;469.010</entry>
+<entry key="6.03.02">Recompra de ações;0</entry>
+<entry key="6.03.01">Aumento do capital social;24.771</entry>
+<entry key="6.01.02.07">Obrigações fiscais;-191.278</entry>
+<entry key="6.01.02.06">Fornecedores;-248.779</entry>
+<entry key="6.01.02.05">Financiamentos - operações serviços financeiros;-238.798</entry>
+<entry key="6.01.02.04">Outros ativos;-83.830</entry>
+<entry key="6.01.02.03">Tributos a recuperar;-29.148</entry>
+<entry key="6.01.02.02">Estoques;-2.862</entry>
+<entry key="6.01.03">Outros;60.842</entry>
+<entry key="6.01.02.01">Contas a receber de clientes;227.673</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;-550.283</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;996.542</entry>
+<entry key="6.01.01.13">Outros ajustes do lucro líquido;7.501</entry>
+<entry key="6.01.01.12">(Reversões) Perdas estimadas em ativos, líquidas;13.656</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;-134.220</entry>
+<entry key="Conta">Descrição;01/01/2019 
+ a 
+ 30/06/2019</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;-1.955</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;-394.757</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-244.609</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;507.101</entry>
+<entry key="6.01.03.04">Aplicações financeiras;302.455</entry>
+<entry key="6.01.03.03">Juros pagos sobre empréstimos, debêntures e arrendamento;-26.861</entry>
+<entry key="6.02.04">Aporte de capital em subsidiárias;</entry>
+<entry key="6.01.03.02">Pagamento de imposto de renda e contribuição social;-214.752</entry>
+<entry key="6.02.03">Recebimentos por vendas de ativos fixos;674</entry>
+<entry key="6.02.01">Aquisições de imobilizado e intangível;-245.283</entry>
+<entry key="6.01.01.09">Imposto de renda e contribuição social;140.779</entry>
+<entry key="6.01.01.05">Juros e custos de estruturação sobre empréstimos e arrendamento;74.943</entry>
+<entry key="6.01.01.02">Depreciações e amortizações;362.919</entry>
+<entry key="6.01.01.01">Lucro líquido do período;396.744</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;810.451</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;944.671</entry>
+<entry key="6.01.02.12">Outras obrigações;-30.959</entry>
+<entry key="6.01.02.11">Obrigações com administradoras de cartões;47.698</entry>
+</properties>

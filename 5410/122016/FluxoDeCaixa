@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.03.06">Hedge Accounting - Fluxo de Caixa;</entry>
+<entry key="6.03.05">Ações em Tesouraria;5.145</entry>
+<entry key="6.03.04">Pgto de Dividendos/Juros s/ Capital Próprio;-526.730</entry>
+<entry key="6.03.03">Juros pagos sobre empréstimos e financimamentos;-405.540</entry>
+<entry key="6.03.02">Pagamento de empréstimos e financiamentos;-1.279.654</entry>
+<entry key="6.03.01">Captação de empréstimos e financiamentos obtidos;1.142.860</entry>
+<entry key="6.01.02.05">Particip. dos Colaboradores Pagos;-189.892</entry>
+<entry key="6.01.02.04">Imposto de Renda e CS pagos;-244.334</entry>
+<entry key="6.01.02.03">Aumento/Redução nos Estoques;276.537</entry>
+<entry key="6.01.02.02">Aumento/Redução nas Contas a Pagar;219.710</entry>
+<entry key="6.01.03">Outros;-110.036</entry>
+<entry key="6.01.02.01">Aumento/Redução nas Contas a Receber;89.449</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;151.470</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;2.089.478</entry>
+<entry key="6.02.10">Caixa adquirido de controlada;4.014</entry>
+<entry key="6.01.01.11">Despesas com Plano de Opções de Compra de Ações;1.469</entry>
+<entry key="6.01.01.10">Juros Provisionados de Empréstimos e Financiamentos;191.238</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;113.547</entry>
+<entry key="Conta">Descrição;01/01/2016 
+ a 
+ 31/12/2016</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;-100.716</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;-1.063.919</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-852.730</entry>
+<entry key="6.02.09">Aquisição de Controlada;-292.301</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;2.130.912</entry>
+<entry key="6.02.08">Ágio em transação de capital;0</entry>
+<entry key="6.02.07">Aplicação Financeira de Longo Prazo;-215.429</entry>
+<entry key="6.02.06">Aquisição de Participação de não Controladores;0</entry>
+<entry key="6.02.05">Ajuste Acumulado de Conversão;</entry>
+<entry key="6.02.04">Resultado de venda de imobilizado;13.611</entry>
+<entry key="6.02.03">Intangível;-37.121</entry>
+<entry key="6.02.02">Imobilizado;-325.504</entry>
+<entry key="6.02.01">Investimentos;</entry>
+<entry key="6.01.01.09">Baixa de Ativos não Circulantes;3.962</entry>
+<entry key="6.01.01.08">Provisão com Garantia de Produtos;21.011</entry>
+<entry key="6.01.01.07">Provisão para Perdas nos Estoques;-7.571</entry>
+<entry key="6.01.01.06">Provisão de Passivos Tributários, Cíveis e Trabalhistas;94.434</entry>
+<entry key="6.01.01.05">Provisão para Risco de Crédito;-5.896</entry>
+<entry key="6.01.01.04">Participação nos Resultados dos Colaboradores;168.060</entry>
+<entry key="6.01.01.03">Equivalência Patrimonial;</entry>
+<entry key="6.01.01.02">Depreciações e Amortizações;343.257</entry>
+<entry key="6.01.01.01">Lucro Antes dos Impostos;1.279.514</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;3.390.662</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;3.277.115</entry>
+</properties>

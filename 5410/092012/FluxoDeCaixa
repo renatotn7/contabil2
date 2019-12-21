@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.01.03">Outros;51.313</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;-397.384</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;854.736</entry>
+<entry key="6.02.06">Ágio em Transação de Capital;-51.788</entry>
+<entry key="6.02.05">Aplicações Financeiras de Longo Prazo;23.332</entry>
+<entry key="6.02.04">Ajuste Acumulado de Conversão;74.054</entry>
+<entry key="Conta">Descrição;01/01/2012 
+ a 
+ 30/09/2012</entry>
+<entry key="6.02.03">Baixa do Ativo Permanente;6.111</entry>
+<entry key="6.02.02">Intangível;-133.691</entry>
+<entry key="6.02.01">Imobilizado;-188.662</entry>
+<entry key="6.03.05">Dividendos/Juros s/ Capital Próprio Pagos;-317.639</entry>
+<entry key="6.03.04">Ações em Tesouraria;0</entry>
+<entry key="6.03.03">Juros Pagos sobre Empréstimos e Financiamentos;-134.146</entry>
+<entry key="6.03.02">Pagamento de Empréstimos e Financiamentos;-1.286.438</entry>
+<entry key="6.03.01">Captação de Empréstimos e Financiamentos Obtidos;836.818</entry>
+<entry key="6.01.01.05">Outros;360</entry>
+<entry key="6.01.01.04">Participação nos Resultados dos Colaboradores;74.384</entry>
+<entry key="6.01.01.03">Equivalência Patrimonial;</entry>
+<entry key="6.01.01.02">Depreciação, Amortização e Exaustão;154.365</entry>
+<entry key="6.01.01.01">Lucro antes dos Impostos;625.627</entry>
+<entry key="6.01.02.05">Part. nos Resultados dos Colaboradores Pagos;-98.515</entry>
+<entry key="6.01.02.04">Imposto de Renda e Contribuição Social Pagos;-150.729</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;2.268.231</entry>
+<entry key="6.01.02.03">Aumento/Redução nos Estoques;-30.268</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;2.931.615</entry>
+<entry key="6.01.02.02">Aumento/Redução nas contas a Pagar;135.902</entry>
+<entry key="6.01.02.01">Aumento/Redução nas contas a Receber;-253.774</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;-663.384</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;-901.405</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-270.644</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;508.665</entry>
+</properties>

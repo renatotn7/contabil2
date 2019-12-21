@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.03.05">Dividendos/Juros s/ Capital próprios pagos;-289.316</entry>
+<entry key="6.03.04">Ações em Tesouraria;-8.276</entry>
+<entry key="6.03.03">Juros pagos sobre empréstimos e financiamentos;-101.436</entry>
+<entry key="6.03.02">Pagamento de Empréstimos e financiamentos;-152.484</entry>
+<entry key="6.03.01">Captação de Empréstimos e financiamentos obtidos;230.199</entry>
+<entry key="6.01.02.05">Part. nos Resultados dos Colaboradores Pagos;-120.193</entry>
+<entry key="6.01.02.04">Imposto de Renda e Contribuição Social Pagos;-35.116</entry>
+<entry key="6.01.02.03">(Aumento)/Redução nos Estoques;-34.410</entry>
+<entry key="6.01.02.02">Aumento/(Redução) nas Contas a Pagar;57.255</entry>
+<entry key="6.01.03">Outros;16.726</entry>
+<entry key="6.01.02.01">(Aumento)/Redução nas Contas a Receber;45.340</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;-87.124</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;489.162</entry>
+<entry key="6.01.01.10">Juros provisionados de empréstimos e financiamentos;50.563</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;-20.697</entry>
+<entry key="Conta">Descrição;01/01/2017 
+ a 
+ 31/03/2017</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;-3.415</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;-321.313</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-114.733</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;418.764</entry>
+<entry key="6.02.07">Aquisições de controladas;-4.050</entry>
+<entry key="6.02.06">Ágio em Transação de Capital;</entry>
+<entry key="6.02.05">Aplicações Financeiras;-50.033</entry>
+<entry key="6.02.03">Recebimento na venda de Ativo Imobilizado;614</entry>
+<entry key="6.02.02">Intangível;-2.601</entry>
+<entry key="6.02.01">Imobilizado;-58.663</entry>
+<entry key="6.01.01.09">Perda na alienação de imobilizado;1.895</entry>
+<entry key="6.01.01.08">Provisão com garantia de produtos;6.987</entry>
+<entry key="6.01.01.07">Provisão com perdas nos estoques;2.056</entry>
+<entry key="6.01.01.06">Provisão de passivos tributários, cíveis e trabalhistas;25.768</entry>
+<entry key="6.01.01.05">Provisão para risco de crédito;-2.114</entry>
+<entry key="6.01.01.04">Despesas com Plano de Opções de Compra de Ações;782</entry>
+<entry key="6.01.01.03">Participação nos Resultados Colaboradores;44.221</entry>
+<entry key="6.01.01.02">Depreciação, Amortização e Exaustão;68.987</entry>
+<entry key="6.01.01.01">Lucro antes dos Impostos;290.017</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;3.369.965</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;3.390.662</entry>
+</properties>

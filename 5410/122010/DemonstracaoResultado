@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="3.04.06">Resultado de Equivalência Patrimonial;2.090</entry>
+<entry key="3.04.05">Outras Despesas Operacionais;-109.530</entry>
+<entry key="3.04.04">Outras Receitas Operacionais;20.098</entry>
+<entry key="3.04.03">Perdas pela Não Recuperabilidade de Ativos;</entry>
+<entry key="Conta">Descrição;01/01/2010 
+ a 
+ 31/12/2010</entry>
+<entry key="3.09">Resultado Líquido das Operações Continuadas;533.634</entry>
+<entry key="3.04.02">Despesas Gerais e Administrativas;-262.724</entry>
+<entry key="3.10.02">Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas;</entry>
+<entry key="3.08">Imposto de Renda e Contribuição Social sobre o Lucro;-192.118</entry>
+<entry key="3.04.01">Despesas com Vendas;-434.249</entry>
+<entry key="3.10.01">Lucro/Prejuízo Líquido das Operações Descontinuadas;</entry>
+<entry key="3.07">Resultado Antes dos Tributos sobre o Lucro;725.752</entry>
+<entry key="3.99">Lucro por Ação - (Reais / Ação);</entry>
+<entry key="3.06">Resultado Financeiro;123.115</entry>
+<entry key="3.05">Resultado Antes do Resultado Financeiro e dos Tributos;602.637</entry>
+<entry key="3.99.01.01">ON;0,84000</entry>
+<entry key="3.04">Despesas/Receitas Operacionais;-784.315</entry>
+<entry key="3.03">Resultado Bruto;1.386.952</entry>
+<entry key="3.02">Custo dos Bens e/ou Serviços Vendidos;-3.005.021</entry>
+<entry key="3.11.02">Atribuído a Sócios Não Controladores;13.852</entry>
+<entry key="3.01">Receita de Venda de Bens e/ou Serviços;4.391.973</entry>
+<entry key="3.11.01">Atribuído a Sócios da Empresa Controladora;519.782</entry>
+<entry key="3.99.02.01">ON;0,84000</entry>
+<entry key="3.99.02">Lucro Diluído por Ação;</entry>
+<entry key="3.06.02">Despesas Financeiras;-225.356</entry>
+<entry key="3.99.01">Lucro Básico por Ação;</entry>
+<entry key="3.06.01">Receitas Financeiras;348.471</entry>
+<entry key="3.11">Lucro/Prejuízo Consolidado do Período;533.634</entry>
+<entry key="3.10">Resultado Líquido de Operações Descontinuadas;</entry>
+<entry key="3.08.02">Diferido;-33.923</entry>
+<entry key="3.04.02.02">Outras;-245.388</entry>
+<entry key="3.08.01">Corrente;-158.195</entry>
+<entry key="3.04.02.01">Honorários dos Administradores;-17.336</entry>
+</properties>

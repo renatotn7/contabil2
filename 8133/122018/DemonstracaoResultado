@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="3.04.06">Resultado de Equivalência Patrimonial;</entry>
+<entry key="3.04.05">Outras Despesas Operacionais;-397.702</entry>
+<entry key="3.04.04">Outras Receitas Operacionais;36.773</entry>
+<entry key="3.04.03">Perdas pela Não Recuperabilidade de Ativos;-280.673</entry>
+<entry key="Conta">Descrição;01/01/2018 
+ a 
+ 31/12/2018</entry>
+<entry key="3.09">Resultado Líquido das Operações Continuadas;1.020.136</entry>
+<entry key="3.04.02">Despesas Gerais e Administrativas;-819.994</entry>
+<entry key="3.10.02">Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas;</entry>
+<entry key="3.08">Imposto de Renda e Contribuição Social sobre o Lucro;-350.057</entry>
+<entry key="3.04.01">Despesas com Vendas;-2.256.607</entry>
+<entry key="3.10.01">Lucro/Prejuízo Líquido das Operações Descontinuadas;</entry>
+<entry key="3.07">Resultado Antes dos Tributos sobre o Lucro;1.370.193</entry>
+<entry key="3.99">Lucro por Ação - (Reais / Ação);</entry>
+<entry key="3.06">Resultado Financeiro;-53.628</entry>
+<entry key="3.05">Resultado Antes do Resultado Financeiro e dos Tributos;1.423.821</entry>
+<entry key="3.99.01.01">ON;1,41000</entry>
+<entry key="3.04">Despesas/Receitas Operacionais;-3.718.203</entry>
+<entry key="3.03">Resultado Bruto;5.142.024</entry>
+<entry key="3.02">Custo dos Bens e/ou Serviços Vendidos;-3.284.517</entry>
+<entry key="3.11.02">Atribuído a Sócios Não Controladores;</entry>
+<entry key="3.01">Receita de Venda de Bens e/ou Serviços;8.426.541</entry>
+<entry key="3.11.01">Atribuído a Sócios da Empresa Controladora;1.020.136</entry>
+<entry key="3.99.02.01">ON;1,40000</entry>
+<entry key="3.99.02">Lucro Diluído por Ação;</entry>
+<entry key="3.06.02">Despesas Financeiras;-102.792</entry>
+<entry key="3.99.01">Lucro Básico por Ação;</entry>
+<entry key="3.06.01">Receitas Financeiras;49.164</entry>
+<entry key="3.11">Lucro/Prejuízo Consolidado do Período;1.020.136</entry>
+<entry key="3.10">Resultado Líquido de Operações Descontinuadas;</entry>
+<entry key="3.01.02">Receita líquida com produtos e serviços financeiros;941.108</entry>
+<entry key="3.01.01">Receita líquida com vendas de mercadorias;7.485.433</entry>
+<entry key="3.08.02">Diferido;-71.960</entry>
+<entry key="3.08.01">Corrente;-278.097</entry>
+<entry key="3.02.02">Custo dos produtos e serviços financeiros;-27.119</entry>
+<entry key="3.02.01">Custo das vendas com mercadorias;-3.257.398</entry>
+</properties>

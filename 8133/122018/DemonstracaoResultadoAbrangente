@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="4.03.01">Atribuído a Sócios da Empresa Controladora;1.018.184</entry>
+<entry key="4.02.04">Ajustes cumulativos de conversão de moeda estrangeira;2.956</entry>
+<entry key="4.02.03">Impostos relacionados com resultado do hedge de fluxo de caixa;2.528</entry>
+<entry key="4.02.02">Hedge de fluxo de caixa em controladas, líquido de impostos;</entry>
+<entry key="4.02.01">Hedge de fluxo de caixa;-7.436</entry>
+<entry key="4.03">Resultado Abrangente Consolidado do Período;1.018.184</entry>
+<entry key="Conta">Descrição;01/01/2018 
+ a 
+ 31/12/2018</entry>
+<entry key="4.02">Outros Resultados Abrangentes;-1.952</entry>
+<entry key="4.01">Lucro Líquido Consolidado do Período;1.020.136</entry>
+<entry key="4.03.02">Atribuído a Sócios Não Controladores;</entry>
+</properties>

@@ -616,7 +616,7 @@ try {
 	 //	em.close();
 }
 public static void main(String []args) {
-	String cvm ="5258";
+	String cvm ="20257";
 //	new PersisteIgualdes("5258","5258","122011","122012","A", "A");
 	new PersisteContasUnificando(cvm,"122011", "A",null);
 	new PersisteContasUnificando(cvm,"122012", "A",null);

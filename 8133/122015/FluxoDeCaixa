@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.03.08">Recompa de Ações;-6.016</entry>
+<entry key="6.03.07">Valor recebido pela emissão de debêntures;0</entry>
+<entry key="6.03.06">Pagamento de custos de estruturação de debêntures;0</entry>
+<entry key="6.03.05">Juros sobre capital próprio e dividendos pagos;-178.954</entry>
+<entry key="6.03.04">Contraprestação de arrendamento mercantil financeiro;-10.829</entry>
+<entry key="6.03.03">Pagamento de empréstimos;-218.753</entry>
+<entry key="6.03.02">Aumento de capital social;30.963</entry>
+<entry key="6.03.01">Empréstimos tomados;85.512</entry>
+<entry key="6.01.02.09">Fornecedores;-6.047</entry>
+<entry key="6.01.02.08">Fiinanciamentos - operações serviços financeiros FIDC;</entry>
+<entry key="6.01.02.07">Financiamentos das importações;-8.442</entry>
+<entry key="6.01.02.06">Financiamento - operações serviços financeiros;46.087</entry>
+<entry key="6.01.02.05">Depósitos Judiciais;-3.992</entry>
+<entry key="6.01.02.04">Outros ativos circulantes;-51.423</entry>
+<entry key="6.01.02.03">Perdas/ganhos não realizadas com derivativos;</entry>
+<entry key="6.01.02.02">Estoques;-29.393</entry>
+<entry key="6.01.03">Outros;-384.878</entry>
+<entry key="6.01.02.01">Contas a receber de clientes;-244.913</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;-197.440</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;1.354.276</entry>
+<entry key="6.01.01.14">Custo de estruturação de debêntures;1.038</entry>
+<entry key="6.01.01.13">Provisões para perdas em ativos;52.440</entry>
+<entry key="6.01.01.12">Provisão para ajuste ao valor líquido realizável;388</entry>
+<entry key="6.01.01.11">Variação cambial;-3.840</entry>
+<entry key="6.01.01.10">Perda (ganho) com derivativo;1.931</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;-96.813</entry>
+<entry key="Conta">Descrição;01/01/2015 
+ a 
+ 31/12/2015</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;260</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;-298.077</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-570.954</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;771.958</entry>
+<entry key="6.02.05">Recebimento por venda de ativos fixos;358</entry>
+<entry key="6.02.04">Caixa recebido na aquisição de controlada;</entry>
+<entry key="6.01.03.03">Pagamento de juros sobre empréstimos e financiamentos;-100.519</entry>
+<entry key="6.02.03">Aquisição em participação societária;</entry>
+<entry key="6.01.03.02">Pagamento de imposto de renda e contribuição social;-284.359</entry>
+<entry key="6.02.02">Aquisições do intangível;-127.493</entry>
+<entry key="6.01.03.01">Recebimento de dividendos de subsidiárias;</entry>
+<entry key="6.02.01">Aquisições do imobilizado;-443.819</entry>
+<entry key="6.01.01.09">Tributos Diferidos;249.829</entry>
+<entry key="6.01.01.08">Provisão p/ Riscos Tributários, Cíveis e Trabalhistas;14.457</entry>
+<entry key="6.01.01.07">Resultado de Equivalência Patrimonial;</entry>
+<entry key="6.01.01.06">Plano de Opção de Compra de Ações;26.431</entry>
+<entry key="6.01.01.05">Despesa com juros de empréstimos e financiamentos;155.660</entry>
+<entry key="6.01.01.04">Mais valia estoque baixada no exercicio;</entry>
+<entry key="6.01.01.03">Resultado Venda ou Baixa de Ativos imobilizado;12.324</entry>
+<entry key="6.01.01.02">Depreciações e amortizações;264.780</entry>
+<entry key="6.01.01.01">Lucro líquido do período;578.838</entry>
+<entry key="6.01.02.16">Obrigações com Administradora de Cartões;44.098</entry>
+<entry key="6.01.02.15">Débito com empresas ligadas;</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;737.527</entry>
+<entry key="6.01.02.14">Obrigações estatutárias;-1.713</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;834.340</entry>
+<entry key="6.01.02.13">Aluguéis a pagar;9.886</entry>
+<entry key="6.01.02.12">Outras obrigações;-525</entry>
+<entry key="6.01.02.11">Impostos e contribuições a recolher;16.247</entry>
+<entry key="6.01.02.10">Salários e férias a pagar;32.690</entry>
+</properties>

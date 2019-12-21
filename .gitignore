@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Created by https://www.gitignore.io/api/java
 # Edit at https://www.gitignore.io/?templates=java
@@ -36,3 +37,43 @@ hs_err_pid*
 
 # End of https://www.gitignore.io/api/java
 /target/
+=======
+
+# Created by https://www.gitignore.io/api/java
+# Edit at https://www.gitignore.io/?templates=java
+
+### Java ###
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+.settings/
+.settings/.*
+.apt_generated/
+.apt_generated/.*
+.target/
+.target/.*
+.project
+.tern-project
+.factorypath
+.classpath
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# End of https://www.gitignore.io/api/java
+/target/
+>>>>>>> 28178ef09e54cb933f75dd076e94d67c4752433f

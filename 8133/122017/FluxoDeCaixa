@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.03.08">Recompa de Ações;-8.836</entry>
+<entry key="6.03.07">Valor recebido pela emissão de debêntures;</entry>
+<entry key="6.03.06">Pagamento de custos de estruturação de debêntures;-1.360</entry>
+<entry key="6.03.05">Juros sobre capital próprio e dividendos pagos;-253.337</entry>
+<entry key="6.03.04">Contraprestação de arrendamento mercantil financeiro;-8.283</entry>
+<entry key="6.03.03">Pagamento de empréstimos;-782.630</entry>
+<entry key="6.03.02">Aumento de capital social;60.678</entry>
+<entry key="6.03.01">Empréstimos tomados;864.536</entry>
+<entry key="6.01.02.09">Fornecedores;164.618</entry>
+<entry key="6.01.02.08">Fiinanciamentos - operações serviços financeiros FIDC;</entry>
+<entry key="6.01.02.07">Financiamentos das importações;0</entry>
+<entry key="6.01.02.06">Financiamento - operações serviços financeiros;-98.130</entry>
+<entry key="6.01.02.05">Depósitos Judiciais;</entry>
+<entry key="6.01.02.04">Outros ativos circulantes;4.240</entry>
+<entry key="6.01.02.03">Perdas/ganhos não realizadas com derivativos;</entry>
+<entry key="6.01.03">Outros;-406.686</entry>
+<entry key="6.01.02.02">Estoques;-166.320</entry>
+<entry key="6.01.02.01">Contas a receber de clientes;-535.420</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;-377.995</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;1.630.271</entry>
+<entry key="6.01.01.14">Custo de estruturação de debêntures;747</entry>
+<entry key="6.01.01.13">Provisões para perdas em ativos;130.635</entry>
+<entry key="6.01.01.12">Provisão para ajuste ao valor líquido realizável;8.759</entry>
+<entry key="6.01.01.11">Variação cambial;-892</entry>
+<entry key="6.01.01.10">Perda (ganho) com derivativo;0</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;164.992</entry>
+<entry key="Conta">Descrição;01/01/2017 
+ a 
+ 31/12/2017</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;-5.850</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;-129.232</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-545.516</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;845.590</entry>
+<entry key="6.02.05">Recebimento por venda de ativos fixos;4.847</entry>
+<entry key="6.02.04">Caixa recebido na aquisição de controlada;</entry>
+<entry key="6.01.03.03">Pagamento de juros sobre empréstimos e financiamentos;-102.047</entry>
+<entry key="6.02.03">Aquisição em participação societária;</entry>
+<entry key="6.01.03.02">Pagamento de imposto de renda e contribuição social;-304.639</entry>
+<entry key="6.02.02">Aquisições do intangível;-110.083</entry>
+<entry key="6.01.03.01">Recebimento de dividendos de subsidiárias;</entry>
+<entry key="6.02.01">Aquisições do imobilizado;-440.280</entry>
+<entry key="6.01.01.09">Tributos Diferidos;271.458</entry>
+<entry key="6.01.01.08">Provisão p/ Riscos Tributários, Cíveis e Trabalhistas;-8.933</entry>
+<entry key="6.01.01.07">Resultado de Equivalência Patrimonial;</entry>
+<entry key="6.01.01.06">Plano de Opção de Compra de Ações;39.727</entry>
+<entry key="6.01.01.05">Despesa com juros de empréstimos e financiamentos;120.703</entry>
+<entry key="6.01.01.04">Mais valia estoque baixada no exercicio;</entry>
+<entry key="6.01.01.03">Resultado Venda ou Baixa de Ativos imobilizado;6.337</entry>
+<entry key="6.01.01.02">Depreciações e amortizações;329.051</entry>
+<entry key="6.01.01.01">Lucro líquido do período;732.679</entry>
+<entry key="6.01.02.17">Aumento em aplicações financeiras;-82.360</entry>
+<entry key="6.01.02.16">Obrigações com Administradora de Cartões;232.690</entry>
+<entry key="6.01.02.15">Débito com empresas ligadas;</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;1.059.873</entry>
+<entry key="6.01.02.14">Obrigações estatutárias;3.816</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;894.881</entry>
+<entry key="6.01.02.13">Aluguéis a pagar;3.785</entry>
+<entry key="6.01.02.12">Outras obrigações;10.908</entry>
+<entry key="6.01.02.11">Obrigações fiscais;36.188</entry>
+<entry key="6.01.02.10">Obrigações sociais e trabalhistas;47.990</entry>
+</properties>

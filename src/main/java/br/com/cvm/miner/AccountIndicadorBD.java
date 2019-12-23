@@ -15,6 +15,9 @@ import javax.persistence.Query;
 import br.com.cvm.bd.helper.PersistenceManager;
 import br.com.cvm.bd.modelBD.ContaContabil;
 import br.com.cvm.bd.modelBD.FundIndicador;
+import br.com.cvm.bd.modelBD.Indicador;
+import br.com.cvm.bd.modelBD.PropstaConfIndicDetalhe;
+import br.com.cvm.bd.modelBD.PropstaConfIndicHeader;
 import br.com.cvm.bd.modelBD.ValorContabil;
 import br.com.cvm.leitor.origemBDeProperties.PeriodoToProperties;
 
@@ -44,8 +47,8 @@ public class AccountIndicadorBD {
 		for (int ientrada = 0; ientrada < valores.size(); ientrada++) {
 			List<ValorContabil> listContas =aalistvalores.get(ientrada);
 			for (int iconta = 0; iconta < listContas.size(); iconta++) {
-				
-				if(comparaValores(valores, map, sb, ientrada, listContas, iconta,0.0,"",new ArrayList< ValorContabil>())) {
+				valoresC.add(listContas.get(iconta));
+				if(comparaValores(valores, map, sb, ientrada, listContas, iconta,0.0,"",valoresC)) {
 					if(encontrou == false) {
 					encontrou=true;
 					}
@@ -55,7 +58,7 @@ public class AccountIndicadorBD {
 			}
 		}
 		if(encontrou) {
-			expoeEncontrado(datas, map);
+			expoeEncontrado(datas, map,"::1");
 			
 		}
 		map.clear();
@@ -79,12 +82,13 @@ public class AccountIndicadorBD {
 					ValorContabil vc = 	listContas.get(iconta2);
 					Double valor=vc.getValor();
 				//	valoresC =new ArrayList<ValorContabil>();
+					valoresC.add(listContas.get(iconta));
 					valoresC.add(vc);
 					String chave=vc.getContaContabil().getDescricao()+":"+ getRaiz( vc);
 					if(valor!=null && comparaValores(valores, map, sb, ientrada, listContas, iconta,valor," + "+chave,valoresC)) {
 						set.add(listContas.get(iconta));
 						set.add(listContas.get(iconta2));
-						expoeEncontrado(datas, map);
+						expoeEncontrado(datas, map,"::1+::2");
 					//	map.clear();
 					//	mapvalores.clear();
 					//	valoresC =new ArrayList<ValorContabil>();
@@ -117,12 +121,13 @@ public class AccountIndicadorBD {
 					ValorContabil vc = 	listContas.get(iconta2);
 					Double valor=vc.getValor();
 				//	valoresC =new ArrayList<ValorContabil>();
+					valoresC.add(listContas.get(iconta));
 					valoresC.add(vc);
 					String chave=vc.getContaContabil().getDescricao()+":"+getRaiz( vc);
 					if(valor!=null && comparaValores(valores, map, sb, ientrada, listContas, iconta,valor*-1," - "+chave,valoresC)){
 						set.add(listContas.get(iconta));
 						set.add(listContas.get(iconta2));
-						expoeEncontrado(datas, map);
+						expoeEncontrado(datas, map,"::1-::2");
 					//	map.clear();
 					//	mapvalores.clear();
 					//	valoresC =new ArrayList<ValorContabil>();
@@ -167,12 +172,13 @@ public class AccountIndicadorBD {
 						//valoresC =new ArrayList<ValorContabil>();
 					//	valoresC.add(vc);
 						valoresC =new ArrayList<ValorContabil>();//o problema é que pode apagar para o proximo ano
+						valoresC.add(listContas.get(iconta));
 						valoresC.add(vc);//talvez possa ser solucionado se eu eliminar quando for negativo
 						valoresC.add(vc2);
 						String chave=vc.getContaContabil().getDescricao()+":"+getRaiz( vc);
 						String chave2=vc2.getContaContabil().getDescricao()+":"+getRaiz( vc2);
 						if(valor!=null && valor2!=null && comparaValores(valores, map, sb, ientrada, listContas, iconta,valor+valor2," + "+ chave +" + "+ chave2,valoresC)){
-							expoeEncontrado(datas, map);
+							expoeEncontrado(datas, map,"::1+::2+::3");
 							set.add(listContas.get(iconta));
 							set.add(listContas.get(iconta2));
 							set.add(listContas.get(iconta3));
@@ -219,12 +225,13 @@ public class AccountIndicadorBD {
 					//	set.add(listContas.get(iconta3));
 						//valoresC =new ArrayList<ValorContabil>();
 					//	valoresC.add(vc);
+						valoresC.add(listContas.get(iconta));
 						valoresC.add(vc);
 						valoresC.add(vc2);
 						String chave=vc.getContaContabil().getDescricao()+":"+getRaiz( vc);
 						String chave2=vc2.getContaContabil().getDescricao()+":"+getRaiz( vc2);
 						if(valor!=null && valor2!=null && comparaValores(valores, map, sb, ientrada, listContas, iconta,(valor*-1)+valor2," - "+chave +" + "+ chave2,valoresC)) {
-							expoeEncontrado(datas, map);
+							expoeEncontrado(datas, map,"::1-::2+::3");
 							set.add(listContas.get(iconta));
 							set.add(listContas.get(iconta2));
 							set.add(listContas.get(iconta3));
@@ -271,12 +278,13 @@ public class AccountIndicadorBD {
 					//	set.add(listContas.get(iconta3));
 						//valoresC =new ArrayList<ValorContabil>();
 					//	valoresC.add(vc);
+						valoresC.add(listContas.get(iconta));
 						valoresC.add(vc);
 						valoresC.add(vc2);
 						String chave=vc.getContaContabil().getDescricao()+":"+getRaiz( vc);
 						String chave2=vc2.getContaContabil().getDescricao()+":"+getRaiz( vc2);
 						if(valor!=null && valor2!=null && comparaValores(valores, map, sb, ientrada, listContas, iconta,(valor2*-1)+(valor*-1)," - "+chave+" - "+ chave2,valoresC)) {
-							expoeEncontrado(datas, map);
+							expoeEncontrado(datas, map,"::1-::2-::3");
 							set.add(listContas.get(iconta));
 							set.add(listContas.get(iconta2));
 							set.add(listContas.get(iconta3));
@@ -323,12 +331,13 @@ public class AccountIndicadorBD {
 					//	set.add(listContas.get(iconta3));
 						//valoresC =new ArrayList<ValorContabil>();
 					//	valoresC.add(vc);
+						valoresC.add(listContas.get(iconta));
 						valoresC.add(vc);
 						valoresC.add(vc2);
 						String chave=vc.getContaContabil().getDescricao()+":"+getRaiz( vc);
 						String chave2=vc2.getContaContabil().getDescricao()+":"+getRaiz( vc2);
 						if(valor!=null && valor2!=null && comparaValores(valores, map, sb, ientrada, listContas, iconta,(valor2*-1)+valor," + "+ chave +" - "+ chave2,valoresC)) {
-							expoeEncontrado(datas, map);
+							expoeEncontrado(datas, map,"::1+::2-::3");
 							set.add(listContas.get(iconta));
 							set.add(listContas.get(iconta2));
 							set.add(listContas.get(iconta3));
@@ -354,9 +363,21 @@ public class AccountIndicadorBD {
 	//	}
 		
 	}
- public static void main(String args[]) {
+	public static Indicador indic;
+	
 
-		String cvm2 = "20257";
+public static void main(String args[]) {
+	String cvm2 = "8133";
+	discoveryIndic( "8133");
+	discoveryIndic( "20257");
+	discoveryIndic( "5410");
+	//5258 8133 20257 5410
+}
+	public static void discoveryIndic(String cvm2) {
+		
+	
+	 	//5258 8133 20257 5410
+		
 		Query query = em.createQuery("SELECT e FROM FundIndicador e where e.demonstrativo.empresa.cvm=\'" + cvm2
 			+"\'"	);
 		
@@ -376,7 +397,25 @@ public class AccountIndicadorBD {
 	//		valores.add((long)fi.getPat_Liq());
 			datas.add(fi.getDemonstrativo().getData());
 		}
-		
+		String nomeindic="Pat_Liq";
+		try {
+		query = em.createQuery("SELECT e FROM Indicador e where e.nomeIndicador=\'" + nomeindic+"\'");
+		 indic= (Indicador) query.getSingleResult();
+		}catch(Exception e) {
+			indic = null;
+		}
+		 if(indic ==null) {
+			 indic= new Indicador();
+				indic.setNomeIndicador(nomeindic);
+				indic.setNomeIndicador("patrimonio liquido consolidado");
+				 em.getTransaction()
+			        .begin();
+					em.persist(indic);
+					em.getTransaction()
+			        .commit();
+		 }
+		 
+		//indic.setNomeIndicador("patrimonio liquido consolidado");
 		System.out.println("patrimonio liquido:");
 		valores.clear();
 		for(FundIndicador fi : cc1) {
@@ -385,7 +424,14 @@ public class AccountIndicadorBD {
 			//datas.add(fi.getDemonstrativo().getData());
 		}
 		miner(cvm2,valores,datas,"patrimonio liquido:");
-	
+		 nomeindic="EBITDA";
+		try {
+		query = em.createQuery("SELECT e FROM Indicador e where e.nomeIndicador=\'" + nomeindic+"\'");
+		 indic= (Indicador) query.getSingleResult();
+		}catch(Exception e) {
+			indic = null;
+		}
+		
 		System.out.println("Ebitda:");
 		valores.clear();
 		for(FundIndicador fi : cc1) {
@@ -394,6 +440,15 @@ public class AccountIndicadorBD {
 			
 		}
 		miner(cvm2,valores,datas,"Ebitda:");
+		
+		 nomeindic="Divida";
+			try {
+			query = em.createQuery("SELECT e FROM Indicador e where e.nomeIndicador=\'" + nomeindic+"\'");
+			 indic= (Indicador) query.getSingleResult();
+			}catch(Exception e) {
+				indic = null;
+			}
+			
 		valores.clear();
 		System.out.println("Divida:");
 		for(FundIndicador fi : cc1) {
@@ -402,7 +457,14 @@ public class AccountIndicadorBD {
 			
 		}
 		miner(cvm2,valores,datas,"Divida:");
-		
+		 nomeindic="CAPEX";
+			try {
+			query = em.createQuery("SELECT e FROM Indicador e where e.nomeIndicador=\'" + nomeindic+"\'");
+			 indic= (Indicador) query.getSingleResult();
+			}catch(Exception e) {
+				indic = null;
+			}
+			
 		System.out.println("Capex:");
 		valores.clear();
 		for(FundIndicador fi : cc1) {
@@ -411,6 +473,15 @@ public class AccountIndicadorBD {
 			
 		}
 		miner(cvm2,valores,datas,"Capex:");
+		
+		 nomeindic="FCO";
+			try {
+			query = em.createQuery("SELECT e FROM Indicador e where e.nomeIndicador=\'" + nomeindic+"\'");
+			 indic= (Indicador) query.getSingleResult();
+			}catch(Exception e) {
+				indic = null;
+			}
+			
 		System.out.println("Fco:");
 		valores.clear();
 		for(FundIndicador fi : cc1) {
@@ -419,6 +490,14 @@ public class AccountIndicadorBD {
 			
 		}
 		miner(cvm2,valores,datas,"Fco:");
+		
+		 nomeindic="FCF";
+			try {
+			query = em.createQuery("SELECT e FROM Indicador e where e.nomeIndicador=\'" + nomeindic+"\'");
+			 indic= (Indicador) query.getSingleResult();
+			}catch(Exception e) {
+				indic = null;
+			}
 		System.out.println("FCF:");
 		valores.clear();
 		for(FundIndicador fi : cc1) {
@@ -427,7 +506,13 @@ public class AccountIndicadorBD {
 			
 		}
 		miner(cvm2,valores,datas,"FCF:");
-	
+		 nomeindic="Prov";
+			try {
+			query = em.createQuery("SELECT e FROM Indicador e where e.nomeIndicador=\'" + nomeindic+"\'");
+			 indic= (Indicador) query.getSingleResult();
+			}catch(Exception e) {
+				indic = null;
+			}
 		System.out.println("Proventos:");
 		valores.clear();
 		for(FundIndicador fi : cc1) {
@@ -447,9 +532,12 @@ public class AccountIndicadorBD {
  }
 
 
-private static void expoeEncontrado(ArrayList<Integer> datas, Map<String, Integer> map) {
+private static void expoeEncontrado(ArrayList<Integer> datas, Map<String, Integer> map,String expressao) {
+	
+	
 	Set<String> sets = new HashSet<String>();
 	StringBuilder sb = new StringBuilder();
+	
 	for (String key : map.keySet()) {
 		if( datas.size()- map.get(key) <=1) {
 			if(sets.contains(key)) {
@@ -458,17 +546,77 @@ private static void expoeEncontrado(ArrayList<Integer> datas, Map<String, Intege
 			sets.add(key);
 		
 			sb.append(key + " - " + map.get(key) + " de " + datas.size()+"\n");
+			 em.getTransaction()
+		        .begin();
+			PropstaConfIndicHeader pcih = new PropstaConfIndicHeader();
+			pcih.setQtdInicial(datas.size());
+			pcih.setQtdEncontrada(map.get(key));
+			pcih.setDescricao(key);
+			
+			pcih.setExpressao(expressao);
+			pcih.setIndicador(indic);
+		//	pcih.setPropstaConfIndicDetalhes(new ArrayList<PropstaConfIndicDetalhe>());
+			em.persist(pcih);
+			
 			for(Integer data:datas) {
-				ArrayList<ValorContabil> vcs = mapvalores.get(data+":"+key);
+				ArrayList<ValorContabil> vcs = mapvalores.get(data+":"+key); //201512:Patrimônio Líquido Consolidado:2 
+			
+				PropstaConfIndicDetalhe pcid = new PropstaConfIndicDetalhe();
+				
 				if(vcs!=null) {
+					pcih.setQtdColunas(vcs.size());
+					pcih.setCvm(vcs.get(0).getDemonstrativo().getEmpresa().getCvm());
+					
 					sb.append("\n\t"+data+"\n");
 					for(ValorContabil vc: vcs) {
 						sb.append("\t\t"+getRaiz(vc)+"\n");
 						sb.append("\t\t\t"+vc.getDemonstrativo().getData()+" "+vc.getDemonstrativo().getEmpresa().getCvm()+" "+vc.getContaContabil().getContaContabil()+" "+ vc.getContaContabil().getDescricao()+" "+ vc.getContaContabil().getIdContaContabil()+" "+ vc.getValor()+"\n");
 					
 					}
+				//	pcih.setDemonstrativo(vcs.get(0).getDemonstrativo());
+					//pcih.addPropstaConfIndicDetalhe(pcid);
+					pcih.getIdPropstaConfIndicHeader();
+					pcid.setPropstaConfIndicHeader(pcih);
+					if(vcs.size()>0) {
+						pcid.setValorContabil1Bean(vcs.get(0));
+					}
+					if(vcs.size()>1) {
+						pcid.setValorContabil2Bean(vcs.get(1));
+					}
+					if(vcs.size()>2) {
+						pcid.setValorContabil3Bean(vcs.get(2));
+					}
+					if(vcs.size()>3) {
+						pcid.setValorContabil4Bean(vcs.get(3));
+					}
+					if(vcs.size()>4) {
+						pcid.setValorContabil5Bean(vcs.get(4));
+					}
+					if(vcs.size()>5) {
+						pcid.setValorContabil6Bean(vcs.get(5));
+					}
+					if(vcs.size()>6) {
+						pcid.setValorContabil7Bean(vcs.get(6));
+					}
+					if(vcs.size()>7) {
+						pcid.setValorContabil8Bean(vcs.get(7));
+					}
+					if(vcs.size()>8) {
+						pcid.setValorContabil9Bean(vcs.get(8));
+					}
+					if(vcs.size()>9) {
+						pcid.setValorContabil10Bean(vcs.get(9));
+					}
+					
+						em.persist(pcid);
+						
 				}
+			
+				
+				//SSystem.out.println("");
 			}
+			em.getTransaction()
+	        .commit();
 		}
 	}
 	System.out.println(sb.toString());
@@ -504,11 +652,19 @@ private static boolean comparaValores(ArrayList<Long> valores, Map<String, Integ
 					if(valorf.compareTo(valorf+valors)==0 && soma >0) {
 							break;
 						}
-						String chave=vc.getContaContabil().getDescricao()+":"+getRaiz(vc);
-					Integer valuemap=	map.getOrDefault(chave + " "+addInMap, 0);
+					
+						String chave="";
+						int nivel_relax = 0;
+						if(nivel_relax==0) {
+								chave  = vc.getContaContabil().getDescricao()+":"+getRaiz(vc);
+						}
+						if(nivel_relax==1) {
+							chave  = vc.getContaContabil().getContaPai().getDescricao()+":"+getRaiz(vc);
+					}
+								Integer valuemap=	map.getOrDefault(chave + " "+addInMap, 0);
 					
 					
-					valoresC.add(vc);
+					//valoresC.add(vc);
 					for( ValorContabil vc1:valoresC) {
 						Double valor1 = vc1.getValor()/Math.pow(10, idivisor);
 						Long valorf1 = (Long)Math.round(valor1);

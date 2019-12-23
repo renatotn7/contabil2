@@ -5,6 +5,30 @@ SELECT b.id_conta_contabil FROM `conta_contabil` a,`valor_contabil` b, `indicado
 
 order by d.data
 
+corrige inconsistencia de foreign key
+update `conta_contabil` set id_refconta = null WHERE id_refconta not in (select id_conta_contabil from conta_contabil)
+
+
+delete  FROM `valor_contabil` where id_demonstrativo=173
+delete  FROM `conta_contabil` where id_demonstrativo=173
+delete  FROM `demonstrativo` where id_demonstrativo=173
+	SELECT b.valor,d.data FROM `conta_contabil` a,`valor_contabil` b, `indicador` c, `demonstrativo` d WHERE a.id_conta_contabil = b.id_conta_contabil and a.id_indicador = c.id_indicador and c.nome_indicador like 'Lucro%' and b.id_demonstrativo = d.id_demonstrativo and d.cvm = 5258 and d.versao =1 order by d.data
+	
+	descobre quais demonstrativos falta o indicador, serve para escolher similaridades e buscas especificas
+	SELECT 
+    *
+FROM 
+   (SELECT d.data as data1 FROM `conta_contabil` a,`valor_contabil` b, `indicador` c, `demonstrativo` d WHERE a.id_conta_contabil = b.id_conta_contabil and a.id_indicador = c.id_indicador and c.nome_indicador like 'Patrim%' and b.id_demonstrativo = d.id_demonstrativo and d.cvm = 9342 and d.versao =1 ) as a
+   LEFT JOIN (SELECT d.data  as data1 FROM `demonstrativo` d where d.cvm = 9342 and d.versao = 1) b USING (data1)
+   where data1 is null
+   
+   SELECT b.valor,d.data FROM `conta_contabil` a,`valor_contabil` b, `indicador` c, `demonstrativo` d WHERE a.id_conta_contabil = b.id_conta_contabil and a.id_indicador = c.id_indicador and c.nome_indicador like 'Patrim%' and b.id_demonstrativo = d.id_demonstrativo and d.cvm = 5258 and d.versao =1 order by d.data
+
+
+SELECT b.id_conta_contabil FROM `conta_contabil` a,`valor_contabil` b, `indicador` c, `demonstrativo` d WHERE a.id_conta_contabil = b.id_conta_contabil and a.id_indicador = c.id_indicador and c.nome_indicador like 'Patrim%' and b.id_demonstrativo = d.id_demonstrativo and d.cvm = 5258 and d.versao =1 
+
+order by d.data
+
 delete  FROM `valor_contabil` where id_demonstrativo=173
 delete  FROM `conta_contabil` where id_demonstrativo=173
 delete  FROM `demonstrativo` where id_demonstrativo=173
@@ -25,3 +49,8 @@ FROM
    
    pega quantidades de demonstrativo 
    select  (select count(1) from `demonstrativo` a where  a.cvm=e.cvm) qtd,e.* from empresa e where cvm in (SELECT distinct cvm FROM `demonstrativo`)
+   
+   
+   quais demonstrativos náo abrangidas e quais contas abrangidas pelo indicador ou seja, quais demonstrativos carecem de resolucao
+   
+   select distinct e.* from demonstrativo e where not exists (select 1 from valor_contabil f where f.id_conta_contabil in (SELECT c.id_conta_contabil FROM propsta_conf_indic_header  a, propsta_conf_indic_detalhe b, valor_contabil c, conta_contabil d WHERE a.`id_indicador`=2 and a.`qtd_encontrada` = 4 and b.id_propsta_conf_indic_header = a.id_propsta_conf_indic_header and a.`qtd_colunas` = 1 and b.valor_contabil1 = c.id_valor_contabil and c.id_conta_contabil = d.id_conta_contabil and a.id_propsta_conf_indic_header =  167)  and f.id_demonstrativo = e.id_demonstrativo)

@@ -4,7 +4,7 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
   version="2.1">
   <persistence-unit name="jpa-example" transaction-type="RESOURCE_LOCAL">
   <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-   <mapping-file>META-INF/orm.xml</mapping-file>
+  <mapping-file>META-INF/orm.xml</mapping-file>
   <class>br.com.cvm.bd.modelBD.Abrangencia</class>
   <class>br.com.cvm.bd.modelBD.ContaContabil</class>
   <class>br.com.cvm.bd.modelBD.Demonstrativo</class>
@@ -13,10 +13,9 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
   <class>br.com.cvm.bd.modelBD.Periodo</class>
   <class>br.com.cvm.bd.modelBD.TipoDemonstrativo</class>
   <class>br.com.cvm.bd.modelBD.ValorContabil</class>
-  <class>br.com.cvm.bd.modelBD.FundIndicador</class>
-     <class>br.com.cvm.bd.modelBD.PropostaConfIndicDetalhe</class>
+    <class>br.com.cvm.bd.modelBD.PropostaConfIndicDetalhe</class>
       <class>br.com.cvm.bd.modelBD.PropostaConfIndicHeader</class>
-    <properties>
+  <properties>
     <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/investcontabil_2" />
     <property name="javax.persistence.jdbc.user" value="root" />
     <property name="javax.persistence.jdbc.password" value=" " />
@@ -31,6 +30,6 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
     <property name="hibernate.c3p0.timeout" value="500" />
     <property name="hibernate.c3p0.max_statements" value="50" />
     <property name="hibernate.c3p0.idle_test_period" value="2000" />
-    </properties>
+    </properties> 
   </persistence-unit>
 </persistence>

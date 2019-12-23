@@ -5,16 +5,18 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
   <persistence-unit name="jpa-example" transaction-type="RESOURCE_LOCAL">
   <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
   <mapping-file>META-INF/orm.xml</mapping-file>
-  <class>br.com.cvm.bd.model.Abrangencia</class>
-  <class>br.com.cvm.bd.model.ContaContabil</class>
-  <class>br.com.cvm.bd.model.Demonstrativo</class>
-  <class>br.com.cvm.bd.model.Empresa</class>
-  <class>br.com.cvm.bd.model.Indicador</class>
-  <class>br.com.cvm.bd.model.Periodo</class>
-  <class>br.com.cvm.bd.model.TipoDemonstrativo</class>
-  <class>br.com.cvm.bd.model.ValorContabil</class>
+  <class>br.com.cvm.bd.modelBD.Abrangencia</class>
+  <class>br.com.cvm.bd.modelBD.ContaContabil</class>
+  <class>br.com.cvm.bd.modelBD.Demonstrativo</class>
+  <class>br.com.cvm.bd.modelBD.Empresa</class>
+  <class>br.com.cvm.bd.modelBD.Indicador</class>
+  <class>br.com.cvm.bd.modelBD.Periodo</class>
+  <class>br.com.cvm.bd.modelBD.TipoDemonstrativo</class>
+  <class>br.com.cvm.bd.modelBD.ValorContabil</class>
+    <class>br.com.cvm.bd.modelBD.PropostaConfIndicDetalhe</class>
+      <class>br.com.cvm.bd.modelBD.PropostaConfIndicHeader</class>
   <properties>
-    <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/investcontabil_3" />
+    <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/investcontabil_2" />
     <property name="javax.persistence.jdbc.user" value="root" />
     <property name="javax.persistence.jdbc.password" value=" " />
     <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
@@ -28,6 +30,6 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
     <property name="hibernate.c3p0.timeout" value="500" />
     <property name="hibernate.c3p0.max_statements" value="50" />
     <property name="hibernate.c3p0.idle_test_period" value="2000" />
-    </properties>
+    </properties> 
   </persistence-unit>
 </persistence>

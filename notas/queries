@@ -49,3 +49,8 @@ FROM
    
    pega quantidades de demonstrativo 
    select  (select count(1) from `demonstrativo` a where  a.cvm=e.cvm) qtd,e.* from empresa e where cvm in (SELECT distinct cvm FROM `demonstrativo`)
+   
+   
+   quais demonstrativos náo abrangidas e quais contas abrangidas pelo indicador ou seja, quais demonstrativos carecem de resolucao
+   
+   select distinct e.* from demonstrativo e where not exists (select 1 from valor_contabil f where f.id_conta_contabil in (SELECT c.id_conta_contabil FROM propsta_conf_indic_header  a, propsta_conf_indic_detalhe b, valor_contabil c, conta_contabil d WHERE a.`id_indicador`=2 and a.`qtd_encontrada` = 4 and b.id_propsta_conf_indic_header = a.id_propsta_conf_indic_header and a.`qtd_colunas` = 1 and b.valor_contabil1 = c.id_valor_contabil and c.id_conta_contabil = d.id_conta_contabil and a.id_propsta_conf_indic_header =  167)  and f.id_demonstrativo = e.id_demonstrativo)

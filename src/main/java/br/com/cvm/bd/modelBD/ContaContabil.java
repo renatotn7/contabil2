@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
+
 import java.util.List;
 
 
@@ -47,6 +48,18 @@ public class ContaContabil implements Serializable {
 	@JoinColumn(name="id_conta_pai")
 	private ContaContabil contaPai;
 	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="id_conta_contabil_indic")
+	private ContaContabilIndic contaContabilIndic;
+	
+	public ContaContabilIndic getContaContabilIndic() {
+		return contaContabilIndic;
+	}
+
+	public void setContaContabilIndic(ContaContabilIndic contaContabilIndic) {
+		this.contaContabilIndic = contaContabilIndic;
+	}
+
 	@JsonIgnore
 	//bi-directional many-to-one association to ContaContabil
 	

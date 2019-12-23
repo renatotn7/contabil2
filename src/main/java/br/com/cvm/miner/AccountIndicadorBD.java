@@ -364,13 +364,16 @@ public class AccountIndicadorBD {
 		
 	}
 	public static Indicador indic;
-	
+
 
 public static void main(String args[]) {
 	String cvm2 = "8133";
+	discoveryIndic( "5258");
 	discoveryIndic( "8133");
 	discoveryIndic( "20257");
 	discoveryIndic( "5410");
+	em.close();
+	System.exit(0);
 	//5258 8133 20257 5410
 }
 	public static void discoveryIndic(String cvm2) {
@@ -527,8 +530,7 @@ public static void main(String args[]) {
 	//	miner(cvm2,valores,datas);
 		
 	//	miner(cvm2,valores,datas);
-		em.close();
-		System.exit(0);
+	
  }
 
 
@@ -575,37 +577,38 @@ private static void expoeEncontrado(ArrayList<Integer> datas, Map<String, Intege
 					}
 				//	pcih.setDemonstrativo(vcs.get(0).getDemonstrativo());
 					//pcih.addPropstaConfIndicDetalhe(pcid);
+					pcid.setDemonstrativo(vcs.get(0).getDemonstrativo());
 					pcih.getIdPropstaConfIndicHeader();
 					pcid.setPropstaConfIndicHeader(pcih);
 					if(vcs.size()>0) {
-						pcid.setValorContabil1Bean(vcs.get(0));
+						pcid.setContaContabil1Bean(vcs.get(0).getContaContabil());
 					}
 					if(vcs.size()>1) {
-						pcid.setValorContabil2Bean(vcs.get(1));
+						pcid.setContaContabil2Bean(vcs.get(1).getContaContabil());
 					}
 					if(vcs.size()>2) {
-						pcid.setValorContabil3Bean(vcs.get(2));
+						pcid.setContaContabil3Bean(vcs.get(2).getContaContabil());
 					}
 					if(vcs.size()>3) {
-						pcid.setValorContabil4Bean(vcs.get(3));
+						pcid.setContaContabil4Bean(vcs.get(3).getContaContabil());
 					}
 					if(vcs.size()>4) {
-						pcid.setValorContabil5Bean(vcs.get(4));
+						pcid.setContaContabil5Bean(vcs.get(4).getContaContabil());
 					}
 					if(vcs.size()>5) {
-						pcid.setValorContabil6Bean(vcs.get(5));
+						pcid.setContaContabil6Bean(vcs.get(5).getContaContabil());
 					}
 					if(vcs.size()>6) {
-						pcid.setValorContabil7Bean(vcs.get(6));
+						pcid.setContaContabil7Bean(vcs.get(6).getContaContabil());
 					}
 					if(vcs.size()>7) {
-						pcid.setValorContabil8Bean(vcs.get(7));
-					}
+						pcid.setContaContabil8Bean(vcs.get(7).getContaContabil());
+					} 
 					if(vcs.size()>8) {
-						pcid.setValorContabil9Bean(vcs.get(8));
+						pcid.setContaContabil9Bean(vcs.get(8).getContaContabil());
 					}
 					if(vcs.size()>9) {
-						pcid.setValorContabil10Bean(vcs.get(9));
+						pcid.setContaContabil10Bean(vcs.get(9).getContaContabil());
 					}
 					
 						em.persist(pcid);

@@ -52,10 +52,7 @@ public class PropstaConfIndicHeader implements Serializable {
 	@OneToMany(mappedBy="propstaConfIndicHeader")
 	private List<PropstaConfIndicDetalhe> propstaConfIndicDetalhes;
 
-	//bi-directional many-to-one association to Demonstrativo
-	@ManyToOne
-	@JoinColumn(name="ID_DEMONSTRATIVO")
-	private Demonstrativo demonstrativo;
+	
 
 	//bi-directional many-to-one association to Indicador
 	@ManyToOne
@@ -126,14 +123,6 @@ public class PropstaConfIndicHeader implements Serializable {
 
 		return propstaConfIndicDetalhe;
 	} 
-
-	public Demonstrativo getDemonstrativo() {
-		return this.demonstrativo;
-	}
-
-	public void setDemonstrativo(Demonstrativo demonstrativo) {
-		this.demonstrativo = demonstrativo;
-	}
 
 	public Indicador getIndicador() {
 		return this.indicador;

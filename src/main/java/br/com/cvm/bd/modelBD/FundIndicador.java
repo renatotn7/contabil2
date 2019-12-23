@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 /**
  * The persistent class for the fund_indicador database table.
- * 
+ *  
  */  
 @Entity
 @Table(name="fund_indicador")

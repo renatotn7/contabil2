@@ -54,3 +54,15 @@ FROM
    quais demonstrativos náo abrangidas e quais contas abrangidas pelo indicador ou seja, quais demonstrativos carecem de resolucao
    
    select distinct e.* from demonstrativo e where not exists (select 1 from valor_contabil f where f.id_conta_contabil in (SELECT c.id_conta_contabil FROM propsta_conf_indic_header  a, propsta_conf_indic_detalhe b, valor_contabil c, conta_contabil d WHERE a.`id_indicador`=2 and a.`qtd_encontrada` = 4 and b.id_propsta_conf_indic_header = a.id_propsta_conf_indic_header and a.`qtd_colunas` = 1 and b.valor_contabil1 = c.id_valor_contabil and c.id_conta_contabil = d.id_conta_contabil and a.id_propsta_conf_indic_header =  167)  and f.id_demonstrativo = e.id_demonstrativo)
+   
+   
+   
+   
+   como pegar um grafico na nova estrutura
+   
+   select * from conta_contabil a,valor_contabil c,demonstrativo d where a.id_conta_contabil = c.id_conta_contabil and exists (SELECT 1 FROM `calculo` b WHERE b.preferencia = 1 and b.id_indicador = 2 and a.id_calculo = b.id_calculo) and d.id_demonstrativo = c.id_demonstrativo and d.cvm = 5258 order by d.data
+   
+   
+   
+   
+   select e.expressao, b.posicao, a.id_conta_contabil,c.id_valor_contabil,c.valor,d.data from conta_contabil a, calculo b, valor_contabil c,demonstrativo d, expressao e where a.id_conta_contabil = c.id_conta_contabil  and d.id_demonstrativo = c.id_demonstrativo and d.cvm = 5258 and b.preferencia = 3 and b.id_indicador = 2 and a.id_calculo = b.id_calculo and b.id_expressao = e.id_expressao order by d.data

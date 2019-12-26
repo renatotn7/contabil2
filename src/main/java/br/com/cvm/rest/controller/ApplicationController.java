@@ -499,8 +499,9 @@ public class ApplicationController {
 					}
 			 }
 			 
-			 Object[][] retorno = new Object[valoresContabeis.size()][6];  
-				 for(int i = 0 ; i < valoresContabeis.size(); i++) {
+		//	 Object[][] retorno = new Object[valoresContabeis.size()][6];  
+			 Object[][] retorno = new Object[2][6];
+			/*	 for(int i = 0 ; i < valoresContabeis.size(); i++) {
 					 ValorContabil vc = valoresContabeis.get(i);
 					 String sdata = (vc.getDemonstrativo().getData()+"").substring(0,4)+"-"+(vc.getDemonstrativo().getData()+"").substring(4,6)+"-"+31;
 					 retorno[i][0] = sdata;
@@ -510,7 +511,7 @@ public class ApplicationController {
 					 retorno[i][4] = vc.getValor();
 					 retorno[i][5] = 1;
 							
-				 }
+				 }*/
 				 
 			 
 		 return retorno;

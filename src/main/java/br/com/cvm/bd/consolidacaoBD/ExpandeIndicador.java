@@ -29,7 +29,7 @@ public class ExpandeIndicador {
 		while (achou) {
 			achou = false;
 			 EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
-			Query queryanalisar = em.createQuery("Select c from ContaContabil c where c.indicador is not null");
+			Query queryanalisar = em.createQuery("Select c from ContaContabil c where c.idCalculo is not null");
 
 			List<ContaContabil> contaAnalisar = (List<ContaContabil>) queryanalisar.getResultList();
 
@@ -37,11 +37,11 @@ public class ExpandeIndicador {
 			for (ContaContabil cc : contaAnalisar) {
 				List<ContaContabil> refcontas = cc.getRefContas();
 				for (ContaContabil refs : refcontas) {
-					if(refs.getIndicador()==null) {
+					if(refs.getIdCalculo()==null) {
 						achou = true;
 					}
 					System.out.println(1);
-					refs.setIndicador(cc.getIndicador());
+					refs.setIdCalculo(cc.getIdCalculo());
 				}
 			
 			

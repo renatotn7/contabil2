@@ -7,10 +7,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
 import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.modelBD.Calculo;
 import br.com.cvm.bd.modelBD.ContaContabil;
-import br.com.cvm.bd.modelBD.ContaContabilIndic;
+import br.com.cvm.bd.modelBD.Expressao;
+//import br.com.cvm.bd.modelBD.ContaContabilIndic;
 import br.com.cvm.bd.modelBD.FundIndicador;
-import br.com.cvm.bd.modelBD.IndicadorRelac;
+//import br.com.cvm.bd.modelBD.IndicadorRelac;
 import br.com.cvm.bd.modelBD.PropstaConfIndicDetalhe;
 import br.com.cvm.bd.modelBD.PropstaConfIndicHeader;
 
@@ -19,15 +21,75 @@ public class LinkaIndicador {
 	public static EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
 public static void main(String[] args) {
 
-	Query query = em.createQuery("SELECT e FROM PropstaConfIndicHeader e where e.indicador.nomeIndicador=\'" + "Pat_Liq"
-		+"\' and e.qtdInicial = qtdEncontrada"	);
+	Query query = em.createQuery("SELECT e FROM PropstaConfIndicHeader e where  e.qtdInicial = qtdEncontrada"	);
 	
+	
+
 	
 	List<PropstaConfIndicHeader> cc1 = (List<PropstaConfIndicHeader>) query.getResultList();
 	ArrayList<String> strs = new ArrayList<String>();
 	for(PropstaConfIndicHeader pcih : cc1) {
-		IndicadorRelac indicadorRelac = null;
-		try {
+	
+		List<Calculo> calculo =null;
+		
+		
+	
+		
+		
+		int qtdColunas = pcih.getQtdColunas();
+		for(PropstaConfIndicDetalhe pcid : pcih.getPropstaConfIndicDetalhes()) {
+			String concatenacao="";
+			if(qtdColunas >= 1) {
+				ContaContabil cb = pcid.getContaContabil1Bean();
+				concatenacao+="|"+cb.getIdContaContabil();
+			}
+			if(qtdColunas >= 2) {
+				ContaContabil cb = pcid.getContaContabil2Bean();
+				concatenacao+="|"+cb.getIdContaContabil();
+			}
+			if(qtdColunas >= 3) {
+				ContaContabil cb = pcid.getContaContabil3Bean();
+				concatenacao+="|"+cb.getIdContaContabil();
+			}
+			if(qtdColunas >= 4) {
+				ContaContabil cb = pcid.getContaContabil4Bean();
+				concatenacao+="|"+cb.getIdContaContabil();
+			}
+			if(strs.contains(concatenacao)) {
+				continue;
+			}else {
+				strs.add(concatenacao);
+			}
+			if(qtdColunas >= 1) {
+				int coluna = 1;
+				em.getTransaction().begin();
+				ContaContabil cb = pcid.getContaContabil1Bean();
+				
+				criaCalculo(pcih, coluna, cb);
+			
+			}
+			if(qtdColunas >= 2) {
+				em.getTransaction().begin();
+				ContaContabil cb = pcid.getContaContabil2Bean();
+				criaCalculo(pcih, 2, cb);
+
+			}
+			if(qtdColunas >= 3) {
+				em.getTransaction().begin();
+				ContaContabil cb = pcid.getContaContabil3Bean();
+				criaCalculo(pcih, 3, cb);
+
+			}
+			if(qtdColunas >= 4) {
+				em.getTransaction().begin();
+				ContaContabil cb = pcid.getContaContabil4Bean();
+				criaCalculo(pcih, 4, cb);
+			}
+		}
+
+	
+	} 
+		/*try {
 		Query query2 = em.createQuery("SELECT e FROM IndicadorRelac e where e.expressao=\'" + pcih.getExpressao()
 				+"\' and e.indicador.idIndicador = "+ pcih.getIndicador().getIdIndicador() +" and e.colunas = "+ pcih.getQtdColunas()	);
 		indicadorRelac = (IndicadorRelac) query2.getSingleResult();
@@ -149,6 +211,48 @@ public static void main(String[] args) {
 	//	em.getTransaction().commit();
 		
 		
+	}*/
+}
+private static void criaCalculo(PropstaConfIndicHeader pcih, int coluna, ContaContabil cb) {
+	boolean encontrou=false;
+	if(cb.listCalculos()!=null) {
+	for(Calculo c : cb.listCalculos()) {
+		if(c.getExpressao().getExpressao().equals(pcih.getExpressao())&& c.getIndicador().getIdIndicador() == pcih.getIndicador().getIdIndicador() && c.getPosicao() == coluna) {
+			encontrou=true;
+		}
 	}
+	}
+	
+	if(!encontrou) {
+		Calculo c = new Calculo();
+		Query query2 = em.createQuery("SELECT e FROM Expressao e where e.expressao=\'" + pcih.getExpressao()+"\'"	);
+
+		Expressao expressao = (Expressao) query2.getSingleResult();
+		if(cb.getIdCalculo()==null  || cb.getIdCalculo()==0 ) {
+				Query query3 = em.createQuery("SELECT max(e.idCalculo)  FROM Calculo e "	);
+				
+				Integer idcalculo = (Integer) query3.getSingleResult();
+				if(idcalculo ==null) {
+					idcalculo = 1;
+				}else
+				idcalculo++;
+				
+				c.setIdCalculo(idcalculo);
+				cb.setIdCalculo(idcalculo);
+				
+		}else {
+			c.setIdCalculo(cb.getIdCalculo());
+		}
+		c.setExpressao(expressao);
+		
+		c.setIndicador(pcih.getIndicador());
+		c.setPosicao(coluna);
+		c.setPreferencia(pcih.getQtdColunas());
+		//em.getTransaction().begin();
+		em.persist(c);
+	
+		
+	}
+	em.getTransaction().commit();
 }
 }

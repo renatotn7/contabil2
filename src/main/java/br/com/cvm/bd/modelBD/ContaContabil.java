@@ -6,7 +6,7 @@ import javax.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-
+import br.com.cvm.bd.helper.PersistenceManager;
 
 import java.util.List;
 
@@ -48,16 +48,47 @@ public class ContaContabil implements Serializable {
 	@JoinColumn(name="id_conta_pai")
 	private ContaContabil contaPai;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="id_conta_contabil_indic")
-	private ContaContabilIndic contaContabilIndic;
+
 	
-	public ContaContabilIndic getContaContabilIndic() {
-		return contaContabilIndic;
+
+
+	@OneToMany(fetch=FetchType.LAZY)
+	@JoinColumn(name="id_calculo")
+	
+	private List<Calculo> calculos;
+	
+	@Column(name="id_calculo")
+	private Integer idCalculo;
+	
+	
+	public List<Calculo> getCalculos() {
+		return calculos;
 	}
 
-	public void setContaContabilIndic(ContaContabilIndic contaContabilIndic) {
-		this.contaContabilIndic = contaContabilIndic;
+
+	public Integer getIdCalculo() {
+		return idCalculo;
+	}
+
+	public void setIdCalculo(Integer idCalculo) {
+		this.idCalculo = idCalculo;
+	}
+	
+	
+	public List<Calculo> listCalculos(){
+		  EntityManager em =null;
+		  List<Calculo> cc1 = null;
+		  if(em==null) {
+				 em  = PersistenceManager.INSTANCE.getEntityManager();
+			}
+			try {
+			Query query = em.createQuery("SELECT e FROM Calculo e where idCalculo =" + this.getIdCalculo()	);
+			
+			
+			cc1 = (List<Calculo>) query.getResultList();
+			}catch(Exception e ) {
+						}
+			return cc1;
 	}
 
 	@JsonIgnore
@@ -212,6 +243,25 @@ public class ContaContabil implements Serializable {
 		contaContabils1.setContaPai(null);
 
 		return contaContabils1;
+	}
+	
+	
+	public void setCalculos(List<Calculo> calculos) {
+		this.calculos = calculos;
+	}
+
+	public Calculo addCalculo(Calculo calculo) {
+		calculos.add(calculo);
+		//contaContabilIndic.addContaContabil(this);
+
+		return calculo;
+	}
+
+	public Calculo removeCalculo(Calculo calculo) {
+		calculos.remove(calculo);
+		//contaContabilIndic.removeContaContabil(this);
+
+		return calculo;
 	}
 
 	public ContaContabil getRefConta() {

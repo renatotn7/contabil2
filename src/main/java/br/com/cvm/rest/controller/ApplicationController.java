@@ -7,6 +7,9 @@ import java.util.Properties;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -32,7 +35,6 @@ import br.com.cvm.bd.modelBD.ValorContabil;
 import br.com.cvm.bd.origemProperties.deprecated.PersisteAccounts;
 import br.com.cvm.leitor.usoemservicos.ExtratorDeDiferencasToObject;
 import br.com.cvm.rest.json.ContaContabilMinInfo;
-import br.com.cvm.rest.json.RespostaComparacao;
 import entities.ContaCandidata;
 import entities.ContaComparada;
 import entities.Divergencia;
@@ -463,20 +465,54 @@ public class ApplicationController {
 	
 	  public Object[][] getAllDemonstrativos(@RequestParam(value="idindicador") Integer idindicador,@RequestParam(value="cvm") Integer cvm) {
 		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
-		 Query query = em.createQuery("SELECT b FROM ValorContabil b where b.contaContabil.indicador = "+idindicador+" and b.demonstrativo.empresa.cvm = "+cvm+" and   b.demonstrativo.versao =1 order by  b.demonstrativo.data");
-		 List<ValorContabil> valoresContabeis= (List<ValorContabil>) query.getResultList();
-		 Object[][] retorno = new Object[valoresContabeis.size()][6];   
-		 for(int i = 0 ; i < valoresContabeis.size(); i++) {
-			 ValorContabil vc = valoresContabeis.get(i);
-			 String sdata = (vc.getDemonstrativo().getData()+"").substring(0,4)+"-"+(vc.getDemonstrativo().getData()+"").substring(4,6)+"-"+31;
-			 retorno[i][0] = sdata;
-			 retorno[i][1] = vc.getValor();
-			 retorno[i][2] = vc.getValor();
-			 retorno[i][3] = vc.getValor();
-			 retorno[i][4] = vc.getValor();
-			 retorno[i][5] = 1;
-					
-		 }
+		//fazer a query de demonstrativos, fazer o parse a partir dos demosntrativos, setando data a data, fazendo loop e pegando especifico na query abaixo
+		//por exemplo a partir de entao para a data 03/12 teria 3 valores na unica data para um preferencia 3 
+		   ScriptEngineManager mgr = new ScriptEngineManager();
+		    ScriptEngine engine = mgr.getEngineByName("JavaScript");
+		    String foo = "40+2";
+		    try {
+				System.out.println(engine.eval(foo));
+			} catch (ScriptException e) {
+				// TODO Bloco catch gerado automaticamente
+				e.printStackTrace();
+			}
+		    
+			 Query queryA = em.createQuery("SELECT b FROM Demonstrativo b where  b.empresa.cvm = "+cvm+" and   b.versao =1 order by  b.data");
+			 List<Demonstrativo> demonstrativos= (List<Demonstrativo>) queryA.getResultList();
+			 List<Double> valoresfinais = new ArrayList<Double>();
+			 for(Demonstrativo dem:demonstrativos) {
+				 Query query = em.createQuery("SELECT b.valor FROM ValorContabil b,Calculo c where b.contaContabil.idCalculo = c.idCalculo and c.indicador.id_indicador = "+idindicador+" and  c.preferencia = 1 and b.demonstrativo.idDemonstrativo = "+dem.getIdDemonstrativo()+" order by  b.posicao");
+				 List<Double> valores= (List<Double>) query.getResultList();
+				 Query querye = em.createQuery("SELECT distinct c.expressao.expressao FROM ValorContabil b,Calculo c where b.contaContabil.idCalculo = c.idCalculo and c.indicador.id_indicador = "+idindicador+" and  c.preferencia = 1 and b.demonstrativo.idDemonstrativo = "+dem.getIdDemonstrativo()+" order by  b.posicao");
+				 String expressao= (String) querye.getSingleResult();
+				 
+				 for(int i = 0 ;i<valores.size();i++) {
+					expressao= expressao.replace("::"+(i+1),valores.get(i)+"");
+				 }
+				 try {
+						Double valorfinal = (Double)engine.eval(expressao);
+						valoresfinais.add(valorfinal);
+						
+					} catch (ScriptException e) {
+						// TODO Bloco catch gerado automaticamente
+						e.printStackTrace();
+					}
+			 }
+			 
+			 Object[][] retorno = new Object[valoresContabeis.size()][6];  
+				 for(int i = 0 ; i < valoresContabeis.size(); i++) {
+					 ValorContabil vc = valoresContabeis.get(i);
+					 String sdata = (vc.getDemonstrativo().getData()+"").substring(0,4)+"-"+(vc.getDemonstrativo().getData()+"").substring(4,6)+"-"+31;
+					 retorno[i][0] = sdata;
+					 retorno[i][1] = vc.getValor();
+					 retorno[i][2] = vc.getValor();
+					 retorno[i][3] = vc.getValor();
+					 retorno[i][4] = vc.getValor();
+					 retorno[i][5] = 1;
+							
+				 }
+				 
+			 
 		 return retorno;
 
 	}

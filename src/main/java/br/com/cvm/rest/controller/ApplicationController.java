@@ -34,6 +34,9 @@ import br.com.cvm.bd.modelBD.TipoDemonstrativo;
 import br.com.cvm.bd.modelBD.ValorContabil;
 import br.com.cvm.bd.origemProperties.deprecated.PersisteAccounts;
 import br.com.cvm.leitor.usoemservicos.ExtratorDeDiferencasToObject;
+import br.com.cvm.miner.AusenciaIndicadorVO;
+import br.com.cvm.miner.ContaContabilCalculo;
+import br.com.cvm.miner.DiagnosticoIndicadores;
 import br.com.cvm.rest.json.ContaContabilMinInfo;
 import entities.ContaCandidata;
 import entities.ContaComparada;
@@ -208,7 +211,40 @@ public class ApplicationController {
 		return ccompescolhida;
 	}
 	
-	  
+	public ContaComparada escolheMelhorContaComparadaIndic(List<ContaComparada > ccomps) {
+		ContaComparada ccompescolhida=null;
+		double maxsimilaridade=-1;
+		if(ccomps ==null) {
+			return null;
+		}
+		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		 Query query = em.createQuery("SELECT distinct e.idContaContabil FROM ContaContabil e where e.analise=1");
+		  List<Integer> contasjainseridas= new ArrayList<Integer>();//(List<Integer>) query.getResultList();
+		  Properties p =new Properties();
+		   for(Integer c:contasjainseridas) {
+			   p.put(c+"", "ok");
+		   }
+		for(ContaComparada ccomp : ccomps) {
+			//ver porque a situação aqui é invertida, eu apresento um já analisado para ver dentro de um
+			//demonstrativo candidatos não analisados
+		if(p.getProperty(""+ccomp.getComparado().getIdContaContabil())!=null) {
+			continue;
+		}
+			
+			if(ccomp.getCandidatos()!=null) {
+				for(ContaCandidata ccand :ccomp.getCandidatos()) {
+					if(ccand.getSimilaridade()>maxsimilaridade) {
+						ccompescolhida=ccomp;
+						maxsimilaridade=ccand.getSimilaridade();
+					}
+				}
+			}
+	
+	
+		}
+		return ccompescolhida;
+	}
+	
 	  
 	@CrossOrigin(origins = "*")
 	@GetMapping(path="/getMelhorCandidatoDif")
@@ -356,6 +392,31 @@ public class ApplicationController {
 		Divergencia dv = ccj.analisar();
 		
 		ContaComparada	 ccompescolhida	=	escolheMelhorContaComparada(dv.getDiferentes());
+	//com problemas aqui
+		return ccompescolhida;
+	}
+	
+	
+	@CrossOrigin(origins = "*")
+	@GetMapping(path="/getMelhorCandidatoIndic")
+	//String cvmbd, String cvmprop, String databd, String dataProp,String perbd, String perprop
+	//http://localhost:8080/getRelatorioDiferencas?cvmbd=5258&cvmprop=5258&databd=122011&dataprop=122012&perbd=A&perprop=A
+	  public ContaComparada getMelhorCandIndic() {
+		
+		DiagnosticoIndicadores di = new DiagnosticoIndicadores();
+		ArrayList<AusenciaIndicadorVO> ausencias = di.getAusencias();
+		ComparaContasJaro ccj = new ComparaContasJaro();
+		AusenciaIndicadorVO aiv1 =ausencias.get(0);
+		ArrayList<ContaContabil > contasencontradas=new ArrayList<ContaContabil > ();
+		for(ContaContabilCalculo ccalculo1: aiv1.getContaCalculos().get(0)) {
+			contasencontradas.add(ccalculo1.getContaContabil());
+		}
+		
+		Divergencia dv = ccj.analisar(contasencontradas, aiv1.getDemonstrativos().get(0));
+		
+	
+		
+		ContaComparada	 ccompescolhida	=	escolheMelhorContaComparadaIndic(dv.getDiferentes());
 	//com problemas aqui
 		return ccompescolhida;
 	}

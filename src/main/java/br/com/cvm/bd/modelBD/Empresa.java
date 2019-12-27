@@ -41,6 +41,7 @@ public class Empresa implements Serializable {
 	private String segmentosetorial;
 	@Column(length=400)
 	private String descricao;
+	@JsonIgnore
 	@Lob
 	@Column(name="fund_json")
 	private String fundJson;

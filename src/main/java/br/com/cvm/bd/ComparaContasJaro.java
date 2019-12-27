@@ -9,6 +9,7 @@ import javax.persistence.Query;
 
 import br.com.cvm.bd.helper.PersistenceManager;
 import br.com.cvm.bd.modelBD.ContaContabil;
+import br.com.cvm.bd.modelBD.Demonstrativo;
 import br.com.cvm.bd.modelBD.TipoDemonstrativo;
 import br.com.cvm.utils.JaroWinklerStrategy;
 import entities.ContaCandidata;
@@ -136,7 +137,7 @@ public  String possivelCorrespondente2(List<ContaContabil> cbd, List<ContaContab
 		
 	 }
 	 Collections.sort(ccands,Collections.reverseOrder());
-	 if(ccands.get(0).getSimilaridade()<70) {
+	 if(ccands!=null && ccands.size()>0 && ccands.get(0).getSimilaridade()<70) {
 			
 			em.getTransaction()
 	        .begin();
@@ -147,6 +148,7 @@ public  String possivelCorrespondente2(List<ContaContabil> cbd, List<ContaContab
 	        .commit();
 			continue;
 	 }
+	 if(ccands!=null && ccands.size()>0  ) {
 	 for(ContaCandidata ccand : ccands) {
 		 if(count<5) {
 			 count++;
@@ -155,8 +157,10 @@ public  String possivelCorrespondente2(List<ContaContabil> cbd, List<ContaContab
 			 }
 		 }
 	 }
-		
+	 }
+	 if(ccomp.getCandidatos()!=null) {
 		divergencia.addDiferente(ccomp);
+	 }
 	}
 	if(encontrou) sb.append("\n");	
 	return sb.toString();
@@ -176,6 +180,24 @@ public Divergencia analisar() {
 	 List<ContaContabil>  contaAnalisar = (List<ContaContabil>) queryanalisar.getResultList();
 	 List<ContaContabil>  contaAnalisadas = (List<ContaContabil>) queryanalisadas.getResultList();
 	 possivelCorrespondente2(contaAnalisadas,contaAnalisar);
+	 //em.close();
+	 return divergencia;
+}
+
+
+public Divergencia analisar(List<ContaContabil> contasAnalisadas,Demonstrativo dem ) {
+
+	
+//	cc.getDemonstrativo().getData();
+	//cc.getDemonstrativo().getEmpresa()
+//	cc.getDemonstrativo().getPeriodo()
+	//cc.getDemonstrativo().getVersao()
+	
+	 Query queryanalisar = em.createQuery("Select c.contaContabil from ValorContabil c where c.demonstrativo.idDemonstrativo = "+dem.getIdDemonstrativo()+" ");
+	
+	 List<ContaContabil>  contasAnalisar = (List<ContaContabil>) queryanalisar.getResultList();
+
+	 possivelCorrespondente2(contasAnalisar , contasAnalisadas);
 	 //em.close();
 	 return divergencia;
 }

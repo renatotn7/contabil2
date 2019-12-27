@@ -24,19 +24,23 @@ public class te {
 	public static EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
 
 	public static void main(String[] args) {
-		int preferencia=3;
+		int preferencia=2;
 		Query queryE = em.createQuery(
 				"SELECT b FROM Empresa b where  exists ( select 1 from Demonstrativo c where  b.cvm = c.empresa.cvm)");
 		List<Empresa> empresas = (List<Empresa>) queryE.getResultList();
 		StringBuilder sberro = new StringBuilder();
-
+		double ierro=0;
+		double iacerto=0;
 		StringBuilder sb = new StringBuilder();
-
+		StringBuilder perc = new StringBuilder();
 		Query queryI = em.createQuery(
 				"SELECT b FROM Indicador b where exists(select 1 from Calculo c where c.indicador.idIndicador = b.idIndicador and c.preferencia = "+preferencia+") ");
 		List<Indicador> indicadores = (List<Indicador>) queryI.getResultList();
 		for (Indicador indic : indicadores) {
 			sberro.append(indic.getNomeIndicador() + "\n");
+			 ierro=0.0;
+			 iacerto=0.0;
+			//sb.append(indic.getNomeIndicador() + "\n");
 			for (Empresa e1 : empresas) {
 				String cvm = e1.getCvm() + "";
 				int idindicador = indic.getIdIndicador();
@@ -73,6 +77,7 @@ public class te {
 						sberro.append("nada encontrado no demonstrativo:  " + dem.getIdDemonstrativo() + " cvm: "
 								+ dem.getEmpresa().getCvm() + " ativo " + dem.getEmpresa().getRaizAtivo() + " data: "
 								+ dem.getData() + "\n");
+						ierro++;
 						continue;
 					}
 					String expressao = c.getExpressao().getExpressao();
@@ -89,25 +94,26 @@ public class te {
 											+ dem.getIdDemonstrativo() + " cvm: " + dem.getEmpresa().getCvm()
 											+ " ativo " + dem.getEmpresa().getRaizAtivo() + " data: " + dem.getData()
 											+ "\n");
+									ierro++;
 								}
 							} catch (Exception e) {
 								sberro.append("erro inespecifico em demonstrativo:  " + dem.getIdDemonstrativo()
 										+ " cvm: " + dem.getEmpresa().getCvm() + " ativo "
 										+ dem.getEmpresa().getRaizAtivo() + " data: " + dem.getData() + "\n");
-
+								ierro++;
 							}
 						}
 						if (!temerro) {
 							sb.append("não encontrou erro: demonstrativo:  " + dem.getIdDemonstrativo() + " cvm: "
 									+ dem.getEmpresa().getCvm() + " ativo " + dem.getEmpresa().getRaizAtivo()
 									+ " data: " + dem.getData() + "\n");
-
+							iacerto++;
 						}
 					} else {
 						sb.append("não encontrou erro: demonstrativo:  " + dem.getIdDemonstrativo() + " cvm: "
 								+ dem.getEmpresa().getCvm() + " ativo " + dem.getEmpresa().getRaizAtivo() + " data: "
 								+ dem.getData() + "\n");
-
+								iacerto++;
 						for (int i = 0; i < valores.size(); i++) {
 							ValorContabil vc = (ValorContabil) valores.get(i)[0];
 							expressao = expressao.replace("::" + (i + 1), vc.getValor() + "");
@@ -140,11 +146,12 @@ public class te {
 					 */
 				}
 			}
+			perc.append("nomeIndicador: "+ indic.getNomeIndicador() +" erro: "+ ierro +" iacerto: " +iacerto +"\n");
 		}
 		System.out.println("erros:");
 
 		System.out.println(sberro.toString());
-
+		System.out.println(perc);
 		// System.out.println("ok:");
 
 		// System.out.println(sb.toString());

@@ -8,6 +8,7 @@ import java.util.Properties;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
@@ -37,8 +38,10 @@ public class CalculoIndicadores {
 		//int preferencia=2;
 		//int icvm=8133;
 		//int indicador =5;
-		Query queryE = em.createQuery(
-				"SELECT b FROM Empresa b where  exists ( select 1 from Demonstrativo c where  b.cvm = c.empresa.cvm and b.cvm = "+icvm+")");
+		TypedQuery<Empresa> queryE = em.createQuery(
+				"SELECT b FROM Empresa b where  exists ( select 1 from Demonstrativo c where  b.cvm = c.empresa.cvm and b.cvm = "+icvm+")"
+				,Empresa.class);
+		
 		List<Empresa> empresas = (List<Empresa>) queryE.getResultList();
 		StringBuilder sberro = new StringBuilder();
 		double ierro=0;
@@ -87,20 +90,11 @@ public class CalculoIndicadores {
 			
 				
 				boolean temerro = false;
-				Demonstrativo demant= new Demonstrativo();
+			
 				for (Demonstrativo dem : demonstrativos) {
-					if(temerro == true) {
 					
-					//		ausencias.add(aiv);
-						//	 aiv=	new AusenciaIndicadorVO();//verr porque se eu setar um novo aqui e o proximo vir com erro eu não terei uma sugestão
-							 //tenho que fazer um tratamento
-							temerro=false;
-					}
-					demant = dem;
-				//	valorescorr.add(valores);
-					if (dem.getIdDemonstrativo() == 354) {
-						System.out.println("aqui");
-					}
+					
+				
 					temerro = false;
 					// Query query = em.createQuery("SELECT b,c FROM ValorContabil b,Calculo c where
 					// b.contaContabil.idCalculo = c.idCalculo and c.indicador.idIndicador =
@@ -129,8 +123,7 @@ public class CalculoIndicadores {
 					String expressao = c.getExpressao().getExpressao()+"";
 					int numcolumns = c.getExpressao().getNumColunas();
 					if (valores.size() != numcolumns) {
-						// problema: não encontrou o numero necessário de colunas para este
-						// demonstrativo
+					
 						for (int i = 1; i <= numcolumns; i++) {
 							try {
 								Calculo c1 = (Calculo) valores.get(i - 1)[1];
@@ -199,13 +192,6 @@ public class CalculoIndicadores {
 						}
 
 					}
-
-					// Query querye = em.createQuery("SELECT distinct c.expressao.expressao FROM
-					// ValorContabil b,Calculo c where b.contaContabil.idCalculo = c.idCalculo and
-					// c.indicador.id_indicador = "+idindicador+" and c.preferencia = 1 and
-					// b.demonstrativo.idDemonstrativo = "+dem.getIdDemonstrativo()+" order by
-					// b.posicao");
-					// String expressao= (String) querye.getSingleResult();
 
 					String expressao2="";
 					 expressao2=expressao+"";

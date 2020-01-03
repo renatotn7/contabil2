@@ -12,13 +12,13 @@ import java.util.Properties;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 import br.com.cvm.bd.modelBD.ContaContabil;
 import br.com.cvm.bd.modelBD.Demonstrativo;
 
 public class PersisteProtocol {
 public static void main(String[] args) throws InvalidPropertiesFormatException, IOException {
-	EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+	EntityManager em = JPAUtil.INSTANCE.getEntityManager();
 ;
 		Query queryanalisar = em.createQuery("Select c from Demonstrativo c where c.protocolo is null");
 

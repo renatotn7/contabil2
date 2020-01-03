@@ -6,13 +6,13 @@ import java.util.ArrayList;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import br.com.cvm.bd.modelBD.Empresa;
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 import br.com.cvm.utils.ApacheHttpGet;
 
 public class b3ComplementaEmpresas {
 	
 	public static void atualizaRaizAtivo() {
-		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 		 Query query = em.createQuery("SELECT e FROM Empresa e where e.raizAtivo is null");
 
 				

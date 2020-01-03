@@ -6,7 +6,7 @@ import javax.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 
 import java.util.List;
 
@@ -79,7 +79,7 @@ public class ContaContabil implements Serializable {
 		  EntityManager em =null;
 		  List<Calculo> cc1 = null;
 		  if(em==null) {
-				 em  = PersistenceManager.INSTANCE.getEntityManager();
+				 em  = JPAUtil.INSTANCE.getEntityManager();
 			}
 			try {
 			Query query = em.createQuery("SELECT e FROM Calculo e where idCalculo =" + this.getIdCalculo()	);

@@ -7,14 +7,14 @@ import java.util.Properties;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 import br.com.cvm.bd.modelBD.ContaContabil;
 import br.com.cvm.bd.modelBD.ValorContabil;
 import br.com.cvm.leitor.origemBDeProperties.PeriodoToProperties;
 
 public class AccountBDReader {
  public static void main(String args[]) {
-	 EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+	 EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 		String cvm1="5258"; 
 		String cvm2="5258";
 		String dp1="122012";
@@ -87,7 +87,7 @@ public class AccountBDReader {
 				   }
 				   vc.setContaContabil(c);
 				 
-					em = PersistenceManager.INSTANCE.getEntityManager();
+					em = JPAUtil.INSTANCE.getEntityManager();
 					em.getTransaction()
 			        .begin();
 					  em.persist(vc);

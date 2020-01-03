@@ -6,7 +6,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 import br.com.cvm.bd.modelBD.Calculo;
 import br.com.cvm.bd.modelBD.ContaContabil;
 import br.com.cvm.bd.modelBD.Expressao;
@@ -18,7 +18,7 @@ import br.com.cvm.bd.modelBD.PropstaConfIndicHeader;
 
 public class LinkaIndicador {
 	
-	public static EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+	public static EntityManager em = JPAUtil.INSTANCE.getEntityManager();
 public static void main(String[] args) {
 
 	Query query = em.createQuery("SELECT e FROM PropstaConfIndicHeader e where  e.qtdInicial = qtdEncontrada"	);

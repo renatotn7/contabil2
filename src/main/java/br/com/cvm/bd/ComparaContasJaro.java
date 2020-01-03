@@ -7,7 +7,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 import br.com.cvm.bd.modelBD.ContaContabil;
 import br.com.cvm.bd.modelBD.Demonstrativo;
 import br.com.cvm.utils.JaroWinklerStrategy;
@@ -21,7 +21,7 @@ public class ComparaContasJaro {
 	}
 	private JaroWinklerStrategy jw = new JaroWinklerStrategy(0.05);
 	private Divergencia divergencia=new Divergencia();
-	private EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+	private EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 public  String possivelCorrespondente2(List<ContaContabil> cbd, List<ContaContabil> cbd2) {
 	StringBuilder sb = new StringBuilder();
 	boolean encontrou = false;

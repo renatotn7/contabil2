@@ -17,7 +17,7 @@ import javax.persistence.metamodel.Metamodel;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
 
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 import br.com.cvm.bd.modelBD.ContaContabil;
 import br.com.cvm.bd.modelBD.Demonstrativo;
 import br.com.cvm.bd.modelBD.Empresa;
@@ -47,7 +47,7 @@ public static void persiste(Object obj) {
 public static  void close(){
 	
     em.close();
-    PersistenceManager.INSTANCE.close();
+    JPAUtil.INSTANCE.close();
 }
 static JaroWinklerStrategy jw = new JaroWinklerStrategy(0.05);
 public static String possivelCorrespondente(List<ContaContabil> cbd, String key2, String value2,ContaComparada contaComparada) {
@@ -493,7 +493,7 @@ public static String compara( Properties p2, String sigla, Integer data, String 
 }
 static List<ContaContabil> cc1;
 static Empresa e1;
-static EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+static EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 static Divergencia divergencia;
 public RelatorioDiferenca rdif = new RelatorioDiferenca();
 public PersisteContasUnificando( String cvmProp,  String dataProp, String perProp,String protocolo ){

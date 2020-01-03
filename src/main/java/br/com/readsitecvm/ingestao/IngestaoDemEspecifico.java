@@ -22,7 +22,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import br.com.cvm.bd.consolidacaoBD.PersisteContasUnificando;
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 import br.com.cvm.bd.modelBD.Demonstrativo;
 import br.com.readsitecvm.entidades.EntidadeCVM;
 import br.com.readsitecvm.ingestao.subsistema.javaCVMTable;
@@ -247,7 +247,7 @@ public class IngestaoDemEspecifico {
 		// TODO Auto-generated method stub
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager em = JPAUtil.INSTANCE.getEntityManager();
 		;
 				Query queryanalisar = em.createQuery("Select c from Demonstrativo c where c.idDemonstrativo ="+idDemonstrativo);
 

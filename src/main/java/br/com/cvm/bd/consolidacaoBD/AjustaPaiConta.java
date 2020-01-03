@@ -5,11 +5,11 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 import br.com.cvm.bd.modelBD.ContaContabil;
 
 public class AjustaPaiConta {
-	static EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+	static EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 public static void persiste(Object obj) {
 
 	  em.persist(obj);
@@ -18,7 +18,7 @@ public static void persiste(Object obj) {
 public static  void close(){
 	
     em.close();
-    PersistenceManager.INSTANCE.close();
+    JPAUtil.INSTANCE.close();
 }
 	public static void main(String[] args) {
 		

@@ -8,7 +8,7 @@ import java.util.Properties;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 import br.com.cvm.bd.modelBD.ContaContabil;
 import br.com.cvm.bd.modelBD.Demonstrativo;
 import br.com.cvm.bd.modelBD.Empresa;
@@ -243,7 +243,7 @@ public static String compara(Properties p1, Properties p2, String sigla, Integer
 }
 static List<ContaContabil> cc1;
 static Empresa e1;
-static EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+static EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 static Divergencia divergencia;
 public RelatorioDiferenca rdif = new RelatorioDiferenca();
 public ExtratorDeDiferencasToObject(String cvmbd, String cvmProp, String databd, String dataProp,String perbd, String perProp ){

@@ -13,7 +13,7 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 import br.com.cvm.bd.ComparaContasJaro;
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 import br.com.cvm.bd.modelBD.Abrangencia;
 import br.com.cvm.bd.modelBD.Calculo;
 import br.com.cvm.bd.modelBD.ContaContabil;
@@ -29,7 +29,7 @@ import entities.Divergencia;
 
 public class DiagnosticoIndicadores {
 
-	public static EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+	public static EntityManager em = JPAUtil.INSTANCE.getEntityManager();
 /**
  * 
  * @param preferencia
@@ -40,7 +40,7 @@ public class DiagnosticoIndicadores {
 	
 	public HashMap<String,Integer> getEleicao(int preferencia){
 		HashMap<String,Integer> phash= new  HashMap<String,Integer>();
-		 EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+		 EntityManager em = JPAUtil.INSTANCE.getEntityManager();
 			
 			Query queryE = em.createQuery(
 					"SELECT b FROM Empresa b where  exists ( select 1 from Demonstrativo c where  b.cvm = c.empresa.cvm)");
@@ -267,7 +267,7 @@ public class DiagnosticoIndicadores {
 	
 	public ArrayList<AusenciaIndicadorVO> getAusencias(){
 		
-		 EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+		 EntityManager em = JPAUtil.INSTANCE.getEntityManager();
 		
 			
 		
@@ -436,7 +436,7 @@ public class DiagnosticoIndicadores {
 				
 				String cvm = e1.getCvm() + "";
 				int idindicador = indic.getIdIndicador();
-				EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+				EntityManager em = JPAUtil.INSTANCE.getEntityManager();
 				
 				ScriptEngineManager mgr = new ScriptEngineManager();
 				ScriptEngine engine = mgr.getEngineByName("JavaScript");
@@ -658,7 +658,7 @@ public class DiagnosticoIndicadores {
 				
 				String cvm = e1.getCvm() + "";
 				int idindicador = indic.getIdIndicador();
-				EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+				EntityManager em = JPAUtil.INSTANCE.getEntityManager();
 				
 				ScriptEngineManager mgr = new ScriptEngineManager();
 				ScriptEngine engine = mgr.getEngineByName("JavaScript");

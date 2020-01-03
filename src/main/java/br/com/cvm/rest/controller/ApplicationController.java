@@ -26,7 +26,7 @@ import com.google.gson.Gson;
 
 import br.com.cvm.bd.ComparaContasJaro;
 import br.com.cvm.bd.consolidacaoBD.ExpandeIndicador;
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 import br.com.cvm.bd.modelBD.ContaContabil;
 import br.com.cvm.bd.modelBD.Demonstrativo;
 import br.com.cvm.bd.modelBD.Empresa;
@@ -61,7 +61,7 @@ public class ApplicationController {
 	  public Object getEmpresa(@PathVariable String cvm
 				) {
 		Object result = null;
-		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 		if(cvm.equals("all")) {
 			 Query query = em.createQuery("SELECT e FROM Empresa e");
 			   result= (List<Empresa>) query.getResultList();
@@ -90,7 +90,7 @@ public class ApplicationController {
 	@GetMapping(path="/getsetores/all")
 	
 	  public List<String> getSetores() {
-		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 		 Query query = em.createQuery("SELECT distinct e.setor FROM Empresa e");
 		    return (List<String>) query.getResultList();
 
@@ -99,7 +99,7 @@ public class ApplicationController {
 	@GetMapping(path="/getsubsetores/{setor}/subsetores/all")
 	
 	  public List<String> getSubSetores(@PathVariable String setor) {
-		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 		 Query query = em.createQuery("SELECT distinct e.subsetor FROM Empresa e where e.setor=\'"+setor+"\'");
 		    return (List<String>) query.getResultList();
 
@@ -107,7 +107,7 @@ public class ApplicationController {
 	@GetMapping(path="/getsegmentossetoriais/{setor}/subsetores/{subsetor}/all")
 	
 	  public List<String> getSubSetores(@PathVariable String setor,@PathVariable String subsetor) {
-		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 		 Query query = em.createQuery("SELECT distinct e.segmentosetorial FROM Empresa e where e.setor=\'"+setor+"\' and e.subsetor=\'"+subsetor+"\'");
 		    return (List<String>) query.getResultList();
 
@@ -117,7 +117,7 @@ public class ApplicationController {
 	@GetMapping(path="/gettipodemonstrativo/all")
 	
 	  public List<TipoDemonstrativo> getTipoDemonstrativos() {
-		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 		 Query query = em.createQuery("SELECT e FROM TipoDemonstrativo e");
 		    return (List<TipoDemonstrativo>) query.getResultList();
 
@@ -126,7 +126,7 @@ public class ApplicationController {
 	@GetMapping(path="/gettipodemonstrativo/{idtipo}")
 	
 	  public TipoDemonstrativo getTipoDemonstrativo(@PathVariable String idtipo) {
-		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 		 Query query = em.createQuery("SELECT e FROM TipoDemonstrativo e where idTipo="+idtipo);
 		    return (TipoDemonstrativo) query.getSingleResult();
 
@@ -134,7 +134,7 @@ public class ApplicationController {
 	@GetMapping(path="/gettipodemonstrativo/sigla/{sigla}")
 	
 	  public TipoDemonstrativo getTipoDemonstrativoSigla(@PathVariable String sigla) {
-		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 		 Query query = em.createQuery("SELECT e FROM TipoDemonstrativo e where siglaTipo=\'"+sigla +"\'");
 		    return (TipoDemonstrativo) query.getSingleResult();
 
@@ -142,7 +142,7 @@ public class ApplicationController {
 	@GetMapping(path="/getperiodo/all")
 	
 	  public List<Periodo> getPeriodos() {
-		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 		 Query query = em.createQuery("SELECT e FROM Periodo e");
 		    return (List<Periodo>) query.getResultList();
 
@@ -150,7 +150,7 @@ public class ApplicationController {
 	@GetMapping(path="/getperiodo/{idperiodo}")
 	
 	  public Periodo getPeriodo(@PathVariable String idperiodo) {
-		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 		 Query query = em.createQuery("SELECT e FROM Periodo e where idPeriodo="+idperiodo);
 		    return (Periodo) query.getSingleResult();
 
@@ -158,7 +158,7 @@ public class ApplicationController {
 	@GetMapping(path="/getperiodo/sigla/{sigla}")
 	
 	  public Periodo getPeriodoSigla(@PathVariable String sigla) {
-		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 		 Query query = em.createQuery("SELECT e FROM Periodo e where siglaPeriodo=\'"+sigla+"\'");
 		    return (Periodo) query.getSingleResult();
 
@@ -185,7 +185,7 @@ public class ApplicationController {
 		if(ccomps ==null) {
 			return null;
 		}
-		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 		 Query query = em.createQuery("SELECT distinct e.idContaContabil FROM ContaContabil e where e.analise=1");
 		  List<Integer> contasjainseridas= (List<Integer>) query.getResultList();
 		  Properties p =new Properties();
@@ -218,7 +218,7 @@ public class ApplicationController {
 		if(ccomps ==null) {
 			return null;
 		}
-		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 		 Query query = em.createQuery("SELECT distinct e.idContaContabil FROM ContaContabil e where e.analise=1");
 		  List<Integer> contasjainseridas= new ArrayList<Integer>();//(List<Integer>) query.getResultList();
 		  Properties p =new Properties();
@@ -374,7 +374,7 @@ public class ApplicationController {
 		if(((String)obj.get("contaescolhida")).length()>0) {
 			ContaContabil contaescolhida=gson.fromJson((String)obj.get("contaescolhida"),ContaContabil.class);
 			//ContaContabil cc = (ContaContabil) obj.get("contacomparada");
-			EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+			EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 			ContaContabil c = em.find(ContaContabil.class, contaescolhida.getIdContaContabil());
 			
 			ccomparada.setRefConta(c);
@@ -392,7 +392,7 @@ public class ApplicationController {
 	@ResponseBody  
 	public void associaContas(@RequestParam(value="idconta1") Integer idConta1,@RequestParam(value="idconta2") Integer idConta2) throws JSONException {
 		Gson gson=new Gson();
-		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 		ContaContabil c1 = em.find(ContaContabil.class, idConta1);
 	
 		ContaContabil c2 = em.find(ContaContabil.class, idConta2);
@@ -487,7 +487,7 @@ public class ApplicationController {
 			
 			
 				
-				EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+				EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 				ContaContabil c = em.find(ContaContabil.class, idConta);
 				ContaContabil cpai = c.getContaPai();
 				String squery = "select c from ValorContabil a ,ContaContabil  c where a.demonstrativo.idDemonstrativo = "+c.getDemonstrativo().getIdDemonstrativo()+ " and a.contaContabil.idContaContabil=c.idContaContabil and c.contaPai="+cpai.getIdContaContabil();
@@ -517,7 +517,7 @@ public class ApplicationController {
 			
 			
 				
-				EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+				EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 				ContaContabil c = em.find(ContaContabil.class, idConta);
 				ContaContabil cpai = c.getContaPai();
 				String squery = "select a from ValorContabil a ,ContaContabil  c where a.demonstrativo.idDemonstrativo = "+c.getDemonstrativo().getIdDemonstrativo()+ " and a.contaContabil.idContaContabil=c.idContaContabil and c.contaPai="+cpai.getIdContaContabil();
@@ -577,7 +577,7 @@ public class ApplicationController {
 			
 			
 				
-				EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+				EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 				ContaContabil c = em.find(ContaContabil.class, idConta);
 				ContaContabil cpai = c.getContaPai();
 				String squery = "select a from ValorContabil a ,ContaContabil  c where a.demonstrativo.idDemonstrativo = "+c.getDemonstrativo().getIdDemonstrativo()+ " and a.contaContabil.idContaContabil=c.idContaContabil and c.tipoDemonstrativo.idTipo="+c.getTipoDemonstrativo().getIdTipo()+ " order by a.contaContabil.contaContabil";
@@ -619,7 +619,7 @@ public class ApplicationController {
 	@GetMapping(path="/getdemonstrativo/all")
 	
 	  public List<Demonstrativo> getAllDemonstrativos() {
-		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager	em = JPAUtil.INSTANCE.getEntityManager();
 		 Query query = em.createQuery("SELECT e FROM Demonstrativo e");
 		    return (List<Demonstrativo>) query.getResultList();
 

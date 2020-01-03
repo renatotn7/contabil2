@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 import br.com.cvm.bd.modelBD.ContaContabil;
 import br.com.cvm.bd.modelBD.Demonstrativo;
 import br.com.cvm.bd.modelBD.ValorContabil;
@@ -13,7 +13,7 @@ import br.com.cvm.bd.modelBD.ValorContabil;
 public class DepurandoOBanco {
  public static void main(String args[]) {
 	 int idDemonstrativo = 1294;
-		EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+		EntityManager em = JPAUtil.INSTANCE.getEntityManager();
 		;
 				Query queryanalisar1 = em.createQuery("Select c from Demonstrativo c where c.idDemonstrativo ="+idDemonstrativo);
 

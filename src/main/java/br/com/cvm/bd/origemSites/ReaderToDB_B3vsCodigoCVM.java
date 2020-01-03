@@ -15,7 +15,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 import br.com.cvm.bd.modelBD.Empresa;
 
 public class ReaderToDB_B3vsCodigoCVM {
@@ -57,7 +57,7 @@ public class ReaderToDB_B3vsCodigoCVM {
 	    		prop.putAll(jb3.resultado);
 	    	}catch(Exception e) {}
 	    	}
-	    EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+	    EntityManager em = JPAUtil.INSTANCE.getEntityManager();
 	    for(Object key: prop.keySet()) {
 	    	try {
 		    	String skey= (String) key;
@@ -89,7 +89,7 @@ public class ReaderToDB_B3vsCodigoCVM {
 			    
 	    }
 	    em.close();
-	    PersistenceManager.INSTANCE.close();
+	    JPAUtil.INSTANCE.close();
 	  //  prop.storeToXML(os, "");
 	}
 	

@@ -12,7 +12,7 @@ import java.util.Set;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 import br.com.cvm.bd.modelBD.ContaContabil;
 import br.com.cvm.bd.modelBD.FundIndicador;
 import br.com.cvm.bd.modelBD.Indicador;
@@ -22,7 +22,7 @@ import br.com.cvm.bd.modelBD.ValorContabil;
 import br.com.cvm.leitor.origemBDeProperties.PeriodoToProperties;
 
 public class AccountIndicadorBD {
-	public static EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+	public static EntityManager em = JPAUtil.INSTANCE.getEntityManager();
 	public static void miner(String cvm2, 	ArrayList<Long> valores, ArrayList<Integer> datas,String titulo) {
 		
 

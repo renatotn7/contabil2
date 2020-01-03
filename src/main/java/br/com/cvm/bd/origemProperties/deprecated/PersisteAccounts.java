@@ -5,7 +5,7 @@ import java.util.Properties;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 import br.com.cvm.bd.modelBD.Abrangencia;
 import br.com.cvm.bd.modelBD.ContaContabil;
 import br.com.cvm.bd.modelBD.Demonstrativo;
@@ -25,7 +25,7 @@ public class PersisteAccounts {
 	public static  void close(){
 		
 	    em.close();
-	    PersistenceManager.INSTANCE.close();
+	    JPAUtil.INSTANCE.close();
 	}
 	public static void persisteDemonstrativo(Properties prop, int tipo,String cvm1, String dp1, String periodo) {
 		
@@ -88,7 +88,7 @@ public class PersisteAccounts {
 	}
 	static Demonstrativo dm = new Demonstrativo();
 	public static void persisteAbrangencia() {
-					em = PersistenceManager.INSTANCE.getEntityManager();
+					em = JPAUtil.INSTANCE.getEntityManager();
 					String cvm1="5258";
 					em.getTransaction()
 			        .begin();
@@ -174,7 +174,7 @@ public class PersisteAccounts {
 	  
 	  }
 	public static void persisteAccount(ContaContabil cc) {
-		em = PersistenceManager.INSTANCE.getEntityManager();
+		em = JPAUtil.INSTANCE.getEntityManager();
 		if(cc.getIdContaContabil()>0) {
 			em.getTransaction()
 	        .begin();

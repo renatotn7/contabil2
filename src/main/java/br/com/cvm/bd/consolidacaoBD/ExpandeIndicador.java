@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.helper.JPAUtil;
 import br.com.cvm.bd.modelBD.ContaContabil;
 
 public class ExpandeIndicador {
@@ -14,7 +14,7 @@ public class ExpandeIndicador {
 		boolean achou = true;
 		while (achou) {
 			achou = false;
-			 EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+			 EntityManager em = JPAUtil.INSTANCE.getEntityManager();
 			Query queryanalisar = em.createQuery("Select c from ContaContabil c where c.idCalculo is not null");
 
 			List<ContaContabil> contaAnalisar = (List<ContaContabil>) queryanalisar.getResultList();
@@ -55,7 +55,7 @@ public class ExpandeIndicador {
 		boolean achou = true;
 		while (achou) {
 			achou = false;
-			 EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+			 EntityManager em = JPAUtil.INSTANCE.getEntityManager();
 			Query queryanalisar = em.createQuery("Select c from ContaContabil c where c.idCalculo is not null");
 
 			List<ContaContabil> contaAnalisar = (List<ContaContabil>) queryanalisar.getResultList();

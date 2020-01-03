@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.03.04">Juros sobre capital próprio e dividendos pagos;-2.401</entry>
+<entry key="6.03.03">Pagamentos de empréstimos;-3.035</entry>
+<entry key="6.03.02">Aumento de capital social;0</entry>
+<entry key="6.03.01">Empréstimos tomados;</entry>
+<entry key="6.01.02.09">Salários e férias a pagar;2.127</entry>
+<entry key="6.01.02.08">Fornecedores;-39.924</entry>
+<entry key="6.01.02.07">Aplicação quotas subordinadas FIDC Lojas Renner;563</entry>
+<entry key="6.01.02.06">Financiamento - operações serviços financeiros;-136.830</entry>
+<entry key="6.01.02.05">Depósitos judiciais;35</entry>
+<entry key="6.01.02.04">Outros ativos circulantes;11.993</entry>
+<entry key="6.01.02.03">Perdas não realizadas em derivativos;1.638</entry>
+<entry key="6.01.02.02">Estoques;-90.676</entry>
+<entry key="6.01.03">Outros;</entry>
+<entry key="6.01.02.01">Contas a receber de clientes;146.595</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;-212.812</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;63.485</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;-178.684</entry>
+<entry key="Conta">Descrição;01/01/2011 
+ a 
+ 31/03/2011</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;-5.436</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-23.921</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;-149.327</entry>
+<entry key="6.02.03">Recebimento por venda de ativo fixo;46</entry>
+<entry key="6.01.03.01">Recebimento de dividendos de subsidiárias;</entry>
+<entry key="6.02.02">Aquisições de intangível;-5.675</entry>
+<entry key="6.02.01">Aquisições de imobilizado;-18.292</entry>
+<entry key="6.01.01.09">Provisão para perda em ativos;-14.823</entry>
+<entry key="6.01.01.08">Tributos diferidos;14.503</entry>
+<entry key="6.01.01.07">Provisão para riscos tributários, cíveis e trabalhistas;-10.047</entry>
+<entry key="6.01.01.06">Plano de opção de compra de ações;4.727</entry>
+<entry key="6.01.01.05">Juros provisionados, líquidos dos pagos;-9</entry>
+<entry key="6.01.01.04">Resultado venda ou baixa dos ativos fixos;32</entry>
+<entry key="6.01.01.03">Amortização de ágio;12</entry>
+<entry key="6.01.01.02">Depreciações e amrtizações;21.503</entry>
+<entry key="6.01.01.01">Lucro líquido do período;47.587</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;504.977</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;683.661</entry>
+<entry key="6.01.02.12">Aluguéis a pagar;-4.218</entry>
+<entry key="6.01.02.11">Outras obrigações;-9.154</entry>
+<entry key="6.01.02.10">Impostos e contribuições a recolher;-94.961</entry>
+</properties>

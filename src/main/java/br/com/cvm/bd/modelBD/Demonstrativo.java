@@ -51,6 +51,15 @@ public class Demonstrativo implements Serializable {
 	//bi-directional many-to-one association to ValorContabil
 	@OneToMany(mappedBy="demonstrativo")
 	private List<ValorContabil> valorContabils;
+	@Column(nullable=true)
+	private String protocolo;
+	public String getProtocolo() {
+		return protocolo;
+	}
+
+	public void setProtocolo(String protocolo) {
+		this.protocolo = protocolo;
+	}
 
 	public Demonstrativo() {
 	}

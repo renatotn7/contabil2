@@ -23,8 +23,8 @@ public class IngestaoEspecifico {
 				//String cvm="20257";]
 			
 		            String cvm="8133";
-		            new IngestaoDemonstrativos(cvm,"A",driver);
-		            new IngestaoDemonstrativos(cvm,"T",driver);
+		            new IngestaoDemsEmpresa(cvm,"A",driver);
+		            new IngestaoDemsEmpresa(cvm,"T",driver);
 	            
 	            driver.quit();
 	          //  System.out.println(prop.getProperty("3.09")); //lucro liquido

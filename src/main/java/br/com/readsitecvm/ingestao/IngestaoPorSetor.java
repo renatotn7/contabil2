@@ -38,7 +38,7 @@ public class IngestaoPorSetor {
 	            	if(value1.equals("Saude_Comercio e Distribuicao_Medicamentos e Outros Produtos")&&prop2.get(skey)!=null) {
 	            		System.out.println(skey);
 	            		System.out.println(prop2.get(skey));
-	            		new IngestaoDemonstrativos((String)prop2.get(skey),"A",driver);
+	            		new IngestaoDemsEmpresa((String)prop2.get(skey),"A",driver);
 	            	}
 	            //	System.out.println(prop.get(skey));
 	            //	System.out.println(prop2.get(value1));

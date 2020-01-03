@@ -10,7 +10,6 @@ import javax.persistence.Query;
 import br.com.cvm.bd.helper.PersistenceManager;
 import br.com.cvm.bd.modelBD.ContaContabil;
 import br.com.cvm.bd.modelBD.Demonstrativo;
-import br.com.cvm.bd.modelBD.TipoDemonstrativo;
 import br.com.cvm.utils.JaroWinklerStrategy;
 import entities.ContaCandidata;
 import entities.ContaComparada;
@@ -62,8 +61,13 @@ public  String possivelCorrespondente2(List<ContaContabil> cbd, List<ContaContab
 	int count=0;
 	 for(ContaContabil cc:cbd) {
 		 String key1 = (String)cc.getContaContabil().trim();
-		 String value1 = cc.getDescricao().trim();
-		 double jaroscore = jw.score(cnovo.getDescricao().trim(), value1.split(";")[0]);
+		 if(key1.equals("6.01.01.02")) {
+			 int kk=0;
+		 }
+		 String value1 = cc.getDescricao().trim().toLowerCase().replaceAll(" de "," ").replaceAll(" da "," ").replaceAll(" do "," ").replaceAll(" e "," ").replaceAll(",", "").replaceAll("\\.", "");
+		 String valuecnovo = cnovo.getDescricao().trim().toLowerCase().replaceAll(" de "," ").replaceAll(" da "," ").replaceAll(" do "," ").replaceAll(" e "," ").replaceAll(",", "").replaceAll("\\.", "");
+		 
+		 double jaroscore = jw.score(valuecnovo, value1.split(";")[0]);
 		 
 			 if(jaroscore>0.20) {
 				
@@ -110,17 +114,17 @@ public  String possivelCorrespondente2(List<ContaContabil> cbd, List<ContaContab
 						perc-=valordescontado;
 					}
 					
-					if(perc>95) {
+					if(perc>98) {
 						
 						
-						em.getTransaction()
-				        .begin();
-						cnovo.setAnalise(1);
-						cnovo.setRefConta(cc);
+					//	em.getTransaction()
+				     //   .begin();
+					//	cnovo.setAnalise(1);
+					//	cnovo.setRefConta(cc);
 					
-						em.getTransaction()
-				        .commit();
-						continue;
+				//		em.getTransaction()
+				 //       .commit();
+					//	continue;
 					}
 					ccand.setSimilaridade(perc);
 					ccand.setRaiz(sinicial1);
@@ -139,13 +143,13 @@ public  String possivelCorrespondente2(List<ContaContabil> cbd, List<ContaContab
 	 Collections.sort(ccands,Collections.reverseOrder());
 	 if(ccands!=null && ccands.size()>0 && ccands.get(0).getSimilaridade()<70) {
 			
-			em.getTransaction()
-	        .begin();
-			cnovo.setAnalise(1);
+		//	em.getTransaction()
+	      //  .begin();
+			//cnovo.setAnalise(1);
 		
 		
-			em.getTransaction()
-	        .commit();
+		//	em.getTransaction()
+	      //  .commit();
 			continue;
 	 }
 	 if(ccands!=null && ccands.size()>0  ) {
@@ -192,11 +196,26 @@ public Divergencia analisar(List<ContaContabil> contasAnalisadas,Demonstrativo d
 	//cc.getDemonstrativo().getEmpresa()
 //	cc.getDemonstrativo().getPeriodo()
 	//cc.getDemonstrativo().getVersao()
+	String notin = "(";
+	for(int i=0;i< contasAnalisadas.size()-1;i++) {
+		ContaContabil cc = contasAnalisadas.get(i);
+		notin+=cc.getDemonstrativo().getIdDemonstrativo()+",";
+	}
+	notin+=contasAnalisadas.get(contasAnalisadas.size()-1).getDemonstrativo().getIdDemonstrativo()+")";
 	
-	 Query queryanalisar = em.createQuery("Select c.contaContabil from ValorContabil c where c.demonstrativo.idDemonstrativo = "+dem.getIdDemonstrativo()+" ");
+	String in = "(";
+	for(int i=0;i< contasAnalisadas.size()-1;i++) {
+		ContaContabil cc = contasAnalisadas.get(i);
+		in+=cc.getTipoDemonstrativo().getIdTipo()+",";
+	}
+	in+=contasAnalisadas.get(contasAnalisadas.size()-1).getTipoDemonstrativo().getIdTipo()+")";
+	String squery  = "Select c.contaContabil from ValorContabil c where c.demonstrativo.idDemonstrativo = "+dem.getIdDemonstrativo()+" and c.contaContabil.demonstrativo.idDemonstrativo not in "+notin +" and c.contaContabil.tipoDemonstrativo.idTipo in "+in+" order by c.contaContabil.contaContabil "  ;
+	 Query queryanalisar = em.createQuery(squery);
 	
 	 List<ContaContabil>  contasAnalisar = (List<ContaContabil>) queryanalisar.getResultList();
-
+	 for(ContaContabil cc : contasAnalisar) {
+		 System.out.println(cc.getContaContabil() + " "+ cc.getDescricao()+ " "+cc.getIdContaContabil() );
+	 }
 	 possivelCorrespondente2(contasAnalisar , contasAnalisadas);
 	 //em.close();
 	 return divergencia;

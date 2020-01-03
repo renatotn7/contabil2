@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="3.99.01.01">ON;0,84070</entry>
+<entry key="3.11.02">Atribuído a Sócios Não Controladores;</entry>
+<entry key="3.11.01">Atribuído a Sócios da Empresa Controladora;103.472</entry>
+<entry key="3.11">Lucro/Prejuízo Consolidado do Período;103.472</entry>
+<entry key="3.10">Resultado Líquido de Operações Descontinuadas;</entry>
+<entry key="3.99.02">Lucro Diluído por Ação;</entry>
+<entry key="3.99.01">Lucro Básico por Ação;</entry>
+<entry key="3.08.02">Diferido;8.071</entry>
+<entry key="3.08.01">Corrente;-52.556</entry>
+<entry key="3.01.02">Receita líquida com produtos e serviços financeiros;100.285</entry>
+<entry key="3.01.01">Receita líquida com venda de mercadorias;855.169</entry>
+<entry key="3.09">Resultado Líquido das Operações Continuadas;103.472</entry>
+<entry key="3.08">Imposto de Renda e Contribuição Social sobre o Lucro;-44.485</entry>
+<entry key="3.06.02">Despesas Financeiras;-11.282</entry>
+<entry key="3.07">Resultado Antes dos Tributos sobre o Lucro;147.957</entry>
+<entry key="3.06.01">Receitas Financeiras;4.764</entry>
+<entry key="3.06">Resultado Financeiro;-6.518</entry>
+<entry key="3.05">Resultado Antes do Resultado Financeiro e dos Tributos;154.475</entry>
+<entry key="3.04">Despesas/Receitas Operacionais;-407.715</entry>
+<entry key="3.03">Resultado Bruto;562.190</entry>
+<entry key="3.99">Lucro por Ação - (Reais / Ação);</entry>
+<entry key="3.99.02.01">ON;0,82470</entry>
+<entry key="3.02">Custo dos Bens e/ou Serviços Vendidos;-393.264</entry>
+<entry key="3.01">Receita de Venda de Bens e/ou Serviços;955.454</entry>
+<entry key="3.04.06">Resultado de Equivalência Patrimonial;</entry>
+<entry key="3.04.05">Outras Despesas Operacionais;-81.886</entry>
+<entry key="3.04.04">Outras Receitas Operacionais;2.626</entry>
+<entry key="3.04.03">Perdas pela Não Recuperabilidade de Ativos;-33.397</entry>
+<entry key="3.04.02">Despesas Gerais e Administrativas;-68.973</entry>
+<entry key="3.04.01">Despesas com Vendas;-226.085</entry>
+<entry key="Conta">Descrição;01/04/2012 
+ a 
+ 30/06/2012</entry>
+<entry key="3.10.02">Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas;</entry>
+<entry key="3.10.01">Lucro/Prejuízo Líquido das Operações Descontinuadas;</entry>
+<entry key="3.02.02">Custo dos produtos e serviços financeiros;-5.384</entry>
+<entry key="3.02.01">Custo das Vendas com Mercadorias;-387.880</entry>
+<entry key="3.04.05.04">Resultado na baixa de ativos fixos;16</entry>
+<entry key="3.04.05.03">Depreciações e amortizações;-31.930</entry>
+<entry key="3.04.05.02">Plano de opção de compra de ações;-4.006</entry>
+<entry key="3.04.05.01">Outras despesas operacionais;-45.966</entry>
+</properties>

@@ -10,6 +10,10 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -18,11 +22,263 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import br.com.cvm.bd.consolidacaoBD.PersisteContasUnificando;
+import br.com.cvm.bd.helper.PersistenceManager;
+import br.com.cvm.bd.modelBD.Demonstrativo;
 import br.com.readsitecvm.entidades.EntidadeCVM;
 import br.com.readsitecvm.ingestao.subsistema.javaCVMTable;
 
-public class IngestaoDemonstrativos {
-	public IngestaoDemonstrativos(String cvm, String tipo,WebDriver driver) throws IOException {
+public class IngestaoDemEspecifico {
+	public IngestaoDemEspecifico(String cvm, String tipo,String data,WebDriver drive) throws IOException {
+		ingere( cvm,  tipo, data,drive);
+		
+		
+	}
+	public IngestaoDemEspecifico(Demonstrativo dem,WebDriver driver) throws IOException {
+
+		
+		String cod = dem.getProtocolo();
+		EntidadeCVM ecvm = new EntidadeCVM(cod);
+		String codcvm = dem.getEmpresa().getCvm()+"";
+		String cvm = codcvm;
+		int ninfo=2;
+		String docto = "";
+		String tipo="";
+		if((dem.getData()+"").endsWith("12")) {
+			docto="DFP";
+			tipo="A";
+		}else {
+			docto="ITR";
+			tipo="T";
+		}
+		 Properties p =  new Properties();
+		 Properties pcheckCodigo=new Properties();
+		
+				
+		String codDocumento = ecvm.codigoDocumento;
+		driver.get(
+				"https://www.rad.cvm.gov.br/enetconsulta/frmGerenciaPaginaFRE.aspx?CodigoTipoInstituicao=1&NumeroSequencialDocumento="
+						+ codDocumento);
+
+		ArrayList<String> valores = new ArrayList<String>();
+		valores.add("1.01");
+		valores.add("1.02");
+		//String prefixo = ecvm.codigoCVM + "_" + ecvm.dataDocto + "_" + ecvm.codigoDocumento + "_";
+	      
+		String prefixo = cvm + "/" + ecvm.dataDocto  ;
+		   File f = new File(prefixo);
+		   try {
+		   f.mkdirs();
+		   }catch(Exception e) {
+			   
+		   }
+		p.put(ecvm.dataDocto, cod);
+		
+		try {
+			new javaCVMTable(driver,
+					"https://www.rad.cvm.gov.br/enetconsulta/frmDemonstracaoFinanceiraITR.aspx?Informacao="+ninfo+"&Demonstracao=2&Periodo=0&Grupo=&Quadro=&NomeTipoDocumento="+docto+"&Empresa=&DataReferencia=&Versao=&CodTipoDocumento=4&NumeroSequencialDocumento="
+							+ codDocumento + "&NumeroSequencialRegistroCvm=" + codcvm + "&CodigoTipoInstituicao=",
+					prefixo + "/BalancoPatrimonialAtivo");
+			//https://www.rad.cvm.gov.br/enetconsulta/frmDemonstracaoFinanceiraITR.aspx?Informacao=1&Demonstracao=4&Periodo=0&Grupo=&Quadro=&NomeTipoDocumento=DFP&Empresa=&DataReferencia=&Versao=&CodTipoDocumento=4&NumeroSequencialDocumento=82498&NumeroSequencialRegistroCvm=5258&CodigoTipoInstituicao=
+			//https://www.rad.cvm.gov.br/enetconsulta/frmDemonstracaoFinanceiraITR.aspx?Informacao=2&Demonstracao=4&Periodo=0&Grupo=&Quadro=&NomeTipoDocumento=ITR&Empresa=&DataReferencia=&Versao=&CodTipoDocumento=3&NumeroSequencialDocumento=82498&NumeroSequencialRegistroCvm=1898&CodigoTipoInstituicao=1	
+			new javaCVMTable(driver,
+					"https://www.rad.cvm.gov.br/enetconsulta/frmDemonstracaoFinanceiraITR.aspx?Informacao="+ninfo+"&Demonstracao=3&Periodo=0&Grupo=&Quadro=&NomeTipoDocumento="+docto+"&Empresa=&DataReferencia=&Versao=&CodTipoDocumento=4&NumeroSequencialDocumento="
+							+ codDocumento + "&NumeroSequencialRegistroCvm=" + codcvm + "&CodigoTipoInstituicao=",
+					prefixo + "/BalancoPatrimonialPassivo");
+
+			new javaCVMTable(driver,
+					"https://www.rad.cvm.gov.br/enetconsulta/frmDemonstracaoFinanceiraITR.aspx?Informacao="+ninfo+"&Demonstracao=4&Periodo=0&Grupo=&Quadro=&NomeTipoDocumento="+docto+"&Empresa=&DataReferencia=&Versao=&CodTipoDocumento=4&NumeroSequencialDocumento="
+							+ codDocumento + "&NumeroSequencialRegistroCvm=" + codcvm + "&CodigoTipoInstituicao=",
+					prefixo + "/DemonstracaoResultado");
+			try {
+			new javaCVMTable(driver,
+					"https://www.rad.cvm.gov.br/enetconsulta/frmDemonstracaoFinanceiraITR.aspx?Informacao="+ninfo+"&Demonstracao=5&Periodo=0&Grupo=&Quadro=&NomeTipoDocumento="+docto+"&Empresa=&DataReferencia=&Versao=&CodTipoDocumento=4&NumeroSequencialDocumento="
+							+ codDocumento + "&NumeroSequencialRegistroCvm=" + codcvm + "&CodigoTipoInstituicao=",
+					prefixo + "/DemonstracaoResultadoAbrangente");
+			}catch(Exception e) {}
+			new javaCVMTable(driver,
+					"https://www.rad.cvm.gov.br/enetconsulta/frmDemonstracaoFinanceiraITR.aspx?Informacao="+ninfo+"&Demonstracao=99&Periodo=0&Grupo=&Quadro=&NomeTipoDocumento="+docto+"&Empresa=&DataReferencia=&Versao=&CodTipoDocumento=4&NumeroSequencialDocumento="
+							+ codDocumento + "&NumeroSequencialRegistroCvm=" + codcvm + "&CodigoTipoInstituicao=",
+					prefixo + "/FluxoDeCaixa");
+			new javaCVMTable(driver,
+					"https://www.rad.cvm.gov.br/enetconsulta/frmDemonstracaoFinanceiraITR.aspx?Informacao="+ninfo+"&Demonstracao=9&Periodo=0&Grupo=&Quadro=&NomeTipoDocumento="+docto+"&Empresa=&DataReferencia=&Versao=&CodTipoDocumento=4&NumeroSequencialDocumento="
+							+ codDocumento + "&NumeroSequencialRegistroCvm=" + codcvm + "&CodigoTipoInstituicao=",
+					prefixo + "/DemValorAdicionado");
+			}
+			catch(Exception e) {
+				
+			}
+		try {
+		  InputStream input = new FileInputStream(prefixo + "/BalancoPatrimonialAtivo");
+
+			Properties prop = new Properties();
+			prop.loadFromXML(input);
+			Double d= 0.0;
+			for(Object key : prop.keySet()) {
+				String skey=(String) key;
+				String value = (String)prop.get(skey);
+			
+				try {
+				d += Double.parseDouble(value.split(";")[1]);
+				}catch(Exception e) {
+					
+				}
+			}
+			if(d==0) {
+				throw new Exception();
+			}
+			//algo
+			 input = new FileInputStream(prefixo + "/BalancoPatrimonialPassivo");
+
+			 prop = new Properties();
+			prop.loadFromXML(input);
+			d= 0.0;
+			for(Object key : prop.keySet()) {
+				String skey=(String) key;
+				String value = (String)prop.get(skey);
+			
+				try {
+				d += Double.parseDouble(value.split(";")[1]);
+				}catch(Exception e) {
+					
+				}
+			}
+			if(d==0) {
+				throw new Exception();
+			}
+			//algo
+			 input = new FileInputStream(prefixo + "/DemonstracaoResultado");
+
+			 prop = new Properties();
+			prop.loadFromXML(input);
+			 d= 0.0;
+			for(Object key : prop.keySet()) {
+				String skey=(String) key;
+				String value = (String)prop.get(skey);
+			
+				try {
+				d += Double.parseDouble(value.split(";")[1]);
+				}catch(Exception e) {
+					
+				}
+			}
+			if(d==0) {
+				throw new Exception();
+			}
+			//algo
+			 /*input = new FileInputStream(prefixo + "/DemonstracaoResultadoAbrangente");
+
+			 prop = new Properties();
+			prop.loadFromXML(input);
+			 d= 0.0;
+			for(Object key : prop.keySet()) {
+				String skey=(String) key;
+				String value = (String)prop.get(skey);
+			
+				try {
+				d += Double.parseDouble(value.split(";")[1]);
+				}catch(Exception e) {
+					
+				}
+			}
+			if(d==0) {
+				throw new Exception();
+			}*/
+			//algo
+			 input = new FileInputStream(prefixo + "/FluxoDeCaixa");
+
+			 prop = new Properties();
+			prop.loadFromXML(input);
+			d= 0.0;
+			for(Object key : prop.keySet()) {
+				String skey=(String) key;
+				String value = (String)prop.get(skey);
+			
+				try {
+				d += Double.parseDouble(value.split(";")[1]);
+				}catch(Exception e) {
+					
+				}
+			}
+			if(d==0) {
+				throw new Exception();
+			}
+			//algo
+			 input = new FileInputStream(prefixo + "/DemValorAdicionado");
+
+			 prop = new Properties();
+			prop.loadFromXML(input);
+			 d= 0.0;
+			for(Object key : prop.keySet()) {
+				String skey=(String) key;
+				String value = (String)prop.get(skey);
+			
+				try {
+				d += Double.parseDouble(value.split(";")[1]);
+				}catch(Exception e) {
+					
+				}
+			}
+			if(d==0) {
+				throw new Exception();
+			}
+			//algo
+			ninfo=2;
+		}catch(Exception e) {
+			
+			ninfo=1;
+			//continue;
+		}
+		
+		new PersisteContasUnificando(cvm,ecvm.dataDocto, tipo,cod);
+		
+		// new
+		// javaCVMMutacoes(driver,"https://www.rad.cvm.gov.br/enetconsulta/frmDemonstracaoFinanceiraITR.aspx?Informacao=200&Demonstracao=8&Periodo=1&Grupo=&Quadro=&NomeTipoDocumento=DFP&Empresa=&DataReferencia=&Versao=5&CodTipoDocumento=4&NumeroSequencialDocumento=82904&NumeroSequencialRegistroCvm=1749&CodigoTipoInstituicao=1","MutacoesNoPatrimonio.xml");
+
+		// so faltou patrimonio que � diferente
+		
+		// js.executeScript("javascript:fVisualizaArquivo_ENET('82904','CONSULTA')","");
+		// System.out.println(driver.getPageSource());
+	}
+		
+		
+	public void consultaCvm(int idDemonstrativo) throws IOException {
+		System.setProperty("webdriver.chrome.driver",
+				"D:\\Downloads_old\\chromedriver_win32\\chromedriver.exe");
+		// TODO Auto-generated method stub
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+		;
+				Query queryanalisar = em.createQuery("Select c from Demonstrativo c where c.idDemonstrativo ="+idDemonstrativo);
+
+				Demonstrativo dem = (Demonstrativo) queryanalisar.getSingleResult();
+		
+		String cod = dem.getProtocolo();
+		EntidadeCVM ecvm = new EntidadeCVM(cod);
+		String codcvm = dem.getEmpresa().getCvm()+"";
+		String cvm = codcvm;
+		int ninfo=2;
+		String docto = "";
+		String tipo="";
+		if((dem.getData()+"").endsWith("12")) {
+			docto="DFP";
+			tipo="A";
+		}else {
+			docto="ITR";
+			tipo="T";
+		}
+		 Properties p =  new Properties();
+		 Properties pcheckCodigo=new Properties();
+		
+				
+		String codDocumento = ecvm.codigoDocumento;
+		driver.get(
+				"https://www.rad.cvm.gov.br/enetconsulta/frmGerenciaPaginaFRE.aspx?CodigoTipoInstituicao=1&NumeroSequencialDocumento="
+						+ codDocumento);
+
+	}
+	
+	public void ingere(String cvm, String tipo,String data,WebDriver driver) throws IOException {
 		// depois posso ver dados cadastrais: Formul�rios Cadastrais (FCA)
 				 Properties p =  new Properties();
 			       
@@ -35,10 +291,12 @@ public class IngestaoDemonstrativos {
 				List<String> codigos = pu.getListCodigos( driver,tipo);
 				boolean sumary_exists=false;
 				String docto = "";
-				if(tipo.equals("A")) {
+				if(data.startsWith("12")) {
 					docto="DFP";
+					tipo="A";
 				}else {
 					docto="ITR";
+					tipo="T";
 				}
 				
 				
@@ -71,7 +329,9 @@ public class IngestaoDemonstrativos {
 					String cod = codigos.get(i);
 					EntidadeCVM ecvm = new EntidadeCVM(cod);
 					 codcvm = ecvm.codigoCVM;
-			
+					if( !ecvm.dataDocto.equals(data)) {
+						continue;
+					}
 					if(pcheckCodigo.get(cod)!=null) {
 						p.put(ecvm.dataDocto, cod);
 						continue;

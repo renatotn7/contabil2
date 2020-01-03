@@ -70,7 +70,7 @@
 
 <?php  include_once (__DIR__. '\..\..\includes\componentes\contacomparada\tabela.html'); ?>
 <?php  include_once (__DIR__. '\..\..\includes\componentes\contacandidata\tabela.html'); ?>
-var response1 = '<?php  echo file_get_contents("http://localhost:8081/getMelhorCandidatoIndic") ?>';
+var response1 = '<?php  echo file_get_contents("http://localhost:8081/getMelhorCandidato") ?>';
 contacomparada(response1);
 contacandidata(response1);
 </script>

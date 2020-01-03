@@ -47,6 +47,7 @@ anychart.onDocumentReady(function () {
         // create data table on loaded data
       xmlhttp=new XMLHttpRequest();
 			xmlhttp.open("GET", "http://localhost/cogg/includes/json/getindicadores.html?cvm=5258", false);
+			
 			xmlhttp.send();
 			var data = JSON.parse(xmlhttp.responseText);
         

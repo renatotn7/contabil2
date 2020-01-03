@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>teste1</comment>
+<entry key="6.03.06">Juros sobre capital próprio e dividendos pagos;-160.754</entry>
+<entry key="6.03.05">Contraprestação de Arrendamento Mercantil Financeiro;-4.768</entry>
+<entry key="6.03.04">Pagamento de custos de estruturação de debêntures;0</entry>
+<entry key="6.03.03">Pagamentos de empréstimos;-6.250</entry>
+<entry key="6.03.02">Aumento de capital social;5.319</entry>
+<entry key="6.03.01">Empréstimos tomados;15.180</entry>
+<entry key="6.01.02.09">Fornecedores;-74.543</entry>
+<entry key="6.01.02.08">Financiamentos das importações;-33.216</entry>
+<entry key="6.01.02.07">Financiamentos - operações serviços financeiros;110.950</entry>
+<entry key="6.01.02.06">Aplicação quotas subordinada FIDC Lojas Renner;</entry>
+<entry key="6.01.02.05">Depósitos judiciais;-181</entry>
+<entry key="6.01.02.04">Outros ativos;41.847</entry>
+<entry key="6.01.02.03">(Perdas) ganhos não realizadas em derivativos;-24.692</entry>
+<entry key="6.01.02.02">Estoques;-63.815</entry>
+<entry key="6.01.03">Outros;-180.682</entry>
+<entry key="6.01.02.01">Contas a receber de clientes;157.244</entry>
+<entry key="6.01.02">Variações nos Ativos e Passivos;5.515</entry>
+<entry key="6.01.01">Caixa Gerado nas Operações;413.328</entry>
+<entry key="6.01.01.12">Provisões para perdas em ativos;10.292</entry>
+<entry key="6.01.01.11">Provisão para ajuste ao valor líquido realizável;-7.213</entry>
+<entry key="6.01.01.10">Variação cambial;-71</entry>
+<entry key="6.05">Aumento (Redução) de Caixa e Equivalentes;-81.963</entry>
+<entry key="Conta">Descrição;01/01/2014 
+ a 
+ 30/06/2014</entry>
+<entry key="6.04">Variação Cambial s/ Caixa e Equivalentes;</entry>
+<entry key="6.03">Caixa Líquido Atividades de Financiamento;-151.273</entry>
+<entry key="6.02">Caixa Líquido Atividades de Investimento;-168.851</entry>
+<entry key="6.01">Caixa Líquido Atividades Operacionais;238.161</entry>
+<entry key="6.02.05">Recebimento por venda de ativos imobilizados;</entry>
+<entry key="6.02.04">Caixa recebido na aquisição de controlada;</entry>
+<entry key="6.01.03.03">Pagamento de juros sobre empréstimos e financiamentos;-48.348</entry>
+<entry key="6.02.03">Recebimento por venda de ativo fixo;257</entry>
+<entry key="6.01.03.02">Pagamento de imposto de renda e contribuição social;-132.334</entry>
+<entry key="6.02.02">Aquisições de intangível;-21.439</entry>
+<entry key="6.01.03.01">Recebimento de dividendos de subsidiárias;</entry>
+<entry key="6.02.01">Aquisições de imobilizado;-147.669</entry>
+<entry key="6.01.01.09">Perda (ganho) com derivativo;-2.935</entry>
+<entry key="6.01.01.08">Tributos diferidos;67.222</entry>
+<entry key="6.01.01.07">Provisão para riscos tributários, cíveis e trabalhistas;3.975</entry>
+<entry key="6.01.01.06">Plano de opção de compra de ações;9.886</entry>
+<entry key="6.01.01.05">Despesa com juros de empréstimos e financiamentos;62.117</entry>
+<entry key="6.01.01.04">Custos de estruturação de debêntures;517</entry>
+<entry key="6.01.01.03">Resultado venda ou baixa dos ativos fixos;217</entry>
+<entry key="6.01.01.02">Depreciações e amortizações;99.937</entry>
+<entry key="6.01.01.01">Lucro líquido do período;169.384</entry>
+<entry key="6.01.02.16">Débito com empresas ligadas;</entry>
+<entry key="6.01.02.15">Obrigações estatutárias;0</entry>
+<entry key="6.05.02">Saldo Final de Caixa e Equivalentes;719.629</entry>
+<entry key="6.01.02.14">Aluguéis a pagar;-4.625</entry>
+<entry key="6.05.01">Saldo Inicial de Caixa e Equivalentes;801.592</entry>
+<entry key="6.01.02.13">Outras obrigações;-26.336</entry>
+<entry key="6.01.02.12">Obrigações com administradora de cartões;18.157</entry>
+<entry key="6.01.02.11">Impostos e contribuições a recolher;-90.410</entry>
+<entry key="6.01.02.10">Salários e férias a pagar;-4.865</entry>
+</properties>

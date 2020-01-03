@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.google.gson.Gson;
 
 import br.com.cvm.bd.ComparaContasJaro;
+import br.com.cvm.bd.consolidacaoBD.ExpandeIndicador;
 import br.com.cvm.bd.helper.PersistenceManager;
 import br.com.cvm.bd.modelBD.ContaContabil;
 import br.com.cvm.bd.modelBD.Demonstrativo;
@@ -383,6 +384,26 @@ public class ApplicationController {
 		PersisteAccounts.persisteAccount(ccomparada);
 		System.out.println(ccomparada.getRefConta().getIdContaContabil());
 	}
+	
+	@CrossOrigin(origins = "*")
+	@GetMapping(path="/associacontas")
+	//String cvmbd, String cvmprop, String databd, String dataProp,String perbd, String perprop
+	//http://localhost:8080/getRelatorioDiferencas?cvmbd=5258&cvmprop=5258&databd=122011&dataprop=122012&perbd=A&perprop=A
+	@ResponseBody  
+	public void associaContas(@RequestParam(value="idconta1") Integer idConta1,@RequestParam(value="idconta2") Integer idConta2) throws JSONException {
+		Gson gson=new Gson();
+		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+		ContaContabil c1 = em.find(ContaContabil.class, idConta1);
+	
+		ContaContabil c2 = em.find(ContaContabil.class, idConta2);
+		em.getTransaction().begin();
+		c2.setRefConta(c1);
+		c2.setAnalise(1);
+		em.getTransaction().commit();
+		ExpandeIndicador e = new ExpandeIndicador();
+		e.expande();
+		
+	}
 	@CrossOrigin(origins = "*")
 	@GetMapping(path="/getMelhorCandidato")
 	//String cvmbd, String cvmprop, String databd, String dataProp,String perbd, String perprop
@@ -397,26 +418,63 @@ public class ApplicationController {
 	}
 	
 	
+	
+	public static void main(String[] args) {
+		ApplicationController ac	=new ApplicationController();
+	ac.getMelhorCandIndic();
+	}
+	public static ArrayList<AusenciaIndicadorVO> ausencias;
 	@CrossOrigin(origins = "*")
 	@GetMapping(path="/getMelhorCandidatoIndic")
 	//String cvmbd, String cvmprop, String databd, String dataProp,String perbd, String perprop
 	//http://localhost:8080/getRelatorioDiferencas?cvmbd=5258&cvmprop=5258&databd=122011&dataprop=122012&perbd=A&perprop=A
 	  public ContaComparada getMelhorCandIndic() {
-		
+		ContaComparada	 ccompescolhida	=null;
 		DiagnosticoIndicadores di = new DiagnosticoIndicadores();
-		ArrayList<AusenciaIndicadorVO> ausencias = di.getAusencias();
+		
+		ausencias = di.getAusencias();
+		boolean erro  = true;
 		ComparaContasJaro ccj = new ComparaContasJaro();
-		AusenciaIndicadorVO aiv1 =ausencias.get(0);
-		ArrayList<ContaContabil > contasencontradas=new ArrayList<ContaContabil > ();
-		for(ContaContabilCalculo ccalculo1: aiv1.getContaCalculos().get(0)) {
+		
+		for(int n=0;n<ausencias.size()&&erro==true;n++) {
+			AusenciaIndicadorVO aiv1 =ausencias.get(n);
+		
+		
+			ArrayList<ContaContabil > contasencontradas=new ArrayList<ContaContabil > ();
+		for(ContaContabilCalculo ccalculo1: aiv1.getListcontaCalculos()) {
 			contasencontradas.add(ccalculo1.getContaContabil());
 		}
-		
-		Divergencia dv = ccj.analisar(contasencontradas, aiv1.getDemonstrativos().get(0));
-		
+		Divergencia dv=null;
+		if(contasencontradas.get(0).getDemonstrativo().getIdDemonstrativo()==aiv1.getDemonstrativo().getIdDemonstrativo()) {
+		try {
+			 dv = ccj.analisar(contasencontradas, aiv1.getDemonstrativo());
+		}catch(Exception e) {
+			erro = true;
+			continue;
+		}
+		}
+		 System.out.println(aiv1.getDemonstrativo().getEmpresa().getRaizAtivo());
+		 System.out.println(aiv1.getDemonstrativo().getData());
 	
+		 dv = ccj.analisar(contasencontradas, aiv1.getDemonstrativo());
+		 
+		 System.out.println(aiv1.getDemonstrativo().getData());
+		if(dv.getDiferentes()==null && dv.getNaoExistencia()==null) {
+			erro=true;
+			continue;
+		}
 		
-		ContaComparada	 ccompescolhida	=	escolheMelhorContaComparadaIndic(dv.getDiferentes());
+		
+		 ccompescolhida	=	escolheMelhorContaComparadaIndic(dv.getDiferentes());
+		if(ccompescolhida==null) {
+			erro = true;
+			continue;
+		}
+		erro =false;
+			break;
+		
+		
+		}
 	//com problemas aqui
 		return ccompescolhida;
 	}
@@ -511,7 +569,52 @@ public class ApplicationController {
 				//ccomparada.setRefConta(c);
 				
 			}
-		
+	@CrossOrigin(origins = "*")
+	@GetMapping(path="/getbytipodemonstrativo")
+	//String cvmbd, String cvmprop, String databd, String dataProp,String perbd, String perprop
+	//http://localhost:8080/getRelatorioDiferencas?cvmbd=5258&cvmprop=5258&databd=122011&dataprop=122012&perbd=A&perprop=A
+	  public List<ContaContabilMinInfo> getByTipoDemonstrativo(@RequestParam(value="idconta") Integer idConta) throws JSONException {
+			
+			
+				
+				EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
+				ContaContabil c = em.find(ContaContabil.class, idConta);
+				ContaContabil cpai = c.getContaPai();
+				String squery = "select a from ValorContabil a ,ContaContabil  c where a.demonstrativo.idDemonstrativo = "+c.getDemonstrativo().getIdDemonstrativo()+ " and a.contaContabil.idContaContabil=c.idContaContabil and c.tipoDemonstrativo.idTipo="+c.getTipoDemonstrativo().getIdTipo()+ " order by a.contaContabil.contaContabil";
+				
+				  Query query = em.createQuery(squery);
+				  List<ValorContabil> valorcontabil= (List<ValorContabil>) query.getResultList();
+				  
+				List<ValorContabil> c1=valorcontabil;
+				List<ContaContabilMinInfo> lista = new ArrayList<ContaContabilMinInfo> ();
+				for(ValorContabil cbytipoDemonstrativo :c1) {
+					ContaContabilMinInfo ccmi = new ContaContabilMinInfo();
+					ccmi.setContaContabil(cbytipoDemonstrativo.getContaContabil().getContaContabil());
+					ccmi.setDescricao(cbytipoDemonstrativo.getContaContabil().getDescricao());
+					ccmi.setIdContaContabil(cbytipoDemonstrativo.getContaContabil().getIdContaContabil());
+					ccmi.setDemonstrativo(cbytipoDemonstrativo.getDemonstrativo());
+					ccmi.setValorContabil(cbytipoDemonstrativo.getValor()+"");
+					
+					
+					
+					
+					
+					
+					ccmi.setCountfilhos(Long.parseLong(cbytipoDemonstrativo.getContaContabil().getIdContaContabil()+""));
+					
+					String[] niveisConta = cbytipoDemonstrativo.getContaContabil().getContaContabil().trim().split("\\.");
+					String contaInicial = niveisConta[0];
+					
+					ccmi.setRaiz(c.getTipoDemonstrativo().getSiglaTipo());
+					lista.add(ccmi);
+				//	System.out.println(cfilho.getContaContabil()+ cfilho.getDescricao());
+					
+					
+				}
+					return	lista;
+				//ccomparada.setRefConta(c);
+				
+			}
 	
 	@GetMapping(path="/getdemonstrativo/all")
 	
@@ -525,54 +628,25 @@ public class ApplicationController {
 	@GetMapping(path="/getjsongraphics")
 	
 	  public Object[][] getAllDemonstrativos(@RequestParam(value="idindicador") Integer idindicador,@RequestParam(value="cvm") Integer cvm) {
-		EntityManager	em = PersistenceManager.INSTANCE.getEntityManager();
-		//fazer a query de demonstrativos, fazer o parse a partir dos demosntrativos, setando data a data, fazendo loop e pegando especifico na query abaixo
-		//por exemplo a partir de entao para a data 03/12 teria 3 valores na unica data para um preferencia 3 
-		   ScriptEngineManager mgr = new ScriptEngineManager();
-		    ScriptEngine engine = mgr.getEngineByName("JavaScript");
-		    String foo = "40+2";
-		    try {
-				System.out.println(engine.eval(foo));
-			} catch (ScriptException e) {
-				// TODO Bloco catch gerado automaticamente
-				e.printStackTrace();
-			}
-		    
-			 Query queryA = em.createQuery("SELECT b FROM Demonstrativo b where  b.empresa.cvm = "+cvm+" and   b.versao =1 order by  b.data");
-			 List<Demonstrativo> demonstrativos= (List<Demonstrativo>) queryA.getResultList();
-			 List<Double> valoresfinais = new ArrayList<Double>();
-			 for(Demonstrativo dem:demonstrativos) {
-				 Query query = em.createQuery("SELECT b.valor FROM ValorContabil b,Calculo c where b.contaContabil.idCalculo = c.idCalculo and c.indicador.id_indicador = "+idindicador+" and  c.preferencia = 1 and b.demonstrativo.idDemonstrativo = "+dem.getIdDemonstrativo()+" order by  b.posicao");
-				 List<Double> valores= (List<Double>) query.getResultList();
-				 Query querye = em.createQuery("SELECT distinct c.expressao.expressao FROM ValorContabil b,Calculo c where b.contaContabil.idCalculo = c.idCalculo and c.indicador.id_indicador = "+idindicador+" and  c.preferencia = 1 and b.demonstrativo.idDemonstrativo = "+dem.getIdDemonstrativo()+" order by  b.posicao");
-				 String expressao= (String) querye.getSingleResult();
-				 
-				 for(int i = 0 ;i<valores.size();i++) {
-					expressao= expressao.replace("::"+(i+1),valores.get(i)+"");
-				 }
-				 try {
-						Double valorfinal = (Double)engine.eval(expressao);
-						valoresfinais.add(valorfinal);
-						
-					} catch (ScriptException e) {
-						// TODO Bloco catch gerado automaticamente
-						e.printStackTrace();
-					}
-			 }
-			 
+		
+			DiagnosticoIndicadores di = new DiagnosticoIndicadores();
+		String resp=	di.getGraficoIndicadores(cvm, idindicador, 2);
+		String[] arr = resp.split("\n");
+		System.out.println(idindicador);
+		System.out.println(cvm);
 		//	 Object[][] retorno = new Object[valoresContabeis.size()][6];  
-			 Object[][] retorno = new Object[2][6];
-			/*	 for(int i = 0 ; i < valoresContabeis.size(); i++) {
-					 ValorContabil vc = valoresContabeis.get(i);
-					 String sdata = (vc.getDemonstrativo().getData()+"").substring(0,4)+"-"+(vc.getDemonstrativo().getData()+"").substring(4,6)+"-"+31;
+			 Object[][] retorno = new Object[arr.length][6];
+				 for(int i = 0 ; i < arr.length; i++) {
+					String val = arr[i].split(";")[1];
+					 String sdata =  arr[i].split(";")[0].substring(0,4)+"-"+(arr[i].split(";")[0]+"").substring(4,6)+"-"+31;
 					 retorno[i][0] = sdata;
-					 retorno[i][1] = vc.getValor();
-					 retorno[i][2] = vc.getValor();
-					 retorno[i][3] = vc.getValor();
-					 retorno[i][4] = vc.getValor();
+					 retorno[i][1] = Double.parseDouble(val);
+					 retorno[i][2] =  Double.parseDouble(val);
+					 retorno[i][3] =  Double.parseDouble(val);
+					 retorno[i][4] =  Double.parseDouble(val);
 					 retorno[i][5] = 1;
 							
-				 }*/
+				 }
 				 
 			 
 		 return retorno;

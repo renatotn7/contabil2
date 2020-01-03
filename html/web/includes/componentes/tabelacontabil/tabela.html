@@ -1,6 +1,6 @@
 function tabelacontacontabil(){
 //service
-var response1 = '<?php  echo file_get_contents("http://localhost:8081/getirmaospai?idconta=". htmlspecialchars($_GET["idconta1"])) ?>';
+var response1 = '<?php  echo file_get_contents("http://localhost:8081/getbytipodemonstrativo?idconta=". htmlspecialchars($_GET["idconta1"])) ?>';
 var idConta1 =  '<?php  echo $_GET["idconta1"] ?>';
 //preparacao tabela
 var response2=  '<?php  $order   = array("\r\n", "\n", "\r"); echo str_replace($order,'',file_get_contents("http://localhost/cogg/includes/componentes/tabelacontabil/templateTabela.html")) ?>';

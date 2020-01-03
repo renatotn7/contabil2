@@ -1,51 +1,73 @@
+
 var match=null;
-function contacandidata(response1){
-//service
-//var response1 = '<?php  echo file_get_contents("http://localhost:8081/getMelhorCandidato") ?>';
+<?php 
 
-//preparacao tabela
-var response2=  '<?php  $order   = array("\r\n", "\n", "\r"); echo str_replace($order,'',file_get_contents("http://localhost/cogg/includes/componentes/contacandidata/templateTabela.html")) ?>';
-var response3=  '<?php  $order   = array("\r\n", "\n", "\r"); echo str_replace($order,'',file_get_contents("http://localhost/cogg/includes/componentes/contacandidata/templateLinhaTabela.html")) ?>';
+ if(isset($_GET["idconta1"])){   //quando vem com parametros faz com que seja enviado para (fazer acontecer em php)
+   //echo "'12345'\n\n";
+   
 
-
-   $(  "#tabelacontacandidata").append(	"<br/><br/>	<div class = 'row'>"+response2+"</div>");
-
-
-  var jsonresponse1 = JSON.parse(response1)
-	var replacedcontacandidata=jsonresponse1.candidatos ;
-	match = JSON.parse(response1)	  	;
-   function replaceAll(str, find, replace) {
-    	return str.replace(new RegExp(find, 'g'), replace);
+   if(isset($_GET["idconta2"])) {
+ 	   echo " var response1 = '". file_get_contents("http://localhost:8081/associacontas?idconta1=". htmlspecialchars($_GET["idconta1"]) ."&idconta2=". htmlspecialchars($_GET["idconta2"]) ) . " '\n" ; 
+       echo "window.location.href ='http://localhost/cogg/pages/componentes/matchindicadores.html' \n" ;
 	}
+ }
 
-    for (i = 0; i < jsonresponse1.candidatos.length; i++) {
-     replacedcontacandidata[i]=(response3.replace("::nomePregao",jsonresponse1.candidatos[i].conta.demonstrativo.empresa.nomePregao).replace("::raiz",jsonresponse1.candidatos[i].raiz).replace("::contaContabil",jsonresponse1.candidatos[i].conta.contaContabil+": "+ jsonresponse1.candidatos[i].conta.descricao).replace("::versao",jsonresponse1.candidatos[i].conta.demonstrativo.versao).replace("::data",jsonresponse1.candidatos[i].conta.demonstrativo.data).replace("::perc",jsonresponse1.candidatos[i].similaridade))
- 		
-   		$(  "#linhastabelacontacandidata").append(	replaceAll(replacedcontacandidata[i],"::opa",i+""));
+?>
 
-     };
+function contacandidata(response1){
+
+
+
+		var response2=  '<?php  $order   = array("\r\n", "\n", "\r"); echo str_replace($order,'',file_get_contents("http://localhost/cogg/includes/componentes/contacandidata/templateTabela.html")) ?>';
+		var response3=  '<?php  $order   = array("\r\n", "\n", "\r"); echo str_replace($order,'',file_get_contents("http://localhost/cogg/includes/componentes/contacandidata/templateLinhaTabela.html")) ?>';
+
+
+		   $(  "#tabelacontacandidata").append(	"<br/><br/>	<div class = 'row'>"+response2+"</div>");
+
+
+		  var jsonresponse1 = JSON.parse(response1)
+			var replacedcontacandidata=jsonresponse1.candidatos ;
+			match = JSON.parse(response1)	  	;
+		   function replaceAll(str, find, replace) {
+				return str.replace(new RegExp(find, 'g'), replace);
+			}
+
+			for (i = 0; i < jsonresponse1.candidatos.length; i++) {
+			 replacedcontacandidata[i]=(response3.replace("::nomePregao",jsonresponse1.candidatos[i].conta.demonstrativo.empresa.nomePregao).replace("::raiz",jsonresponse1.candidatos[i].raiz).replace("::contaContabil",jsonresponse1.candidatos[i].conta.contaContabil+": "+ jsonresponse1.candidatos[i].conta.descricao).replace("::versao",jsonresponse1.candidatos[i].conta.demonstrativo.versao).replace("::data",jsonresponse1.candidatos[i].conta.demonstrativo.data).replace("::perc",jsonresponse1.candidatos[i].similaridade))
+				
+				$(  "#linhastabelacontacandidata").append(	replaceAll(replacedcontacandidata[i],"::opa",i+""));
+
+			 };
    
     
 }
-http://localhost/cogg/pages/componentes/EncubadoraComponentes.html?idconta1=3743&idconta2=3722
+
+
 function contextualizaplanos(tipobtn,idbtn,ncandidato){
-match.candidatos[ncandidato].conta.idConta
- window.location.href ="http://localhost/cogg/pages/componentes/EncubadoraComponentes.html?idconta1="+match.comparado.idContaContabil+"&"+"idconta2="+match.candidatos[ncandidato].conta.idContaContabil;
+	match.candidatos[ncandidato].conta.idConta;
+	 window.location.href ="http://localhost/cogg/pages/componentes/EncubadoraComponentes.html?idconta1="+match.comparado.idContaContabil+"&"+"idconta2="+match.candidatos[ncandidato].conta.idContaContabil;
 }
+
+
+
 function processalinha(tipobtn,idbtn,ncandidato){
-if($(  "#tabelacontacandidata").hasClass( '.normal-cc-text_'+ncandidato)){
+		if(tipobtn=='btnA'){
+			window.location.href ="http://localhost/cogg/pages/componentes/matchindicadores.html?idconta1="+match.comparado.idContaContabil+"&"+"idconta2="+match.candidatos[ncandidato].conta.idContaContabil;
 
-	$('.normal-cc-text_'+ncandidato).html('<span>'+diff1(match.candidatos[ncandidato].conta.contaContabil,match.comparado.contaContabil)+":</span>"+diff1(match.candidatos[ncandidato].conta.descricao, match.comparado.descricao )); 
-$('.normal-raiz-text_'+ncandidato).html(diff1(match.candidatos[ncandidato].raiz,match.raiz)); 
+		}
+		if($(  "#tabelacontacandidata").hasClass( '.normal-cc-text_'+ncandidato)){
+
+			$('.normal-cc-text_'+ncandidato).html('<span>'+diff1(match.candidatos[ncandidato].conta.contaContabil,match.comparado.contaContabil)+":</span>"+diff1(match.candidatos[ncandidato].conta.descricao, match.comparado.descricao )); 
+		$('.normal-raiz-text_'+ncandidato).html(diff1(match.candidatos[ncandidato].raiz,match.raiz)); 
 
 
-	$(  "#tabelacontacandidata").addClass('.compair-cc-text_'+ncandidato).removeClass( '.normal-cc-text_'+ncandidato);
-	
-}else{
-$(  "#tabelacontacandidata").addClass('.normal-cc-text_'+ncandidato ).removeClass( '.compair-cc-text_'+ncandidato);
-$('.normal-raiz-text_'+ncandidato).html(match.candidatos[ncandidato].raiz); 
-$('.normal-cc-text_'+ncandidato).html(match.candidatos[ncandidato].conta.contaContabil+":"+match.candidatos[ncandidato].conta.descricao);
-}
+			$(  "#tabelacontacandidata").addClass('.compair-cc-text_'+ncandidato).removeClass( '.normal-cc-text_'+ncandidato);
+			
+		}else{
+		$(  "#tabelacontacandidata").addClass('.normal-cc-text_'+ncandidato ).removeClass( '.compair-cc-text_'+ncandidato);
+		$('.normal-raiz-text_'+ncandidato).html(match.candidatos[ncandidato].raiz); 
+		$('.normal-cc-text_'+ncandidato).html(match.candidatos[ncandidato].conta.contaContabil+":"+match.candidatos[ncandidato].conta.descricao);
+		}
 
 
 

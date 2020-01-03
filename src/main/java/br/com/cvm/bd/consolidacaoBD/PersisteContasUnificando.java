@@ -175,13 +175,20 @@ public static String possivelCorrespondente2(List<ContaContabil> cbd, List<Conta
 	
 }
 
-public static String comparaExistencia(Properties novo,String sigla, Integer data, String cvm) {
+public static String comparaExistencia(Properties novo,String sigla, Integer data, String cvm,String protocolo) {
 	int count = 0;
 	StringBuilder sb1 = new StringBuilder(); 
 	StringBuilder sb2 = new StringBuilder(); 
 	StringBuilder sb = new StringBuilder(); 
+	try {
 	em.getTransaction()
     .begin();
+	}catch(Exception e) {
+		
+	}
+	if(cvm==null) {
+		int i = 0;
+	}
 	Demonstrativo dm = new Demonstrativo();
 	Empresa e = em.find(Empresa.class, Integer.parseInt(cvm));
 	Periodo p = em.find(Periodo.class, 2);
@@ -194,17 +201,38 @@ public static String comparaExistencia(Properties novo,String sigla, Integer dat
 	dm.setEstadoCriacao(0);
 	dm.setVersao(1);
 	dm.setData(data);
+	dm.setProtocolo(protocolo);
+	if((data+"").endsWith("12")) {
+		 Query query = em.createQuery("SELECT e FROM Periodo e where e.idPeriodo ="+2);
+		 
+		Periodo per= (Periodo) query.getSingleResult();
+		dm.setPeriodo(per);
+	}else {
+		 Query query = em.createQuery("SELECT e FROM Periodo e where e.idPeriodo ="+1);
+		 
+			Periodo per= (Periodo) query.getSingleResult();
+			dm.setPeriodo(per);
+	}
 	
 	persiste(dm);
 	 em.getTransaction()
 	    .commit();
 	}catch(Exception e1) {
-		
+		e1.printStackTrace();
 		 em.getTransaction()
 		    .rollback();
-	
+		System.out.println(cvm);
+		System.out.println(p.getIdPeriodo());
+		System.out.println(dm.getData());
 		 Query query = em.createQuery("SELECT e FROM Demonstrativo e where e.empresa.cvm="+Integer.parseInt(cvm)+" and e.periodo.idPeriodo ="+p.getIdPeriodo()+" and e.versao = "+dm.getVersao()+" and e.data ="+dm.getData());
 		 dm= (Demonstrativo) query.getSingleResult();
+		 if(dm.getProtocolo()==null) {
+			 em.getTransaction()
+			    .begin();
+			 dm.setProtocolo(protocolo);
+			 em.getTransaction().commit();
+		 }
+		
 	}
 	
 	/*
@@ -440,10 +468,10 @@ public static String comparaExistencia(Properties novo,String sigla, Integer dat
 	 return sb.toString();
 }
 
-public static String compara( Properties p2, String sigla, Integer data, String cvm) {
+public static String compara( Properties p2, String sigla, Integer data, String cvm,String protocolo) {
 
 	 StringBuilder sb = new StringBuilder();
-	 	String retorno1 = comparaExistencia(p2,sigla,data,cvm);
+	 	String retorno1 = comparaExistencia(p2,sigla,data,cvm,protocolo);
 	 	if(retorno1.length()>0) {
 	 	//sb.append(desc1 +" x " +desc2 +"\n");
 	 	sb.append(retorno1+"\n");
@@ -522,7 +550,7 @@ try {
 	  dr2=ptp2.getEdp().getDra();
 	  divergencia = new Divergencia();
 	 	
-	  	String retorno1 =  compara(dr2,"DRA",dp2db,cvm2);
+	  	String retorno1 =  compara(dr2,"DRA",dp2db,cvm2,protocolo);
 	  	rdif.setDra(divergencia);
 	 	if(retorno1.length()>0) {
 	 		System.out.println(retorno1);
@@ -539,7 +567,7 @@ try {
 	  
 	  //compara(dr1,dr2,"DR "+ desc1 ,desc2);
 	  divergencia = new Divergencia();
-		retorno1 =  compara(dr2,"DR",dp2db,cvm2);
+		retorno1 =  compara(dr2,"DR",dp2db,cvm2,protocolo);
 		rdif.setDr(divergencia);
 	 	if(retorno1.length()>0) {
 	 		System.out.println(retorno1);
@@ -554,7 +582,7 @@ try {
 	  
 	  
 	  divergencia = new Divergencia();
-	  retorno1 =  compara(dr2,"BPA",dp2db,cvm2);
+	  retorno1 =  compara(dr2,"BPA",dp2db,cvm2,protocolo);
 	  rdif.setBpa(divergencia);
 	 	if(retorno1.length()>0) {
 	 		System.out.println(retorno1);
@@ -569,7 +597,7 @@ try {
 	  
 
 	  divergencia = new Divergencia();
-	  retorno1 =  compara(dr2,"BPP",dp2db,cvm2);
+	  retorno1 =  compara(dr2,"BPP",dp2db,cvm2,protocolo);
 	  rdif.setBpp(divergencia);
 	 	if(retorno1.length()>0) {
 	 		System.out.println(retorno1);
@@ -585,7 +613,7 @@ try {
 	  
 	  
 	  divergencia = new Divergencia();
-	  retorno1 =  compara(dr2,"FC",dp2db,cvm2);
+	  retorno1 =  compara(dr2,"FC",dp2db,cvm2,protocolo);
 	  rdif.setFc(divergencia);
 	 	if(retorno1.length()>0) {
 	 		System.out.println(retorno1);
@@ -602,7 +630,7 @@ try {
 	  
 	  
 	  divergencia = new Divergencia();
-	  retorno1 =  compara(dr2,"DVA",dp2db,cvm2);
+	  retorno1 =  compara(dr2,"DVA",dp2db,cvm2,protocolo);
 	  rdif.setDva(divergencia);
 	 	if(retorno1.length()>0) {
 	 		System.out.println(retorno1);
@@ -616,9 +644,9 @@ try {
 	 //	em.close();
 }
 public static void main(String []args) {
-	String cvm ="20257";
+	String cvm ="8133";
 //	new PersisteIgualdes("5258","5258","122011","122012","A", "A");
-	new PersisteContasUnificando(cvm,"122011", "A",null);
+	/*new PersisteContasUnificando(cvm,"122011", "A",null);
 	new PersisteContasUnificando(cvm,"122012", "A",null);
 	new PersisteContasUnificando(cvm,"122013", "A",null);
 	new PersisteContasUnificando(cvm,"122014", "A",null);
@@ -664,7 +692,7 @@ public static void main(String []args) {
 
 	new PersisteContasUnificando(cvm,"032019", "T",null);
 	new PersisteContasUnificando(cvm,"062019", "T",null);
-	new PersisteContasUnificando(cvm,"092019", "T",null);
+	new PersisteContasUnificando(cvm,"092019", "T",null);*/
 //	new PersisteIgualdes(cvm,"122016", "A");
 //	new PersisteIgualdes(cvm,"122017", "A");
 //	new PersisteIgualdes(cvm,"122018", "A");

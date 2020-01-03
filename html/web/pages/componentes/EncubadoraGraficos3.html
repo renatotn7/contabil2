@@ -53,15 +53,88 @@
 </style>
 </head>
 <body>
+
+						<div class="col-md-3">
+					<div class="select-component grid">
+						<div class="hidden" id="selectEmp">
+							<input id="documento-CPF" type="radio" onselect="myFunction()" name="documento" value="5258">
+							<input id="documento-RG" type="radio" onselect="myFunction()" name="documento" value="8133">
+							<input id="documento-RG2" type="radio" onselect="myFunction()" name="documento" value="20257">
+							<input type="radio" name="documento" value="" checked="checked">
+						</div>
+						<div class="select-fake grid col-12">
+							<div class="select-box col-12">
+								<label for="documento-CPF"  onselect="myFunction()" class="select-item">
+									<span class="select-text">5258</span>
+								</label>
+								<label for="documento-RG" class="select-item">
+									<span class="select-text">8133</span>
+								</label>
+								<label for="documento-RG2" class="select-item">
+									<span class="select-text">20257</span>
+								</label>
+								<p class="select-default">
+									<span class="select-text">Selecione o tipo de documento</span>
+								</p>
+							</div>
+							<i class="select-arrow icon-gray-dark icon-seta-baixo-b"></i>
+						</div>
+					</div>
+
+					<div class="font14px mg-top-20">
+								Cor fundo: <b>#ffffff</b><br>
+								Cor fonte: <b>#0b67bd</b><br>
+								Cor Borda: <b>#d6d6d6</b><br>
+								Tamanho fonte: <b>12px</b><br>
+								Raio Borda: <b>2px</b>
+							</div>
+				</div>
+										<div class="col-md-3">
+					<div class="select-component grid">
+						<div class="hidden" id="selectIndic">
+							<input id="documento-CPF2" type="radio" onselect="myFunction()" name="documento" value="2">
+							<input id="documento-RG2" type="radio" onselect="myFunction()" name="documento" value="4">
+							<input id="documento-RG3" type="radio" onselect="myFunction()" name="documento" value="5">
+							<input type="radio" name="documento" value="" checked="checked">
+						</div>
+						<div class="select-fake grid col-12">
+							<div class="select-box col-12">
+								<label for="documento-CPF2"  onselect="myFunction()" class="select-item">
+									<span class="select-text">Patrimonio</span>
+								</label>
+								<label for="documento-RG2" class="select-item">
+									<span class="select-text">Receita liquida</span>
+								</label>
+								<label for="documento-RG3" class="select-item">
+									<span class="select-text">EBITDA</span>
+								</label>
+								<p class="select-default">
+									<span class="select-text">Selecione o tipo de documento</span>
+								</p>
+							</div>
+							<i class="select-arrow icon-gray-dark icon-seta-baixo-b"></i>
+						</div>
+					</div>
+
+					<div class="font14px mg-top-20">
+								Cor fundo: <b>#ffffff</b><br>
+								Cor fonte: <b>#0b67bd</b><br>
+								Cor Borda: <b>#d6d6d6</b><br>
+								Tamanho fonte: <b>12px</b><br>
+								Raio Borda: <b>2px</b>
+							</div>
+				</div>
   <div id="container"></div>
   <script>
-anychart.onDocumentReady(function () {
-  
+  var data = null;
+  var teste1  = null;
+  function exibeGrafico(cvm,indic){
+   
             // create data table on loaded data
             xmlhttp=new XMLHttpRequest();
-			xmlhttp.open("GET", "http://localhost/cogg/includes/json/getindicadores.html?cvm=9342", false);
+			xmlhttp.open("GET", "http://localhost/cogg/includes/json/getindicadores.html?cvm="+cvm+"&idindicador="+indic, false);
 			xmlhttp.send();
-			var data = JSON.parse(xmlhttp.responseText);
+			data = JSON.parse(xmlhttp.responseText);
          
        //var data= JSON.parse('[["2011-11-31",2201174.0,2201174.0,2201174.0,2201174.0,1],["2012-06-31",2234786.0,2234786.0,2234786.0,2234786.0,1],["2012-09-31",2255015.0,2255015.0,2255015.0,2255015.0,1],["2012-12-31",2264659.0,2264659.0,2264659.0,2264659.0,1],["2013-03-31",2275538.0,2275538.0,2275538.0,2275538.0,1],["2012-03-31",2213560.0,2213560.0,2213560.0,2213560.0,1],["2013-06-31",2291749.0,2291749.0,2291749.0,2291749.0,1],["2013-09-31",2304867.0,2304867.0,2304867.0,2304867.0,1],["2013-12-31",2326983.0,2326983.0,2326983.0,2326983.0,1],["2015-12-31",2656798.0,2656798.0,2656798.0,2656798.0,1],["2016-03-31",2655480.0,2655480.0,2655480.0,2655480.0,1],["2016-06-31",2767763.0,2767763.0,2767763.0,2767763.0,1],["2016-09-31",2838416.0,2838416.0,2838416.0,2838416.0,1],["2016-12-31",2935955.0,2935955.0,2935955.0,2935955.0,1],["2017-03-31",2930398.0,2930398.0,2930398.0,2930398.0,1],["2017-06-31",3023250.0,3023250.0,3023250.0,3023250.0,1],["2017-09-31",3112051.0,3112051.0,3112051.0,3112051.0,1],["2017-12-31",3250372.0,3250372.0,3250372.0,3250372.0,1],["2018-03-31",3224392.0,3224392.0,3224392.0,3224392.0,1],["2018-06-31",3314660.0,3314660.0,3314660.0,3314660.0,1],["2018-09-31",3394855.0,3394855.0,3394855.0,3394855.0,1],["2018-12-31",3534767.0,3534767.0,3534767.0,3534767.0,1],["2019-03-31",3571437.0,3571437.0,3571437.0,3571437.0,1],["2019-06-31",3591225.0,3591225.0,3591225.0,3591225.0,1],["2019-09-31",4005550.0,4005550.0,4005550.0,4005550.0,1]]');
    
@@ -85,7 +158,121 @@ anychart.onDocumentReady(function () {
 
 
             // create stock chart
-            var chart = anychart.stock();
+             chart = anychart.stock();
+
+            // create candlestick series
+            chart.plot().line(mapping).name('HPE.US');
+
+            // create price oscillator indicator
+           
+              var ppoIndicatorPlot =  chart.plot(2);
+              ppoIndicatorPlot.height('40%');
+               var ppoIndicator = ppoIndicatorPlot.ppo(mapping,3,6,2);
+            	var indicatorPlot = chart.plot(1);
+
+				// set second plot's height
+				indicatorPlot.height('10%');
+
+				// adding extra Y axis to the right side
+				indicatorPlot.yAxis(1).orientation('right');
+			var aoIndicator = indicatorPlot.ao(mapping,3,5);
+
+				// set rising and falling stroke settings
+				aoIndicator.series().risingStroke('green');
+				aoIndicator.series().fallingStroke('red');
+
+            // get histogram series of the price oscillator
+            var histogram = ppoIndicator.histogramSeries();
+
+            // setup color scale ranges
+            var colorScale = anychart.scales.ordinalColor();
+            colorScale.ranges([{
+                less: 0,
+                color: '#FC1F28'
+            },
+            {
+                greater: 0,
+                color: '#4ED1FC'
+            },
+            ]);
+
+            // set color scale for the histogram series
+         //   histogram.colorScale(colorScale);
+
+            // create scroller series
+            chart.scroller().column(valueMapping);
+
+            // set chart selected date/time range
+            chart.selectRange('2011-04-11', '2019-12-11');
+			$("#container").empty();
+            // set container id for the chart
+            chart.container('container');
+            // initiate chart drawing
+            chart.draw();
+
+            // create range picker
+            var rangePicker = anychart.ui.rangePicker();
+            // init range picker
+            rangePicker.render(chart);
+
+            // create range selector
+            var rangeSelector = anychart.ui.rangeSelector();
+            // init range selector
+            rangeSelector.render(chart);
+			
+  }
+  var selectedEmp = 5258;
+  var selectedIndic = 2;
+  $( "#selectEmp" ).change(function (e) {
+  selectedEmp=e.target.value;
+console.log(e.target.value);
+ exibeGrafico(selectedEmp,selectedIndic);
+       
+//console.log($(':focus'));
+});
+
+  $( "#selectIndic" ).change(function (e) {
+  selectedIndic=e.target.value;
+console.log(e.target.value);
+ exibeGrafico(selectedEmp,selectedIndic);
+       
+//console.log($(':focus'));
+});
+ function myFunction(){
+  alert('ola')
+  }
+  var chart =null;
+anychart.onDocumentReady(function () {
+  
+            // create data table on loaded data
+            xmlhttp=new XMLHttpRequest();
+			xmlhttp.open("GET", "http://localhost/cogg/includes/json/getindicadores.html?cvm=8133&idindicador=5", false);
+			xmlhttp.send();
+			data = JSON.parse(xmlhttp.responseText);
+         
+       //var data= JSON.parse('[["2011-11-31",2201174.0,2201174.0,2201174.0,2201174.0,1],["2012-06-31",2234786.0,2234786.0,2234786.0,2234786.0,1],["2012-09-31",2255015.0,2255015.0,2255015.0,2255015.0,1],["2012-12-31",2264659.0,2264659.0,2264659.0,2264659.0,1],["2013-03-31",2275538.0,2275538.0,2275538.0,2275538.0,1],["2012-03-31",2213560.0,2213560.0,2213560.0,2213560.0,1],["2013-06-31",2291749.0,2291749.0,2291749.0,2291749.0,1],["2013-09-31",2304867.0,2304867.0,2304867.0,2304867.0,1],["2013-12-31",2326983.0,2326983.0,2326983.0,2326983.0,1],["2015-12-31",2656798.0,2656798.0,2656798.0,2656798.0,1],["2016-03-31",2655480.0,2655480.0,2655480.0,2655480.0,1],["2016-06-31",2767763.0,2767763.0,2767763.0,2767763.0,1],["2016-09-31",2838416.0,2838416.0,2838416.0,2838416.0,1],["2016-12-31",2935955.0,2935955.0,2935955.0,2935955.0,1],["2017-03-31",2930398.0,2930398.0,2930398.0,2930398.0,1],["2017-06-31",3023250.0,3023250.0,3023250.0,3023250.0,1],["2017-09-31",3112051.0,3112051.0,3112051.0,3112051.0,1],["2017-12-31",3250372.0,3250372.0,3250372.0,3250372.0,1],["2018-03-31",3224392.0,3224392.0,3224392.0,3224392.0,1],["2018-06-31",3314660.0,3314660.0,3314660.0,3314660.0,1],["2018-09-31",3394855.0,3394855.0,3394855.0,3394855.0,1],["2018-12-31",3534767.0,3534767.0,3534767.0,3534767.0,1],["2019-03-31",3571437.0,3571437.0,3571437.0,3571437.0,1],["2019-06-31",3591225.0,3591225.0,3591225.0,3591225.0,1],["2019-09-31",4005550.0,4005550.0,4005550.0,4005550.0,1]]');
+   
+            var dataTable = anychart.data.table();
+            dataTable.addData(data);
+
+            // map data for the candlestick series
+            
+   var mapping = dataTable.mapAs({
+            'open': 1,
+            'high': 2,
+            'low': 3,
+            'close': 4,
+            'value': {'column': 4, 'type': 'close'}
+        });
+
+        // map loaded data for the scroller
+   
+         var valueMapping = dataTable.mapAs({ 'value': 4 });
+      
+
+
+            // create stock chart
+             chart = anychart.stock();
 
             // create candlestick series
             chart.plot().line(mapping).name('HPE.US');
@@ -154,16 +341,7 @@ anychart.onDocumentReady(function () {
 
                 
                 
-              </div>
-						
-
-					
-
-					
-					</div>
-				
-			</section>
-		</div>
+           
 	</body>
 
    

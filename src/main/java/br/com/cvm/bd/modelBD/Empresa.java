@@ -27,7 +27,7 @@ public class Empresa implements Serializable {
 
 	@Column(name="nome_pregao", nullable=false, length=50)
 	private String nomePregao;
-
+	
 	@Column(name="raiz_ativo", length=8)
 	private String raizAtivo;
 

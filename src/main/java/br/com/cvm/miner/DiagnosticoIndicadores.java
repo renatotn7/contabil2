@@ -695,7 +695,7 @@ public class DiagnosticoIndicadores {
 					Query query = em.createQuery(
 							"SELECT b,c FROM ValorContabil b,Calculo c where b.contaContabil.idCalculo = c.idCalculo and c.indicador.idIndicador = "
 									+ idindicador + " and   b.demonstrativo.idDemonstrativo = "
-									+ dem.getIdDemonstrativo() + " and c.preferencia = "+preferencia+" order by  c.posicao");
+									+ dem.getIdDemonstrativo() + " and c.preferencia = "+indic.getNumpref()+" order by  c.posicao");
 					ArrayList<Object[]> valores = (ArrayList<Object[]>)query.getResultList();
 
 					Calculo c = null;

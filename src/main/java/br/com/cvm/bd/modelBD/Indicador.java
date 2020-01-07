@@ -24,6 +24,14 @@ public class Indicador implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="id_indicador", unique=true, nullable=false)
 	private int idIndicador;
+	private int numpref;
+	public int getNumpref() {
+		return numpref;
+	}
+
+	public void setNumpref(int numpref) {
+		this.numpref = numpref;
+	}
 
 	@Column(nullable=false, length=255)
 	private String descricao;

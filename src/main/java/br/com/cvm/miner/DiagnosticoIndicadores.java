@@ -639,7 +639,7 @@ public class DiagnosticoIndicadores {
 				"SELECT b FROM Indicador b where  b.idIndicador = "+indicador+"  ");
 		List<Indicador> indicadores = (List<Indicador>) queryI.getResultList();
 		ArrayList<AusenciaIndicadorVO> ausencias = new ArrayList<AusenciaIndicadorVO>();
-		StringBuilder resultados=new StringBuilder();
+		StringBuilder resultados=new StringBuilder();	
 		StringBuilder depresultados = new StringBuilder();
 		 AusenciaIndicadorVO aiv=null;
 		for (Indicador indic : indicadores) {
@@ -804,7 +804,11 @@ public class DiagnosticoIndicadores {
 							TipoDemonstrativo tpdem = vc.getContaContabil().getTipoDemonstrativo();
 							int tpdemid= tpdem.getIdTipo();
 							Periodo periodo = vc.getDemonstrativo().getPeriodo();
-							Double valor = vc.getValor()*1.0;
+							Double valor=0.0;
+							if(vc.getValor()!=null) {
+								valor = vc.getValor()*1.0;
+							}
+							//valor = vc.getValor()*1.0;
 							
 							if(abrang.getSiglaAbrangencia().equals("M")) {
 								valor=valor;

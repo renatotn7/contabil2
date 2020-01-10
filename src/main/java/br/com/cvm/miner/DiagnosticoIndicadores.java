@@ -797,7 +797,7 @@ public class DiagnosticoIndicadores {
 					  for(int i = 0 ;i<valores.size();i++) { 
 						  
 							ValorContabil vc = (ValorContabil) valores.get(i)[0];
-							if(vc.getDemonstrativo().getData() == 201709 || vc.getDemonstrativo().getData() == 201712) {
+							if(vc.getDemonstrativo().getData() == 201103 || vc.getDemonstrativo().getData() == 201106) {
 								int j = 0;
 							}
 							Abrangencia abrang = vc.getContaContabil().getTipoDemonstrativo().getAbrangencia();
@@ -828,7 +828,7 @@ public class DiagnosticoIndicadores {
 								valor=valor;
 								}else
 								if(periodo.getSiglaPeriodo().equals("T")) {
-									String sdata = vc.getContaContabil().getDemonstrativo().getData()+"";
+									String sdata = vc.getDemonstrativo().getData()+"";
 									String smes = sdata.substring(4);
 									Double dmes = Double.parseDouble(smes+".0");
 									valor=(valor/dmes)*12.0;

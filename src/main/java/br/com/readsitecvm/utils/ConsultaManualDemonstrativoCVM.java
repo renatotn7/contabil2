@@ -18,7 +18,7 @@ public class ConsultaManualDemonstrativoCVM {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Stub de método gerado automaticamente
-			(new ConsultaManualDemonstrativoCVM()).consultaCvm(1288);
+			(new ConsultaManualDemonstrativoCVM()).consultaCvm(186);
 	}
 	public void consultaCvm(int idDemonstrativo) throws IOException {
 		System.setProperty("webdriver.chrome.driver",

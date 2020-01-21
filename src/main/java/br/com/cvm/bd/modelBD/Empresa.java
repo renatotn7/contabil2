@@ -30,6 +30,15 @@ public class Empresa implements Serializable {
 	
 	@Column(name="raiz_ativo", length=8)
 	private String raizAtivo;
+	@Column(name="id_cvm_trademap")
+	private Integer idCvmTrademap;
+	public Integer getIdCvmTrademap() {
+		return idCvmTrademap;
+	}
+
+	public void setIdCvmTrademap(Integer idCvmTrademap) {
+		this.idCvmTrademap = idCvmTrademap;
+	}
 
 	@Column(name="razao_social", nullable=false, length=255)
 	private String razaoSocial;

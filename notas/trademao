@@ -1,0 +1,95 @@
+chega a outras infos do stock dentro do trademap
+https://portal.trademap.com.br/Products/stock/StockService.cfc
+{"method":"getStockById","id":"5489"}
+
+{"SUCCESS":true,"RESULT":{"IDCOMPANY":189,"STANDARDLOT":100,"IDEXCHANGESEGMENT":1,"QUOTATION_FORM":1,"TICKSIZEDENOMINATOR":2,"DT_EXPIRATION_OPTION":20140616,"TPSPECIFICATION":"PN","CDSTOCK":"GGBRF23","IDSTOCK":5489,"NMCOMPANY":"GERDAU","ID_EXCHANGE":1,"CDSEGMENT":"04
+","DSSEGMENT":"Opções ","TYPE":"Opções "}}
+
+
+GGBRF23
+
+
+post
+https://portal.trademap.com.br/Products/fundamental/FundamentalService.cfc
+
+{"method":"getCompanyBalanceAssetsTS","idCompany":5489,"dt_reference":"20190930,20190630,20190331,20181231,20180930,20180630,20180331,20171231,20170930,20170630,20170331,20161231,20160930,20160630,20160331,20151231,20150930,20150630,20150331,20141231,20140930,20140630,20140331","tipo":2}
+se colocar o endereço na web ele da a doumentacao
+
+{"method":"getOptions","cd_stock":"TAEE11","dtExpiration":20200120}
+getCompanyBalanceLiabilitiesWithJson
+{"method":"getCompanyBalanceLiabilitiesWithJson","idCompany":5489,"dt_reference":"20190930,20190630,20190331,20181231,20180930,20180630,20180331,20171231,20170930,20170630,20170331,20161231,20160930,20160630,20160331,20151231,20150930,20150630,20150331,20141231,20140930,20140630,20140331","tipo":2}
+
+
+getCompanyBalanceLiabilitiesTS
+{"method":"getCompanyBalanceLiabilitiesTS","idCompany":5489,"dt_reference":"20190930,20190630,20190331,20181231,20180930,20180630,20180331,20171231,20170930,20170630,20170331,20161231,20160930,20160630,20160331,20151231,20150930,20150630,20150331,20141231,20140930,20140630,20140331","tipo":2}
+
+getCompanyDatesIndicesWithJson
+{"method":"getCompanyDatesIndicesWithJson","idCompany":5489}
+
+getCompanyDepartmentReward
+{"method":"getCompanyDepartmentReward","idCompany":5489,"dt_reference":"20190930,20190630,20190331,20181231,20180930,20180630,20180331,20171231,20170930,20170630,20170331,20161231,20160930,20160630,20160331,20151231,20150930,20150630,20150331,20141231,20140930,20140630,20140331","tipo":2}
+
+getCompanyIncomeStatementTS
+
+{"method":"getCompanyIncomeStatementTS","idCompany":5489,"dt_reference":"20190930,20190630,20190331,20181231,20180930,20180630,20180331,20171231,20170930,20170630,20170331,20161231,20160930,20160630,20160331,20151231,20150930,20150630,20150331,20141231,20140930,20140630,20140331","tipo":2}
+
+getCompanyCashFlowTS
+{"method":"getStockOptions","idCompany":5489,"dt_reference":"20190930,20190630,20190331,20181231,20180930,20180630,20180331,20171231,20170930,20170630,20170331,20161231,20160930,20160630,20160331,20151231,20150930,20150630,20150331,20141231,20140930,20140630,20140331","tipo":2}
+
+
+grafico
+(precisa estar logado)
+https://portal.trademap.com.br/api/trademap/v1/stock/get-stock-by-code
+{"currency":"REAL","cd_stock":"TAEE4","id_exchange":1,"id_template":412166,"tbbar":"oneminute","count":500,"since":999999999999,"annotations":true,"documents":true,"events":true}
+origin: https://portal.trademap.com.br
+referer: https://portal.trademap.com.br/stock-detail/TAEE4/base-chart
+
+npl
+https://portal.trademap.com.br/Products/stock/StockService.cfc
+
+{"method":"getStockSnapshot","stocks":"TAEE4"} pega o book
+https://portal.trademap.com.br/Products/stock/StockService.cfc  tem um monte de coisas
+
+
+https://portal.trademap.com.br/Products/util/CalendarioService.cfc tem um monte de funcoes tb	
+{"method":"getHashDtHoliday"} 
+
+
+https://portal.trademap.com.br/Products/stock/StockService.cfc
+{"method":"getStockSnapshot","stocks":"TAEE4"}
+
+https://portal.trademap.com.br/Products/fundamental/FundamentalService.cfc
+{"method":"getCompanyMajorShareholders","dt_reference":20191231,"cd_stock":"TAEE4"} pega as participações em ações
+https://portal.trademap.com.br/Products/fundamental/FundamentalService.cfc
+{"method":"getCompanyBoardMembers","cd_stock":"TAEE4"}membros da diretoria e descrições
+
+
+{"code":"ra"}
+
+(precisa estar logado
+pegando os indices
+https://portal.trademap.com.br/api/trademap/v2/fundamental/company-indices
+{"id_cvm_company":5489,"dt_entry":[20180930],"id_company_type":2}
+
+https://portal.trademap.com.br/assets/images/company_logos/PETR.png
+
+https://portal.trademap.com.br/api/trademap/v1/fundamental/company-info
+{"cd_stock":"PETR4"} traz tag along etc
+
+https://portal.trademap.com.br/api/trademap/v1/stock/get-company-activity-info-by-stock
+{"cd_stock":"PETR4","id_exchange":1} get id company
+
+get id_cvm_company
+https://portal.trademap.com.br/api/trademap/v2/fundamental/list-provents
+{"period":"oneyear","cd_stock":"PETR4","id_exchange":1}
+
+https://portal.trademap.com.br/api/trademap/v1/fundamental/get-indicator-help
+get indicators help
+
+
+outra forma de pegar indicadores
+
+https://portal.trademap.com.br/api/trademap/v2/fundamental/company-indices-history
+{"papeis":"PETR4:1","indicadores":"net_worth,roe_annual,availabilities,leverage,divida_liquida,debt_to_equity,divida_bruta,net_debt_ebitda,total_assets,total_liabilities,roa_annual,roic_annual,short_asset,short_liabilities,indice_basileia,short_asset,short_liabilities,current_liquidity,vl_total_income_annual,gross_margin_annual,vl_ebit_annual,ebit_margin_annual,vl_ebitda_annual,ebitda_margin_annual,vl_profit_annual,net_margin_annual,vl_pdd,vl_pdd_over_profit,vl_dividend_annual,vl_dividend_yield_annual,payout_annual,cash_flow_oper_annual,cash_flow_invest_annual,cash_flow_finan_annual,mcap,price_per_vpa,price_profit_annual,enterprise_value,ev_over_ebitda_annual","id_company_type":2}
+pega historico
+
